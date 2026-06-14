@@ -1900,7 +1900,7 @@ T_LARKB-1,LARKB-1,Larks Green Battery Storage,OTHER,T,C,52.000,EDF Energy Custom
 E_LCHWT-1,LCHWT-1,Letchworth,,E,C,15.000,Conrad Energy (Trading) Ltd,Eastern,,reference_only,True
 2__LRWED001,LCKLB-1,2__LRWED001,,S,C,15.300,ENGIE Power Limited,South Western,,reference_only,False
 T_LCLTW-1,LCLTW-1,Lochluichart Windfarm,WIND,T,C,69.000,Eneco Energy Trade,,,reference_only,False
-2__PMARB001,LCSMH-1,Lochaber Hydro,NPSHYD,S,C,80.000,Marble Power Limited,North Scotland,,reference_only,False
+2__PMARB001,LCSMH-1,Lochaber Hydro,NPSHYD,S,C,80.000,Marble Power Limited,North Scotland,,reference_only,True
 V__NFORS002,LEVNG-1,V__NFORS002,,V,P,20.000,Forsa Trading Limited,South Scotland,,reference_only,False
 2__LFSEN200,LFSE01,2__LFSENIN200,,S,C,3.041,F & S Energy Ltd,South Western,,reference_only,False
 T_LIONB-1,LionB-1,Wilton BESS,,T,C,50.000,Sembcorp (Wilton BESS) Ltd,,,reference_only,True

@@ -5110,5 +5110,14 @@
     "bmu_type": "T",
     "source": "manual",
     "notes": null
+  },
+  {
+    "osm_id": "way/94249536",
+    "plant_name": "Lochaber Hydroelectric Scheme",
+    "bmu_id": "2__PMARB001",
+    "ngc_bmu_id": "LCSMH-1",
+    "bmu_type": "S",
+    "source": "manual",
+    "notes": "Secondary (2__) BMU mapped manually so its BM activity shows on the map"
   }
 ]

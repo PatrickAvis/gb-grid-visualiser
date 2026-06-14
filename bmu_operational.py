@@ -3,6 +3,7 @@
 from __future__ import annotations
 
 import json
+import re
 from collections import defaultdict
 from collections.abc import Callable
 from datetime import UTC, date, datetime, timedelta
@@ -243,12 +244,24 @@ def _index_plant_bmu_links(map_frame: pd.DataFrame) -> dict[str, list[dict[str, 
     return dict(by_bmu)
 
 
+def _normalize_osm_id(value: Any) -> str | None:
+    """Join key for osm_ids: the link table uses canonical "way/123" but the
+    site GeoJSON often stores bare "123" (export sources without an element
+    type), so match on the numeric part. "manual/..." ids are kept as-is.
+    """
+    text = _string_or_none(value)
+    if text is None:
+        return None
+    return re.sub(r"^(way|relation|node)/", "", text)
+
+
 def _site_feature_lookup(plants: gpd.GeoDataFrame) -> dict[str, dict[str, Any]]:
     lookup: dict[str, dict[str, Any]] = {}
     for _, row in plants.iterrows():
         osm_id = None if is_empty(row.get("osm_id")) else str(row["osm_id"]).strip()
         if not osm_id:
             continue
+        key = _normalize_osm_id(osm_id)
         lon = row.get("longitude")
         lat = row.get("latitude")
         if is_empty(lat) or is_empty(lon):
@@ -258,7 +271,7 @@ def _site_feature_lookup(plants: gpd.GeoDataFrame) -> dict[str, dict[str, Any]]:
             point = geom.representative_point()
             lon = point.x
             lat = point.y
-        lookup[osm_id] = {
+        lookup[key] = {
             "osm_id": osm_id,
             "plant_name": None if is_empty(row.get("name")) else str(row["name"]).strip(),
             "operator": None if is_empty(row.get("operator")) else str(row["operator"]).strip(),
@@ -332,7 +345,7 @@ def _aggregate_mapped_actions(
             continue
 
         for link in links:
-            osm_id = _string_or_none(link.get("osm_id"))
+            osm_id = _normalize_osm_id(link.get("osm_id"))
             if not osm_id or osm_id not in sites_by_osm:
                 continue
             key = (
