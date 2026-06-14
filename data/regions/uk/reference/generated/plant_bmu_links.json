@@ -1,12 +1,12 @@
 [
   {
-    "osm_id": "relation/7885568",
-    "plant_name": "Langage Solar Farm",
+    "osm_id": "way/178884128",
+    "plant_name": "Langage Power Station",
     "bmu_id": "T_LAGA-1",
     "ngc_bmu_id": "LAGA-1",
     "bmu_type": "T",
-    "source": "auto",
-    "notes": null
+    "source": "manual",
+    "notes": "Corrected: T_LAGA-1 is the CCGT; was auto-matched to Langage Solar Farm (relation/7885568)"
   },
   {
     "osm_id": "relation/12718371",

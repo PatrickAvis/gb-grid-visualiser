@@ -1,5 +1,4 @@
 severity,issue,osm_id,plant_name,bmu_id,ngc_bmu_id,source,detail
-warn,fuel_mismatch,relation/7885568,Langage Solar Farm,T_LAGA-1,LAGA-1,auto,site=solar vs bmu fuelType=CCGT
 warn,fuel_mismatch,way/1017473264,Glen Finglas,T_GLNKW-1,GLNKW-1,auto,site=hydro_non_pumped vs bmu fuelType=WIND
 warn,fuel_mismatch,way/1017473264,Glen Finglas,T_GNAPW-1,GNAPW-1,auto,site=hydro_non_pumped vs bmu fuelType=WIND
 warn,fuel_mismatch,way/1122850401,Whitelee Wind Farm Battery Storage,T_WHILW-2,WHILW-2,auto,site=battery vs bmu fuelType=WIND
@@ -186,7 +185,6 @@ info,osm_id_format,relation/5474028,Gwynt y Môr Offshore Wind Farm,T_GYMR-17,GY
 info,osm_id_format,relation/5474028,Gwynt y Môr Offshore Wind Farm,T_GYMR-26,GYMR-26,manual,geojson stores '5474028'; joined via normalized osm_id
 info,osm_id_format,relation/5474028,Gwynt y Môr Offshore Wind Farm,T_GYMR-28,GYMR-28,manual,geojson stores '5474028'; joined via normalized osm_id
 info,osm_id_format,relation/7868829,Chapel Lane Solar Farm,E_CHAPB-1,CHAPB-1,auto,geojson stores '7868829'; joined via normalized osm_id
-info,osm_id_format,relation/7885568,Langage Solar Farm,T_LAGA-1,LAGA-1,auto,geojson stores '7885568'; joined via normalized osm_id
 info,osm_id_format,relation/8829625,Walney Wind Farm,T_WLNYO-2,WLNYO-2,auto,geojson stores '8829625'; joined via normalized osm_id
 info,osm_id_format,relation/8829625,Walney Wind Farm,T_WLNYO-3,WLNYO-3,auto,geojson stores '8829625'; joined via normalized osm_id
 info,osm_id_format,relation/8829625,Walney Wind Farm,T_WLNYO-4,WLNYO-4,auto,geojson stores '8829625'; joined via normalized osm_id
@@ -341,6 +339,7 @@ info,osm_id_format,way/16075498,Pembroke Power Station,T_PEMB-31,PEMB-31,auto,ge
 info,osm_id_format,way/16075498,Pembroke Power Station,T_PEMB-41,PEMB-41,auto,geojson stores '16075498'; joined via normalized osm_id
 info,osm_id_format,way/16075498,Pembroke Power Station,T_PEMB-51,PEMB-51,auto,geojson stores '16075498'; joined via normalized osm_id
 info,osm_id_format,way/16075498,Pembroke Power Station,T_PEMBSC-61,PMBSC-61,auto,geojson stores '16075498'; joined via normalized osm_id
+info,osm_id_format,way/178884128,Langage Power Station,T_LAGA-1,LAGA-1,manual,geojson stores '178884128'; joined via normalized osm_id
 info,osm_id_format,way/201993701,Great Yarmouth Power Station,E_GYAR-1,GYAR-1,auto,geojson stores '201993701'; joined via normalized osm_id
 info,osm_id_format,way/204595889,Marchwood Power Station,T_MRWD-1,MRWD-1,auto,geojson stores '204595889'; joined via normalized osm_id
 info,osm_id_format,way/204918278,South Humber Bank Power Station,T_SHBA-1,SHBA-1,manual,geojson stores '204918278'; joined via normalized osm_id

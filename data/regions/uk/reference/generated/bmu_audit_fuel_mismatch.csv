@@ -1,5 +1,4 @@
 osm_id,plant_name,site_fuel_bucket,bmu_id,bmu_fuel,bmu_name,name_sim,likely_cause,suggested_action
-relation/7885568,Langage Solar Farm,solar,T_LAGA-1,CCGT,Langage Power Station,1.00,BMU name matches site -> OSM fuel tag likely wrong,verify OSM plant:source; keep link
 way/1017473264,Glen Finglas,hydro_non_pumped,T_GLNKW-1,WIND,GLEN KYLLACHY WINDFARM,0.47,weak name agreement -> link may be wrong,verify; remove link if BMU is a different site
 way/1017473264,Glen Finglas,hydro_non_pumped,T_GNAPW-1,WIND,Glen App Windfarm,0.55,BMU name matches site -> OSM fuel tag likely wrong,verify OSM plant:source; keep link
 way/1122850401,Whitelee Wind Farm Battery Storage,battery,T_WHILW-2,WIND,Whitelee Extension,0.61,BMU name matches site -> OSM fuel tag likely wrong,verify OSM plant:source; keep link

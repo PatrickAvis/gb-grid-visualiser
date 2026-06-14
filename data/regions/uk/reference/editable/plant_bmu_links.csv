@@ -1,5 +1,5 @@
 osm_id,plant_name,bmu_id,ngc_bmu_id,bmu_type,source,notes
-relation/7885568,Langage Solar Farm,T_LAGA-1,LAGA-1,T,auto,
+way/178884128,Langage Power Station,T_LAGA-1,LAGA-1,T,manual,Corrected: T_LAGA-1 is the CCGT; was auto-matched to Langage Solar Farm (relation/7885568)
 relation/12718371,Exeter Gas Power Station,E_EXETR-2,EXETR-2,E,auto,
 way/16075498,Pembroke Power Station,T_PEMB-11,PEMB-11,T,auto,
 way/16075498,Pembroke Power Station,T_PEMB-21,PEMB-21,T,auto,
