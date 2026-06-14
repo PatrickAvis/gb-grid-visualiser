@@ -6,6 +6,7 @@ import {
   buildLineLegend,
   buildPlantLegend,
   compareEtysBoundaries,
+  setBmLegendVisible,
   setEtysLegendVisible,
   setGeneratorLegendVisible,
   setLineLegendVisible,
@@ -235,56 +236,18 @@ export function createLayerManager(map, regionConfig, zoneFilter) {
     });
   }
 
-  // BM markers are drawn as canvas triangles (up = offer, down = bid). A
-  // CircleMarker subclass keeps all the projection/hit-test machinery and only
-  // overrides the canvas draw step; a shared canvas renderer keeps ~5k markers
-  // cheap. Both lazily created so Leaflet is loaded first.
-  let bmTriangleMarkerCtor = null;
-  let bmCanvasRenderer = null;
-
-  function bmTriangleMarkerClass() {
-    if (!bmTriangleMarkerCtor) {
-      bmTriangleMarkerCtor = L.CircleMarker.extend({
-        options: { direction: "up" },
-        _updatePath() {
-          const renderer = this._renderer;
-          if (!renderer || !renderer._drawing || this._empty()) return;
-          const ctx = renderer._ctx;
-          const p = this._point;
-          const r = Math.max(Math.round(this._radius), 2);
-          ctx.beginPath();
-          if (this.options.direction === "up") {
-            ctx.moveTo(p.x, p.y - r);
-            ctx.lineTo(p.x - r, p.y + r);
-            ctx.lineTo(p.x + r, p.y + r);
-          } else {
-            ctx.moveTo(p.x, p.y + r);
-            ctx.lineTo(p.x - r, p.y - r);
-            ctx.lineTo(p.x + r, p.y - r);
-          }
-          ctx.closePath();
-          renderer._fillStroke(ctx, this);
-        },
-      });
-    }
-    return bmTriangleMarkerCtor;
+  // The BM bids/offers layers share one static key, shown when either is on.
+  function syncBmLegend() {
+    const bmOn = document.getElementById("toggle-bm_activity_bid")?.checked
+      || document.getElementById("toggle-bm_activity_offer")?.checked;
+    setBmLegendVisible(Boolean(bmOn));
   }
 
   function createPointMarker(latlng, feature, layerConfig) {
     const [latOffset = 0, lngOffset = 0] = layerConfig.markerOffset || [];
     const position = L.latLng(latlng.lat + latOffset, latlng.lng + lngOffset);
     const props = feature.properties || {};
-    const style = layerConfig.styleFn(props);
-    if (layerConfig.markerShape === "triangle-up" || layerConfig.markerShape === "triangle-down") {
-      if (!bmCanvasRenderer) bmCanvasRenderer = L.canvas({ padding: 0.5 });
-      const TriangleMarker = bmTriangleMarkerClass();
-      return new TriangleMarker(position, {
-        ...style,
-        direction: layerConfig.markerShape === "triangle-up" ? "up" : "down",
-        renderer: bmCanvasRenderer,
-      });
-    }
-    return L.circleMarker(position, style);
+    return L.circleMarker(position, layerConfig.styleFn(props));
   }
 
   function buildGeoJsonLayer(layerKey, data, layerConfig) {
@@ -694,6 +657,9 @@ export function createLayerManager(map, regionConfig, zoneFilter) {
         buildGeneratorLegend(generatorBucketVisibility, setGeneratorBucketVisible, generatorLegendOptions(setStatus));
         setGeneratorLegendVisible(document.getElementById("toggle-generators")?.checked);
       }
+      if (layerKey === "bm_activity_bid" || layerKey === "bm_activity_offer") {
+        syncBmLegend();
+      }
       return geoLayer;
     })();
 
@@ -894,6 +860,9 @@ export function createLayerManager(map, regionConfig, zoneFilter) {
         if (layerKey === "plants") setPlantLegendVisible(false, plantBucketGroups);
         if (layerKey === "etys_boundaries") setEtysLegendVisible(false, etysBucketGroups);
         if (layerKey === "generators") setGeneratorLegendVisible(false);
+      }
+      if (layerKey === "bm_activity_bid" || layerKey === "bm_activity_offer") {
+        syncBmLegend();
       }
       if (layerKey === "turbines") {
         syncTurbineCheckboxes(enabled);

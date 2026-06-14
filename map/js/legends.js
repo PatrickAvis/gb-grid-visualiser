@@ -215,6 +215,13 @@ export function setGeneratorLegendVisible(visible) {
   legendEl.hidden = !visible;
 }
 
+// Static key shared by the BM bids/offers layers (shape = side, colour = fuel).
+export function setBmLegendVisible(visible) {
+  const legendEl = document.getElementById("bm-legend");
+  if (!legendEl) return;
+  legendEl.hidden = !visible;
+}
+
 export function buildEtysLegend(
   etysBucketGroups,
   etysBucketVisibility,
