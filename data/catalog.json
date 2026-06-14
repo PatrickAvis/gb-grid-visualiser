@@ -24,6 +24,12 @@
           "hint": "Grid-scale stations & farms; Elexon BMU links (OSM power=plant)",
           "defaultOn": true
         },
+        "plant_boundaries": {
+          "type": "geojson",
+          "path": "regions/uk/map/derived_plant_boundaries.geojson",
+          "label": "Wind farm extents (approx)",
+          "hint": "Approximate boundaries derived from turbine clusters for farms OSM maps only as points"
+        },
         "bm_activity_bid": {
           "type": "geojson",
           "path": "regions/uk/reference/operational/bmu_activity_latest.json",

@@ -3,6 +3,7 @@ import {
   bmActivityOfferMarkerStyle,
   converterMarkerStyle,
   converterPolygonStyle,
+  derivedBoundaryStyle,
   equipmentMarkerStyle,
   equipmentPolygonStyle,
   etysBoundaryStyle,
@@ -33,6 +34,12 @@ export const LAYER_BEHAVIOR = {
     combinedLayer: true,
     filterable: true,
     kind: "plants",
+  },
+  plant_boundaries: {
+    label: "Wind farm extents (approx)",
+    styleFn: derivedBoundaryStyle,
+    popupKeys: ["name", "source_bucket", "generator_count", "boundary_source"],
+    kind: "generic",
   },
   bm_activity_bid: {
     label: "BM bids",

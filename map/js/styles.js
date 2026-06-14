@@ -211,6 +211,20 @@ export function generatorPolygonStyle(props) {
   };
 }
 
+// Approximate (turbine-cluster) boundaries: dashed outline, fuel-tinted, faint
+// fill — visually distinct from solid OSM ground-truth polygons.
+export function derivedBoundaryStyle(props) {
+  const color = fuelTypeColor(plantSourceBucket(props));
+  return {
+    color,
+    weight: 1.5,
+    opacity: 0.9,
+    dashArray: "4 3",
+    fillColor: color,
+    fillOpacity: 0.12,
+  };
+}
+
 function bmActivityRadius(props) {
   const volume = Number(props.abs_volume_mwh ?? Math.abs(Number(props.volume_mwh) || 0));
   return Math.max(5, Math.min(18, 4 + Math.sqrt(Math.max(volume, 0)) * 1.5));
