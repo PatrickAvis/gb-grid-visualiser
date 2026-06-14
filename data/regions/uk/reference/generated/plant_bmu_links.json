@@ -468,13 +468,13 @@
     "notes": null
   },
   {
-    "osm_id": "way/1474131593",
-    "plant_name": "Harestanes Windfarm BESS",
+    "osm_id": "relation/9396198",
+    "plant_name": "Harestanes Wind Farm",
     "bmu_id": "T_HRSTW-1",
     "ngc_bmu_id": "HRSTW-1",
     "bmu_type": "T",
-    "source": "auto",
-    "notes": null
+    "source": "manual",
+    "notes": "Wind BMU moved from co-located battery/hydro to the wind farm polygon"
   },
   {
     "osm_id": "way/1482240805",
@@ -639,13 +639,13 @@
     "notes": null
   },
   {
-    "osm_id": "way/264087413",
-    "plant_name": "Clachan Power Station",
+    "osm_id": "relation/9316516",
+    "plant_name": "Clachan Flats",
     "bmu_id": "E_CLFLW-1",
     "ngc_bmu_id": "CLFLW-1",
     "bmu_type": "E",
-    "source": "auto",
-    "notes": null
+    "source": "manual",
+    "notes": "Wind BMU moved from co-located battery/hydro to the wind farm polygon"
   },
   {
     "osm_id": "way/294548158",
@@ -2565,13 +2565,13 @@
     "notes": null
   },
   {
-    "osm_id": "way/1408758796",
-    "plant_name": "Hywind 2",
+    "osm_id": "way/565033674",
+    "plant_name": "Hywind Scotland Wind Farm",
     "bmu_id": "E_HYWDW-1",
     "ngc_bmu_id": "HYWDW-1",
     "bmu_type": "E",
-    "source": "auto",
-    "notes": null
+    "source": "manual",
+    "notes": "Wind BMU moved from co-located battery/hydro to the wind farm polygon"
   },
   {
     "osm_id": "way/1483333224",

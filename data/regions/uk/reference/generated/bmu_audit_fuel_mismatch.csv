@@ -1,16 +1,12 @@
 osm_id,plant_name,site_fuel_bucket,bmu_id,bmu_fuel,bmu_name,name_sim,likely_cause,suggested_action
-way/1122850401,Whitelee Wind Farm Battery Storage,battery,T_WHILW-2,WIND,Whitelee Extension,0.61,BMU name matches site -> OSM fuel tag likely wrong,verify OSM plant:source; keep link
-way/1122850401,Whitelee Wind Farm Battery Storage,battery,T_WHILW-1,WIND,T_WHILW-1,0.37,weak name agreement -> link may be wrong,verify; remove link if BMU is a different site
 way/1149233319,The Drove Power Plant,gas,E_TDRVE-1,OTHER,The Drove,1.00,BMU name matches site -> OSM fuel tag likely wrong,verify OSM plant:source; keep link
 way/1168494496,Larks Green Solar Farm,solar,T_LARKB-1,OTHER,Larks Green Battery Storage,1.00,BMU name matches site -> OSM fuel tag likely wrong,verify OSM plant:source; keep link
 way/1168910658,Burwell Solar Farm,solar,E_BURWB-1,OTHER,Burwell Weirs Drove BESS,0.54,BMU name matches site -> OSM fuel tag likely wrong,verify OSM plant:source; keep link
 way/1233495394,Peterborough STOR,gas,E_PETEM3,OTHER,Peterborough Power 3,0.81,BMU name matches site -> OSM fuel tag likely wrong,verify OSM plant:source; keep link
 way/1300558890,Sutton Bridge Solar Farm,solar,T_SUTBS-1,OTHER,Sutton Bridge Solar Farm,1.00,BMU name matches site -> OSM fuel tag likely wrong,verify OSM plant:source; keep link
-way/1408758796,Hywind 2,battery,E_HYWDW-1,WIND,Hywind Generator BMU1,0.48,weak name agreement -> link may be wrong,verify; remove link if BMU is a different site
 way/1473937486,Uskmouth BESS,battery,T_USKM-13,BIOMASS,Uskmouth 13,0.84,BMU name matches site -> OSM fuel tag likely wrong,verify OSM plant:source; keep link
 way/1473937486,Uskmouth BESS,battery,T_USKM-14,BIOMASS,Uskmouth 14,0.84,BMU name matches site -> OSM fuel tag likely wrong,verify OSM plant:source; keep link
 way/1473937486,Uskmouth BESS,battery,T_USKM-15,BIOMASS,Uskmouth 15,0.84,BMU name matches site -> OSM fuel tag likely wrong,verify OSM plant:source; keep link
-way/1474131593,Harestanes Windfarm BESS,battery,T_HRSTW-1,WIND,Harestanes,0.69,BMU name matches site -> OSM fuel tag likely wrong,verify OSM plant:source; keep link
 way/1483333224,Kincraig Solar Farm,solar,E_KINCS-1,OTHER,Kincraig,1.00,BMU name matches site -> OSM fuel tag likely wrong,verify OSM plant:source; keep link
 way/160279522,West Burton B Power Station,gas,T_WBUPS-1,COAL,West Burton Unit 01,0.75,BMU name matches site -> OSM fuel tag likely wrong,verify OSM plant:source; keep link
 way/160279522,West Burton B Power Station,gas,T_WBUPS-2,COAL,West Burton Unit 02,0.75,BMU name matches site -> OSM fuel tag likely wrong,verify OSM plant:source; keep link
@@ -18,7 +14,6 @@ way/160279522,West Burton B Power Station,gas,T_WBUPS-3,COAL,West Burton Unit 03
 way/160279522,West Burton B Power Station,gas,T_WBUPS-4,COAL,West Burton Unit 04,0.75,BMU name matches site -> OSM fuel tag likely wrong,verify OSM plant:source; keep link
 way/160279522,West Burton B Power Station,gas,T_WBURB-41,OTHER,West Burton B Battery,0.76,BMU name matches site -> OSM fuel tag likely wrong,verify OSM plant:source; keep link
 way/160279522,West Burton B Power Station,gas,T_WBURB-43,OTHER,West Burton B Battery,0.76,BMU name matches site -> OSM fuel tag likely wrong,verify OSM plant:source; keep link
-way/264087413,Clachan Power Station,hydro_non_pumped,E_CLFLW-1,WIND,Clachan Flats,0.70,BMU name matches site -> OSM fuel tag likely wrong,verify OSM plant:source; keep link
 way/34383063,Drax Power Station,biomass,T_DRAXX-5,COAL,T_DRAXX-5,0.62,BMU name matches site -> OSM fuel tag likely wrong,verify OSM plant:source; keep link
 way/34383063,Drax Power Station,biomass,T_DRAXX-6,COAL,T_DRAXX-6,0.62,BMU name matches site -> OSM fuel tag likely wrong,verify OSM plant:source; keep link
 way/34383063,Drax Power Station,biomass,T_DRAXX-9G,OCGT,T_DRAXX-9G,0.57,BMU name matches site -> OSM fuel tag likely wrong,verify OSM plant:source; keep link
