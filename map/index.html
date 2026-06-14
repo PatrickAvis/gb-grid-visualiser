@@ -223,6 +223,8 @@
       font-size: 0.75rem;
       color: #555;
     }
+    .bm-legend-item { cursor: default; }
+    #bm-legend-list { margin-top: 6px; }
     .plant-swatch {
       width: 12px;
       height: 12px;
@@ -319,10 +321,8 @@
     </div>
     <div id="bm-legend" class="plant-legend" hidden>
       <div class="legend-title">Balancing Mechanism</div>
-      <div class="plant-legend-list">
-        <div class="plant-legend-subitem" style="margin-left: 0">Marker colour = fuel type, size = volume.</div>
-        <div class="plant-legend-subitem" style="margin-left: 0">Bids &amp; offers are shown as separate layers.</div>
-      </div>
+      <div class="plant-legend-subitem" style="margin-left: 0">Colour = fuel type, size = volume. Bids &amp; offers are separate layers.</div>
+      <div id="bm-legend-list" class="plant-legend-list"></div>
     </div>
     <p class="attribution">Zone boundaries &copy; <a href="https://www.neso.energy/data-portal">NESO</a> (UK). Infrastructure &copy; <a href="https://www.openstreetmap.org/copyright">OpenStreetMap</a> contributors.</p>
   </div>

@@ -215,11 +215,34 @@ export function setGeneratorLegendVisible(visible) {
   legendEl.hidden = !visible;
 }
 
-// Static key shared by the BM bids/offers layers (shape = side, colour = fuel).
+// Shared by the BM bids/offers layers: a fuel colour key (no per-fuel filter,
+// so swatches only — no checkboxes).
 export function setBmLegendVisible(visible) {
   const legendEl = document.getElementById("bm-legend");
   if (!legendEl) return;
   legendEl.hidden = !visible;
+}
+
+export function buildBmFuelLegend(buckets) {
+  const listEl = document.getElementById("bm-legend-list");
+  if (!listEl) return;
+  listEl.replaceChildren();
+  const present = new Set(buckets);
+  const ordered = [
+    ...fuelTypeOrder().filter((bucket) => present.has(bucket)),
+    ...[...present].filter((bucket) => !fuelTypeOrder().includes(bucket)).sort(),
+  ];
+  for (const bucket of ordered) {
+    const item = document.createElement("div");
+    item.className = "plant-legend-item bm-legend-item";
+
+    const swatch = document.createElement("span");
+    swatch.className = "plant-swatch";
+    swatch.style.background = fuelTypeColor(bucket);
+
+    item.append(swatch, document.createTextNode(fuelTypeLabel(bucket)));
+    listEl.appendChild(item);
+  }
 }
 
 export function buildEtysLegend(

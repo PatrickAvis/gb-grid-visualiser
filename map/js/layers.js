@@ -6,6 +6,7 @@ import {
   buildLineLegend,
   buildPlantLegend,
   compareEtysBoundaries,
+  buildBmFuelLegend,
   setBmLegendVisible,
   setEtysLegendVisible,
   setGeneratorLegendVisible,
@@ -236,11 +237,26 @@ export function createLayerManager(map, regionConfig, zoneFilter) {
     });
   }
 
-  // The BM bids/offers layers share one static key, shown when either is on.
+  // Fuel buckets present across whichever BM layers are currently loaded.
+  function bmFuelBuckets() {
+    const buckets = new Set();
+    for (const key of ["bm_activity_bid", "bm_activity_offer"]) {
+      const cache = layerCache[key];
+      if (!cache?.loaded || !cache.data) continue;
+      for (const feature of cache.data.features || []) {
+        const bucket = feature.properties?.source_bucket;
+        if (bucket) buckets.add(bucket);
+      }
+    }
+    return [...buckets];
+  }
+
+  // The BM bids/offers layers share one fuel legend, shown when either is on.
   function syncBmLegend() {
     const bmOn = document.getElementById("toggle-bm_activity_bid")?.checked
       || document.getElementById("toggle-bm_activity_offer")?.checked;
     setBmLegendVisible(Boolean(bmOn));
+    if (bmOn) buildBmFuelLegend(bmFuelBuckets());
   }
 
   function createPointMarker(latlng, feature, layerConfig) {
