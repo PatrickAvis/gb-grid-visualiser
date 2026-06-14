@@ -18,18 +18,25 @@ python scripts/refresh_uk.py          # one-shot: refresh the whole UK dataset e
 python scripts/serve_map.py           # serve map at http://localhost:8000/map/ (supports HTTP range -> PMTiles)
 ```
 
-`refresh_uk.py` runs the pipeline in order (BMU standing data → NESO zones → OSM export if a `.osm.pbf` is present → web layers → plant↔BMU match → PMTiles). Any stage skippable via `--skip-osm`, `--skip-elexon`, `--skip-zones`, `--skip-bmu-match`, `--skip-tiles`. Run stages individually:
+`refresh_uk.py` runs the pipeline in order: BMU standing data → NESO zones → OSM export (if a `.osm.pbf`) → **plant polygons via Overpass** → **offshore wind turbines** → web layers → **derived wind-farm boundaries** → plant↔BMU match → PMTiles. Skip stages via `--skip-osm/-elexon/-zones/-plant-fetch/-offshore-turbines/-prepare/-boundaries/-bmu-match/-tiles`; `--rebuild-plants` does a clean (non-additive) plant-layer rebuild. Run stages individually:
 
 ```powershell
 python scripts/export_region.py --region uk --all [--osm-pbf data/regions/uk/source/great-britain-latest.osm.pbf]
+python scripts/fetch_plants_overpass.py        # authoritative plant source (see GDAL note below)
+python scripts/fetch_offshore_turbines.py      # tops up offshore turbines the export clips out
 python scripts/fetch_neso_zones.py
 python scripts/prepare_map_data.py --region uk [--skip-plants|--skip-lines|--skip-substations|--skip-turbines|--skip-zones]
-python scripts/sync_uk_plants.py              # merge OSM exports into bmu_sites_web.geojson (prepare_map_data does this too)
+python scripts/derive_plant_boundaries.py      # hull boundaries for farms OSM maps only as points
 python scripts/propose_plant_bmu_map.py [--fetch]
-python scripts/build_tiles.py --region uk     # needs Tippecanoe + PMTiles CLI on PATH
+python scripts/audit_bmu_links.py              # data-quality report on the plant↔BMU links
+python scripts/build_tiles.py --region uk      # needs Tippecanoe + PMTiles CLI on PATH (WSL)
 ```
 
 There is no test suite, linter, or build config in this repo. Use `serve_map.py` (not `python -m http.server`) so PMTiles range requests work.
+
+### Critical: GDAL drops plant relations — plants come from Overpass, not the PBF
+
+The `.osm.pbf`/GDAL export silently drops most `power=plant` **multipolygon/site relations**, so ~600 plants (most large wind farms, all offshore) are missing from `export_region.py`'s `plants.geojson`. **`fetch_plants_overpass.py` is the authoritative plant source** — it queries Overpass directly, assembles ways/relations into polygons itself, hulls `type=site` turbine groupings, pulls offshore (clipped to UK waters, foreign sectors excluded), and tags each plant with a `status` (operational / construction / closed). It overwrites `raw/plants.geojson` after the PBF export. The same relation-drop likely affects **lines** (route relations); substations have few relations.
 
 ### Environment notes (important)
 

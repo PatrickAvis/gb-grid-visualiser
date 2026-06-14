@@ -7,14 +7,20 @@ dataset end to end:
   1. Elexon BMU standing data        (scripts/fetch_bmu_reference.py)
   2. NESO zone boundaries            (scripts/fetch_neso_zones.py)
   3. OSM power export (if a PBF)      (scripts/export_region.py --all)
-  4. Lightweight web layers          (scripts/prepare_map_data.py)
-  5. Plant <-> BMU matching          (scripts/propose_plant_bmu_map.py)
-  6. PMTiles archives                (scripts/build_tiles.py)
+  4. Plant polygons via Overpass     (scripts/fetch_plants_overpass.py)
+  5. Offshore wind turbines          (scripts/fetch_offshore_turbines.py)
+  6. Lightweight web layers          (scripts/prepare_map_data.py)
+  7. Derived wind-farm boundaries    (scripts/derive_plant_boundaries.py)
+  8. Plant <-> BMU matching          (scripts/propose_plant_bmu_map.py)
+  9. PMTiles archives                (scripts/build_tiles.py)
 
 The OSM export only runs when a local ``.osm.pbf`` is found (auto-detected under
 ``data/regions/{region}/source/`` or given with ``--osm-pbf``); otherwise the
-existing ``data/regions/{region}/raw/`` exports are reused. Each step can be
-skipped with the matching ``--skip-*`` flag.
+existing ``data/regions/{region}/raw/`` exports are reused. Steps 4-5 and 7 are
+UK-only and run regardless of the PBF: GDAL's OSM driver drops most power=plant
+relations, so plants are re-fetched from Overpass (incl. offshore + lifecycle
+status), and offshore wind turbines and turbine-cluster boundaries are added on
+top. Each step can be skipped with the matching ``--skip-*`` flag.
 Network/optional steps that fail are reported but do not abort the run; the OSM
 export and the prepare step are treated as critical.
 """
@@ -71,7 +77,16 @@ def parse_args() -> argparse.Namespace:
     parser.add_argument("--skip-osm", action="store_true", help="Skip OSM export even if a PBF is present")
     parser.add_argument("--skip-elexon", action="store_true", help="Skip Elexon BMU reference download")
     parser.add_argument("--skip-zones", action="store_true", help="Skip NESO zone boundary download")
+    parser.add_argument("--skip-plant-fetch", action="store_true", help="Skip re-fetching plant polygons via Overpass")
+    parser.add_argument("--skip-offshore-turbines", action="store_true", help="Skip the offshore wind turbine top-up")
     parser.add_argument("--skip-prepare", action="store_true", help="Skip building lightweight web layers")
+    parser.add_argument("--skip-boundaries", action="store_true", help="Skip derived wind-farm boundaries")
+    parser.add_argument(
+        "--rebuild-plants",
+        action="store_true",
+        help="Rebuild bmu_sites_web.geojson fresh instead of the additive merge "
+        "(clean/reproducible, but discards direct edits to that file)",
+    )
     parser.add_argument("--skip-bmu-match", action="store_true", help="Skip plant <-> BMU matching")
     parser.add_argument("--skip-tiles", action="store_true", help="Skip PMTiles build")
     parser.add_argument(
@@ -158,7 +173,40 @@ def main() -> int:
         print(f"\nSkipping OSM export ({reason}); reusing existing data/regions/{args.region}/raw/ exports.")
         results.append(("OSM export", "skipped"))
 
-    # 4. Build the lightweight web GeoJSON layers (and prepared zones).
+    # 4. Re-fetch plant polygons from Overpass (UK only). GDAL's OSM driver drops
+    # most power=plant relations, so this overwrites raw/plants.geojson with the
+    # full set (onshore + offshore + construction/closed status).
+    if not args.skip_plant_fetch and uk_only:
+        run_step(
+            "Plant polygons via Overpass",
+            [str(SCRIPTS / "fetch_plants_overpass.py"), "--region", args.region],
+            critical=False,
+            results=results,
+        )
+
+    # 5. Top up offshore wind turbines the land-clipped generator export misses.
+    # Must run after the OSM export (which regenerates wind_turbines.csv); it
+    # dedupes by osm_id so re-runs are idempotent.
+    if not args.skip_offshore_turbines and uk_only:
+        run_step(
+            "Offshore wind turbines",
+            [str(SCRIPTS / "fetch_offshore_turbines.py"), "--region", args.region],
+            critical=False,
+            results=results,
+        )
+
+    # Optional clean rebuild: drop the ground-truth plant layer so sync rebuilds
+    # it from the fresh Overpass plants + manual_plants (no stale/accumulated
+    # features). Manual data in the editable CSVs is preserved regardless.
+    if args.rebuild_plants:
+        from common import map_dir
+
+        plant_layer = map_dir(args.region) / "bmu_sites_web.geojson"
+        if plant_layer.exists():
+            plant_layer.unlink()
+            print(f"\nRemoved {plant_layer.relative_to(REPO_ROOT)} for a clean rebuild.")
+
+    # 6. Build the lightweight web GeoJSON layers (and prepared zones).
     if not args.skip_prepare:
         if not run_step(
             "Prepare web layers",
@@ -167,6 +215,15 @@ def main() -> int:
             results=results,
         ):
             return 1
+
+    # 7. Derive turbine-cluster boundaries for farms OSM maps only as points.
+    if not args.skip_boundaries and uk_only:
+        run_step(
+            "Derived wind-farm boundaries",
+            [str(SCRIPTS / "derive_plant_boundaries.py"), "--region", args.region],
+            critical=False,
+            results=results,
+        )
 
     # 5. Match OSM plants to Elexon BMUs (UK only). Elexon reference was already
     # refreshed above, so no extra --fetch here.
