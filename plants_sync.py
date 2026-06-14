@@ -30,6 +30,7 @@ WEB_PLANT_COLS = [
     "latitude",
     "capacity_mw",
     "source_bucket",
+    "construction",
 ]
 
 
@@ -86,6 +87,7 @@ def plants_from_raw(source: Path) -> gpd.GeoDataFrame:
         "plant:output:electricity",
         "generator:source",
         "generator:output:electricity",
+        "construction",
     ]
     print(f"Reading OSM export {source.name}…")
     frame = gpd.read_file(source)

@@ -51,14 +51,14 @@ CONTINENTAL_SHELF = {"lon_min": 2.6, "lat_max": 53.0}
 def area_query(country_iso: str, out: str) -> str:
     return f"""[out:json][timeout:300];
 area["ISO3166-1"="{country_iso}"][admin_level=2]->.a;
-(nwr["power"="plant"](area.a););
+(nwr["power"="plant"](area.a);nwr["construction:power"="plant"](area.a););
 out {out};"""
 
 
 def bbox_query(bbox: tuple[float, float, float, float]) -> str:
     s, w, n, e = bbox
     return f"""[out:json][timeout:300];
-(nwr["power"="plant"]({s},{w},{n},{e}););
+(nwr["power"="plant"]({s},{w},{n},{e});nwr["construction:power"="plant"]({s},{w},{n},{e}););
 out geom;"""
 
 
@@ -151,8 +151,11 @@ def to_features(elements: list[dict]) -> list[dict]:
         if geom is None or geom.is_empty:
             skipped += 1
             continue
+        tags = el.get("tags") or {}
         props = {"element": etype, "id": el["id"]}
-        props.update(el.get("tags") or {})
+        props.update(tags)
+        if tags.get("power") != "plant" and tags.get("construction:power") == "plant":
+            props["construction"] = "yes"  # under construction; flag for distinct styling
         features.append({"geometry": geom, "properties": props})
     print(f"Converted {len(features):,} features ({skipped} skipped: open ways / empty geometry)")
     return features

@@ -154,9 +154,21 @@ export function plantMarkerRadius(props) {
   return PLANT_MARKER_MIN_RADIUS + frac * (PLANT_MARKER_MAX_RADIUS - PLANT_MARKER_MIN_RADIUS);
 }
 
+// Under-construction plants (OSM construction:power=plant, e.g. Inch Cape) are
+// shown with an amber dashed outline and fainter fill so they read as planned,
+// not operational.
+const CONSTRUCTION_STROKE = "#ff8f00";
+
+export function isConstructionPlant(props) {
+  const flag = String(props.construction || "").toLowerCase();
+  return flag === "yes" || flag === "true";
+}
+
 export function plantPolygonStyle(props) {
-  const bucket = plantSourceBucket(props);
-  const color = fuelTypeColor(bucket);
+  const color = fuelTypeColor(plantSourceBucket(props));
+  if (isConstructionPlant(props)) {
+    return { color: CONSTRUCTION_STROKE, weight: 1.5, opacity: 0.95, dashArray: "5 4", fillColor: color, fillOpacity: 0.15 };
+  }
   return {
     color: "#263238",
     weight: 1,
@@ -169,13 +181,15 @@ export function plantPolygonStyle(props) {
 export function plantMarkerStyle(props) {
   const bucket = plantSourceBucket(props);
   const color = fuelTypeColor(bucket);
+  const construction = isConstructionPlant(props);
   return {
     radius: plantMarkerRadius(props),
     fillColor: color,
-    color: "#263238",
-    weight: 1,
+    color: construction ? CONSTRUCTION_STROKE : "#263238",
+    weight: construction ? 2 : 1,
+    dashArray: construction ? "3 3" : undefined,
     opacity: 0.95,
-    fillOpacity: 0.9,
+    fillOpacity: construction ? 0.5 : 0.9,
   };
 }
 
