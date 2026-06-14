@@ -1,0 +1,102 @@
+bmu_id,ngc_bmu_id,plant_name,bmu_name,osm_id,site_name,suggested_action,keep_reason
+,SFIL-1,St. Fillans Power Station,,way/1020439730,St. Fillans Power Station,KEEP,closest name match
+,SFIL-1,St. Fillans Power Station,,way/129923951,Grudie Bridge Power Station,consolidate into way/1020439730,
+,SFIL-1,St. Fillans Power Station,,way/130127380,Shin Power Station,consolidate into way/1020439730,
+,SFIL-1,St. Fillans Power Station,,way/26550612,Rannoch Power Station,consolidate into way/1020439730,
+,SFIL-1,St. Fillans Power Station,,way/562727161,Inverawe Power Station,consolidate into way/1020439730,
+,SFIL-1,St. Fillans Power Station,,way/956016428,Steven's Croft Power Station,consolidate into way/1020439730,
+E_BARNB-1,BARNB-1,Hunningley Stairfoot BESS,Hunningley Stairfoot BESS,way/1149297467,Hunningley Stairfoot BESS,KEEP,name matches BMU 'Hunningley Stairfoot BESS'
+E_BARNB-1,BARNB-1,Hunningley Stairfoot BESS,Hunningley Stairfoot BESS,way/1409249776,Stairfoot Battery Storage & 33kV substation,consolidate into way/1149297467,
+E_BRGG-1,BRGG-1,Brigg STOR,Glanford Brigg,way/1233495808,Brigg STOR,consolidate into way/208495234,
+E_BRGG-1,BRGG-1,Brigg STOR,Glanford Brigg,way/208495234,Glanford Brigg Power Station,KEEP,name matches BMU 'Glanford Brigg'
+E_BRGG-1,BRGG-1,Brigg STOR,Glanford Brigg,way/956046652,Brigg Renewable Energy Plant,consolidate into way/208495234,
+E_BROFB-1,BROFB-1,Brook Hall Farm Solar Farm,Brook Farm BESS,relation/9539129,Brook Hall Farm Solar Farm,consolidate into way/1148893647,
+E_BROFB-1,BROFB-1,Brook Hall Farm Solar Farm,Brook Farm BESS,way/1148893647,Brook Farm Battery,KEEP,name matches BMU 'Brook Farm BESS'
+E_BURGH-1,BURGH-1,Burghfield Landfill Gas Utilisation Site,Burghfield Power Station,way/843940770,Burghfield Landfill Gas Utilisation Site,consolidate into way/843940771,
+E_BURGH-1,BURGH-1,Burghfield Landfill Gas Utilisation Site,Burghfield Power Station,way/843940771,Burghfield Generation Plant,KEEP,name matches BMU 'Burghfield Power Station'
+E_BURWB-1,BURWB-1,Burwell Battery,Burwell Weirs Drove BESS,way/1005424593,Burwell Battery,consolidate into way/1168910658,
+E_BURWB-1,BURWB-1,Burwell Battery,Burwell Weirs Drove BESS,way/1168910658,Burwell Solar Farm,KEEP,name matches BMU 'Burwell Weirs Drove BESS'
+E_BURWB-2,BURWB-2,Burwell Battery,Burwell 1,way/1005424593,Burwell Battery,KEEP,name matches BMU 'Burwell 1'
+E_BURWB-2,BURWB-2,Burwell Battery,Burwell 1,way/1168910658,Burwell Solar Farm,consolidate into way/1005424593,
+E_BURWB-3,BURWB-3,Burwell Battery,Burwell 2,way/1005424593,Burwell Battery,consolidate into way/1475040946,
+E_BURWB-3,BURWB-3,Burwell Battery,Burwell 2,way/1168910658,Burwell Solar Farm,consolidate into way/1475040946,
+E_BURWB-3,BURWB-3,Burwell Battery,Burwell 2,way/1475040946,Burwell 2 BESS,KEEP,name matches BMU 'Burwell 2'
+E_CHAPB-1,CHAPB-1,Chapel Lane Solar Farm,Chapel Farm BESS,relation/7868829,Chapel Lane Solar Farm,consolidate into way/729739562,
+E_CHAPB-1,CHAPB-1,Chapel Lane Solar Farm,Chapel Farm BESS,way/1160388718,Chapel Farm Battery Storage,consolidate into way/729739562,
+E_CHAPB-1,CHAPB-1,Chapel Lane Solar Farm,Chapel Farm BESS,way/374197421,Chapel Hill Solar Farm,consolidate into way/729739562,
+E_CHAPB-1,CHAPB-1,Chapel Lane Solar Farm,Chapel Farm BESS,way/729739562,Chapel Farm,KEEP,name matches BMU 'Chapel Farm BESS'
+E_DERBY-1,DERBY-2,Derby & Derbyshire Waste Treatment Centre,DERBY,way/392054586,Derby & Derbyshire Waste Treatment Centre,consolidate into way/940961824,
+E_DERBY-1,DERBY-2,Derby & Derbyshire Waste Treatment Centre,DERBY,way/940961824,Derby Gas Power Station,KEEP,closest name match
+E_DOWL-1,DOWL-1,Dowlais STOR West,Dowlais II,way/951794677,Dowlais STOR West,KEEP,name matches BMU 'Dowlais II'
+E_DOWL-1,DOWL-1,Dowlais STOR West,Dowlais II,way/951794678,Dowlais STOR East,consolidate into way/951794677,
+E_EXETR-2,EXETR-2,Exeter Gas Power Station,Exeter,relation/12718371,Exeter Gas Power Station,KEEP,relation (site boundary)
+E_EXETR-2,EXETR-2,Exeter Gas Power Station,Exeter,way/406035513,Exeter Energy Recovery Facility,consolidate into relation/12718371,
+E_EXETR-2,EXETR-2,Exeter Gas Power Station,Exeter,way/947716071,Exeter City Council Solar Farm,consolidate into relation/12718371,
+E_FARNB-1,FARNB-1,Farnham Battery Storage,Farnham BESS,way/1187625958,Farnham Battery Storage,KEEP,name matches BMU 'Farnham BESS'
+E_FARNB-1,FARNB-1,Farnham Battery Storage,Farnham BESS,way/956252571,Farnham Landfill Gas Plant,consolidate into way/1187625958,
+E_GFLDW-1,GFLDW-1,Fields Farm (Agden),Goole Fields Wind Farm,relation/9938532,Fields Farm (Agden),KEEP,name matches BMU 'Goole Fields Wind Farm'
+E_GFLDW-1,GFLDW-1,Fields Farm (Agden),Goole Fields Wind Farm,way/718284355,Fields Farm Solar Farm,consolidate into relation/9938532,
+E_GOSHS-1,GOSHS-1,Goose House Lane Power Station,Goose House Lane,way/1153082218,Goose House Lane Power Station,KEEP,name matches BMU 'Goose House Lane'
+E_GOSHS-1,GOSHS-1,Goose House Lane Power Station,Goose House Lane,way/681589458,Goose Willow Farm,consolidate into way/1153082218,
+E_GRCRB-1,GRCRB-1,Cross Roads Plantation Solar Farm,Gerrards Cross BESS,relation/9106671,Cross Roads Plantation Solar Farm,consolidate into way/1475218524,
+E_GRCRB-1,GRCRB-1,Cross Roads Plantation Solar Farm,Gerrards Cross BESS,way/1475218524,Gerrards Cross BESS,KEEP,name matches BMU 'Gerrards Cross BESS'
+E_PETEM3,PETEM3,Peterborough STOR,Peterborough Power 3,way/1233495394,Peterborough STOR,KEEP,name matches BMU 'Peterborough Power 3'
+E_PETEM3,PETEM3,Peterborough STOR,Peterborough Power 3,way/918927238,Peterborough Energy from Waste,consolidate into way/1233495394,
+E_PLYRK-1,PLYRK-1,Plymouth Energy,Plymouth Rock,way/413032680,Plymouth Energy,KEEP,name matches BMU 'Plymouth Rock'
+E_PLYRK-1,PLYRK-1,Plymouth Energy,Plymouth Rock,way/728893771,Rock Farm / Goldborough Farm (Rookwood),consolidate into way/413032680,
+E_PLYRK-1,PLYRK-1,Plymouth Energy,Plymouth Rock,way/931133702,Rock Farm Battery Storage Scheme,consolidate into way/413032680,
+E_TOLLB-1,TOLLB-1,Tollgate Battery Storage Facility,Tollgate Energy Storage,way/1189799812,Tollgate Battery Storage Facility,KEEP,name matches BMU 'Tollgate Energy Storage'
+E_TOLLB-1,TOLLB-1,Tollgate Battery Storage Facility,Tollgate Energy Storage,way/512579289,Tollgate Solar Farm,consolidate into way/1189799812,
+E_WBUPS-STX,WBUPS-STX,West Burton B Power Station,West Burton Station Load,way/160279522,West Burton B Power Station,KEEP,name matches BMU 'West Burton Station Load'
+E_WBUPS-STX,WBUPS-STX,West Burton B Power Station,West Burton Station Load,way/956046649,West Burton B Battery Storage,consolidate into way/160279522,
+E_WOLVB-1,WOLVB-1,Wolverhampton West BESS,Wolverhampton West BESS,way/1512631595,Wolverhampton West BESS,KEEP,name matches BMU 'Wolverhampton West BESS'
+E_WOLVB-1,WOLVB-1,Wolverhampton West BESS,Wolverhampton West BESS,way/265797509,Wolverhampton EfW,consolidate into way/1512631595,
+E_WOLVB-1,WOLVB-1,Wolverhampton West BESS,Wolverhampton West BESS,way/938180482,Wolverhampton Power,consolidate into way/1512631595,
+T_BEASC-1,BEASC-1,Black Bush Farm,Black Hillock Sync Comp,way/625572056,Black Bush Farm,KEEP,closest name match
+T_BEASC-1,BEASC-1,Black Bush Farm,Black Hillock Sync Comp,way/694152827,Black Peak Farm,consolidate into way/625572056,
+T_BLPFB-1,BLPFB-1,Bulphan Fen Solar Farm,Bulphan Fen Warley Green BESS,relation/19313332,Bulphan Fen Solar Farm,KEEP,name matches BMU 'Bulphan Fen Warley Green BESS'
+T_BLPFB-1,BLPFB-1,Bulphan Fen Solar Farm,Bulphan Fen Warley Green BESS,way/1411410097,Bulphan Fen Solar Farm Battery Storage,consolidate into relation/19313332,
+T_BLPFS-1,BLPFS-1,Bulphan Fen Solar Farm,Bulphan Fen Warley Green Solar,relation/19313332,Bulphan Fen Solar Farm,KEEP,name matches BMU 'Bulphan Fen Warley Green Solar'
+T_BLPFS-1,BLPFS-1,Bulphan Fen Solar Farm,Bulphan Fen Warley Green Solar,way/1411410097,Bulphan Fen Solar Farm Battery Storage,consolidate into relation/19313332,
+T_BLWNB-1,BLWNB-1,Thornton Greener Grid Park,Thornton Battery,way/332532014,Thornton Greener Grid Park,consolidate into way/682463646,
+T_BLWNB-1,BLWNB-1,Thornton Greener Grid Park,Thornton Battery,way/682463646,Thornton Lane Solar Farm,KEEP,name matches BMU 'Thornton Battery'
+T_COVNB-1,COVNB-1,Coventry BESS,Pivot Power Coventry,way/1483389306,Coventry BESS,KEEP,closest name match
+T_COVNB-1,COVNB-1,Coventry BESS,Pivot Power Coventry,way/856731154,Coventry Energy From Waste,consolidate into way/1483389306,
+T_CUMHW-1,CUMHW-1,Cumberhead Wind Farm,Cumberhead wind energy limited,relation/17296061,Cumberhead Wind Farm,KEEP,name matches BMU 'Cumberhead wind energy limited'
+T_CUMHW-1,CUMHW-1,Cumberhead Wind Farm,Cumberhead wind energy limited,relation/19404961,Cumberhead West Wind Farm,consolidate into relation/17296061,
+T_FOYED-1,FOYED-1,Foyers Falls Power Station,Foyers Stn Txs,way/294548158,Foyers Falls Power Station,consolidate into way/449382772,
+T_FOYED-1,FOYED-1,Foyers Falls Power Station,Foyers Stn Txs,way/449382772,Foyers Power Station,KEEP,name matches BMU 'Foyers Stn Txs'
+T_HAGHW-2,HAGHW-2,Hagshaw Hill (Repowering),Hagshaw Repower 2,relation/19405219,Hagshaw Hill (Repowering),KEEP,name matches BMU 'Hagshaw Repower 2'
+T_HAGHW-2,HAGHW-2,Hagshaw Hill (Repowering),Hagshaw Repower 2,relation/8835793,Hagshaw Hill Extension Wind Farm,consolidate into relation/19405219,
+T_HEYM2-D,HEYM2D-1,Heysham Power,Heysham 2 Station Demand,way/1518654795,Heysham Power,consolidate into way/310488542,
+T_HEYM2-D,HEYM2D-1,Heysham Power,Heysham 2 Station Demand,way/310488542,Heysham Nuclear Power Station,KEEP,name matches BMU 'Heysham 2 Station Demand'
+T_INDQB-1,INDQB-1,Indian Queens Power Station,INDIAN QUEENS BESS,way/143791247,Indian Queens Power Station,consolidate into way/1484583344,
+T_INDQB-1,INDQB-1,Indian Queens Power Station,INDIAN QUEENS BESS,way/1484583344,Indian Queens BESS,KEEP,name matches BMU 'INDIAN QUEENS BESS'
+T_KEMB-1,KEMB-1,Kemsley Battery Storage,Pivot Power Kemsley,way/1149301628,Kemsley Battery Storage,KEEP,closest name match
+T_KEMB-1,KEMB-1,Kemsley Battery Storage,Pivot Power Kemsley,way/903794092,Kemsley Energy from Waste,consolidate into way/1149301628,
+T_LARKB-1,LARKB-1,Larks Green Solar Farm,Larks Green Battery Storage,way/1168494496,Larks Green Solar Farm,consolidate into way/1442566922,
+T_LARKB-1,LARKB-1,Larks Green Solar Farm,Larks Green Battery Storage,way/1442566922,Larks Green Solar Farm Battery Storage,KEEP,name matches BMU 'Larks Green Battery Storage'
+T_LIONB-1,LionB-1,Wilton BESS Phase 1,Wilton BESS,way/1211651931,Wilton BESS Phase 1,KEEP,name matches BMU 'Wilton BESS'
+T_LIONB-1,LionB-1,Wilton BESS Phase 1,Wilton BESS,way/550726464,Wilton Farm (pv),consolidate into way/1211651931,
+T_LIONB-1,LionB-1,Wilton BESS Phase 1,Wilton BESS,way/77471728,Wilton Power Station,consolidate into way/1211651931,
+T_LIONB-1,LionB-1,Wilton BESS Phase 1,Wilton BESS,way/956070478,Wilton 11 EfW,consolidate into way/1211651931,
+T_LIONB-2,LionB-2,Wilton BESS Phase 1,Wilton BESS,way/1211651931,Wilton BESS Phase 1,KEEP,name matches BMU 'Wilton BESS'
+T_LIONB-2,LionB-2,Wilton BESS Phase 1,Wilton BESS,way/550726464,Wilton Farm (pv),consolidate into way/1211651931,
+T_LIONB-2,LionB-2,Wilton BESS Phase 1,Wilton BESS,way/77471728,Wilton Power Station,consolidate into way/1211651931,
+T_LIONB-2,LionB-2,Wilton BESS Phase 1,Wilton BESS,way/956070478,Wilton 11 EfW,consolidate into way/1211651931,
+T_LIONB-3,LionB-3,Wilton BESS Phase 1,Wilton BESS,way/1211651931,Wilton BESS Phase 1,KEEP,name matches BMU 'Wilton BESS'
+T_LIONB-3,LionB-3,Wilton BESS Phase 1,Wilton BESS,way/550726464,Wilton Farm (pv),consolidate into way/1211651931,
+T_LIONB-3,LionB-3,Wilton BESS Phase 1,Wilton BESS,way/77471728,Wilton Power Station,consolidate into way/1211651931,
+T_LIONB-3,LionB-3,Wilton BESS Phase 1,Wilton BESS,way/956070478,Wilton 11 EfW,consolidate into way/1211651931,
+T_LIOND-1,LionD-1,Wilton BESS Phase 1,Wilton BESS,way/1211651931,Wilton BESS Phase 1,KEEP,name matches BMU 'Wilton BESS'
+T_LIOND-1,LionD-1,Wilton BESS Phase 1,Wilton BESS,way/550726464,Wilton Farm (pv),consolidate into way/1211651931,
+T_LIOND-1,LionD-1,Wilton BESS Phase 1,Wilton BESS,way/77471728,Wilton Power Station,consolidate into way/1211651931,
+T_LIOND-1,LionD-1,Wilton BESS Phase 1,Wilton BESS,way/956070478,Wilton 11 EfW,consolidate into way/1211651931,
+T_SUNDB-1,SUNDB-1,Sundon Battery Storage,SUNDON BESS,way/1482190103,Sundon Battery Storage,KEEP,name matches BMU 'SUNDON BESS'
+T_SUNDB-1,SUNDB-1,Sundon Battery Storage,SUNDON BESS,way/840178098,Sundon Landfill Site,consolidate into way/1482190103,
+T_SUTBS-1,SUTBS-1,Sutton Bridge Solar Farm,Sutton Bridge Solar Farm,way/1300558890,Sutton Bridge Solar Farm,KEEP,name matches BMU 'Sutton Bridge Solar Farm'
+T_SUTBS-1,SUTBS-1,Sutton Bridge Solar Farm,Sutton Bridge Solar Farm,way/498275162,Sutton Bridge Solar Farm,consolidate into way/1300558890,
+T_TEBWB-1,TEBWB-1,Tebworth - Solar Farm,Tebworth BESS Power Park,relation/20265488,Tebworth - Solar Farm,KEEP,name matches BMU 'Tebworth BESS Power Park'
+T_TEBWB-1,TEBWB-1,Tebworth - Solar Farm,Tebworth BESS Power Park,way/1482245953,Tebworth Battery Storage,consolidate into relation/20265488,
+T_TEBWS-1,TEBWS-1,Tebworth - Solar Farm,Tebworth PV Power Park,relation/20265488,Tebworth - Solar Farm,KEEP,name matches BMU 'Tebworth PV Power Park'
+T_TEBWS-1,TEBWS-1,Tebworth - Solar Farm,Tebworth PV Power Park,way/1482245953,Tebworth Battery Storage,consolidate into relation/20265488,

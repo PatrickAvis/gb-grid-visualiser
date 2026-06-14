@@ -1,0 +1,17 @@
+osm_id,plant_name,bmu_id,ngc_bmu_id,bmu_name,detail,source,suggested_action
+167003752,Chadderton BESS,E_OLDHB-1,OLDHB-1,Oldham BESS,sim=0.25 vs 'Oldham BESS',manual,verify the link is the same physical site
+manual/aberdeen-bay-wind-farm,Aberdeen Bay Offshore Wind Farm,T_ABRBO-1,ABRBO-1,ABRBO-1,sim=0.29 vs 'ABRBO-1',manual,verify the link is the same physical site
+manual/pen-y-cymoedd-wind-farm,Pen y Cymoedd Wind Farm,T_PNYCW-1,PNYCW-1,PNYCW-1 Export,sim=0.22 vs 'PNYCW-1 Export',manual,verify the link is the same physical site
+relation/9106671,Cross Roads Plantation Solar Farm,E_GRCRB-1,GRCRB-1,Gerrards Cross BESS,sim=0.28 vs 'Gerrards Cross BESS',auto,verify the link is the same physical site
+way/1149621575,Keadby Power Station,T_KEAD-1,KEAD-1,KGL CCGT 1,sim=0.12 vs 'KGL CCGT 1',auto,verify the link is the same physical site
+way/1149621575,Keadby Power Station,T_KEADGT-3,KEADGT-3,KGL GT 3,sim=0.14 vs 'KGL GT 3',auto,verify the link is the same physical site
+way/1409249776,Stairfoot Battery Storage & 33kV substation,E_BARNB-1,BARNB-1,Hunningley Stairfoot BESS,sim=0.30 vs 'Hunningley Stairfoot BESS',auto,verify the link is the same physical site
+way/1473937486,Uskmouth BESS,T_USKMB-2,USKMB-2,UES Asset 1 limited BMU1 BESS1,sim=0.21 vs 'UES Asset 1 limited BMU1 BESS1',manual,verify the link is the same physical site
+way/1473937486,Uskmouth BESS,T_USKMB-3,USKMB-3,UES Asset 1 limited BMU1 BESS2,sim=0.21 vs 'UES Asset 1 limited BMU1 BESS2',manual,verify the link is the same physical site
+way/208757000,Immingham Power Station,T_HUMR-1,HUMR-1,HUMR-1,sim=0.13 vs 'HUMR-1',manual,verify the link is the same physical site
+way/392054586,Derby & Derbyshire Waste Treatment Centre,E_DERBY-1,DERBY-2,DERBY,sim=0.23 vs 'DERBY',auto,verify the link is the same physical site
+way/550699358,Lincs Wind Farm,T_LNCSW-1,LNCSO-1,Lincs wind farm offshore BMU1,sim=0.29 vs 'Lincs wind farm offshore BMU1',auto,verify the link is the same physical site
+way/550699358,Lincs Wind Farm,T_LNCSW-2,LNCSO-2,Lincs wind farm offshore BMU2,sim=0.29 vs 'Lincs wind farm offshore BMU2',auto,verify the link is the same physical site
+way/728893771,Rock Farm / Goldborough Farm (Rookwood),E_PLYRK-1,PLYRK-1,Plymouth Rock,sim=0.17 vs 'Plymouth Rock',auto,verify the link is the same physical site
+way/931133702,Rock Farm Battery Storage Scheme,E_PLYRK-1,PLYRK-1,Plymouth Rock,sim=0.18 vs 'Plymouth Rock',auto,verify the link is the same physical site
+way/956046652,Brigg Renewable Energy Plant,E_BRGG-1,BRGG-1,Glanford Brigg,sim=0.24 vs 'Glanford Brigg',auto,verify the link is the same physical site
