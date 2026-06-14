@@ -88,6 +88,11 @@ async function initRegion(regionId) {
   buildLayerPanel(regionConfig, (layerId, enabled) => {
     layerManager.setLayerEnabled(layerId, enabled, setStatus);
   });
+  for (const status of ["operational", "construction", "closed"]) {
+    document.getElementById(`plant-status-${status}`)?.addEventListener("change", (event) => {
+      layerManager.setPlantStatusVisible(status, event.target.checked);
+    });
+  }
   buildSearchPanel(
     (query) => layerManager.searchFeatures(query),
     (result) => layerManager.focusSearchResult(result),

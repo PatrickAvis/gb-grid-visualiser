@@ -23,6 +23,7 @@ import {
   plantMarkerStyle,
   plantPolygonStyle,
   plantSourceBucket,
+  plantStatus,
   substationMarkerStyle,
   substationPolygonStyle,
   turbineMarkerStyle,
@@ -54,6 +55,12 @@ export function createLayerManager(map, regionConfig, zoneFilter) {
   const gatedRequested = {};
   const plantBucketGroups = {};
   const plantBucketVisibility = {};
+  // Plant lifecycle filter: operational + construction on, closed off by default.
+  const plantStatusVisible = { operational: true, construction: true, closed: false };
+  function setPlantStatusVisible(status, visible) {
+    plantStatusVisible[status] = visible;
+    rebuildFilterableLayers(zoneFilter.geometry);
+  }
   const generatorBucketVisibility = {};
   const etysBucketGroups = {};
   const etysBucketVisibility = {};
@@ -146,6 +153,7 @@ export function createLayerManager(map, regionConfig, zoneFilter) {
     const byBucket = new Map();
     for (const feature of data.features || []) {
       const props = feature.properties || {};
+      if (!plantStatusVisible[plantStatus(props)]) continue;  // open/construction/closed filter
       if (filterGeometry && layerConfig.filterable) {
         const latlon = getLatLon(props, feature);
         if (!latlon || !zoneFilter.pointInside(latlon[0], latlon[1], filterGeometry)) continue;
@@ -913,6 +921,7 @@ export function createLayerManager(map, regionConfig, zoneFilter) {
     focusSearchResult,
     rebuildFilterableLayers,
     restoreFilterableLayers,
+    setPlantStatusVisible,
     destroy,
   };
 }

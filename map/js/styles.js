@@ -154,43 +154,40 @@ export function plantMarkerRadius(props) {
   return PLANT_MARKER_MIN_RADIUS + frac * (PLANT_MARKER_MAX_RADIUS - PLANT_MARKER_MIN_RADIUS);
 }
 
-// Under-construction plants (OSM construction:power=plant, e.g. Inch Cape) are
-// shown with an amber dashed outline and fainter fill so they read as planned,
-// not operational.
+// Plant lifecycle status drives a distinct look: operational = solid dark
+// outline; construction (OSM construction:power=plant, e.g. Inch Cape) = amber
+// dashed; closed (disused/abandoned/...) = grey faded dashed.
 const CONSTRUCTION_STROKE = "#ff8f00";
+const CLOSED_STROKE = "#9e9e9e";
 
-export function isConstructionPlant(props) {
-  const flag = String(props.construction || "").toLowerCase();
-  return flag === "yes" || flag === "true";
+export function plantStatus(props) {
+  const status = String(props.status || "").toLowerCase();
+  return status === "construction" || status === "closed" ? status : "operational";
 }
 
 export function plantPolygonStyle(props) {
   const color = fuelTypeColor(plantSourceBucket(props));
-  if (isConstructionPlant(props)) {
-    return { color: CONSTRUCTION_STROKE, weight: 1.5, opacity: 0.95, dashArray: "5 4", fillColor: color, fillOpacity: 0.15 };
+  switch (plantStatus(props)) {
+    case "construction":
+      return { color: CONSTRUCTION_STROKE, weight: 1.5, opacity: 0.95, dashArray: "5 4", fillColor: color, fillOpacity: 0.15 };
+    case "closed":
+      return { color: CLOSED_STROKE, weight: 1, opacity: 0.8, dashArray: "2 4", fillColor: color, fillOpacity: 0.1 };
+    default:
+      return { color: "#263238", weight: 1, opacity: 0.75, fillColor: color, fillOpacity: 0.35 };
   }
-  return {
-    color: "#263238",
-    weight: 1,
-    opacity: 0.75,
-    fillColor: color,
-    fillOpacity: 0.35,
-  };
 }
 
 export function plantMarkerStyle(props) {
-  const bucket = plantSourceBucket(props);
-  const color = fuelTypeColor(bucket);
-  const construction = isConstructionPlant(props);
-  return {
-    radius: plantMarkerRadius(props),
-    fillColor: color,
-    color: construction ? CONSTRUCTION_STROKE : "#263238",
-    weight: construction ? 2 : 1,
-    dashArray: construction ? "3 3" : undefined,
-    opacity: 0.95,
-    fillOpacity: construction ? 0.5 : 0.9,
-  };
+  const color = fuelTypeColor(plantSourceBucket(props));
+  const radius = plantMarkerRadius(props);
+  switch (plantStatus(props)) {
+    case "construction":
+      return { radius, fillColor: color, color: CONSTRUCTION_STROKE, weight: 2, dashArray: "3 3", opacity: 0.95, fillOpacity: 0.5 };
+    case "closed":
+      return { radius, fillColor: color, color: CLOSED_STROKE, weight: 1.5, dashArray: "2 3", opacity: 0.8, fillOpacity: 0.3 };
+    default:
+      return { radius, fillColor: color, color: "#263238", weight: 1, opacity: 0.95, fillOpacity: 0.9 };
+  }
 }
 
 export function generatorSourceBucket(props) {

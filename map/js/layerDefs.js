@@ -30,7 +30,7 @@ export const LAYER_BEHAVIOR = {
     polygonStyleFn: plantPolygonStyle,
     markerStyleFn: plantMarkerStyle,
     popupPropsFn: plantPropsForPopup,
-    popupKeys: ["name", "construction", "bmu_id", "ngc_bmu_id", "bmu_type", "capacity_mw", "latitude", "longitude", "plant:source", "source_bucket", "plant:output:electricity", "operator"],
+    popupKeys: ["name", "status", "bmu_id", "ngc_bmu_id", "bmu_type", "capacity_mw", "latitude", "longitude", "plant:source", "source_bucket", "plant:output:electricity", "operator"],
     combinedLayer: true,
     filterable: true,
     kind: "plants",

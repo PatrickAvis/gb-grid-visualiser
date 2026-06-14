@@ -46,19 +46,31 @@ OFFSHORE_SEA_BUFFER_KM = 250.0
 # off the Belgian coast — too close to Kent for any UK sea-buffer to exclude, so
 # drop this continental-shelf corner explicitly (no UK farm sits here).
 CONTINENTAL_SHELF = {"lon_min": 2.6, "lat_max": 53.0}
+# Norwegian-sector platforms (Sleipner, ...) in the northern North Sea sit within
+# the sea buffer from Shetland; no UK plant is east of 1.5E up there.
+NORTH_SEA_FOREIGN = {"lon_min": 1.5, "lat_min": 56.0}
+
+# A plant carries power=plant when operational, construction:power=plant while
+# being built, and a lifecycle-prefixed key once closed.
+CLOSED_PREFIXES = ("disused", "abandoned", "demolished", "razed", "removed", "was")
+PLANT_KEYS = ["power", "construction:power"] + [f"{p}:power" for p in CLOSED_PREFIXES]
+
+
+def _plant_clauses(selector: str) -> str:
+    return "".join(f'nwr["{key}"="plant"]{selector};' for key in PLANT_KEYS)
 
 
 def area_query(country_iso: str, out: str) -> str:
     return f"""[out:json][timeout:300];
 area["ISO3166-1"="{country_iso}"][admin_level=2]->.a;
-(nwr["power"="plant"](area.a);nwr["construction:power"="plant"](area.a););
+({_plant_clauses("(area.a)")});
 out {out};"""
 
 
 def bbox_query(bbox: tuple[float, float, float, float]) -> str:
     s, w, n, e = bbox
     return f"""[out:json][timeout:300];
-(nwr["power"="plant"]({s},{w},{n},{e});nwr["construction:power"="plant"]({s},{w},{n},{e}););
+({_plant_clauses(f"({s},{w},{n},{e})")});
 out geom;"""
 
 
@@ -132,6 +144,20 @@ def relation_multipolygon(element: dict):
     return body if body.is_valid else body.buffer(0)
 
 
+def plant_status(tags: dict) -> str:
+    """operational | construction | closed, from OSM lifecycle tagging."""
+    osm_status = str(tags.get("status") or "").strip().lower()
+    if tags.get("construction:power") == "plant" or osm_status in ("construction", "planned", "proposed"):
+        return "construction"
+    if (any(tags.get(f"{p}:power") == "plant" for p in CLOSED_PREFIXES)
+            or osm_status in ("disused", "abandoned", "decommissioned", "demolished", "closed", "razed", "mothballed")):
+        return "closed"
+    end = str(tags.get("end_date") or "")[:4]
+    if tags.get("power") == "plant" and end.isdigit() and int(end) < 2026:
+        return "closed"  # still power=plant but with a past end_date
+    return "operational"
+
+
 def to_features(elements: list[dict]) -> list[dict]:
     features = []
     skipped = 0
@@ -154,8 +180,12 @@ def to_features(elements: list[dict]) -> list[dict]:
         tags = el.get("tags") or {}
         props = {"element": etype, "id": el["id"]}
         props.update(tags)
-        if tags.get("power") != "plant" and tags.get("construction:power") == "plant":
-            props["construction"] = "yes"  # under construction; flag for distinct styling
+        props["status"] = plant_status(tags)
+        if not props.get("plant:source"):  # lifecycle-prefixed sources, e.g. disused:plant:source
+            for prefix in ("construction",) + CLOSED_PREFIXES:
+                if tags.get(f"{prefix}:plant:source"):
+                    props["plant:source"] = tags[f"{prefix}:plant:source"]
+                    break
         features.append({"geometry": geom, "properties": props})
     print(f"Converted {len(features):,} features ({skipped} skipped: open ways / empty geometry)")
     return features
@@ -197,7 +227,9 @@ def main() -> int:
             if not geom.intersects(waters):
                 return False
             point = geom.representative_point()
-            return not (point.x > CONTINENTAL_SHELF["lon_min"] and point.y < CONTINENTAL_SHELF["lat_max"])
+            in_shelf = point.x > CONTINENTAL_SHELF["lon_min"] and point.y < CONTINENTAL_SHELF["lat_max"]
+            in_norway = point.x > NORTH_SEA_FOREIGN["lon_min"] and point.y > NORTH_SEA_FOREIGN["lat_min"]
+            return not (in_shelf or in_norway)
 
         kept = [f for f in offshore_feats if is_uk_offshore(f["geometry"])]
         print(f"  {len(kept):,} offshore features within UK waters (+{len(offshore_feats) - len(kept)} foreign/far dropped)")
