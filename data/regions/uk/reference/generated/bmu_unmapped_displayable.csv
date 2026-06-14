@@ -1,4 +1,47 @@
 bmu_id,ngc_bmu_id,bmUnitName,fuelType,bmUnitType,productionOrConsumptionFlag,generationCapacity,leadPartyName,gspGroupName,interconnectorId,category,mapped
+T_ABRBO-1,ABRBO-1,ABRBO-1,WIND,T,P,99.000,Aberdeen Offshore Wind Farm,,,displayable,False
+T_AKGLW-2,AKGLW-2,AIKENGALL II,WIND,T,P,63.840,Aikengall 2 CWCL,,,displayable,False
+T_AKGLW-3,AKGLW-3,AIKENGALL2A-W,WIND,T,P,163.400,AIK2A Sustainable Energy Ltd,,,displayable,False
+T_ANSUW-1,ANSUW-1,An Suidhe 1,WIND,T,P,19.360,Statkraft Markets Gmbh,,,displayable,False
+T_ARCHW-1,ARCHW-1,Arecleoch,WIND,T,P,114.000,SP Renewables (UK) Limited,,,displayable,False
+T_BENBW-1,BENBW-1,Benbrack WF,WIND,T,P,67.000,Benbrack Wind Farm Limited,,,displayable,False
 E_BETHW-1,BETHW-1,BETHW-1,WIND,E,P,29.750,SP Renewables (UK) Limited,North Scotland,,displayable,False
+T_BHLAW-1,BHLAW-1,Bhlaraidh Windfarm 1,WIND,T,P,108.000,SSE Generation Ltd,,,displayable,False
+T_BLLA-1,BLLA-1,T_BLLA-1,WIND,T,P,118.000,SP Renewables (UK) Limited,,,displayable,False
+E_BNWKW-1,BNWKW-1,Burn of Whilk Windfarm,WIND,E,P,22.500,Eneco Energy Trade,North Scotland,,displayable,False
+E_BTUIW-2,BTUIW-2,Beinn An Tuirc 2,WIND,E,P,43.700,SP Renewables (UK) Limited,North Scotland,,displayable,False
+E_BTUIW-3,BTUIW-3,Beinn an Tuirc III Windfarm,WIND,E,P,52.000,SP Renewables (UK) Limited,North Scotland,,displayable,False
+T_CGTHW-1,CGTHW-1,Corriegarth WF,WIND,T,P,69.000,Corriegarth Wind Energy LTD,,,displayable,False
+T_CLDCW-1,CLDCW-1,Clyde Central,WIND,T,P,200.000,Clyde Windfarm (Scotland) Ltd,,,displayable,False
+T_COUWW-1,COUWW-1,Cour Wind Farm,WIND,T,P,20.500,Cour Wind farm (Scotland) Ltd,,,displayable,False
+T_CRGHW-1,CRGHW-1,Carraig Gheal Wind Farm,WIND,T,P,46.000,Statkraft Markets Gmbh,,,displayable,False
 E_CRGTW-1,CRGTW-1,Craig 2 Wind Farm,WIND,E,P,4.700,British Gas Trading Ltd,South Scotland,,displayable,False
-T_KTHLW-1,KTHLW-1,KEITH HILL WINDFARM,WIND,T,P,4.540,Statkraft Markets Gmbh,,,displayable,False
+T_CRYRW-2,CRYRW-2,Crystal Rig II Windfarm,WIND,T,P,150.620,Eneco Energy Trade,,,displayable,False
+T_CRYRW-3,CRYRW-3,Crystal Rig III,WIND,T,P,13.800,Eneco Energy Trade,,,displayable,False
+T_CRYRW-4,CRYRW-4,Crystal Rig IV Wind Farm,WIND,T,P,48.200,Erova Energy Limited,,,displayable,False
+T_CUMHW-2,CUMHW-2,T_CUMHW-2,WIND,T,P,126.000,CUMBERHEAD WEST WIND FARM LTD,,,displayable,False
+T_DNLWW-1,DNLWW-1,Dunlaw Extension,WIND,T,P,29.750,SP Renewables (UK) Limited,,,displayable,False
+T_DOUGW-1,DOUGW-1,T-DOUGW-1,WIND,T,P,45.000,Erova Energy Limited,,,displayable,False
+T_DRSLW-1,DRSLW-1,Dersalloch Windfarm,WIND,T,P,70.900,SP Renewables (UK) Limited,,,displayable,False
+T_DUNGW-1,DUNGW-1,Dunmglass Windfarm 1,WIND,T,P,100.000,Dunmaglass Wind Farm Limited,,,displayable,False
+T_GORDW-1,GORDW-1,Gordon Bush,WIND,T,P,86.764,SSE Generation Ltd,,,displayable,False
+T_GYMR-15,GYMRO-15,GyM OSPE 15,WIND,T,P,148.000,Gwynt y Mor Offshore Wind Farm,,,displayable,False
+T_GYMR-17,GYMRO-17,GyM OSPE 17,WIND,T,P,148.000,Gwynt y Mor Offshore Wind Farm,,,displayable,False
+T_GYMR-26,GYMRO-26,GyM OSPW 26,WIND,T,P,148.000,Gwynt y Mor Offshore Wind Farm,,,displayable,False
+T_GYMR-28,GYMRO-28,GyM OSPW 28,WIND,T,P,148.000,Gwynt y Mor Offshore Wind Farm,,,displayable,False
+T_HOWBO-1,HOWBO-1,HORNSEA_WF_2A,WIND,T,P,440.000,Breesea Limited,,,displayable,False
+T_HOWBO-2,HOWBO-2,HORNSEA_WF_2B,WIND,T,P,440.000,Sonningmay Wind Limited,,,displayable,False
+T_HOWBO-3,HOWBO-3,HORNSEA_WF_2C,WIND,T,P,440.000,Soundmark Wind Limited,,,displayable,False
+T_KILBW-1,KILBW-1,KILBW,WIND,T,P,68.510,Kilbraur Wind Energy Ltd,,,displayable,False
+T_KPMRW-1,KPMRW-1,KYPE MUIR WIND FARM,WIND,T,P,89.000,OnPath Energy Limited,,,displayable,False
+T_KYPEW-1,KYPEW-1,KYPE MUIR EXT WIND FARM,WIND,T,P,67.000,Kype Extension Wind Farm Ltd,,,displayable,False
+T_MILWW-1,MILWW-1,MILWW,WIND,T,P,65.000,Millennium Wind Energy Ltd,,,displayable,False
+T_PNYCW-1,PNYCW-1,PNYCW-1 Export,WIND,T,P,228.000,Pen y Cymoedd Wind Farm LTD,,,displayable,False
+T_RREW-1,RREW-1,T_RREW-1,WIND,T,P,114.293,RWE Renewables UK Robin Rigg,,,displayable,False
+T_RRWW-1,RRWW-1,T_RRWW-1,WIND,T,P,90.838,RWE Renewables UK Robin Rigg,,,displayable,False
+T_SANQW-1,SANQW-1,SANQUHAR,WIND,T,P,32.080,SANQUHAR CWCL,,,displayable,False
+T_THUPG-1,THUPG-1,T_THUPG-1,OTHER,T,P,180.000,THURROCK POWER LIMITED,,,displayable,False
+E_TULWW-1,TULWW-1,Tullo Windfarm,WIND,E,P,17.000,Eneco Energy Trade,North Scotland,,displayable,False
+T_TWSHW-1,TWSHW-1,Twenty Shilling Wind Farm,WIND,T,P,37.800,Twentyshilling Limited,,,displayable,False
+T_USKMB-2,USKMB-2,UES Asset 1 limited BMU1 BESS1,OTHER,T,P,57.500,UES Asset 1 Limited,,,displayable,False
+T_USKMB-3,USKMB-3,UES Asset 1 limited BMU1 BESS2,OTHER,T,P,57.500,UES Asset 1 Limited,,,displayable,False
