@@ -5119,5 +5119,41 @@
     "bmu_type": "S",
     "source": "manual",
     "notes": "Secondary (2__) BMU mapped manually so its BM activity shows on the map"
+  },
+  {
+    "osm_id": "way/951797053",
+    "plant_name": "Hirwaun",
+    "bmu_id": "V__KHABI007",
+    "ngc_bmu_id": "HIRWB-1",
+    "bmu_type": "V",
+    "source": "manual",
+    "notes": "Co-located battery at Hirwaun (site also has T_HIRWN-1 OCGT)"
+  },
+  {
+    "osm_id": "way/1307361806",
+    "plant_name": "Wormald Green BESS",
+    "bmu_id": "2__FBPGM001",
+    "ngc_bmu_id": "FBPG01",
+    "bmu_type": "S",
+    "source": "manual",
+    "notes": "Secondary (2__) BMU mapped for BM activity"
+  },
+  {
+    "osm_id": "way/1148936262",
+    "plant_name": "Hawkers Hill Energy Park",
+    "bmu_id": "E_HAWKB-1",
+    "ngc_bmu_id": "HAWKB-1",
+    "bmu_type": "E",
+    "source": "manual",
+    "notes": null
+  },
+  {
+    "osm_id": "way/1122855396",
+    "plant_name": "Bloxwich Battery",
+    "bmu_id": "E_ARNKB-1",
+    "ngc_bmu_id": "ARNKB-1",
+    "bmu_type": "E",
+    "source": "manual",
+    "notes": "bmUnitName AR0006-BLOX inferred to Bloxwich"
   }
 ]

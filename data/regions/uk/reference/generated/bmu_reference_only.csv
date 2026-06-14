@@ -569,7 +569,7 @@ T_FARR-1,FAARW-1,Farr Unit 1,WIND,T,C,92.000,Smartestenergy Limited,,,reference_
 T_FARR-2,FAARW-2,Farr Unit 2,WIND,T,C,92.000,Smartestenergy Limited,,,reference_only,False
 T_FALGD-1,FALGD-1,Fallago Rig Demand,,T,C,0.000,Fallago Rig Wind Farm Limited,,,reference_only,False
 E_FAWN-1,FAWN-1,Fawley Cogen,CCGT,E,C,155.000,ESSO Petroleum Company Ltd,Southern,,reference_only,True
-2__FBPGM001,FBPG01,Wormald Green BESS,,S,C,40.000,BP Gas Marketing Limited,Northern,,reference_only,False
+2__FBPGM001,FBPG01,Wormald Green BESS,,S,C,40.000,BP Gas Marketing Limited,Northern,,reference_only,True
 2__FBPGM002,FBPG02,Hawthorn Pit BESS,,S,C,60.000,BP Gas Marketing Limited,Northern,,reference_only,False
 E_FDUN-1,FDUNT-1,Fort Dunlop,,E,C,99.000,Whitetower Energy Limited,Midlands,,reference_only,True
 2__FCMRO002,FFSE01,2__FCMRO002,,S,C,0.000,BGI Trading Limited,Northern,,reference_only,False
@@ -613,7 +613,7 @@ T_HEYM2-D,HEYM2D-1,Heysham 2 Station Demand,,T,P,0.000,EDF Energy Nuclear Genera
 T_HINB-7,HINB-7,Hinkley Point B Generator 7,NUCLEAR,T,C,0.000,EDF Energy Nuclear Generation,,,reference_only,False
 T_HINB-8,HINB-8,Hinkley Point B Generator 8,NUCLEAR,T,C,0.000,EDF Energy Nuclear Generation,,,reference_only,False
 T_HINB-D,HINBD-1,Hinkley Point B Station Demand,,T,C,4.000,EDF Energy Customers Limited,,,reference_only,False
-V__KHABI007,HIRWB-1,Hirwaun,,V,C,0.000,Habitat Energy Limited,South Wales,,reference_only,False
+V__KHABI007,HIRWB-1,Hirwaun,,V,C,0.000,Habitat Energy Limited,South Wales,,reference_only,True
 2__HJERE000,HJERE000,2__HJERE000,,G,C,0.000,Shell Energy UK Limited,Southern,,reference_only,False
 E_HLGLW-1,HLGLW-1,Hill of Glaschyle,WIND,E,C,28.000,ENGIE Power Limited,North Scotland,,reference_only,False
 V__GFORS004,HLLHG-1,V__GFORS004,,V,P,20.000,Forsa Trading Limited,North Western,,reference_only,False

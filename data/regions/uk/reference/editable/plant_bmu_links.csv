@@ -568,3 +568,7 @@ manual/beinn-an-tuirc-ii,Beinn an Tuirc 2 Wind Farm,E_BTUIW-2,BTUIW-2,E,manual,
 manual/an-suidhe-wind-farm,An Suidhe Wind Farm,T_ANSUW-1,ANSUW-1,T,manual,
 manual/jg-pears-high-marnham,JG Pears High Marnham Power,T_JGPR-1,JGPR-1,T,manual,
 way/94249536,Lochaber Hydroelectric Scheme,2__PMARB001,LCSMH-1,S,manual,Secondary (2__) BMU mapped manually so its BM activity shows on the map
+way/951797053,Hirwaun,V__KHABI007,HIRWB-1,V,manual,Co-located battery at Hirwaun (site also has T_HIRWN-1 OCGT)
+way/1307361806,Wormald Green BESS,2__FBPGM001,FBPG01,S,manual,Secondary (2__) BMU mapped for BM activity
+way/1148936262,Hawkers Hill Energy Park,E_HAWKB-1,HAWKB-1,E,manual,
+way/1122855396,Bloxwich Battery,E_ARNKB-1,ARNKB-1,E,manual,bmUnitName AR0006-BLOX inferred to Bloxwich
