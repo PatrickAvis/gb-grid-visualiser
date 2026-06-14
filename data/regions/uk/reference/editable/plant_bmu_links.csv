@@ -562,3 +562,5 @@ way/951797053,Hirwaun,V__KHABI007,HIRWB-1,V,manual,Co-located battery at Hirwaun
 way/1307361806,Wormald Green BESS,2__FBPGM001,FBPG01,S,manual,Secondary (2__) BMU mapped for BM activity
 way/1148936262,Hawkers Hill Energy Park,E_HAWKB-1,HAWKB-1,E,manual,
 way/1122855396,Bloxwich Battery,E_ARNKB-1,ARNKB-1,E,manual,bmUnitName AR0006-BLOX inferred to Bloxwich
+relation/6949414,Beinn Tharsuinn,E_BETHW-1,BETHW-1,E,auto,
+relation/8410936,Craig,E_CRGTW-1,CRGTW-1,E,auto,

@@ -1,5 +1,3 @@
 osm_id,plant_name,bmu_id,ngc_bmu_id,bmu_type,source,notes
-relation/9319220,Craigengelt Hill Wind Farm,E_CRGTW-1,CRGTW-1,E,manual,Candidate match: bmUnitName=Craig 2 Wind Farm; fuelType=WIND; confidence=medium; reason=site_name_contains_bmUnitName; fuel_compatible=True
 relation/9599112,Glen App Wind Farm,T_GNAPW-1,GNAPW-1,T,manual,Candidate match: bmUnitName=Glen App Windfarm; fuelType=WIND; confidence=medium; reason=site_name_contains_bmUnitName; fuel_compatible=True
-relation/9599113,Blackcraig Wind Farm,E_CRGTW-1,CRGTW-1,E,manual,Candidate match: bmUnitName=Craig 2 Wind Farm; fuelType=WIND; confidence=medium; reason=site_name_contains_bmUnitName; fuel_compatible=True
-relation/20665071,Craiggore Wind Farm,E_CRGTW-1,CRGTW-1,E,manual,Candidate match: bmUnitName=Craig 2 Wind Farm; fuelType=WIND; confidence=medium; reason=site_name_contains_bmUnitName; fuel_compatible=True
+relation/9632223,Keith Hill,T_KTHLW-1,KTHLW-1,T,manual,Candidate match: bmUnitName=KEITH HILL WINDFARM; fuelType=WIND; confidence=medium; reason=site_name_contains_bmUnitName; fuel_compatible=True

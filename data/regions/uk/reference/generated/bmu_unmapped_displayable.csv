@@ -1,5 +1,3 @@
 bmu_id,ngc_bmu_id,bmUnitName,fuelType,bmUnitType,productionOrConsumptionFlag,generationCapacity,leadPartyName,gspGroupName,interconnectorId,category,mapped
-E_BETHW-1,BETHW-1,BETHW-1,WIND,E,P,29.750,SP Renewables (UK) Limited,North Scotland,,displayable,False
-E_CRGTW-1,CRGTW-1,Craig 2 Wind Farm,WIND,E,P,4.700,British Gas Trading Ltd,South Scotland,,displayable,False
 T_GNAPW-1,GNAPW-1,Glen App Windfarm,WIND,T,P,22.000,SP Renewables (UK) Limited,,,displayable,False
 T_KTHLW-1,KTHLW-1,KEITH HILL WINDFARM,WIND,T,P,4.540,Statkraft Markets Gmbh,,,displayable,False

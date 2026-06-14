@@ -5065,5 +5065,23 @@
     "bmu_type": "E",
     "source": "manual",
     "notes": "bmUnitName AR0006-BLOX inferred to Bloxwich"
+  },
+  {
+    "osm_id": "relation/6949414",
+    "plant_name": "Beinn Tharsuinn",
+    "bmu_id": "E_BETHW-1",
+    "ngc_bmu_id": "BETHW-1",
+    "bmu_type": "E",
+    "source": "auto",
+    "notes": null
+  },
+  {
+    "osm_id": "relation/8410936",
+    "plant_name": "Craig",
+    "bmu_id": "E_CRGTW-1",
+    "ngc_bmu_id": "CRGTW-1",
+    "bmu_type": "E",
+    "source": "auto",
+    "notes": null
   }
 ]

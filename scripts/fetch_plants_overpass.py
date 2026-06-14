@@ -22,7 +22,8 @@ from pathlib import Path
 
 import geopandas as gpd
 import requests
-from shapely.geometry import LineString, MultiPolygon, Point, Polygon
+from shapely import concave_hull
+from shapely.geometry import LineString, MultiPoint, MultiPolygon, Point, Polygon
 from shapely.ops import polygonize, unary_union
 
 REPO_ROOT = Path(__file__).resolve().parents[1]
@@ -89,6 +90,19 @@ def way_polygon(element: dict):
     return poly if poly.is_valid else poly.buffer(0)
 
 
+def site_hull(element: dict):
+    """Boundary for a type=site relation (e.g. a wind farm grouping its turbines
+    with no perimeter way): the concave hull of its member generator nodes."""
+    pts = [(m["lon"], m["lat"]) for m in element.get("members", [])
+           if m.get("type") == "node" and "lat" in m and "lon" in m]
+    if len(pts) < 3:
+        return None
+    hull = concave_hull(MultiPoint(pts), ratio=0.3)
+    if hull.geom_type not in ("Polygon", "MultiPolygon") or hull.is_empty:
+        return None
+    return hull if hull.is_valid else hull.buffer(0)
+
+
 def relation_multipolygon(element: dict):
     """Assemble a (multi)polygon from a relation's outer/inner member ways."""
     def member_lines(want_inner: bool) -> list[LineString]:
@@ -128,7 +142,10 @@ def to_features(elements: list[dict]) -> list[dict]:
         elif etype == "way":
             geom = way_polygon(el)
         elif etype == "relation":
-            geom = relation_multipolygon(el)
+            if (el.get("tags") or {}).get("type") == "site":
+                geom = site_hull(el)  # turbine grouping -> hull of its turbines
+            else:
+                geom = relation_multipolygon(el)
         else:
             geom = None
         if geom is None or geom.is_empty:
