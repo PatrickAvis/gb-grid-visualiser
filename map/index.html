@@ -225,6 +225,7 @@
     }
     .bm-legend-item { cursor: default; }
     #bm-legend-list { margin-top: 6px; }
+    .status-count { color: #888; font-size: 0.72rem; font-variant-numeric: tabular-nums; }
     .plant-swatch {
       width: 12px;
       height: 12px;
@@ -303,9 +304,9 @@
     <div id="plant-status-filter" class="plant-legend">
       <div class="legend-title">Plant status</div>
       <div class="plant-legend-list">
-        <label class="plant-legend-item"><input type="checkbox" id="plant-status-operational" checked> Operational</label>
-        <label class="plant-legend-item"><input type="checkbox" id="plant-status-construction" checked> Under construction <span style="color:#ff8f00">▦</span></label>
-        <label class="plant-legend-item"><input type="checkbox" id="plant-status-closed"> Closed <span style="color:#9e9e9e">▦</span></label>
+        <label class="plant-legend-item"><input type="checkbox" id="plant-status-operational" checked> Operational <span class="status-count" id="plant-status-count-operational"></span></label>
+        <label class="plant-legend-item"><input type="checkbox" id="plant-status-construction" checked> Under construction <span style="color:#ff8f00">▦</span> <span class="status-count" id="plant-status-count-construction"></span></label>
+        <label class="plant-legend-item"><input type="checkbox" id="plant-status-closed"> Closed <span style="color:#9e9e9e">▦</span> <span class="status-count" id="plant-status-count-closed"></span></label>
       </div>
     </div>
     <div id="status" class="status">Loading…</div>
@@ -332,7 +333,7 @@
       <div class="plant-legend-subitem" style="margin-left: 0">Colour = fuel type, size = volume. Bids &amp; offers are separate layers.</div>
       <div id="bm-legend-list" class="plant-legend-list"></div>
     </div>
-    <p class="attribution">Zone boundaries &copy; <a href="https://www.neso.energy/data-portal">NESO</a> (UK). Infrastructure &copy; <a href="https://www.openstreetmap.org/copyright">OpenStreetMap</a> contributors.</p>
+    <p class="attribution"><span id="data-provenance"></span>Zone boundaries &copy; <a href="https://www.neso.energy/data-portal">NESO</a> (UK). Infrastructure &copy; <a href="https://www.openstreetmap.org/copyright">OpenStreetMap</a> contributors.</p>
   </div>
 
   <script

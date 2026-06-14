@@ -93,6 +93,13 @@ async function initRegion(regionId) {
       layerManager.setPlantStatusVisible(status, event.target.checked);
     });
   }
+  fetch(`../data/regions/${regionId}/map/plants_meta.json`)
+    .then((response) => (response.ok ? response.json() : null))
+    .then((meta) => {
+      const el = document.getElementById("data-provenance");
+      if (el && meta?.plants_fetched) el.textContent = `OSM plants fetched ${meta.plants_fetched}. `;
+    })
+    .catch(() => {});
   buildSearchPanel(
     (query) => layerManager.searchFeatures(query),
     (result) => layerManager.focusSearchResult(result),

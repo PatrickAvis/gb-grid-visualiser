@@ -61,6 +61,18 @@ export function createLayerManager(map, regionConfig, zoneFilter) {
     plantStatusVisible[status] = visible;
     rebuildFilterableLayers(zoneFilter.geometry);
   }
+  function updatePlantStatusCounts() {
+    const cache = layerCache.plants;
+    if (!cache?.loaded || !cache.data) return;
+    const counts = { operational: 0, construction: 0, closed: 0 };
+    for (const feature of cache.data.features || []) {
+      counts[plantStatus(feature.properties || {})] += 1;
+    }
+    for (const status of Object.keys(counts)) {
+      const el = document.getElementById(`plant-status-count-${status}`);
+      if (el) el.textContent = `(${counts[status].toLocaleString()})`;
+    }
+  }
   const generatorBucketVisibility = {};
   const etysBucketGroups = {};
   const etysBucketVisibility = {};
@@ -672,6 +684,7 @@ export function createLayerManager(map, regionConfig, zoneFilter) {
       if (layerKey === "plants") {
         buildPlantLegend(plantBucketGroups, plantBucketVisibility, setPlantBucketVisible, plantLegendOptions(setStatus));
         setPlantLegendVisible(document.getElementById("toggle-plants")?.checked, plantBucketGroups);
+        updatePlantStatusCounts();
       }
       if (layerKey === "etys_boundaries") {
         buildEtysLegend(etysBucketGroups, etysBucketVisibility, setEtysBucketVisible, etysLegendOptions(setStatus));

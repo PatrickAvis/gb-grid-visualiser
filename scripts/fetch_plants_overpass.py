@@ -249,6 +249,14 @@ def main() -> int:
     gdf.to_file(out_path, driver="GeoJSON")
     geom_counts = gdf.geometry.geom_type.value_counts().to_dict()
     print(f"Wrote {len(gdf):,} plants -> {out_path.relative_to(REPO_ROOT)}  {geom_counts}")
+
+    # Provenance for the map's "data fetched" note.
+    from common import map_dir
+    from datetime import date
+
+    meta_path = map_dir(args.region) / "plants_meta.json"
+    meta_path.write_text(json.dumps({"plants_fetched": date.today().isoformat(), "plant_count": len(gdf)}, indent=2))
+    print(f"Wrote {meta_path.relative_to(REPO_ROOT)}")
     return 0
 
 

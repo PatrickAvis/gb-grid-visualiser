@@ -156,7 +156,7 @@ export function plantMarkerRadius(props) {
 
 // Plant lifecycle status drives a distinct look: operational = solid dark
 // outline; construction (OSM construction:power=plant, e.g. Inch Cape) = amber
-// dashed; closed (disused/abandoned/...) = grey faded dashed.
+// dashed; closed (disused/abandoned/...) = grey dashed (same fill alpha).
 const CONSTRUCTION_STROKE = "#ff8f00";
 const CLOSED_STROKE = "#9e9e9e";
 
@@ -171,7 +171,7 @@ export function plantPolygonStyle(props) {
     case "construction":
       return { color: CONSTRUCTION_STROKE, weight: 1.5, opacity: 0.95, dashArray: "5 4", fillColor: color, fillOpacity: 0.15 };
     case "closed":
-      return { color: CLOSED_STROKE, weight: 1, opacity: 0.8, dashArray: "2 4", fillColor: color, fillOpacity: 0.1 };
+      return { color: CLOSED_STROKE, weight: 1, opacity: 0.75, dashArray: "2 4", fillColor: color, fillOpacity: 0.35 };
     default:
       return { color: "#263238", weight: 1, opacity: 0.75, fillColor: color, fillOpacity: 0.35 };
   }
@@ -184,7 +184,7 @@ export function plantMarkerStyle(props) {
     case "construction":
       return { radius, fillColor: color, color: CONSTRUCTION_STROKE, weight: 2, dashArray: "3 3", opacity: 0.95, fillOpacity: 0.5 };
     case "closed":
-      return { radius, fillColor: color, color: CLOSED_STROKE, weight: 1.5, dashArray: "2 3", opacity: 0.8, fillOpacity: 0.3 };
+      return { radius, fillColor: color, color: CLOSED_STROKE, weight: 1.5, dashArray: "2 3", opacity: 0.95, fillOpacity: 0.9 };
     default:
       return { radius, fillColor: color, color: "#263238", weight: 1, opacity: 0.95, fillOpacity: 0.9 };
   }
