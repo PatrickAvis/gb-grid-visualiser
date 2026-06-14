@@ -1,6 +1,4 @@
 severity,issue,osm_id,plant_name,bmu_id,ngc_bmu_id,source,detail
-warn,fuel_mismatch,way/1017473264,Glen Finglas,T_GLNKW-1,GLNKW-1,auto,site=hydro_non_pumped vs bmu fuelType=WIND
-warn,fuel_mismatch,way/1017473264,Glen Finglas,T_GNAPW-1,GNAPW-1,auto,site=hydro_non_pumped vs bmu fuelType=WIND
 warn,fuel_mismatch,way/1122850401,Whitelee Wind Farm Battery Storage,T_WHILW-2,WHILW-2,auto,site=battery vs bmu fuelType=WIND
 warn,fuel_mismatch,way/1122850401,Whitelee Wind Farm Battery Storage,T_WHILW-1,WHILW-1,manual,site=battery vs bmu fuelType=WIND
 warn,fuel_mismatch,way/1149233319,The Drove Power Plant,E_TDRVE-1,TDRVE-1,auto,site=gas vs bmu fuelType=OTHER
@@ -55,7 +53,6 @@ warn,multi_site,relation/20265488,Tebworth - Solar Farm,T_TEBWB-1,TEBWB-1,auto,"
 warn,multi_site,relation/20265488,Tebworth - Solar Farm,T_TEBWS-1,TEBWS-1,auto,"BMU on 2 sites: 1482245953, 20265488"
 warn,multi_site,relation/7868829,Chapel Lane Solar Farm,E_CHAPB-1,CHAPB-1,auto,"BMU on 4 sites: 1160388718, 374197421, 729739562, 7868829"
 warn,multi_site,relation/8835793,Hagshaw Hill Extension Wind Farm,T_HAGHW-2,HAGHW-2,auto,"BMU on 2 sites: 19405219, 8835793"
-warn,multi_site,relation/9106671,Cross Roads Plantation Solar Farm,E_GRCRB-1,GRCRB-1,auto,"BMU on 2 sites: 1475218524, 9106671"
 warn,multi_site,relation/9539129,Brook Hall Farm Solar Farm,E_BROFB-1,BROFB-1,auto,"BMU on 2 sites: 1148893647, 9539129"
 warn,multi_site,relation/9938532,Fields Farm (Agden),E_GFLDW-1,GFLDW-1,auto,"BMU on 2 sites: 718284355, 9938532"
 warn,multi_site,way/1005424593,Burwell Battery,E_BURWB-1,BURWB-1,auto,"BMU on 2 sites: 1005424593, 1168910658"
@@ -90,7 +87,6 @@ warn,multi_site,way/1411410097,Bulphan Fen Solar Farm Battery Storage,T_BLPFS-1,
 warn,multi_site,way/143791247,Indian Queens Power Station,T_INDQB-1,INDQB-1,auto,"BMU on 2 sites: 143791247, 1484583344"
 warn,multi_site,way/1442566922,Larks Green Solar Farm Battery Storage,T_LARKB-1,LARKB-1,auto,"BMU on 2 sites: 1168494496, 1442566922"
 warn,multi_site,way/1475040946,Burwell 2 BESS,E_BURWB-3,BURWB-3,auto,"BMU on 3 sites: 1005424593, 1168910658, 1475040946"
-warn,multi_site,way/1475218524,Gerrards Cross BESS,E_GRCRB-1,GRCRB-1,auto,"BMU on 2 sites: 1475218524, 9106671"
 warn,multi_site,way/1482190103,Sundon Battery Storage,T_SUNDB-1,SUNDB-1,auto,"BMU on 2 sites: 1482190103, 840178098"
 warn,multi_site,way/1482245953,Tebworth Battery Storage,T_TEBWB-1,TEBWB-1,auto,"BMU on 2 sites: 1482245953, 20265488"
 warn,multi_site,way/1482245953,Tebworth Battery Storage,T_TEBWS-1,TEBWS-1,auto,"BMU on 2 sites: 1482245953, 20265488"
@@ -153,7 +149,6 @@ warn,multi_site,way/956252571,Farnham Landfill Gas Plant,E_FARNB-1,FARNB-1,auto,
 info,name_low_sim,167003752,Chadderton BESS,E_OLDHB-1,OLDHB-1,manual,sim=0.25 vs 'Oldham BESS'
 info,name_low_sim,manual/aberdeen-bay-wind-farm,Aberdeen Bay Offshore Wind Farm,T_ABRBO-1,ABRBO-1,manual,sim=0.29 vs 'ABRBO-1'
 info,name_low_sim,manual/pen-y-cymoedd-wind-farm,Pen y Cymoedd Wind Farm,T_PNYCW-1,PNYCW-1,manual,sim=0.22 vs 'PNYCW-1 Export'
-info,name_low_sim,relation/9106671,Cross Roads Plantation Solar Farm,E_GRCRB-1,GRCRB-1,auto,sim=0.28 vs 'Gerrards Cross BESS'
 info,name_low_sim,way/1149621575,Keadby Power Station,T_KEAD-1,KEAD-1,auto,sim=0.12 vs 'KGL CCGT 1'
 info,name_low_sim,way/1149621575,Keadby Power Station,T_KEADGT-3,KEADGT-3,auto,sim=0.14 vs 'KGL GT 3'
 info,name_low_sim,way/1409249776,Stairfoot Battery Storage & 33kV substation,E_BARNB-1,BARNB-1,auto,sim=0.30 vs 'Hunningley Stairfoot BESS'
@@ -190,7 +185,6 @@ info,osm_id_format,relation/8829625,Walney Wind Farm,T_WLNYO-3,WLNYO-3,auto,geoj
 info,osm_id_format,relation/8829625,Walney Wind Farm,T_WLNYO-4,WLNYO-4,auto,geojson stores '8829625'; joined via normalized osm_id
 info,osm_id_format,relation/8829625,Walney Wind Farm,T_WLNYW-1,WLNYW-1,auto,geojson stores '8829625'; joined via normalized osm_id
 info,osm_id_format,relation/8835793,Hagshaw Hill Extension Wind Farm,T_HAGHW-2,HAGHW-2,auto,geojson stores '8835793'; joined via normalized osm_id
-info,osm_id_format,relation/9106671,Cross Roads Plantation Solar Farm,E_GRCRB-1,GRCRB-1,auto,geojson stores '9106671'; joined via normalized osm_id
 info,osm_id_format,relation/9291197,Water Eaton Farm/Port Farm,E_WTRLN-1,WTRLN-1,auto,geojson stores '9291197'; joined via normalized osm_id
 info,osm_id_format,relation/9455566,Ferry Farm I,T_FIDL-1,FIDL-1,auto,geojson stores '9455566'; joined via normalized osm_id
 info,osm_id_format,relation/9455566,Ferry Farm I,T_FIDL-2,FIDL-2,auto,geojson stores '9455566'; joined via normalized osm_id
@@ -204,8 +198,6 @@ info,osm_id_format,relation/9938532,Fields Farm (Agden),E_GFLDW-1,GFLDW-1,auto,g
 info,osm_id_format,way/1005424593,Burwell Battery,E_BURWB-1,BURWB-1,auto,geojson stores '1005424593'; joined via normalized osm_id
 info,osm_id_format,way/1005424593,Burwell Battery,E_BURWB-2,BURWB-2,auto,geojson stores '1005424593'; joined via normalized osm_id
 info,osm_id_format,way/1005424593,Burwell Battery,E_BURWB-3,BURWB-3,auto,geojson stores '1005424593'; joined via normalized osm_id
-info,osm_id_format,way/1017473264,Glen Finglas,T_GLNKW-1,GLNKW-1,auto,geojson stores '1017473264'; joined via normalized osm_id
-info,osm_id_format,way/1017473264,Glen Finglas,T_GNAPW-1,GNAPW-1,auto,geojson stores '1017473264'; joined via normalized osm_id
 info,osm_id_format,way/1020439730,St. Fillans Power Station,T_SFILD-1,SFILD-1,auto,geojson stores '1020439730'; joined via normalized osm_id
 info,osm_id_format,way/1020439730,St. Fillans Power Station,,SFIL-1,auto,geojson stores '1020439730'; joined via normalized osm_id
 info,osm_id_format,way/1066120013,Bispham Flexible Generation,E_BSPHM-1,BSPHM-1,auto,geojson stores '1066120013'; joined via normalized osm_id

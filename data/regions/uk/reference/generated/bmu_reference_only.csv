@@ -590,7 +590,7 @@ E_GFLDW-1,GFLDW-1,Goole Fields Wind Farm,,E,C,32.800,Edgware Energy Limited,York
 E_GLCHW-1,GLCHW-1,Glenchamber,WIND,E,C,27.440,ENGIE Power Limited,South Scotland,,reference_only,False
 T_GLEND-1,GLEND-1,Dundreggan Station Demand,,T,C,0.100,SSE Generation Ltd,,,reference_only,False
 T_GLNDOD1,GLNDOD1,Glendoe Earthing Tx Stn Dem,,T,C,0.000,SSE Generation Ltd,,,reference_only,True
-T_GLNKW-1,GLNKW-1,GLEN KYLLACHY WINDFARM,WIND,T,C,52.000,EDF Energy Customers Limited,,,reference_only,True
+T_GLNKW-1,GLNKW-1,GLEN KYLLACHY WINDFARM,WIND,T,C,52.000,EDF Energy Customers Limited,,,reference_only,False
 E_GLOFW-1,GLOFW-1,Glens of Foudland,WIND,E,C,26.700,Glens of Foudland Ltd,North Scotland,,reference_only,False
 2__JCPPR002,GLSBB-1,Glassenbury B,,S,C,10.000,Octopus Energy Trading Limited,South Eastern,,reference_only,False
 T_GORDD-1,GORDD-1,Gordonbush Demand,,T,C,0.000,SSE Generation Ltd,,,reference_only,False

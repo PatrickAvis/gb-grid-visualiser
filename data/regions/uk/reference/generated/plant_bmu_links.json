@@ -738,24 +738,6 @@
     "notes": null
   },
   {
-    "osm_id": "way/1017473264",
-    "plant_name": "Glen Finglas",
-    "bmu_id": "T_GLNKW-1",
-    "ngc_bmu_id": "GLNKW-1",
-    "bmu_type": "T",
-    "source": "auto",
-    "notes": null
-  },
-  {
-    "osm_id": "way/1017473264",
-    "plant_name": "Glen Finglas",
-    "bmu_id": "T_GNAPW-1",
-    "ngc_bmu_id": "GNAPW-1",
-    "bmu_type": "T",
-    "source": "auto",
-    "notes": null
-  },
-  {
     "osm_id": "way/1020439730",
     "plant_name": "St. Fillans Power Station",
     "bmu_id": "T_SFILD-1",
@@ -787,15 +769,6 @@
     "plant_name": "Chapel Lane Solar Farm",
     "bmu_id": "E_CHAPB-1",
     "ngc_bmu_id": "CHAPB-1",
-    "bmu_type": "E",
-    "source": "auto",
-    "notes": null
-  },
-  {
-    "osm_id": "relation/9106671",
-    "plant_name": "Cross Roads Plantation Solar Farm",
-    "bmu_id": "E_GRCRB-1",
-    "ngc_bmu_id": "GRCRB-1",
     "bmu_type": "E",
     "source": "auto",
     "notes": null

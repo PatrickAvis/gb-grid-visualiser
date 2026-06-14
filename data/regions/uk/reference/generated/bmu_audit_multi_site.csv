@@ -38,8 +38,6 @@ E_GFLDW-1,GFLDW-1,Fields Farm (Agden),Goole Fields Wind Farm,relation/9938532,Fi
 E_GFLDW-1,GFLDW-1,Fields Farm (Agden),Goole Fields Wind Farm,way/718284355,Fields Farm Solar Farm,consolidate into relation/9938532,
 E_GOSHS-1,GOSHS-1,Goose House Lane Power Station,Goose House Lane,way/1153082218,Goose House Lane Power Station,KEEP,name matches BMU 'Goose House Lane'
 E_GOSHS-1,GOSHS-1,Goose House Lane Power Station,Goose House Lane,way/681589458,Goose Willow Farm,consolidate into way/1153082218,
-E_GRCRB-1,GRCRB-1,Cross Roads Plantation Solar Farm,Gerrards Cross BESS,relation/9106671,Cross Roads Plantation Solar Farm,consolidate into way/1475218524,
-E_GRCRB-1,GRCRB-1,Cross Roads Plantation Solar Farm,Gerrards Cross BESS,way/1475218524,Gerrards Cross BESS,KEEP,name matches BMU 'Gerrards Cross BESS'
 E_PETEM3,PETEM3,Peterborough STOR,Peterborough Power 3,way/1233495394,Peterborough STOR,KEEP,name matches BMU 'Peterborough Power 3'
 E_PETEM3,PETEM3,Peterborough STOR,Peterborough Power 3,way/918927238,Peterborough Energy from Waste,consolidate into way/1233495394,
 E_PLYRK-1,PLYRK-1,Plymouth Energy,Plymouth Rock,way/413032680,Plymouth Energy,KEEP,name matches BMU 'Plymouth Rock'

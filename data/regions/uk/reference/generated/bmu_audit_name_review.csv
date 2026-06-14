@@ -2,7 +2,6 @@ osm_id,plant_name,bmu_id,ngc_bmu_id,bmu_name,detail,source,suggested_action
 167003752,Chadderton BESS,E_OLDHB-1,OLDHB-1,Oldham BESS,sim=0.25 vs 'Oldham BESS',manual,verify the link is the same physical site
 manual/aberdeen-bay-wind-farm,Aberdeen Bay Offshore Wind Farm,T_ABRBO-1,ABRBO-1,ABRBO-1,sim=0.29 vs 'ABRBO-1',manual,verify the link is the same physical site
 manual/pen-y-cymoedd-wind-farm,Pen y Cymoedd Wind Farm,T_PNYCW-1,PNYCW-1,PNYCW-1 Export,sim=0.22 vs 'PNYCW-1 Export',manual,verify the link is the same physical site
-relation/9106671,Cross Roads Plantation Solar Farm,E_GRCRB-1,GRCRB-1,Gerrards Cross BESS,sim=0.28 vs 'Gerrards Cross BESS',auto,verify the link is the same physical site
 way/1149621575,Keadby Power Station,T_KEAD-1,KEAD-1,KGL CCGT 1,sim=0.12 vs 'KGL CCGT 1',auto,verify the link is the same physical site
 way/1149621575,Keadby Power Station,T_KEADGT-3,KEADGT-3,KGL GT 3,sim=0.14 vs 'KGL GT 3',auto,verify the link is the same physical site
 way/1409249776,Stairfoot Battery Storage & 33kV substation,E_BARNB-1,BARNB-1,Hunningley Stairfoot BESS,sim=0.30 vs 'Hunningley Stairfoot BESS',auto,verify the link is the same physical site
