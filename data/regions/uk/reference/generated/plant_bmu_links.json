@@ -2898,7 +2898,7 @@
     "notes": null
   },
   {
-    "osm_id": "manual/dinorwig",
+    "osm_id": "relation/6901664",
     "plant_name": "Dinorwig Power Station",
     "bmu_id": "T_DINO-1",
     "ngc_bmu_id": "DINO-1",
@@ -2907,7 +2907,7 @@
     "notes": "Manual plant point; absent from OSM plant export"
   },
   {
-    "osm_id": "manual/dinorwig",
+    "osm_id": "relation/6901664",
     "plant_name": "Dinorwig Power Station",
     "bmu_id": "T_DINO-2",
     "ngc_bmu_id": "DINO-2",
@@ -2916,7 +2916,7 @@
     "notes": "Manual plant point; absent from OSM plant export"
   },
   {
-    "osm_id": "manual/dinorwig",
+    "osm_id": "relation/6901664",
     "plant_name": "Dinorwig Power Station",
     "bmu_id": "T_DINO-3",
     "ngc_bmu_id": "DINO-3",
@@ -2925,7 +2925,7 @@
     "notes": "Manual plant point; absent from OSM plant export"
   },
   {
-    "osm_id": "manual/dinorwig",
+    "osm_id": "relation/6901664",
     "plant_name": "Dinorwig Power Station",
     "bmu_id": "T_DINO-4",
     "ngc_bmu_id": "DINO-4",
@@ -2934,7 +2934,7 @@
     "notes": "Manual plant point; absent from OSM plant export"
   },
   {
-    "osm_id": "manual/dinorwig",
+    "osm_id": "relation/6901664",
     "plant_name": "Dinorwig Power Station",
     "bmu_id": "T_DINO-5",
     "ngc_bmu_id": "DINO-5",
@@ -2943,7 +2943,7 @@
     "notes": "Manual plant point; absent from OSM plant export"
   },
   {
-    "osm_id": "manual/dinorwig",
+    "osm_id": "relation/6901664",
     "plant_name": "Dinorwig Power Station",
     "bmu_id": "T_DINO-6",
     "ngc_bmu_id": "DINO-6",
@@ -3429,7 +3429,7 @@
     "notes": "Candidate match: bmUnitName=Greater Gabbard Module 3; fuelType=WIND; confidence=medium; reason=site_name_contains_bmUnitName; fuel_compatible=True"
   },
   {
-    "osm_id": "790946237",
+    "osm_id": "way/790946237",
     "plant_name": "Triton Knoll Wind Farm",
     "bmu_id": "T_TKNWW-1",
     "ngc_bmu_id": "TKNWW-1",
@@ -3780,7 +3780,7 @@
     "notes": "Baillie Wind Farm"
   },
   {
-    "osm_id": "manual/blackcraig-wind-farm",
+    "osm_id": "relation/9599113",
     "plant_name": "Blackcraig Wind Farm",
     "bmu_id": "T_BLKWW-1",
     "ngc_bmu_id": "BLKWW-1",
@@ -3807,7 +3807,7 @@
     "notes": "Clay Tye BESS 2"
   },
   {
-    "osm_id": "manual/pines-burn-wind-farm",
+    "osm_id": "relation/20157713",
     "plant_name": "Pines Burn Wind Farm",
     "bmu_id": "E_PIBUW-1",
     "ngc_bmu_id": "PIBUW-1",
@@ -3843,7 +3843,7 @@
     "notes": "Limekiln Wind Farm"
   },
   {
-    "osm_id": "manual/rampion-wind-farm",
+    "osm_id": "relation/12617390",
     "plant_name": "Rampion Wind Farm",
     "bmu_id": "T_RMPNO-1",
     "ngc_bmu_id": "RMPNO-1",
@@ -3852,7 +3852,7 @@
     "notes": "Rampion Wind Farm 1"
   },
   {
-    "osm_id": "manual/rampion-wind-farm",
+    "osm_id": "relation/12617390",
     "plant_name": "Rampion Wind Farm",
     "bmu_id": "T_RMPNO-2",
     "ngc_bmu_id": "RMPNO-2",
@@ -3861,7 +3861,7 @@
     "notes": "Rampion Wind Farm 2"
   },
   {
-    "osm_id": "manual/kilgallioch-wind-farm",
+    "osm_id": "relation/9396275",
     "plant_name": "Kilgallioch Wind Farm",
     "bmu_id": "T_KLGLW-1",
     "ngc_bmu_id": "KLGLW-1",
@@ -3870,7 +3870,7 @@
     "notes": "Kilgallioch Wind Farm"
   },
   {
-    "osm_id": "manual/creag-riabhach-wind-farm",
+    "osm_id": "relation/15073556",
     "plant_name": "Creag Riabhach Wind Farm",
     "bmu_id": "T_CREAW-1",
     "ngc_bmu_id": "CREAW-1",
@@ -4014,7 +4014,7 @@
     "notes": "Dalquhandy Wind Farm"
   },
   {
-    "osm_id": "manual/fallago-rig-wind-farm",
+    "osm_id": "relation/8185279",
     "plant_name": "Fallago Rig Wind Farm",
     "bmu_id": "T_FALGW-1",
     "ngc_bmu_id": "FALGW-1",
@@ -4032,7 +4032,7 @@
     "notes": "Freasdail Wind Farm"
   },
   {
-    "osm_id": "manual/galawhistle-wind-farm",
+    "osm_id": "relation/13615670",
     "plant_name": "Galawhistle Wind Farm",
     "bmu_id": "T_GLWSW-1",
     "ngc_bmu_id": "GLWSW-1",
@@ -4068,7 +4068,7 @@
     "notes": "Kennoxhead Wind Farm"
   },
   {
-    "osm_id": "manual/arecleoch-wind-farm",
+    "osm_id": "relation/7872032",
     "plant_name": "Arecleoch Wind Farm",
     "bmu_id": "T_ARCHW-1",
     "ngc_bmu_id": "ARCHW-1",
@@ -4077,7 +4077,7 @@
     "notes": "Arecleoch Wind Farm"
   },
   {
-    "osm_id": "manual/benbrack-wind-farm",
+    "osm_id": "relation/20152387",
     "plant_name": "Benbrack Wind Farm",
     "bmu_id": "T_BENBW-1",
     "ngc_bmu_id": "BENBW-1",
@@ -4248,7 +4248,7 @@
     "notes": "Hornsea 2 unit 3"
   },
   {
-    "osm_id": "manual/burn-of-whilk-wind-farm",
+    "osm_id": "relation/9584471",
     "plant_name": "Burn of Whilk Wind Farm",
     "bmu_id": "E_BNWKW-1",
     "ngc_bmu_id": "BNWKW-1",
@@ -4311,7 +4311,7 @@
     "notes": "Heysham 2 Generator 8"
   },
   {
-    "osm_id": "790946237",
+    "osm_id": "way/790946237",
     "plant_name": "Triton Knoll Wind Farm",
     "bmu_id": "T_TKNEW-1",
     "ngc_bmu_id": "TKNEW-1",
@@ -4419,7 +4419,7 @@
     "notes": "Gwynt y M\u00f4r 576MW offshore wind, OSP West 28"
   },
   {
-    "osm_id": "manual/dorenell-wind-farm",
+    "osm_id": "relation/9590825",
     "plant_name": "Dorenell Wind Farm",
     "bmu_id": "T_DOREW-1",
     "ngc_bmu_id": "DOREW-1",
@@ -4428,7 +4428,7 @@
     "notes": null
   },
   {
-    "osm_id": "manual/dorenell-wind-farm",
+    "osm_id": "relation/9590825",
     "plant_name": "Dorenell Wind Farm",
     "bmu_id": "T_DOREW-2",
     "ngc_bmu_id": "DOREW-2",
@@ -4446,7 +4446,7 @@
     "notes": null
   },
   {
-    "osm_id": "manual/crystal-rig-wind-farm",
+    "osm_id": "relation/7872001",
     "plant_name": "Crystal Rig Wind Farm",
     "bmu_id": "T_CRYRW-2",
     "ngc_bmu_id": "CRYRW-2",
@@ -4464,7 +4464,7 @@
     "notes": "Crystal Rig III 14MW"
   },
   {
-    "osm_id": "manual/bhlaraidh-wind-farm",
+    "osm_id": "relation/8039767",
     "plant_name": "Bhlaraidh Wind Farm",
     "bmu_id": "T_BHLAW-1",
     "ngc_bmu_id": "BHLAW-1",
@@ -4473,7 +4473,7 @@
     "notes": null
   },
   {
-    "osm_id": "manual/gordonbush-wind-farm",
+    "osm_id": "relation/6949356",
     "plant_name": "Gordonbush Wind Farm",
     "bmu_id": "T_GORDW-1",
     "ngc_bmu_id": "GORDW-1",
@@ -4482,7 +4482,7 @@
     "notes": null
   },
   {
-    "osm_id": "manual/black-law-wind-farm",
+    "osm_id": "relation/2321400",
     "plant_name": "Black Law Wind Farm",
     "bmu_id": "T_BLLA-1",
     "ngc_bmu_id": "BLLA-1",
@@ -4491,7 +4491,7 @@
     "notes": "Black Law original 118MW"
   },
   {
-    "osm_id": "manual/black-law-wind-farm",
+    "osm_id": "relation/2321400",
     "plant_name": "Black Law Wind Farm",
     "bmu_id": "T_BLLA-2",
     "ngc_bmu_id": "BLLA-2",
@@ -4500,7 +4500,7 @@
     "notes": "Black Law Extension 69MW"
   },
   {
-    "osm_id": "manual/beinneun-wind-farm",
+    "osm_id": "relation/9353227",
     "plant_name": "Beinneun Wind Farm",
     "bmu_id": "T_BEINW-1",
     "ngc_bmu_id": "BEINW-1",
@@ -4518,7 +4518,7 @@
     "notes": "228MW"
   },
   {
-    "osm_id": "manual/dogger-bank-a",
+    "osm_id": "way/889977926",
     "plant_name": "Dogger Bank A Offshore Wind Farm",
     "bmu_id": "T_DBAWO-1",
     "ngc_bmu_id": "DBAWO-1",
@@ -4527,7 +4527,7 @@
     "notes": null
   },
   {
-    "osm_id": "manual/dogger-bank-a",
+    "osm_id": "way/889977926",
     "plant_name": "Dogger Bank A Offshore Wind Farm",
     "bmu_id": "T_DBAWO-2",
     "ngc_bmu_id": "DBAWO-2",
@@ -4536,7 +4536,7 @@
     "notes": null
   },
   {
-    "osm_id": "manual/dogger-bank-a",
+    "osm_id": "way/889977926",
     "plant_name": "Dogger Bank A Offshore Wind Farm",
     "bmu_id": "T_DBAWO-3",
     "ngc_bmu_id": "DBAWO-3",
@@ -4545,7 +4545,7 @@
     "notes": null
   },
   {
-    "osm_id": "manual/dogger-bank-a",
+    "osm_id": "way/889977926",
     "plant_name": "Dogger Bank A Offshore Wind Farm",
     "bmu_id": "T_DBAWO-4",
     "ngc_bmu_id": "DBAWO-4",
@@ -4554,7 +4554,7 @@
     "notes": null
   },
   {
-    "osm_id": "manual/dogger-bank-a",
+    "osm_id": "way/889977926",
     "plant_name": "Dogger Bank A Offshore Wind Farm",
     "bmu_id": "T_DBAWO-5",
     "ngc_bmu_id": "DBAWO-5",
@@ -4563,7 +4563,7 @@
     "notes": null
   },
   {
-    "osm_id": "manual/south-kyle-wind-farm",
+    "osm_id": "relation/17577116",
     "plant_name": "South Kyle Wind Farm",
     "bmu_id": "T_SOKYW-1",
     "ngc_bmu_id": "SOKYW-1",
@@ -4572,7 +4572,7 @@
     "notes": "427MW onshore wind, East Ayrshire"
   },
   {
-    "osm_id": "manual/east-anglia-one",
+    "osm_id": "way/518314314",
     "plant_name": "East Anglia One Offshore Wind Farm",
     "bmu_id": "T_EAAO-1",
     "ngc_bmu_id": "EAAO-1",
@@ -4581,7 +4581,7 @@
     "notes": "EA1 offshore 358MW"
   },
   {
-    "osm_id": "manual/east-anglia-one",
+    "osm_id": "way/518314314",
     "plant_name": "East Anglia One Offshore Wind Farm",
     "bmu_id": "T_EAAO-2",
     "ngc_bmu_id": "EAAO-2",
@@ -4590,7 +4590,7 @@
     "notes": "EA1 offshore 367MW"
   },
   {
-    "osm_id": "manual/clyde-wind-farm",
+    "osm_id": "relation/6949277",
     "plant_name": "Clyde Wind Farm",
     "bmu_id": "T_CLDCW-1",
     "ngc_bmu_id": "CLDCW-1",
@@ -4599,7 +4599,7 @@
     "notes": "Clyde Central 200MW"
   },
   {
-    "osm_id": "manual/clyde-wind-farm",
+    "osm_id": "relation/6949277",
     "plant_name": "Clyde Wind Farm",
     "bmu_id": "T_CLDNW-1",
     "ngc_bmu_id": "CLDNW-1",
@@ -4608,7 +4608,7 @@
     "notes": "Clyde North 200MW"
   },
   {
-    "osm_id": "manual/clyde-wind-farm",
+    "osm_id": "relation/6949277",
     "plant_name": "Clyde Wind Farm",
     "bmu_id": "T_CLDSW-1",
     "ngc_bmu_id": "CLDSW-1",
@@ -4644,7 +4644,7 @@
     "notes": "Aikengall 2A 163MW, East Lothian"
   },
   {
-    "osm_id": "manual/cumberhead-west-wind-farm",
+    "osm_id": "relation/19404961",
     "plant_name": "Cumberhead West Wind Farm",
     "bmu_id": "T_CUMHW-2",
     "ngc_bmu_id": "CUMHW-2",
@@ -4662,7 +4662,7 @@
     "notes": "Dunmaglass 100MW, Highland"
   },
   {
-    "osm_id": "manual/griffin-wind-farm",
+    "osm_id": "relation/6949300",
     "plant_name": "Griffin Wind Farm",
     "bmu_id": "T_GRIFW-1",
     "ngc_bmu_id": "GRIFW-1",
@@ -4671,7 +4671,7 @@
     "notes": "Griffin WF unit 1, 102MW, Perthshire"
   },
   {
-    "osm_id": "manual/griffin-wind-farm",
+    "osm_id": "relation/6949300",
     "plant_name": "Griffin Wind Farm",
     "bmu_id": "T_GRIFW-2",
     "ngc_bmu_id": "GRIFW-2",
@@ -4680,7 +4680,7 @@
     "notes": "Griffin WF unit 2, 104MW, Perthshire"
   },
   {
-    "osm_id": "manual/hadyard-hill-wind-farm",
+    "osm_id": "relation/6949332",
     "plant_name": "Hadyard Hill Wind Farm",
     "bmu_id": "T_HADHW-1",
     "ngc_bmu_id": "HADHW-1",
@@ -4689,7 +4689,7 @@
     "notes": "Hadyard Hill 130MW, South Ayrshire"
   },
   {
-    "osm_id": "manual/north-kyle-wind-farm",
+    "osm_id": "relation/19453061",
     "plant_name": "North Kyle Wind Farm",
     "bmu_id": "T_NOKYW-1",
     "ngc_bmu_id": "NOKYW-1",
@@ -4698,7 +4698,7 @@
     "notes": "North Kyle unit 1, 106MW"
   },
   {
-    "osm_id": "manual/north-kyle-wind-farm",
+    "osm_id": "relation/19453061",
     "plant_name": "North Kyle Wind Farm",
     "bmu_id": "T_NOKYW-2",
     "ngc_bmu_id": "NOKYW-2",
@@ -4707,7 +4707,7 @@
     "notes": "North Kyle unit 2, 106MW"
   },
   {
-    "osm_id": "manual/dogger-bank-b",
+    "osm_id": "way/1157893250",
     "plant_name": "Dogger Bank B Offshore Wind Farm",
     "bmu_id": "T_DBBWO-1",
     "ngc_bmu_id": "DBBWO-1",
@@ -4716,7 +4716,7 @@
     "notes": null
   },
   {
-    "osm_id": "manual/dogger-bank-b",
+    "osm_id": "way/1157893250",
     "plant_name": "Dogger Bank B Offshore Wind Farm",
     "bmu_id": "T_DBBWO-2",
     "ngc_bmu_id": "DBBWO-2",
@@ -4725,7 +4725,7 @@
     "notes": null
   },
   {
-    "osm_id": "manual/dogger-bank-b",
+    "osm_id": "way/1157893250",
     "plant_name": "Dogger Bank B Offshore Wind Farm",
     "bmu_id": "T_DBBWO-3",
     "ngc_bmu_id": "DBBWO-3",
@@ -4734,7 +4734,7 @@
     "notes": null
   },
   {
-    "osm_id": "manual/dogger-bank-b",
+    "osm_id": "way/1157893250",
     "plant_name": "Dogger Bank B Offshore Wind Farm",
     "bmu_id": "T_DBBWO-4",
     "ngc_bmu_id": "DBBWO-4",
@@ -4743,7 +4743,7 @@
     "notes": null
   },
   {
-    "osm_id": "manual/dogger-bank-b",
+    "osm_id": "way/1157893250",
     "plant_name": "Dogger Bank B Offshore Wind Farm",
     "bmu_id": "T_DBBWO-5",
     "ngc_bmu_id": "DBBWO-5",
@@ -4752,7 +4752,7 @@
     "notes": null
   },
   {
-    "osm_id": "manual/gordonbush-wind-farm",
+    "osm_id": "relation/6949356",
     "plant_name": "Gordonbush Wind Farm",
     "bmu_id": "T_GORDW-2",
     "ngc_bmu_id": "GORDW-2",
@@ -4761,7 +4761,7 @@
     "notes": "Gordonbush WF Extension 59MW"
   },
   {
-    "osm_id": "manual/race-bank-wind-farm",
+    "osm_id": "way/565030207",
     "plant_name": "Race Bank Offshore Wind Farm",
     "bmu_id": "T_RCBKO-1",
     "ngc_bmu_id": "RCBKO-1",
@@ -4770,7 +4770,7 @@
     "notes": "Race Bank Zone 1 284MW"
   },
   {
-    "osm_id": "manual/race-bank-wind-farm",
+    "osm_id": "way/565030207",
     "plant_name": "Race Bank Offshore Wind Farm",
     "bmu_id": "T_RCBKO-2",
     "ngc_bmu_id": "RCBKO-2",
@@ -4788,7 +4788,7 @@
     "notes": "Aikengall II 64MW, same site as Aikengall 2A"
   },
   {
-    "osm_id": "manual/crystal-rig-wind-farm",
+    "osm_id": "relation/7872001",
     "plant_name": "Crystal Rig Wind Farm",
     "bmu_id": "T_CRYRW-4",
     "ngc_bmu_id": "CRYRW-4",
@@ -4842,7 +4842,7 @@
     "notes": null
   },
   {
-    "osm_id": "manual/enoch-hill-wind-farm",
+    "osm_id": "relation/19453343",
     "plant_name": "Enoch Hill Wind Farm",
     "bmu_id": "T_ENHLW-1",
     "ngc_bmu_id": "ENHLW-1",
@@ -4851,7 +4851,7 @@
     "notes": null
   },
   {
-    "osm_id": "manual/mark-hill-wind-farm",
+    "osm_id": "relation/7998314",
     "plant_name": "Mark Hill Wind Farm",
     "bmu_id": "T_MKHLW-1",
     "ngc_bmu_id": "MKHLW-1",
@@ -4905,7 +4905,7 @@
     "notes": null
   },
   {
-    "osm_id": "manual/middle-muir-wind-farm",
+    "osm_id": "relation/12862506",
     "plant_name": "Middle Muir Wind Farm",
     "bmu_id": "T_MIDMW-1",
     "ngc_bmu_id": "MIDMW-1",
@@ -4914,7 +4914,7 @@
     "notes": null
   },
   {
-    "osm_id": "manual/douglas-west-wind-farm",
+    "osm_id": "relation/13616181",
     "plant_name": "Douglas West Wind Farm",
     "bmu_id": "T_DOUGW-1",
     "ngc_bmu_id": "DOUGW-1",
@@ -4941,7 +4941,7 @@
     "notes": null
   },
   {
-    "osm_id": "manual/kilbraur-wind-farm",
+    "osm_id": "relation/6949355",
     "plant_name": "Kilbraur Wind Farm",
     "bmu_id": "T_KILBW-1",
     "ngc_bmu_id": "KILBW-1",
@@ -4959,7 +4959,7 @@
     "notes": null
   },
   {
-    "osm_id": "manual/millennium-wind-farm",
+    "osm_id": "relation/8039743",
     "plant_name": "Millennium Wind Farm",
     "bmu_id": "T_MILWW-1",
     "ngc_bmu_id": "MILWW-1",
@@ -4986,7 +4986,7 @@
     "notes": null
   },
   {
-    "osm_id": "manual/beinn-an-tuirc-iii",
+    "osm_id": "relation/15016558",
     "plant_name": "Beinn an Tuirc III Wind Farm",
     "bmu_id": "E_BTUIW-3",
     "ngc_bmu_id": "BTUIW-3",

@@ -7,14 +7,9 @@ manual/andershaw-wind-farm,Andershaw Wind Farm,Statkraft Markets Gmbh,wind,35 MW
 manual/achruach-wind-farm,AChruach Wind Farm,Mobius Renewables Gen. (GB2),wind,42.6 MW,56.12748,-5.34365,42.6,wind_onshore,Absent from OSM plant export; coords from operator data
 manual/afton-wind-farm,Afton Wind Farm,Afton Wind Farm Limited,wind,50 MW,55.31161,-4.16848,50,wind_onshore,Absent from OSM plant export; coords from operator data
 manual/baillie-wind-farm,Baillie Wind Farm,Statkraft Markets Gmbh,wind,52.5 MW,54.602733,-3.503099,52.5,wind_onshore,Absent from OSM plant export; E_BABAW-1 and T_BEINW-1
-manual/blackcraig-wind-farm,Blackcraig Wind Farm,Blackcraig Wind Farm Limited,wind,56.2 MW,55.128768,-4.056825,56.216,wind_onshore,Absent from OSM plant export; coords from Blackcraig Substation
-manual/pines-burn-wind-farm,Pines Burn Wind Farm,Npower Commercial Gas Limited,wind,36 MW,55.34217,-2.72556,36,wind_onshore,Absent from OSM plant export; coords from operator data
 manual/toddleburn-wind-farm,Toddleburn,SSE Generation Ltd,wind,31.6 MW,55.76837,-2.87283,31.6,wind_onshore,Absent from OSM plant export; coords from operator data
 manual/minnygap-wind-farm,Minnygap Wind Farm,Minnygap Energy Limited,wind,25 MW,55.25205,-3.53209,25,wind_onshore,Absent from OSM plant export; coords from operator data
 manual/limekiln-wind-farm,Limekiln Wind Farm,Limekiln Extension Ltd,wind,106 MW,58.52329,-3.7423,106,wind_onshore,Absent from OSM plant export; coords from operator data
-manual/rampion-wind-farm,Rampion Wind Farm,Rampion Offshore Windfarm Ltd,wind,400 MW,50.6651,-0.2071,400.2,wind,Absent from OSM plant export; T_RMPNO-1 and T_RMPNO-2
-manual/kilgallioch-wind-farm,Kilgallioch Wind Farm,SP Renewables (UK) Limited,wind,228 MW,55.01749,-4.7754,228,wind_onshore,Absent from OSM plant export; coords from operator data
-manual/creag-riabhach-wind-farm,Creag Riabhach Wind Farm,Creag Riabhach Wind Farm Ltd,wind,93 MW,58.22001,-4.51092,93,wind_onshore,Absent from OSM plant export; coords from operator data
 manual/edinbane-wind-farm,Edinbane Windfarm,Vattenfall Wind Power Ltd,wind,41.4 MW,57.43091,-6.41947,41.4,wind_onshore,Absent from OSM plant export; coords from operator data
 manual/coire-na-cloiche-wind-farm,Coire Na Cloiche Wind Farm,Statkraft Markets Gmbh,wind,30.52 MW,57.79054,-4.37826,30.52,wind_onshore,Absent from OSM plant export; coords from operator data
 manual/conon-cascade,Conon Cascade,SSE Generation Ltd,hydro,95.226 MW,57.554,-4.598,95.226,hydro_non_pumped,Absent from OSM plant export; coords from operator data
@@ -22,14 +17,10 @@ manual/garry-cascade,Garry Cascade,SSE Generation Ltd,hydro,40 MW,57.07297,-4.77
 manual/hunterston-b-power-station,Hunterston B Power Station,EDF Energy Nuclear Generation,nuclear,1020 MW,55.7221,-4.8901,1020,nuclear,Absent from OSM plant export; T_HUNB-7 and T_HUNB-8
 manual/bad-a-cheo-wind-farm,Bad a Cheo Wind Farm,RWE Generation UK plc,wind,270 MW,58.41728,-3.42371,270,wind_onshore,Absent from OSM plant export; T_BDCHW-1
 manual/dalquhandy-wind-farm,Dalquhandy Wind Farm,Statkraft Markets Gmbh,wind,42.846 MW,55.57726,-3.91699,42.846,wind_onshore,Absent from OSM plant export; T_DALQW-1
-manual/fallago-rig-wind-farm,Fallago Rig Wind Farm,Fallago Rig Wind Farm Limited,wind,144 MW,55.82923,-2.66838,144,wind_onshore,Absent from OSM plant export; T_FALGW-1
 manual/freasdail-wind-farm,Freasdail Wind Farm,Freasdail Energy Limited,wind,22.2 MW,55.76942,-5.46335,22.2,wind_onshore,Absent from OSM plant export; T_FSDLW-1
-manual/galawhistle-wind-farm,Galawhistle Wind Farm,GALAWHISTLE WIND FARM,wind,55.2 MW,55.54637,-3.94644,55.2,wind_onshore,Absent from OSM plant export; T_GLWSW-1
 manual/halsary-wind-farm,Halsary Wind Farm,SP Renewables (UK) Limited,wind,30 MW,58.43556,-3.40356,30,wind_onshore,Absent from OSM plant export; T_HALSW-1
 manual/harburnhead-wind-farm,Harburnhead Wind Farm,LDV Harburnhead Ltd,wind,51.7 MW,55.80362,-3.53772,51.7,wind_onshore,Absent from OSM plant export; E_HBHDW-1
 manual/kennoxhead-wind-farm,Kennoxhead Wind Farm,Kennoxhead Wind Farm Limited,wind,60 MW,55.49444,-3.96765,60,wind_onshore,Absent from OSM plant export; T_KENNW-1
-manual/arecleoch-wind-farm,Arecleoch Wind Farm,SP Renewables (UK) Limited,wind,114 MW,55.06973,-4.86819,114,wind_onshore,Absent from OSM plant export; T_ARCHW-1
-manual/benbrack-wind-farm,Benbrack Wind Farm,Benbrack Wind Farm Limited,wind,67 MW,55.28131,-4.30733,67,wind_onshore,Absent from OSM plant export; T_BENBW-1
 manual/kype-wind-farm,Kype Wind Farm,OnPath Energy Limited,wind,89 MW,55.62006,-4.04213,89,wind_onshore,Absent from OSM plant export; T_KPMRW-1
 manual/kype-muir-wind-farm-extension,Kype Muir Wind Farm Extension,Kype Extension Wind Farm Ltd,wind,67 MW,55.60799,-4.05796,67,wind_onshore,Absent from OSM plant export; T_KYPEW-1
 manual/twentyshilling-hill-wind-farm,Twentyshilling Hill Wind Farm,Twentyshilling Limited,wind,37.8 MW,55.31262,-3.91574,37.8,wind_onshore,Absent from OSM plant export; T_TWSHW-1
@@ -37,53 +28,28 @@ manual/tullo-wind-farm,Tullo Wind Farm,Eneco Energy Trade,wind,17 MW,56.83654,-2
 manual/cour-wind-farm,Cour Wind Farm,Cour Wind farm (Scotland) Ltd,wind,20.5 MW,55.67247,-5.51623,20.5,wind_onshore,Absent from OSM plant export; T_COUWW-1
 manual/carraig-gheal-wind-farm,Carraig Gheal Wind Farm,Statkraft Markets Gmbh,wind,46 MW,56.33713,-5.27363,46,wind_onshore,Absent from OSM plant export; T_CRGHW-1
 manual/corriegarth-wind-farm,Corriegarth Wind Farm,Corriegarth Wind Energy LTD,wind,69 MW,57.18805,-4.36074,69,wind_onshore,Absent from OSM plant export; T_CGTHW-1
-manual/burn-of-whilk-wind-farm,Burn of Whilk Wind Farm,Eneco Energy Trade,wind,22.5 MW,58.35491,-3.2142,22.5,wind_onshore,Absent from OSM plant export; E_BNWKW-1
 manual/brentwood-bess,Brentwood BESS,EDF Energy Customers Limited,battery,52 MW,51.6405,0.362,52,battery,Absent from OSM plant export; E_BRETB-1/2; east of Shenfield substation
 manual/green-knowes-wind-farm,Green Knowes Wind Farm,ScottishPower Renewables,wind,27 MW,56.24726,-3.66553,27,wind_onshore,Absent from OSM plant export; V__PHABI006 Glendevon
-790946237,Triton Knoll Offshore Wind Farm,RWE,wind,857 MW,53.4467,0.5467,857,wind_offshore,OSM relation/790946237; 33km off Lincolnshire coast; absent from plant export
-manual/dorenell-wind-farm,Dorenell Wind Farm,EDF Renewables,wind,314 MW,57.3530,-3.1190,314,wind_onshore,"OSM relation/9590825; Cabrach area, Moray; absent from plant export"
 manual/strathy-north-wind-farm,Strathy North Wind Farm,SSE Renewables,wind,70 MW,58.5280,-4.0250,70,wind_onshore,"OSM relation/8087274; Strathy Forest, north Sutherland; absent from plant export"
-manual/crystal-rig-wind-farm,Crystal Rig Wind Farm,ERG,wind,200 MW,55.8680,-2.5610,200,wind_onshore,"OSM relation/7872001; Crystal Rig I+II, Lammermuir Hills; absent from plant export"
 manual/crystal-rig-iii-wind-farm,Crystal Rig III Wind Farm,ERG,wind,14 MW,55.8720,-2.5480,14,wind_onshore,OSM relation/13616456; Crystal Rig III extension; absent from plant export
-manual/bhlaraidh-wind-farm,Bhlaraidh Wind Farm,SSE Renewables,wind,108 MW,57.1780,-4.6050,108,wind_onshore,"OSM relation/8039767; Great Glen, NW of Loch Ness; absent from plant export"
-manual/gordonbush-wind-farm,Gordonbush Wind Farm,SSE Renewables,wind,87 MW,58.0200,-3.9200,87,wind_onshore,"OSM relation/6949356; Sutherland, north of Dornoch Firth; absent from plant export"
-manual/black-law-wind-farm,Black Law Wind Farm,EDF Renewables,wind,187 MW,55.6660,-3.8270,187,wind_onshore,"OSM relation/2321400; South Lanarkshire, west of Forth; absent from plant export"
-manual/beinneun-wind-farm,Beinneun Wind Farm,SSE Renewables,wind,109 MW,57.0720,-4.9230,109,wind_onshore,"OSM relation/9353227; near Invergarry, Highland; absent from plant export"
 manual/pen-y-cymoedd-wind-farm,Pen y Cymoedd Wind Farm,Vattenfall,wind,228 MW,51.7310,-3.7010,228,wind_onshore,"OSM relation/7906469; Neath Port Talbot, Wales; absent from plant export"
-manual/dogger-bank-a,Dogger Bank A Offshore Wind Farm,SSE Renewables / Equinor,wind,1200 MW,54.7700,1.9100,1200,wind_offshore,"OSM way/889977926; Dogger Bank, North Sea, ~130km off Yorkshire; absent from plant export"
-manual/south-kyle-wind-farm,South Kyle Wind Farm,Vattenfall,wind,427 MW,55.3210,-4.2720,427,wind_onshore,"No OSM relation; 5km east of Dalmellington, East Ayrshire"
-manual/east-anglia-one,East Anglia One Offshore Wind Farm,ScottishPower Renewables,wind,714 MW,52.2300,2.4800,714,wind_offshore,"No OSM relation; 43km off Suffolk coast, North Sea"
-manual/clyde-wind-farm,Clyde Wind Farm,SSE Renewables,wind,522 MW,55.5020,-3.7350,522,wind_onshore,"No OSM relation; Clyde Central/North/South, near Abington, South Lanarkshire"
 manual/aikengall-2a-wind-farm,Aikengall 2A Wind Farm,AIK2A Sustainable Energy Ltd,wind,163 MW,55.9200,-2.3500,163,wind_onshore,"OSM relation not confirmed; Lammermuir Hills, East Lothian, extension of Aikengall I/II"
-manual/cumberhead-west-wind-farm,Cumberhead West Wind Farm,Cumberhead West Wind Farm Ltd,wind,126 MW,55.5720,-3.8720,126,wind_onshore,"OSM relation/19404961 (not in plant export); Douglas area, South Lanarkshire"
 manual/dunmaglass-wind-farm,Dunmaglass Wind Farm,Dunmaglass Wind Farm Limited,wind,100 MW,57.2250,-4.2470,100,wind_onshore,"No confirmed OSM ID; near Daviot, south of Inverness, Highland"
-manual/griffin-wind-farm,Griffin Wind Farm,Griffin Wind Farm Ltd,wind,206 MW,56.6270,-3.9720,206,wind_onshore,"No confirmed OSM ID; near Aberfeldy, Perthshire"
-manual/hadyard-hill-wind-farm,Hadyard Hill Wind Farm,SSE Renewables,wind,130 MW,55.1270,-4.6540,130,wind_onshore,"No confirmed OSM ID; near Barr, South Ayrshire"
-manual/north-kyle-wind-farm,North Kyle Wind Farm,North Kyle Wind Farm Ltd,wind,212 MW,55.3710,-4.3600,212,wind_onshore,"No confirmed OSM ID; near Dalmellington, South Ayrshire"
-manual/dogger-bank-b,Dogger Bank B Offshore Wind Farm,SSE Renewables / Equinor,wind,1199 MW,54.8050,2.1300,1199,wind_offshore,"No confirmed OSM ID; Dogger Bank B, adjacent to Dogger Bank A, North Sea"
-manual/race-bank-wind-farm,Race Bank Offshore Wind Farm,Ørsted,wind,574 MW,53.0500,0.9700,574,wind_offshore,OSM 565030207 not in plant export; ~27km off Lincolnshire coast
 manual/aberdeen-bay-wind-farm,Aberdeen Bay Offshore Wind Farm,Vattenfall,wind,93 MW,57.2030,-1.9730,93,wind_offshore,European Offshore Wind Deployment Centre (EOWDC); Aberdeen Bay
 manual/mgt-teesside,MGT Teesside Biomass Power Station,MGT Teesside Ltd,biomass,285 MW,54.5940,-1.1560,285,biomass,"No confirmed OSM ID; Teesport, near Middlesbrough"
 manual/thurrock-power,Thurrock Power Station,Thurrock Power Limited,gas,180 MW,51.4640,0.3540,180,gas_ocgt,"No confirmed OSM ID; Tilbury area, Thurrock, Essex; classified OTHER by Elexon"
 manual/sandy-knowe-wind-farm,Sandy Knowe Wind Farm,ERG,wind,87 MW,55.3740,-3.9650,87,wind_onshore,"Near Kirkconnel, Dumfries & Galloway"
 manual/dersalloch-wind-farm,Dersalloch Wind Farm,SP Renewables,wind,69 MW,55.3043,-4.4897,69,wind_onshore,"Between Straiton and Dalmellington, South Ayrshire"
-manual/enoch-hill-wind-farm,Enoch Hill Wind Farm,RWE,wind,70 MW,55.3850,-4.2450,70,wind_onshore,"8km NE of Dalmellington, East Ayrshire; operational 2026"
-manual/mark-hill-wind-farm,Mark Hill Wind Farm,SP Renewables,wind,53 MW,55.1480,-4.7330,53,wind_onshore,"3km NE of Barrhill, South Ayrshire"
 manual/windy-rig-wind-farm,Windy Rig Wind Farm,Statkraft,wind,43 MW,55.2742,-4.1795,43,wind_onshore,"Moorbrock Estate, 10km south of New Cumnock, D&G"
 manual/hare-hill-extension,Hare Hill Extension Wind Farm,SP Renewables,wind,30 MW,55.3620,-4.1850,30,wind_onshore,"SE of New Cumnock, East Ayrshire / D&G border"
 manual/whiteside-hill-wf,Whiteside Hill Wind Farm,Whiteside Hill,wind,28 MW,55.3574,-4.0294,28,wind_onshore,"Near Sanquhar, Dumfries & Galloway"
 manual/ewe-hill-ii-wf,Ewe Hill II Wind Farm,SP Renewables,wind,38 MW,55.2250,-3.8350,38,wind_onshore,Dumfries & Galloway; extension of Ewe Hill WF
 manual/sanquhar-community-wf,Sanquhar Community Wind Farm,Sanquhar CWCL,wind,32 MW,55.3800,-3.9300,32,wind_onshore,"Community wind farm near Sanquhar, D&G"
-manual/middle-muir-wind-farm,Middle Muir Wind Farm,OnPath Energy,wind,51 MW,55.5130,-3.8110,51,wind_onshore,"Between Douglas and Crawfordjohn, South Lanarkshire"
-manual/douglas-west-wind-farm,Douglas West Wind Farm,Erova Energy,wind,45 MW,55.5540,-3.8570,45,wind_onshore,"1.2km south of Coalburn, South Lanarkshire"
 manual/hagshaw-repower-wf,Hagshaw Hill Repowering WF,Hagshaw Hill Repowering,wind,30 MW,55.5530,-3.8940,30,wind_onshore,"3.2km west of Douglas, South Lanarkshire"
 manual/dunlaw-extension-wf,Dun Law Extension Wind Farm,SP Renewables,wind,30 MW,55.8090,-2.8380,30,wind_onshore,"Scottish Borders, near Soutra Hill; adjacent to Dun Law"
-manual/kilbraur-wind-farm,Kilbraur Wind Farm,Kilbraur Wind Energy,wind,69 MW,58.0400,-4.0600,69,wind_onshore,"Strath Brora, ~10km NW of Golspie, Sutherland"
 manual/berry-burn-wind-farm,Berry Burn Wind Farm,Statkraft,wind,63 MW,57.4740,-3.6040,63,wind_onshore,"Altyre Estate, 12km south of Forres, Moray"
-manual/millennium-wind-farm,Millennium Wind Farm,Nadara,wind,65 MW,57.1290,-4.8490,65,wind_onshore,"10km WSW of Fort Augustus, Highland"
 relation/8836282,Hill of Towie Wind Farm,ScottishPower Renewables,wind,48 MW,57.5036,-3.0697,48,wind_onshore,"OSM relation/8836282; near Keith, Aberdeenshire; not in plant export"
 manual/greengairs-east-wf,Greengairs East Wind Farm,Greengairs East WF Ltd,wind,38 MW,55.8860,-3.8960,38,wind_onshore,"Between Greengairs and Caldercruix, North Lanarkshire"
-manual/beinn-an-tuirc-iii,Beinn an Tuirc III Wind Farm,SP Renewables,wind,52 MW,55.5710,-5.5760,52,wind_onshore,"Kintyre peninsula, Argyll and Bute"
 manual/beinn-an-tuirc-ii,Beinn an Tuirc 2 Wind Farm,SP Renewables,wind,44 MW,55.5780,-5.5740,44,wind_onshore,"Kintyre peninsula, adjacent to BaT III"
 manual/an-suidhe-wind-farm,An Suidhe Wind Farm,Statkraft,wind,19 MW,56.2310,-5.2200,19,wind_onshore,"5.25 miles west of Inveraray, Mid-Argyll"
 manual/jg-pears-high-marnham,JG Pears High Marnham Power,JG Pears Power Ltd,biomass,13 MW,53.2290,-0.7930,13,biomass,"Biomass CHP; High Marnham, Nottinghamshire"

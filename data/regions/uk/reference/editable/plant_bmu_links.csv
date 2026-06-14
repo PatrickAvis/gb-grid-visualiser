@@ -321,12 +321,12 @@ way/545681226,Sheringham Shoal Offshore Wind Farm,T_SHRSW-2,SHRSO-2,T,auto,
 way/550699358,Lincs Wind Farm,T_LNCSW-1,LNCSO-1,T,auto,
 way/550699358,Lincs Wind Farm,T_LNCSW-2,LNCSO-2,T,auto,
 way/1148893647,Brook Farm Battery,E_BROFB-1,BROFB-1,E,auto,
-manual/dinorwig,Dinorwig Power Station,T_DINO-1,DINO-1,T,manual,Manual plant point; absent from OSM plant export
-manual/dinorwig,Dinorwig Power Station,T_DINO-2,DINO-2,T,manual,Manual plant point; absent from OSM plant export
-manual/dinorwig,Dinorwig Power Station,T_DINO-3,DINO-3,T,manual,Manual plant point; absent from OSM plant export
-manual/dinorwig,Dinorwig Power Station,T_DINO-4,DINO-4,T,manual,Manual plant point; absent from OSM plant export
-manual/dinorwig,Dinorwig Power Station,T_DINO-5,DINO-5,T,manual,Manual plant point; absent from OSM plant export
-manual/dinorwig,Dinorwig Power Station,T_DINO-6,DINO-6,T,manual,Manual plant point; absent from OSM plant export
+relation/6901664,Dinorwig Power Station,T_DINO-1,DINO-1,T,manual,Manual plant point; absent from OSM plant export
+relation/6901664,Dinorwig Power Station,T_DINO-2,DINO-2,T,manual,Manual plant point; absent from OSM plant export
+relation/6901664,Dinorwig Power Station,T_DINO-3,DINO-3,T,manual,Manual plant point; absent from OSM plant export
+relation/6901664,Dinorwig Power Station,T_DINO-4,DINO-4,T,manual,Manual plant point; absent from OSM plant export
+relation/6901664,Dinorwig Power Station,T_DINO-5,DINO-5,T,manual,Manual plant point; absent from OSM plant export
+relation/6901664,Dinorwig Power Station,T_DINO-6,DINO-6,T,manual,Manual plant point; absent from OSM plant export
 way/143791247,Indian Queens Power Station,T_INDQ-1,INDQ-1,T,auto,
 way/402796795,Ffestiniog Power Station,T_FFES-1,FFES-1,T,auto,
 way/402796795,Ffestiniog Power Station,T_FFES-2,FFES-2,T,auto,
@@ -380,7 +380,7 @@ relation/19293473,Tye Lane - Solar Power Station,T_TYLNB-1,TYLNB-1,T,manual,Cand
 13386800,Greater Gabbard Wind Farm,T_GRGBW-1,GRGBW-1,T,manual,Candidate match: bmUnitName=Greater Gabbard Module 1; fuelType=WIND; confidence=medium; reason=site_name_contains_bmUnitName; fuel_compatible=True
 13386800,Greater Gabbard Wind Farm,T_GRGBW-2,GRGBW-2,T,manual,Candidate match: bmUnitName=Greater Gabbard Module 2; fuelType=WIND; confidence=medium; reason=site_name_contains_bmUnitName; fuel_compatible=True
 13386800,Greater Gabbard Wind Farm,T_GRGBW-3,GRGBW-3,T,manual,Candidate match: bmUnitName=Greater Gabbard Module 3; fuelType=WIND; confidence=medium; reason=site_name_contains_bmUnitName; fuel_compatible=True
-790946237,Triton Knoll Wind Farm,T_TKNWW-1,TKNWW-1,T,manual,Candidate match: bmUnitName=Triton Knoll OSP west 1; fuelType=WIND; confidence=medium; reason=site_name_contains_bmUnitName; fuel_compatible=True
+way/790946237,Triton Knoll Wind Farm,T_TKNWW-1,TKNWW-1,T,manual,Candidate match: bmUnitName=Triton Knoll OSP west 1; fuelType=WIND; confidence=medium; reason=site_name_contains_bmUnitName; fuel_compatible=True
 1254849361,Moray West Wind Farm,T_MOWWO-1,MOWWO-1,T,manual,Candidate match: bmUnitName=Moray West OWF1; fuelType=WIND; confidence=medium; reason=site_name_contains_bmUnitName; fuel_compatible=True
 1254849361,Moray West Wind Farm,T_MOWWO-2,MOWWO-2,T,manual,Candidate match: bmUnitName=Moray West OWF2; fuelType=WIND; confidence=medium; reason=site_name_contains_bmUnitName; fuel_compatible=True
 1254849361,Moray West Wind Farm,T_MOWWO-3,MOWWO-3,T,manual,Candidate match: bmUnitName=Moray West OWF3; fuelType=WIND; confidence=medium; reason=site_name_contains_bmUnitName; fuel_compatible=True
@@ -419,17 +419,17 @@ manual/andershaw-wind-farm,Andershaw Wind Farm,E_ASHWW-1,ASHWW-1,E,manual,Anders
 manual/achruach-wind-farm,AChruach Wind Farm,T_ACHRW-1,ACHRW-1,T,manual,AChruach Wind Farm
 manual/afton-wind-farm,Afton Wind Farm,T_AFTOW-1,AFTOW-1,T,manual,Afton Wind Farm
 manual/baillie-wind-farm,Baillie Wind Farm,E_BABAW-1,BABAW-1,E,manual,Baillie Wind Farm
-manual/blackcraig-wind-farm,Blackcraig Wind Farm,T_BLKWW-1,BLKWW-1,T,manual,Blackcraig Wind Farm
+relation/9599113,Blackcraig Wind Farm,T_BLKWW-1,BLKWW-1,T,manual,Blackcraig Wind Farm
 way/1176283907,Clay Tye BESS,E_CLAYB-1,CLAYB-1,E,manual,Clay Tye BESS 1
 way/1176283907,Clay Tye BESS,E_CLAYB-2,CLAYB-2,E,manual,Clay Tye BESS 2
-manual/pines-burn-wind-farm,Pines Burn Wind Farm,E_PIBUW-1,PIBUW-1,E,manual,Pines Burn Wind Farm
+relation/20157713,Pines Burn Wind Farm,E_PIBUW-1,PIBUW-1,E,manual,Pines Burn Wind Farm
 manual/toddleburn-wind-farm,Toddleburn,T_TDBNW-1,TDBNW-1,T,manual,Toddleburn
 manual/minnygap-wind-farm,Minnygap Wind Farm,T_MYGPW-1,MYGPW-1,T,manual,Minnygap Wind Farm
 manual/limekiln-wind-farm,Limekiln Wind Farm,T_LIMKW-1,LIMKW-1,T,manual,Limekiln Wind Farm
-manual/rampion-wind-farm,Rampion Wind Farm,T_RMPNO-1,RMPNO-1,T,manual,Rampion Wind Farm 1
-manual/rampion-wind-farm,Rampion Wind Farm,T_RMPNO-2,RMPNO-2,T,manual,Rampion Wind Farm 2
-manual/kilgallioch-wind-farm,Kilgallioch Wind Farm,T_KLGLW-1,KLGLW-1,T,manual,Kilgallioch Wind Farm
-manual/creag-riabhach-wind-farm,Creag Riabhach Wind Farm,T_CREAW-1,CREAW-1,T,manual,Creag Riabhach Wind Farm
+relation/12617390,Rampion Wind Farm,T_RMPNO-1,RMPNO-1,T,manual,Rampion Wind Farm 1
+relation/12617390,Rampion Wind Farm,T_RMPNO-2,RMPNO-2,T,manual,Rampion Wind Farm 2
+relation/9396275,Kilgallioch Wind Farm,T_KLGLW-1,KLGLW-1,T,manual,Kilgallioch Wind Farm
+relation/15073556,Creag Riabhach Wind Farm,T_CREAW-1,CREAW-1,T,manual,Creag Riabhach Wind Farm
 manual/edinbane-wind-farm,Edinbane Windfarm,T_EDINW-1,EDINW-1,T,manual,Edinbane Windfarm
 manual/coire-na-cloiche-wind-farm,Coire Na Cloiche Wind Farm,E_CNCLW-1,CNCLW-1,E,manual,Coire Na Cloiche Wind Farm
 manual/conon-cascade,Conon Cascade,M_CAS-CON01,CAS-CON01,T,manual,Conon Cascade
@@ -445,14 +445,14 @@ manual/hunterston-b-power-station,Hunterston B Power Station,T_HUNB-8,HUNB-8,T,m
 manual/bad-a-cheo-wind-farm,Bad a Cheo Wind Farm,T_BDCHW-1,BDCHW-1,T,manual,Bad a Cheo Wind Farm
 way/130870162,Lochay Power Station,M_CAS-KIL01,CAS-KIL01,T,manual,Killin Cascade
 manual/dalquhandy-wind-farm,Dalquhandy Wind Farm,T_DALQW-1,DALQW-1,T,manual,Dalquhandy Wind Farm
-manual/fallago-rig-wind-farm,Fallago Rig Wind Farm,T_FALGW-1,FALGW-1,T,manual,Fallago Rig Wind Farm
+relation/8185279,Fallago Rig Wind Farm,T_FALGW-1,FALGW-1,T,manual,Fallago Rig Wind Farm
 manual/freasdail-wind-farm,Freasdail Wind Farm,T_FSDLW-1,FSDLW-1,T,manual,Freasdail Wind Farm
-manual/galawhistle-wind-farm,Galawhistle Wind Farm,T_GLWSW-1,GLWSW-1,T,manual,Galawhistle Wind Farm
+relation/13615670,Galawhistle Wind Farm,T_GLWSW-1,GLWSW-1,T,manual,Galawhistle Wind Farm
 manual/halsary-wind-farm,Halsary Wind Farm,T_HALSW-1,HALSW-1,T,manual,Halsary Wind Farm
 manual/harburnhead-wind-farm,Harburnhead Wind Farm,E_HBHDW-1,HBHDW-1,E,manual,Harburnhead Wind Farm
 manual/kennoxhead-wind-farm,Kennoxhead Wind Farm,T_KENNW-1,KENNW-1,T,manual,Kennoxhead Wind Farm
-manual/arecleoch-wind-farm,Arecleoch Wind Farm,T_ARCHW-1,ARCHW-1,T,manual,Arecleoch Wind Farm
-manual/benbrack-wind-farm,Benbrack Wind Farm,T_BENBW-1,BENBW-1,T,manual,Benbrack Wind Farm
+relation/7872032,Arecleoch Wind Farm,T_ARCHW-1,ARCHW-1,T,manual,Arecleoch Wind Farm
+relation/20152387,Benbrack Wind Farm,T_BENBW-1,BENBW-1,T,manual,Benbrack Wind Farm
 manual/kype-wind-farm,Kype Wind Farm,T_KPMRW-1,KPMRW-1,T,manual,Kype Wind Farm
 manual/kype-muir-wind-farm-extension,Kype Muir Wind Farm Extension,T_KYPEW-1,KYPEW-1,T,manual,Kype Muir Wind Farm Extension
 manual/twentyshilling-hill-wind-farm,Twentyshilling Hill Wind Farm,T_TWSHW-1,TWSHW-1,T,manual,Twentyshilling Hill Wind Farm
@@ -471,14 +471,14 @@ manual/green-knowes-wind-farm,Green Knowes Wind Farm,V__PHABI006,AG-HEL0EP,V,man
 11343101,Hornsea 2 Offshore Wind Farm,T_HOWBO-1,HOWBO-1,T,manual,Hornsea 2 unit 1 (replaces wrongly linked HORNSEA_1A)
 11343101,Hornsea 2 Offshore Wind Farm,T_HOWBO-2,HOWBO-2,T,manual,Hornsea 2 unit 2
 11343101,Hornsea 2 Offshore Wind Farm,T_HOWBO-3,HOWBO-3,T,manual,Hornsea 2 unit 3
-manual/burn-of-whilk-wind-farm,Burn of Whilk Wind Farm,E_BNWKW-1,BNWKW-1,E,manual,Burn of Whilk Wind Farm
+relation/9584471,Burn of Whilk Wind Farm,E_BNWKW-1,BNWKW-1,E,manual,Burn of Whilk Wind Farm
 28390306,King's Lynn Power Station,E_KLYN-A-1,KLYN-A-1,E,auto,
 way/51698894,Sutton Bridge Power Station,T_SUTB-1,SUTB-1,T,manual,Sutton Bridge CCGT main unit
 way/310488542,Heysham Nuclear Power Station,T_HEYM11,HEYM11,T,manual,Heysham 1 Generator 1
 way/310488542,Heysham Nuclear Power Station,T_HEYM12,HEYM12,T,manual,Heysham 1 Generator 2
 way/310488542,Heysham Nuclear Power Station,T_HEYM27,HEYM27,T,manual,Heysham 2 Generator 7
 way/310488542,Heysham Nuclear Power Station,T_HEYM28,HEYM28,T,manual,Heysham 2 Generator 8
-790946237,Triton Knoll Wind Farm,T_TKNEW-1,TKNEW-1,T,manual,Triton Knoll OSP East 1
+way/790946237,Triton Knoll Wind Farm,T_TKNEW-1,TKNEW-1,T,manual,Triton Knoll OSP East 1
 way/34383063,Drax Power Station,T_DRAXX-5,DRAXX-5,T,manual,Drax unit 5 (coal)
 way/34383063,Drax Power Station,T_DRAXX-6,DRAXX-6,T,manual,Drax unit 6 (coal)
 way/34383063,Drax Power Station,T_DRAXX-9G,DRAXX-9G,T,manual,Drax OCGT 9G
@@ -490,70 +490,70 @@ relation/5474028,Gwynt y Môr Offshore Wind Farm,T_GYMR-15,GYMR-15,T,manual,"Gwy
 relation/5474028,Gwynt y Môr Offshore Wind Farm,T_GYMR-17,GYMR-17,T,manual,"Gwynt y Môr 576MW offshore wind, OSP East 17"
 relation/5474028,Gwynt y Môr Offshore Wind Farm,T_GYMR-26,GYMR-26,T,manual,"Gwynt y Môr 576MW offshore wind, OSP West 26"
 relation/5474028,Gwynt y Môr Offshore Wind Farm,T_GYMR-28,GYMR-28,T,manual,"Gwynt y Môr 576MW offshore wind, OSP West 28"
-manual/dorenell-wind-farm,Dorenell Wind Farm,T_DOREW-1,DOREW-1,T,manual,
-manual/dorenell-wind-farm,Dorenell Wind Farm,T_DOREW-2,DOREW-2,T,manual,
+relation/9590825,Dorenell Wind Farm,T_DOREW-1,DOREW-1,T,manual,
+relation/9590825,Dorenell Wind Farm,T_DOREW-2,DOREW-2,T,manual,
 manual/strathy-north-wind-farm,Strathy North Wind Farm,T_STRNW-1,STRNW-1,T,manual,
-manual/crystal-rig-wind-farm,Crystal Rig Wind Farm,T_CRYRW-2,CRYRW-2,T,manual,Crystal Rig II 151MW
+relation/7872001,Crystal Rig Wind Farm,T_CRYRW-2,CRYRW-2,T,manual,Crystal Rig II 151MW
 manual/crystal-rig-iii-wind-farm,Crystal Rig III Wind Farm,T_CRYRW-3,CRYRW-3,T,manual,Crystal Rig III 14MW
-manual/bhlaraidh-wind-farm,Bhlaraidh Wind Farm,T_BHLAW-1,BHLAW-1,T,manual,
-manual/gordonbush-wind-farm,Gordonbush Wind Farm,T_GORDW-1,GORDW-1,T,manual,
-manual/black-law-wind-farm,Black Law Wind Farm,T_BLLA-1,BLLA-1,T,manual,Black Law original 118MW
-manual/black-law-wind-farm,Black Law Wind Farm,T_BLLA-2,BLLA-2,T,manual,Black Law Extension 69MW
-manual/beinneun-wind-farm,Beinneun Wind Farm,T_BEINW-1,BEINW-1,T,manual,
+relation/8039767,Bhlaraidh Wind Farm,T_BHLAW-1,BHLAW-1,T,manual,
+relation/6949356,Gordonbush Wind Farm,T_GORDW-1,GORDW-1,T,manual,
+relation/2321400,Black Law Wind Farm,T_BLLA-1,BLLA-1,T,manual,Black Law original 118MW
+relation/2321400,Black Law Wind Farm,T_BLLA-2,BLLA-2,T,manual,Black Law Extension 69MW
+relation/9353227,Beinneun Wind Farm,T_BEINW-1,BEINW-1,T,manual,
 manual/pen-y-cymoedd-wind-farm,Pen y Cymoedd Wind Farm,T_PNYCW-1,PNYCW-1,T,manual,228MW
-manual/dogger-bank-a,Dogger Bank A Offshore Wind Farm,T_DBAWO-1,DBAWO-1,T,manual,
-manual/dogger-bank-a,Dogger Bank A Offshore Wind Farm,T_DBAWO-2,DBAWO-2,T,manual,
-manual/dogger-bank-a,Dogger Bank A Offshore Wind Farm,T_DBAWO-3,DBAWO-3,T,manual,
-manual/dogger-bank-a,Dogger Bank A Offshore Wind Farm,T_DBAWO-4,DBAWO-4,T,manual,
-manual/dogger-bank-a,Dogger Bank A Offshore Wind Farm,T_DBAWO-5,DBAWO-5,T,manual,
-manual/south-kyle-wind-farm,South Kyle Wind Farm,T_SOKYW-1,SOKYW-1,T,manual,"427MW onshore wind, East Ayrshire"
-manual/east-anglia-one,East Anglia One Offshore Wind Farm,T_EAAO-1,EAAO-1,T,manual,EA1 offshore 358MW
-manual/east-anglia-one,East Anglia One Offshore Wind Farm,T_EAAO-2,EAAO-2,T,manual,EA1 offshore 367MW
-manual/clyde-wind-farm,Clyde Wind Farm,T_CLDCW-1,CLDCW-1,T,manual,Clyde Central 200MW
-manual/clyde-wind-farm,Clyde Wind Farm,T_CLDNW-1,CLDNW-1,T,manual,Clyde North 200MW
-manual/clyde-wind-farm,Clyde Wind Farm,T_CLDSW-1,CLDSW-1,T,manual,Clyde South 150MW
+way/889977926,Dogger Bank A Offshore Wind Farm,T_DBAWO-1,DBAWO-1,T,manual,
+way/889977926,Dogger Bank A Offshore Wind Farm,T_DBAWO-2,DBAWO-2,T,manual,
+way/889977926,Dogger Bank A Offshore Wind Farm,T_DBAWO-3,DBAWO-3,T,manual,
+way/889977926,Dogger Bank A Offshore Wind Farm,T_DBAWO-4,DBAWO-4,T,manual,
+way/889977926,Dogger Bank A Offshore Wind Farm,T_DBAWO-5,DBAWO-5,T,manual,
+relation/17577116,South Kyle Wind Farm,T_SOKYW-1,SOKYW-1,T,manual,"427MW onshore wind, East Ayrshire"
+way/518314314,East Anglia One Offshore Wind Farm,T_EAAO-1,EAAO-1,T,manual,EA1 offshore 358MW
+way/518314314,East Anglia One Offshore Wind Farm,T_EAAO-2,EAAO-2,T,manual,EA1 offshore 367MW
+relation/6949277,Clyde Wind Farm,T_CLDCW-1,CLDCW-1,T,manual,Clyde Central 200MW
+relation/6949277,Clyde Wind Farm,T_CLDNW-1,CLDNW-1,T,manual,Clyde North 200MW
+relation/6949277,Clyde Wind Farm,T_CLDSW-1,CLDSW-1,T,manual,Clyde South 150MW
 way/291146217,Robin Rigg Offshore Wind Farm,T_RREW-1,RREW-1,T,manual,"Robin Rigg East 114MW, Solway Firth"
 way/291146217,Robin Rigg Offshore Wind Farm,T_RRWW-1,RRWW-1,T,manual,"Robin Rigg West 91MW, Solway Firth"
 manual/aikengall-2a-wind-farm,Aikengall 2A Wind Farm,T_AKGLW-3,AKGLW-3,T,manual,"Aikengall 2A 163MW, East Lothian"
-manual/cumberhead-west-wind-farm,Cumberhead West Wind Farm,T_CUMHW-2,CUMHW-2,T,manual,"Cumberhead West 126MW, South Lanarkshire"
+relation/19404961,Cumberhead West Wind Farm,T_CUMHW-2,CUMHW-2,T,manual,"Cumberhead West 126MW, South Lanarkshire"
 manual/dunmaglass-wind-farm,Dunmaglass Wind Farm,T_DUNGW-1,DUNGW-1,T,manual,"Dunmaglass 100MW, Highland"
-manual/griffin-wind-farm,Griffin Wind Farm,T_GRIFW-1,GRIFW-1,T,manual,"Griffin WF unit 1, 102MW, Perthshire"
-manual/griffin-wind-farm,Griffin Wind Farm,T_GRIFW-2,GRIFW-2,T,manual,"Griffin WF unit 2, 104MW, Perthshire"
-manual/hadyard-hill-wind-farm,Hadyard Hill Wind Farm,T_HADHW-1,HADHW-1,T,manual,"Hadyard Hill 130MW, South Ayrshire"
-manual/north-kyle-wind-farm,North Kyle Wind Farm,T_NOKYW-1,NOKYW-1,T,manual,"North Kyle unit 1, 106MW"
-manual/north-kyle-wind-farm,North Kyle Wind Farm,T_NOKYW-2,NOKYW-2,T,manual,"North Kyle unit 2, 106MW"
-manual/dogger-bank-b,Dogger Bank B Offshore Wind Farm,T_DBBWO-1,DBBWO-1,T,manual,
-manual/dogger-bank-b,Dogger Bank B Offshore Wind Farm,T_DBBWO-2,DBBWO-2,T,manual,
-manual/dogger-bank-b,Dogger Bank B Offshore Wind Farm,T_DBBWO-3,DBBWO-3,T,manual,
-manual/dogger-bank-b,Dogger Bank B Offshore Wind Farm,T_DBBWO-4,DBBWO-4,T,manual,
-manual/dogger-bank-b,Dogger Bank B Offshore Wind Farm,T_DBBWO-5,DBBWO-5,T,manual,
-manual/gordonbush-wind-farm,Gordonbush Wind Farm,T_GORDW-2,GORDW-2,T,manual,Gordonbush WF Extension 59MW
-manual/race-bank-wind-farm,Race Bank Offshore Wind Farm,T_RCBKO-1,RCBKO-1,T,manual,Race Bank Zone 1 284MW
-manual/race-bank-wind-farm,Race Bank Offshore Wind Farm,T_RCBKO-2,RCBKO-2,T,manual,Race Bank Zone 2 290MW
+relation/6949300,Griffin Wind Farm,T_GRIFW-1,GRIFW-1,T,manual,"Griffin WF unit 1, 102MW, Perthshire"
+relation/6949300,Griffin Wind Farm,T_GRIFW-2,GRIFW-2,T,manual,"Griffin WF unit 2, 104MW, Perthshire"
+relation/6949332,Hadyard Hill Wind Farm,T_HADHW-1,HADHW-1,T,manual,"Hadyard Hill 130MW, South Ayrshire"
+relation/19453061,North Kyle Wind Farm,T_NOKYW-1,NOKYW-1,T,manual,"North Kyle unit 1, 106MW"
+relation/19453061,North Kyle Wind Farm,T_NOKYW-2,NOKYW-2,T,manual,"North Kyle unit 2, 106MW"
+way/1157893250,Dogger Bank B Offshore Wind Farm,T_DBBWO-1,DBBWO-1,T,manual,
+way/1157893250,Dogger Bank B Offshore Wind Farm,T_DBBWO-2,DBBWO-2,T,manual,
+way/1157893250,Dogger Bank B Offshore Wind Farm,T_DBBWO-3,DBBWO-3,T,manual,
+way/1157893250,Dogger Bank B Offshore Wind Farm,T_DBBWO-4,DBBWO-4,T,manual,
+way/1157893250,Dogger Bank B Offshore Wind Farm,T_DBBWO-5,DBBWO-5,T,manual,
+relation/6949356,Gordonbush Wind Farm,T_GORDW-2,GORDW-2,T,manual,Gordonbush WF Extension 59MW
+way/565030207,Race Bank Offshore Wind Farm,T_RCBKO-1,RCBKO-1,T,manual,Race Bank Zone 1 284MW
+way/565030207,Race Bank Offshore Wind Farm,T_RCBKO-2,RCBKO-2,T,manual,Race Bank Zone 2 290MW
 manual/aikengall-2a-wind-farm,Aikengall 2 Wind Farm,T_AKGLW-2,AKGLW-2,T,manual,"Aikengall II 64MW, same site as Aikengall 2A"
-manual/crystal-rig-wind-farm,Crystal Rig Wind Farm,T_CRYRW-4,CRYRW-4,T,manual,Crystal Rig IV 48MW extension
+relation/7872001,Crystal Rig Wind Farm,T_CRYRW-4,CRYRW-4,T,manual,Crystal Rig IV 48MW extension
 manual/aberdeen-bay-wind-farm,Aberdeen Bay Offshore Wind Farm,T_ABRBO-1,ABRBO-1,T,manual,EOWDC 93MW offshore
 manual/mgt-teesside,MGT Teesside Biomass Power Station,T_TSREP-1,TSREP-1,T,manual,MGT Teesside biomass 285MW
 manual/thurrock-power,Thurrock Power Station,T_THUPG-1,THUPG-1,T,manual,Thurrock Power 180MW OCGT/peaker
 manual/sandy-knowe-wind-farm,Sandy Knowe Wind Farm,T_SAKNW-1,SAKNW-1,T,manual,
 manual/dersalloch-wind-farm,Dersalloch Wind Farm,T_DRSLW-1,DRSLW-1,T,manual,
-manual/enoch-hill-wind-farm,Enoch Hill Wind Farm,T_ENHLW-1,ENHLW-1,T,manual,
-manual/mark-hill-wind-farm,Mark Hill Wind Farm,T_MKHLW-1,MKHLW-1,T,manual,
+relation/19453343,Enoch Hill Wind Farm,T_ENHLW-1,ENHLW-1,T,manual,
+relation/7998314,Mark Hill Wind Farm,T_MKHLW-1,MKHLW-1,T,manual,
 manual/windy-rig-wind-farm,Windy Rig Wind Farm,T_WDRGW-1,WDRGW-1,T,manual,
 manual/hare-hill-extension,Hare Hill Extension Wind Farm,E_HRHLW-1,HRHLW-1,E,manual,
 manual/whiteside-hill-wf,Whiteside Hill Wind Farm,T_WHIHW-1,WHIHW-1,T,manual,
 manual/ewe-hill-ii-wf,Ewe Hill II Wind Farm,T_EWHLW-1,EWHLW-1,T,manual,
 manual/sanquhar-community-wf,Sanquhar Community Wind Farm,T_SANQW-1,SANQW-1,T,manual,
-manual/middle-muir-wind-farm,Middle Muir Wind Farm,T_MIDMW-1,MIDMW-1,T,manual,
-manual/douglas-west-wind-farm,Douglas West Wind Farm,T_DOUGW-1,DOUGW-1,T,manual,
+relation/12862506,Middle Muir Wind Farm,T_MIDMW-1,MIDMW-1,T,manual,
+relation/13616181,Douglas West Wind Farm,T_DOUGW-1,DOUGW-1,T,manual,
 manual/hagshaw-repower-wf,Hagshaw Hill Repowering WF,T_HAHAW-1,HAHAW-1,T,manual,
 manual/dunlaw-extension-wf,Dun Law Extension Wind Farm,T_DNLWW-1,DNLWW-1,T,manual,
-manual/kilbraur-wind-farm,Kilbraur Wind Farm,T_KILBW-1,KILBW-1,T,manual,
+relation/6949355,Kilbraur Wind Farm,T_KILBW-1,KILBW-1,T,manual,
 manual/berry-burn-wind-farm,Berry Burn Wind Farm,E_BRYBW-1,BRYBW-1,E,manual,
-manual/millennium-wind-farm,Millennium Wind Farm,T_MILWW-1,MILWW-1,T,manual,
+relation/8039743,Millennium Wind Farm,T_MILWW-1,MILWW-1,T,manual,
 relation/8836282,Hill of Towie Wind Farm,E_HLTWW-1,HLTWW-1,E,manual,
 manual/greengairs-east-wf,Greengairs East Wind Farm,E_GRGRW-1,GRGRW-1,E,manual,
-manual/beinn-an-tuirc-iii,Beinn an Tuirc III Wind Farm,E_BTUIW-3,BTUIW-3,E,manual,
+relation/15016558,Beinn an Tuirc III Wind Farm,E_BTUIW-3,BTUIW-3,E,manual,
 manual/beinn-an-tuirc-ii,Beinn an Tuirc 2 Wind Farm,E_BTUIW-2,BTUIW-2,E,manual,
 manual/an-suidhe-wind-farm,An Suidhe Wind Farm,T_ANSUW-1,ANSUW-1,T,manual,
 manual/jg-pears-high-marnham,JG Pears High Marnham Power,T_JGPR-1,JGPR-1,T,manual,
