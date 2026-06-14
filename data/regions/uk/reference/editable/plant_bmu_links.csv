@@ -45,7 +45,7 @@ relation/19412289,Broken Cross Wind Farm,T_BROCW-1,BROCW-1,T,auto,
 way/931146013,Energy Centre,T_EECL-1,EECL-1,T,auto,
 way/956335701,Caledonian Papermill,T_MEADD-1,MEADD-1,T,auto,
 way/956335705,Dunlop Landfill Gas Scheme,E_FDUN-1,FDUNT-1,E,auto,
-way/1122850401,Whitelee Wind Farm Battery Storage,T_WHILW-2,WHILW-2,T,auto,
+relation/2593160,Whitelee Wind Farm,T_WHILW-2,WHILW-2,T,manual,Wind units moved from the co-located BESS to the wind farm polygon
 way/1122850401,Whitelee Wind Farm Battery Storage,T_WHLWB-1,WHLWB-1,T,auto,
 way/1152536439,Wishaw Battery,T_WISHB-1,WISHB-1,T,auto,
 way/1152536439,Wishaw Battery,T_WISHD-1,WISHD-1,T,auto,
@@ -352,7 +352,7 @@ way/1149621575,Keadby Power Station,T_KEAD-1,KEAD-1,T,auto,
 way/1149621575,Keadby Power Station,T_KEADGT-3,KEADGT-3,T,auto,
 way/951797053,Hirwaun,T_HIRWN-1,HIRWN-1,T,manual,Candidate match: bmUnitName=Hirwaun 1; fuelType=OCGT; confidence=medium; reason=site_name_bmUnitName;fuel_mismatch; fuel_compatible=False
 way/956007730,Broxburn Battery Storage,E_BROXB-1,BROXB-1,E,manual,Candidate match: bmUnitName=BroxburnBattery; fuelType=OTHER; confidence=medium; reason=site_name_contains_bmUnitName; fuel_compatible=True
-way/1122850401,Whitelee Wind Farm Battery Storage,T_WHILW-1,WHILW-1,T,manual,Candidate match: bmUnitName=T_WHILW-1; fuelType=WIND; confidence=medium; reason=compact_site_name_oc2_BMGROUP_NAME;fuel_mismatch; fuel_compatible=False
+relation/2593160,Whitelee Wind Farm,T_WHILW-1,WHILW-1,T,manual,Wind units moved from the co-located BESS to the wind farm polygon
 way/1421373804,Cathkin BESS,E_CATHB-1,CATHB-1,E,manual,Candidate match: bmUnitName=CathkinBattery; fuelType=OTHER; confidence=medium; reason=site_name_contains_bmUnitName; fuel_compatible=True
 way/143902275,Spalding Power Station,T_SEEL-1,SEEL-1,T,manual,Candidate match: bmUnitName=Spalding Energy Expansion Ltd; fuelType=OCGT; confidence=medium; reason=site_name_contains_bmUnitName; fuel_compatible=True
 way/208757000,Immingham Power Station,T_HUMR-1,HUMR-1,T,manual,Candidate match: bmUnitName=HUMR-1; fuelType=CCGT; confidence=medium; reason=site_name_contains_oc2_BMGROUP_NAME; fuel_compatible=True

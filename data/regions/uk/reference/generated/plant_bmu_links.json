@@ -414,13 +414,13 @@
     "notes": null
   },
   {
-    "osm_id": "way/1122850401",
-    "plant_name": "Whitelee Wind Farm Battery Storage",
+    "osm_id": "relation/2593160",
+    "plant_name": "Whitelee Wind Farm",
     "bmu_id": "T_WHILW-2",
     "ngc_bmu_id": "WHILW-2",
     "bmu_type": "T",
-    "source": "auto",
-    "notes": null
+    "source": "manual",
+    "notes": "Wind units moved from the co-located BESS to the wind farm polygon"
   },
   {
     "osm_id": "way/1122850401",
@@ -3177,13 +3177,13 @@
     "notes": "Candidate match: bmUnitName=BroxburnBattery; fuelType=OTHER; confidence=medium; reason=site_name_contains_bmUnitName; fuel_compatible=True"
   },
   {
-    "osm_id": "way/1122850401",
-    "plant_name": "Whitelee Wind Farm Battery Storage",
+    "osm_id": "relation/2593160",
+    "plant_name": "Whitelee Wind Farm",
     "bmu_id": "T_WHILW-1",
     "ngc_bmu_id": "WHILW-1",
     "bmu_type": "T",
     "source": "manual",
-    "notes": "Candidate match: bmUnitName=T_WHILW-1; fuelType=WIND; confidence=medium; reason=compact_site_name_oc2_BMGROUP_NAME;fuel_mismatch; fuel_compatible=False"
+    "notes": "Wind units moved from the co-located BESS to the wind farm polygon"
   },
   {
     "osm_id": "way/1421373804",
