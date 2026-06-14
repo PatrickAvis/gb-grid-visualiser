@@ -1,10 +1,4 @@
 bmu_id,ngc_bmu_id,plant_name,bmu_name,osm_id,site_name,suggested_action,keep_reason
-,SFIL-1,St. Fillans Power Station,,way/1020439730,St. Fillans Power Station,KEEP,closest name match
-,SFIL-1,St. Fillans Power Station,,way/129923951,Grudie Bridge Power Station,consolidate into way/1020439730,
-,SFIL-1,St. Fillans Power Station,,way/130127380,Shin Power Station,consolidate into way/1020439730,
-,SFIL-1,St. Fillans Power Station,,way/26550612,Rannoch Power Station,consolidate into way/1020439730,
-,SFIL-1,St. Fillans Power Station,,way/562727161,Inverawe Power Station,consolidate into way/1020439730,
-,SFIL-1,St. Fillans Power Station,,way/956016428,Steven's Croft Power Station,consolidate into way/1020439730,
 E_BARNB-1,BARNB-1,Hunningley Stairfoot BESS,Hunningley Stairfoot BESS,way/1149297467,Hunningley Stairfoot BESS,KEEP,name matches BMU 'Hunningley Stairfoot BESS'
 E_BARNB-1,BARNB-1,Hunningley Stairfoot BESS,Hunningley Stairfoot BESS,way/1409249776,Stairfoot Battery Storage & 33kV substation,consolidate into way/1149297467,
 E_BRGG-1,BRGG-1,Brigg STOR,Glanford Brigg,way/1233495808,Brigg STOR,consolidate into way/208495234,

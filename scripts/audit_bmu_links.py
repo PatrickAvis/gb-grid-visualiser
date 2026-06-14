@@ -152,8 +152,14 @@ def audit(plants_path: Path, name_sim: float) -> tuple[list[dict], dict]:
 
         unit = by_elexon.get(bmu_id.upper()) or by_ngc.get(ngc_id.upper())
 
+        # error: no Elexon bmu_id. The ngc id may still resolve to a registry
+        # record, but an NGC-only stub (empty elexonBmUnit) is not a usable BMU:
+        # it shows nothing in popups and can never match BM (ISPSTACK) activity.
+        if not bmu_id:
+            add("error", "blank_bmu_id", row,
+                f"no Elexon bmu_id (ngc {ngc_id or '?'} is an NGC-only registry stub)")
         # error: BMU not in registry
-        if unit is None:
+        elif unit is None:
             add("error", "bmu_unknown", row, f"{bmu_id or ngc_id} absent from Elexon registry")
 
         # osm_id resolution (manual/ sites live in manual_plants.csv, not OSM)
