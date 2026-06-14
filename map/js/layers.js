@@ -235,11 +235,35 @@ export function createLayerManager(map, regionConfig, zoneFilter) {
     });
   }
 
+  function bmTriangleIcon(style, direction) {
+    const r = style.radius || 7;
+    const size = Math.max(10, Math.round(r * 2.4));
+    const pad = (style.weight || 1.5) + 0.5;
+    const points = direction === "up"
+      ? `${size / 2},${pad} ${pad},${size - pad} ${size - pad},${size - pad}`
+      : `${pad},${pad} ${size - pad},${pad} ${size / 2},${size - pad}`;
+    const svg = `<svg width="${size}" height="${size}" viewBox="0 0 ${size} ${size}" xmlns="http://www.w3.org/2000/svg">`
+      + `<polygon points="${points}" fill="${style.fillColor || "#757575"}" `
+      + `fill-opacity="${style.fillOpacity ?? 0.9}" stroke="${style.color || "#ffffff"}" `
+      + `stroke-width="${style.weight ?? 1.5}" stroke-linejoin="round" /></svg>`;
+    return L.divIcon({
+      className: "bm-activity-triangle",
+      html: svg,
+      iconSize: [size, size],
+      iconAnchor: [size / 2, size / 2],
+    });
+  }
+
   function createPointMarker(latlng, feature, layerConfig) {
     const [latOffset = 0, lngOffset = 0] = layerConfig.markerOffset || [];
     const position = L.latLng(latlng.lat + latOffset, latlng.lng + lngOffset);
     const props = feature.properties || {};
-    return L.circleMarker(position, layerConfig.styleFn(props));
+    const style = layerConfig.styleFn(props);
+    if (layerConfig.markerShape === "triangle-up" || layerConfig.markerShape === "triangle-down") {
+      const direction = layerConfig.markerShape === "triangle-up" ? "up" : "down";
+      return L.marker(position, { icon: bmTriangleIcon(style, direction) });
+    }
+    return L.circleMarker(position, style);
   }
 
   function buildGeoJsonLayer(layerKey, data, layerConfig) {

@@ -38,6 +38,7 @@ export const LAYER_BEHAVIOR = {
     label: "BM bids",
     styleFn: bmActivityBidMarkerStyle,
     sideFilter: "bid",
+    markerShape: "triangle-down",
     markerOffset: [-0.0004, -0.0004],
     popupKeys: [
       "plant_name",
@@ -57,6 +58,7 @@ export const LAYER_BEHAVIOR = {
     label: "BM offers",
     styleFn: bmActivityOfferMarkerStyle,
     sideFilter: "offer",
+    markerShape: "triangle-up",
     markerOffset: [0.0004, 0.0004],
     popupKeys: [
       "plant_name",
