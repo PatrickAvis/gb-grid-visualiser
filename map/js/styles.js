@@ -218,8 +218,8 @@ function bmActivityRadius(props) {
 
 // Fill encodes fuel type (same palette as the plant layer) so "what is being
 // used" reads at a glance. Bids and offers are separate toggleable layers, so
-// the side needs no colour; a neutral ring keeps the fuel fill dominant.
-const BM_RING = "#ffffff";
+// the side needs no colour; a thin dark ring keeps the fuel fill dominant.
+const BM_RING = "#000000";
 
 function bmActivityFill(props) {
   return fuelTypeColor(plantSourceBucket(props));
@@ -230,7 +230,7 @@ function bmActivityMarkerStyle(props) {
     radius: bmActivityRadius(props),
     fillColor: bmActivityFill(props),
     color: BM_RING,
-    weight: 1.5,
+    weight: 0.5,
     opacity: 0.9,
     fillOpacity: 0.9,
   };
