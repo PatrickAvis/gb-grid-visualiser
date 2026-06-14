@@ -286,6 +286,11 @@ def propose_match_candidates_for_plant(
     if is_empty(plant.get("name")):
         return []
 
+    # Names like "Wind Farm" / "Solar Farm" are substrings of many BMU names and
+    # produce a flood of false-positive matches, so they are not matchable.
+    if is_generic_plant_name(plant.get("name")):
+        return []
+
     plant_norm = normalize_site_name(str(plant["name"]))
     plant_bucket = plant.get("source_bucket")
     candidates: list[dict[str, Any]] = []
@@ -567,8 +572,7 @@ def propose_plant_bmu_map(
         if is_empty(plant.get("name")):
             continue
         plant_name = str(plant["name"])
-        if is_generic_plant_name(plant_name):
-            continue
+        # Generic names are filtered inside propose_match_candidates_for_plant.
         osm_id = None if is_empty(plant.get("osm_id")) else str(plant["osm_id"])
         for candidate in propose_match_candidates_for_plant(plant, bmunits):
             if candidate["confidence"] != auto_confidence:

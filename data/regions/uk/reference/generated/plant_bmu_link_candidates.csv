@@ -1,2 +1,2 @@
 osm_id,plant_name,bmu_id,ngc_bmu_id,bmu_type,source,notes
-
+manual/blackcraig-wind-farm,Blackcraig Wind Farm,E_CRGTW-1,CRGTW-1,E,manual,Candidate match: bmUnitName=Craig 2 Wind Farm; fuelType=WIND; confidence=medium; reason=site_name_contains_bmUnitName; fuel_compatible=True
