@@ -275,6 +275,7 @@ def _site_feature_lookup(plants: gpd.GeoDataFrame) -> dict[str, dict[str, Any]]:
             "osm_id": osm_id,
             "plant_name": None if is_empty(row.get("name")) else str(row["name"]).strip(),
             "operator": None if is_empty(row.get("operator")) else str(row["operator"]).strip(),
+            "source_bucket": None if is_empty(row.get("source_bucket")) else str(row["source_bucket"]).strip(),
             "latitude": float(lat),
             "longitude": float(lon),
         }

@@ -216,25 +216,35 @@ function bmActivityRadius(props) {
   return Math.max(5, Math.min(18, 4 + Math.sqrt(Math.max(volume, 0)) * 1.5));
 }
 
+// Fill encodes fuel type (same palette as the plant layer); the ring colour
+// encodes the BM side, so "what is being used" reads at a glance: red ring =
+// bid (reduce generation), green ring = offer (increase generation).
+const BM_BID_RING = "#c62828";
+const BM_OFFER_RING = "#2e7d32";
+
+function bmActivityFill(props) {
+  return fuelTypeColor(plantSourceBucket(props));
+}
+
 export function bmActivityBidMarkerStyle(props) {
   return {
     radius: bmActivityRadius(props),
-    fillColor: "#c62828",
-    color: "#ffffff",
-    weight: 1.5,
-    opacity: 0.95,
-    fillOpacity: 0.88,
+    fillColor: bmActivityFill(props),
+    color: BM_BID_RING,
+    weight: 3,
+    opacity: 1,
+    fillOpacity: 0.9,
   };
 }
 
 export function bmActivityOfferMarkerStyle(props) {
   return {
     radius: bmActivityRadius(props),
-    fillColor: "#2e7d32",
-    color: "#ffffff",
-    weight: 1.5,
-    opacity: 0.95,
-    fillOpacity: 0.88,
+    fillColor: bmActivityFill(props),
+    color: BM_OFFER_RING,
+    weight: 3,
+    opacity: 1,
+    fillOpacity: 0.9,
   };
 }
 
