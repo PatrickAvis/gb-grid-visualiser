@@ -12,6 +12,15 @@ function normalizePlantName(name) {
     .replace(/ bess$/, "");
 }
 
+// OSM ids are joined on their numeric part only: the link table uses the
+// canonical "way/123" / "relation/123" form, but exported site GeoJSON often
+// stores bare ids ("123") when the export source lacks an element type. Manual
+// ids ("manual/...") have no OSM prefix and are matched as-is.
+function normalizeOsmId(value) {
+  if (value == null) return "";
+  return String(value).trim().replace(/^(way|relation|node)\//, "");
+}
+
 function joinUnique(values) {
   const seen = [];
   for (const value of values) {
@@ -49,7 +58,7 @@ export function createPlantBmuLookup(entries) {
   const byName = new Map();
 
   for (const row of entries) {
-    const osmId = row.osm_id ? String(row.osm_id).trim() : "";
+    const osmId = normalizeOsmId(row.osm_id);
     if (osmId) {
       if (!byOsmId.has(osmId)) {
         byOsmId.set(osmId, []);
@@ -66,7 +75,7 @@ export function createPlantBmuLookup(entries) {
   }
 
   return function lookupBmu(props = {}) {
-    const osmId = props.osm_id ? String(props.osm_id).trim() : "";
+    const osmId = normalizeOsmId(props.osm_id);
     if (osmId && byOsmId.has(osmId)) {
       return aggregateMapEntries(byOsmId.get(osmId));
     }

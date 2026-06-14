@@ -151,400 +151,6 @@ warn,multi_site,way/956070478,Wilton 11 EfW,T_LIONB-2,LionB-2,auto,"BMU on 4 sit
 warn,multi_site,way/956070478,Wilton 11 EfW,T_LIONB-3,LionB-3,auto,"BMU on 4 sites: 1211651931, 550726464, 77471728, 956070478"
 warn,multi_site,way/956070478,Wilton 11 EfW,T_LIOND-1,LionD-1,auto,"BMU on 4 sites: 1211651931, 550726464, 77471728, 956070478"
 warn,multi_site,way/956252571,Farnham Landfill Gas Plant,E_FARNB-1,FARNB-1,auto,"BMU on 2 sites: 1187625958, 956252571"
-warn,osm_id_format,relation/12718371,Exeter Gas Power Station,E_EXETR-2,EXETR-2,auto,resolves by numeric id only; map join falls back to plant_name
-warn,osm_id_format,relation/13616181,Douglas West wind farm,T_DWEXW-1,DWEXW-1,auto,resolves by numeric id only; map join falls back to plant_name
-warn,osm_id_format,relation/17296061,Cumberhead Wind Farm,T_CUMHW-1,CUMHW-1,auto,resolves by numeric id only; map join falls back to plant_name
-warn,osm_id_format,relation/19293473,Tye Lane - Solar Power Station,T_TYLNS-1,TYLNS-1,auto,resolves by numeric id only; map join falls back to plant_name
-warn,osm_id_format,relation/19293473,Tye Lane - Solar Power Station,T_TYLNB-1,TYLNB-1,manual,resolves by numeric id only; map join falls back to plant_name
-warn,osm_id_format,relation/19313332,Bulphan Fen Solar Farm,T_BLPFB-1,BLPFB-1,auto,resolves by numeric id only; map join falls back to plant_name
-warn,osm_id_format,relation/19313332,Bulphan Fen Solar Farm,T_BLPFS-1,BLPFS-1,auto,resolves by numeric id only; map join falls back to plant_name
-warn,osm_id_format,relation/19404961,Cumberhead West Wind Farm,T_CUMHW-1,CUMHW-1,auto,resolves by numeric id only; map join falls back to plant_name
-warn,osm_id_format,relation/19405219,Hagshaw Hill (Repowering),T_HAGHW-2,HAGHW-2,auto,resolves by numeric id only; map join falls back to plant_name
-warn,osm_id_format,relation/19412289,Broken Cross Wind Farm,T_BROCW-1,BROCW-1,auto,resolves by numeric id only; map join falls back to plant_name
-warn,osm_id_format,relation/19454939,Windy Standard II,T_WISTW-2,WISTW-2,auto,resolves by numeric id only; map join falls back to plant_name
-warn,osm_id_format,relation/20265488,Tebworth - Solar Farm,T_TEBWB-1,TEBWB-1,auto,resolves by numeric id only; map join falls back to plant_name
-warn,osm_id_format,relation/20265488,Tebworth - Solar Farm,T_TEBWS-1,TEBWS-1,auto,resolves by numeric id only; map join falls back to plant_name
-warn,osm_id_format,relation/20679002,Dollymans Battery Storage,E_DOLLB-1,DOLLB-1,auto,resolves by numeric id only; map join falls back to plant_name
-warn,osm_id_format,relation/5474028,Gwynt y Môr Offshore Wind Farm,T_GYMR-15,GYMR-15,manual,resolves by numeric id only; map join falls back to plant_name
-warn,osm_id_format,relation/5474028,Gwynt y Môr Offshore Wind Farm,T_GYMR-17,GYMR-17,manual,resolves by numeric id only; map join falls back to plant_name
-warn,osm_id_format,relation/5474028,Gwynt y Môr Offshore Wind Farm,T_GYMR-26,GYMR-26,manual,resolves by numeric id only; map join falls back to plant_name
-warn,osm_id_format,relation/5474028,Gwynt y Môr Offshore Wind Farm,T_GYMR-28,GYMR-28,manual,resolves by numeric id only; map join falls back to plant_name
-warn,osm_id_format,relation/7868829,Chapel Lane Solar Farm,E_CHAPB-1,CHAPB-1,auto,resolves by numeric id only; map join falls back to plant_name
-warn,osm_id_format,relation/7885568,Langage Solar Farm,T_LAGA-1,LAGA-1,auto,resolves by numeric id only; map join falls back to plant_name
-warn,osm_id_format,relation/8829625,Walney Wind Farm,T_WLNYO-2,WLNYO-2,auto,resolves by numeric id only; map join falls back to plant_name
-warn,osm_id_format,relation/8829625,Walney Wind Farm,T_WLNYO-3,WLNYO-3,auto,resolves by numeric id only; map join falls back to plant_name
-warn,osm_id_format,relation/8829625,Walney Wind Farm,T_WLNYO-4,WLNYO-4,auto,resolves by numeric id only; map join falls back to plant_name
-warn,osm_id_format,relation/8829625,Walney Wind Farm,T_WLNYW-1,WLNYW-1,auto,resolves by numeric id only; map join falls back to plant_name
-warn,osm_id_format,relation/8835793,Hagshaw Hill Extension Wind Farm,T_HAGHW-2,HAGHW-2,auto,resolves by numeric id only; map join falls back to plant_name
-warn,osm_id_format,relation/9106671,Cross Roads Plantation Solar Farm,E_GRCRB-1,GRCRB-1,auto,resolves by numeric id only; map join falls back to plant_name
-warn,osm_id_format,relation/9291197,Water Eaton Farm/Port Farm,E_WTRLN-1,WTRLN-1,auto,resolves by numeric id only; map join falls back to plant_name
-warn,osm_id_format,relation/9455566,Ferry Farm I,T_FIDL-1,FIDL-1,auto,resolves by numeric id only; map join falls back to plant_name
-warn,osm_id_format,relation/9455566,Ferry Farm I,T_FIDL-2,FIDL-2,auto,resolves by numeric id only; map join falls back to plant_name
-warn,osm_id_format,relation/9455566,Ferry Farm I,T_FIDL-2G,FIDL-2G,auto,resolves by numeric id only; map join falls back to plant_name
-warn,osm_id_format,relation/9455566,Ferry Farm I,T_FIDL-3,FIDL-3,auto,resolves by numeric id only; map join falls back to plant_name
-warn,osm_id_format,relation/9455566,Ferry Farm I,T_FIDL-3G,FIDL-3G,auto,resolves by numeric id only; map join falls back to plant_name
-warn,osm_id_format,relation/9455566,Ferry Farm I,T_FIDL-4,FIDL-4,auto,resolves by numeric id only; map join falls back to plant_name
-warn,osm_id_format,relation/9455566,Ferry Farm I,T_FIDLST1,FIDLST1,auto,resolves by numeric id only; map join falls back to plant_name
-warn,osm_id_format,relation/9539129,Brook Hall Farm Solar Farm,E_BROFB-1,BROFB-1,auto,resolves by numeric id only; map join falls back to plant_name
-warn,osm_id_format,relation/9938532,Fields Farm (Agden),E_GFLDW-1,GFLDW-1,auto,resolves by numeric id only; map join falls back to plant_name
-warn,osm_id_format,way/1005424593,Burwell Battery,E_BURWB-1,BURWB-1,auto,resolves by numeric id only; map join falls back to plant_name
-warn,osm_id_format,way/1005424593,Burwell Battery,E_BURWB-2,BURWB-2,auto,resolves by numeric id only; map join falls back to plant_name
-warn,osm_id_format,way/1005424593,Burwell Battery,E_BURWB-3,BURWB-3,auto,resolves by numeric id only; map join falls back to plant_name
-warn,osm_id_format,way/1017473264,Glen Finglas,T_GLNKW-1,GLNKW-1,auto,resolves by numeric id only; map join falls back to plant_name
-warn,osm_id_format,way/1017473264,Glen Finglas,T_GNAPW-1,GNAPW-1,auto,resolves by numeric id only; map join falls back to plant_name
-warn,osm_id_format,way/1020439730,St. Fillans Power Station,T_SFILD-1,SFILD-1,auto,resolves by numeric id only; map join falls back to plant_name
-warn,osm_id_format,way/1020439730,St. Fillans Power Station,,SFIL-1,auto,resolves by numeric id only; map join falls back to plant_name
-warn,osm_id_format,way/1066120013,Bispham Flexible Generation,E_BSPHM-1,BSPHM-1,auto,resolves by numeric id only; map join falls back to plant_name
-warn,osm_id_format,way/1110596984,Newton Wood Farm BESS,E_NEWTB-1,NEWTB-1,auto,resolves by numeric id only; map join falls back to plant_name
-warn,osm_id_format,way/1116566266,Pillswood Battery Storage,E_PILLB-1,PILLB-1,auto,resolves by numeric id only; map join falls back to plant_name
-warn,osm_id_format,way/1116566266,Pillswood Battery Storage,E_PILLB-2,PILLB-2,auto,resolves by numeric id only; map join falls back to plant_name
-warn,osm_id_format,way/1122850401,Whitelee Wind Farm Battery Storage,T_WHILW-2,WHILW-2,auto,resolves by numeric id only; map join falls back to plant_name
-warn,osm_id_format,way/1122850401,Whitelee Wind Farm Battery Storage,T_WHLWB-1,WHLWB-1,auto,resolves by numeric id only; map join falls back to plant_name
-warn,osm_id_format,way/1122850401,Whitelee Wind Farm Battery Storage,T_WHILW-1,WHILW-1,manual,resolves by numeric id only; map join falls back to plant_name
-warn,osm_id_format,way/1134093224,Middlewich Power Generation Plant,E_MDLWH-1,MDLWH-1,auto,resolves by numeric id only; map join falls back to plant_name
-warn,osm_id_format,way/113739834,Thanet Wind Farm,T_THNTO-1,THNTO-1,auto,resolves by numeric id only; map join falls back to plant_name
-warn,osm_id_format,way/113739834,Thanet Wind Farm,T_THNTO-2,THNTO-2,auto,resolves by numeric id only; map join falls back to plant_name
-warn,osm_id_format,way/1148893647,Brook Farm Battery,E_BROFB-1,BROFB-1,auto,resolves by numeric id only; map join falls back to plant_name
-warn,osm_id_format,way/1148898112,Arbroath Battery,E_ARBRB-1,ARBRB-1,auto,resolves by numeric id only; map join falls back to plant_name
-warn,osm_id_format,way/1148934860,Contego Battery,E_CONTB-1,CONTB-1,auto,resolves by numeric id only; map join falls back to plant_name
-warn,osm_id_format,way/1148939839,Nursling Battery Storage,T_NURSB-1,NURSB-1,auto,resolves by numeric id only; map join falls back to plant_name
-warn,osm_id_format,way/1149111148,Cowley Battery Storage,T_COWB-1,COWB-1,auto,resolves by numeric id only; map join falls back to plant_name
-warn,osm_id_format,way/1149138868,Bustleholme Battery,T_BUSTB-1,BUSTB-1,auto,resolves by numeric id only; map join falls back to plant_name
-warn,osm_id_format,way/1149192582,Enderby Battery Storage,T_ENDRB-1,ENDRB-1,auto,resolves by numeric id only; map join falls back to plant_name
-warn,osm_id_format,way/1149228931,Lester Way Flexible Generation Facility,E_LSTWY-1,LSTWY-1,auto,resolves by numeric id only; map join falls back to plant_name
-warn,osm_id_format,way/1149233319,The Drove Power Plant,E_TDRVE-1,TDRVE-1,auto,resolves by numeric id only; map join falls back to plant_name
-warn,osm_id_format,way/1149297467,Hunningley Stairfoot BESS,E_BARNB-1,BARNB-1,auto,resolves by numeric id only; map join falls back to plant_name
-warn,osm_id_format,way/1149301628,Kemsley Battery Storage,T_KEMB-1,KEMB-1,auto,resolves by numeric id only; map join falls back to plant_name
-warn,osm_id_format,way/1149497116,Chickerell Power Station,E_CHICK-1,CHICK-1,auto,resolves by numeric id only; map join falls back to plant_name
-warn,osm_id_format,way/1149621575,Keadby Power Station,T_KEAD-2,KEAD-2,auto,resolves by numeric id only; map join falls back to plant_name
-warn,osm_id_format,way/1149621575,Keadby Power Station,T_KEAD-1,KEAD-1,auto,resolves by numeric id only; map join falls back to plant_name
-warn,osm_id_format,way/1149621575,Keadby Power Station,T_KEADGT-3,KEADGT-3,auto,resolves by numeric id only; map join falls back to plant_name
-warn,osm_id_format,way/1152536439,Wishaw Battery,T_WISHB-1,WISHB-1,auto,resolves by numeric id only; map join falls back to plant_name
-warn,osm_id_format,way/1152536439,Wishaw Battery,T_WISHD-1,WISHD-1,auto,resolves by numeric id only; map join falls back to plant_name
-warn,osm_id_format,way/1152989938,Moorfield Drive Power Station,E_MORFL-1,MORFL-1,auto,resolves by numeric id only; map join falls back to plant_name
-warn,osm_id_format,way/1152991020,Rake Lane Power Station,E_RAKE-1,RAKE-1,auto,resolves by numeric id only; map join falls back to plant_name
-warn,osm_id_format,way/1153082218,Goose House Lane Power Station,E_GOSHS-1,GOSHS-1,auto,resolves by numeric id only; map join falls back to plant_name
-warn,osm_id_format,way/1159868562,Broadditch Battery,E_BROAB-1,BROAB-1,auto,resolves by numeric id only; map join falls back to plant_name
-warn,osm_id_format,way/1160388718,Chapel Farm Battery Storage,E_CHAPB-1,CHAPB-1,auto,resolves by numeric id only; map join falls back to plant_name
-warn,osm_id_format,way/1168494496,Larks Green Solar Farm,T_LARKB-1,LARKB-1,auto,resolves by numeric id only; map join falls back to plant_name
-warn,osm_id_format,way/1168910658,Burwell Solar Farm,E_BURWB-1,BURWB-1,auto,resolves by numeric id only; map join falls back to plant_name
-warn,osm_id_format,way/1168910658,Burwell Solar Farm,E_BURWB-2,BURWB-2,auto,resolves by numeric id only; map join falls back to plant_name
-warn,osm_id_format,way/1168910658,Burwell Solar Farm,E_BURWB-3,BURWB-3,auto,resolves by numeric id only; map join falls back to plant_name
-warn,osm_id_format,way/1176283907,Clay Tye BESS,E_CLAYB-1,CLAYB-1,manual,resolves by numeric id only; map join falls back to plant_name
-warn,osm_id_format,way/1176283907,Clay Tye BESS,E_CLAYB-2,CLAYB-2,manual,resolves by numeric id only; map join falls back to plant_name
-warn,osm_id_format,way/1187625958,Farnham Battery Storage,E_FARNB-1,FARNB-1,auto,resolves by numeric id only; map join falls back to plant_name
-warn,osm_id_format,way/1187629536,Fordtown Battery Energy Storage System,V__PHABI004,AG-HEL0CP,auto,resolves by numeric id only; map join falls back to plant_name
-warn,osm_id_format,way/1189799812,Tollgate Battery Storage Facility,E_TOLLB-1,TOLLB-1,auto,resolves by numeric id only; map join falls back to plant_name
-warn,osm_id_format,way/1189809901,Capenhurst Battery Energy Storage,T_PINFB-1,PINFB-1,manual,resolves by numeric id only; map join falls back to plant_name
-warn,osm_id_format,way/1189809901,Capenhurst Battery Energy Storage,T_PINFB-2,PINFB-2,manual,resolves by numeric id only; map join falls back to plant_name
-warn,osm_id_format,way/1189809901,Capenhurst Battery Energy Storage,T_PINFB-3,PINFB-3,manual,resolves by numeric id only; map join falls back to plant_name
-warn,osm_id_format,way/1189809901,Capenhurst Battery Energy Storage,T_PINFB-4,PINFB-4,manual,resolves by numeric id only; map join falls back to plant_name
-warn,osm_id_format,way/1210002953,Little Raith Battery Storage,E_LITRB-1,LITRB-1,auto,resolves by numeric id only; map join falls back to plant_name
-warn,osm_id_format,way/1211651931,Wilton BESS Phase 1,T_LIONB-1,LionB-1,auto,resolves by numeric id only; map join falls back to plant_name
-warn,osm_id_format,way/1211651931,Wilton BESS Phase 1,T_LIONB-2,LionB-2,auto,resolves by numeric id only; map join falls back to plant_name
-warn,osm_id_format,way/1211651931,Wilton BESS Phase 1,T_LIONB-3,LionB-3,auto,resolves by numeric id only; map join falls back to plant_name
-warn,osm_id_format,way/1211651931,Wilton BESS Phase 1,T_LIOND-1,LionD-1,auto,resolves by numeric id only; map join falls back to plant_name
-warn,osm_id_format,way/1233495394,Peterborough STOR,E_PETEM3,PETEM3,auto,resolves by numeric id only; map join falls back to plant_name
-warn,osm_id_format,way/1233495808,Brigg STOR,E_BRGG-1,BRGG-1,auto,resolves by numeric id only; map join falls back to plant_name
-warn,osm_id_format,way/129923951,Grudie Bridge Power Station,,GRUB-1,auto,resolves by numeric id only; map join falls back to plant_name
-warn,osm_id_format,way/129923951,Grudie Bridge Power Station,,GRUB-2,auto,resolves by numeric id only; map join falls back to plant_name
-warn,osm_id_format,way/1300558890,Sutton Bridge Solar Farm,T_SUTBS-1,SUTBS-1,auto,resolves by numeric id only; map join falls back to plant_name
-warn,osm_id_format,way/130127380,Shin Power Station,,SHIN-1,auto,resolves by numeric id only; map join falls back to plant_name
-warn,osm_id_format,way/130127380,Shin Power Station,,SHIN-2,auto,resolves by numeric id only; map join falls back to plant_name
-warn,osm_id_format,way/133329765,Peterhead Power Station,T_PEHE-1,PEHE-1,auto,resolves by numeric id only; map join falls back to plant_name
-warn,osm_id_format,way/133329765,Peterhead Power Station,T_PEHE-2,PEHE-2,auto,resolves by numeric id only; map join falls back to plant_name
-warn,osm_id_format,way/133329765,Peterhead Power Station,T_PEHED-1,PEHED-1,auto,resolves by numeric id only; map join falls back to plant_name
-warn,osm_id_format,way/1347689402,Invergarry Power Station,T_INGAD-1,INGAD-1,auto,resolves by numeric id only; map join falls back to plant_name
-warn,osm_id_format,way/1353839293,Aberdare Power Station,E_ABERDARE,ABERU-1,auto,resolves by numeric id only; map join falls back to plant_name
-warn,osm_id_format,way/1364037063,Shilton Lane Battery Storage,E_SHILB-1,SHILB-1,auto,resolves by numeric id only; map join falls back to plant_name
-warn,osm_id_format,way/1371100889,Croydon Power plant,E_CROYD-2,CROYD-2,auto,resolves by numeric id only; map join falls back to plant_name
-warn,osm_id_format,way/1376105604,Roaring Hill Energy Storage,E_ROARB-1,ROARB-1,auto,resolves by numeric id only; map join falls back to plant_name
-warn,osm_id_format,way/1408758796,Hywind 2,E_HYWDW-1,HYWDW-1,auto,resolves by numeric id only; map join falls back to plant_name
-warn,osm_id_format,way/1409249776,Stairfoot Battery Storage & 33kV substation,E_BARNB-1,BARNB-1,auto,resolves by numeric id only; map join falls back to plant_name
-warn,osm_id_format,way/1411410097,Bulphan Fen Solar Farm Battery Storage,T_BLPFB-1,BLPFB-1,auto,resolves by numeric id only; map join falls back to plant_name
-warn,osm_id_format,way/1411410097,Bulphan Fen Solar Farm Battery Storage,T_BLPFS-1,BLPFS-1,auto,resolves by numeric id only; map join falls back to plant_name
-warn,osm_id_format,way/1419346810,Monk Fryston Battery Storage,T_MKFRB-1,MKFRB-1,auto,resolves by numeric id only; map join falls back to plant_name
-warn,osm_id_format,way/1419408503,Capenhurst Lane BESS,T_CAPNB-1,CAPNB-1,manual,resolves by numeric id only; map join falls back to plant_name
-warn,osm_id_format,way/1419436615,Native River BESS,T_NTRVB-1,NTRVB-1,auto,resolves by numeric id only; map join falls back to plant_name
-warn,osm_id_format,way/1421373804,Cathkin BESS,E_CATHB-1,CATHB-1,manual,resolves by numeric id only; map join falls back to plant_name
-warn,osm_id_format,way/143791247,Indian Queens Power Station,T_INDQB-1,INDQB-1,auto,resolves by numeric id only; map join falls back to plant_name
-warn,osm_id_format,way/143791247,Indian Queens Power Station,T_INDQ-1,INDQ-1,auto,resolves by numeric id only; map join falls back to plant_name
-warn,osm_id_format,way/143902275,Spalding Power Station,T_SPLN-1,SPLN-1,auto,resolves by numeric id only; map join falls back to plant_name
-warn,osm_id_format,way/143902275,Spalding Power Station,T_SEEL-1,SEEL-1,manual,resolves by numeric id only; map join falls back to plant_name
-warn,osm_id_format,way/1442566922,Larks Green Solar Farm Battery Storage,T_LARKB-1,LARKB-1,auto,resolves by numeric id only; map join falls back to plant_name
-warn,osm_id_format,way/1442566922,Larks Green Solar Farm Battery Storage,T_LARKS-1,LARKS-1,auto,resolves by numeric id only; map join falls back to plant_name
-warn,osm_id_format,way/1442624228,Coupar Angus BESS,E_CUPAB-1,CUPAB-1,auto,resolves by numeric id only; map join falls back to plant_name
-warn,osm_id_format,way/1473937486,Uskmouth BESS,T_USKM-13,USKM-13,auto,resolves by numeric id only; map join falls back to plant_name
-warn,osm_id_format,way/1473937486,Uskmouth BESS,T_USKM-14,USKM-14,auto,resolves by numeric id only; map join falls back to plant_name
-warn,osm_id_format,way/1473937486,Uskmouth BESS,T_USKM-15,USKM-15,auto,resolves by numeric id only; map join falls back to plant_name
-warn,osm_id_format,way/1473937486,Uskmouth BESS,T_USKMB-4,USKMB-4,auto,resolves by numeric id only; map join falls back to plant_name
-warn,osm_id_format,way/1473937486,Uskmouth BESS,T_USKMB-5,USKMB-5,auto,resolves by numeric id only; map join falls back to plant_name
-warn,osm_id_format,way/1473937486,Uskmouth BESS,T_USKMB-2,USKMB-2,manual,resolves by numeric id only; map join falls back to plant_name
-warn,osm_id_format,way/1473937486,Uskmouth BESS,T_USKMB-3,USKMB-3,manual,resolves by numeric id only; map join falls back to plant_name
-warn,osm_id_format,way/1474131593,Harestanes Windfarm BESS,T_HRSTW-1,HRSTW-1,auto,resolves by numeric id only; map join falls back to plant_name
-warn,osm_id_format,way/1475015185,Blackpool BESS,E_BLKPB-1,BLKPB-1,auto,resolves by numeric id only; map join falls back to plant_name
-warn,osm_id_format,way/1475017990,Holes Bay BESS,E_BHOLB-1,BHOLB-1,auto,resolves by numeric id only; map join falls back to plant_name
-warn,osm_id_format,way/1475040946,Burwell 2 BESS,E_BURWB-3,BURWB-3,auto,resolves by numeric id only; map join falls back to plant_name
-warn,osm_id_format,way/1475218524,Gerrards Cross BESS,E_GRCRB-1,GRCRB-1,auto,resolves by numeric id only; map join falls back to plant_name
-warn,osm_id_format,way/1476437942,Skelmersdale Battery,E_SKELB-1,SKELB-1,auto,resolves by numeric id only; map join falls back to plant_name
-warn,osm_id_format,way/1476526758,Torquay BESS,E_TORQB-1,TORQB-1,auto,resolves by numeric id only; map join falls back to plant_name
-warn,osm_id_format,way/1476530724,Whitebirk BESS,E_WHTBB-1,WHTBB-1,auto,resolves by numeric id only; map join falls back to plant_name
-warn,osm_id_format,way/1476857822,Bredbury BESS,T_BREDB-1,BREDB-1,auto,resolves by numeric id only; map join falls back to plant_name
-warn,osm_id_format,way/1476906510,Ferrybridge BESS,T_FERRB-1,FERRB-1,auto,resolves by numeric id only; map join falls back to plant_name
-warn,osm_id_format,way/1476906510,Ferrybridge BESS,T_FERRB-2,FERRB-2,auto,resolves by numeric id only; map join falls back to plant_name
-warn,osm_id_format,way/1482190103,Sundon Battery Storage,T_SUNDB-1,SUNDB-1,auto,resolves by numeric id only; map join falls back to plant_name
-warn,osm_id_format,way/1482240805,Neilston Greener Grid Park Phase I,T_NLSTB-1,NLSTB-1,auto,resolves by numeric id only; map join falls back to plant_name
-warn,osm_id_format,way/1482245953,Tebworth Battery Storage,T_TEBWB-1,TEBWB-1,auto,resolves by numeric id only; map join falls back to plant_name
-warn,osm_id_format,way/1482245953,Tebworth Battery Storage,T_TEBWS-1,TEBWS-1,auto,resolves by numeric id only; map join falls back to plant_name
-warn,osm_id_format,way/1483333224,Kincraig Solar Farm,E_KINCS-1,KINCS-1,auto,resolves by numeric id only; map join falls back to plant_name
-warn,osm_id_format,way/1483389306,Coventry BESS,T_COVNB-1,COVNB-1,auto,resolves by numeric id only; map join falls back to plant_name
-warn,osm_id_format,way/1484128931,Overhill BESS,E_OVRHB-1,OVRHB-1,auto,resolves by numeric id only; map join falls back to plant_name
-warn,osm_id_format,way/1484583344,Indian Queens BESS,T_INDQB-1,INDQB-1,auto,resolves by numeric id only; map join falls back to plant_name
-warn,osm_id_format,way/1506690182,PeakGen Hatfield,E_PGPETE,PGPET-1,auto,resolves by numeric id only; map join falls back to plant_name
-warn,osm_id_format,way/150780483,Medway Power Station,T_MEDP-1,MEDP-1,auto,resolves by numeric id only; map join falls back to plant_name
-warn,osm_id_format,way/1512575413,Berkeley BESS,E_BERKB-1,BERKB-1,auto,resolves by numeric id only; map join falls back to plant_name
-warn,osm_id_format,way/1512575413,Berkeley BESS,E_BERKB-2,BERKB-2,auto,resolves by numeric id only; map join falls back to plant_name
-warn,osm_id_format,way/1512627537,North Tawton BESS,E_NTAWB-1,NTAWB-1,auto,resolves by numeric id only; map join falls back to plant_name
-warn,osm_id_format,way/1512631595,Wolverhampton West BESS,E_WOLVB-1,WOLVB-1,auto,resolves by numeric id only; map join falls back to plant_name
-warn,osm_id_format,way/1518654795,Heysham Power,T_HEYM2-D,HEYM2D-1,auto,resolves by numeric id only; map join falls back to plant_name
-warn,osm_id_format,way/160279522,West Burton B Power Station,T_WBUGT-1,WBUGT-1,auto,resolves by numeric id only; map join falls back to plant_name
-warn,osm_id_format,way/160279522,West Burton B Power Station,T_WBUGT-4,WBUGT-4,auto,resolves by numeric id only; map join falls back to plant_name
-warn,osm_id_format,way/160279522,West Burton B Power Station,T_WBUPS-1,WBUPS-1,auto,resolves by numeric id only; map join falls back to plant_name
-warn,osm_id_format,way/160279522,West Burton B Power Station,T_WBUPS-2,WBUPS-2,auto,resolves by numeric id only; map join falls back to plant_name
-warn,osm_id_format,way/160279522,West Burton B Power Station,T_WBUPS-3,WBUPS-3,auto,resolves by numeric id only; map join falls back to plant_name
-warn,osm_id_format,way/160279522,West Burton B Power Station,T_WBUPS-4,WBUPS-4,auto,resolves by numeric id only; map join falls back to plant_name
-warn,osm_id_format,way/160279522,West Burton B Power Station,E_WBUPS-STX,WBUPS-STX,auto,resolves by numeric id only; map join falls back to plant_name
-warn,osm_id_format,way/160279522,West Burton B Power Station,T_WBURB-1,WBURB-1,auto,resolves by numeric id only; map join falls back to plant_name
-warn,osm_id_format,way/160279522,West Burton B Power Station,T_WBURB-2,WBURB-2,auto,resolves by numeric id only; map join falls back to plant_name
-warn,osm_id_format,way/160279522,West Burton B Power Station,T_WBURB-3,WBURB-3,auto,resolves by numeric id only; map join falls back to plant_name
-warn,osm_id_format,way/160279522,West Burton B Power Station,T_WBURB-41,WBURB-41,auto,resolves by numeric id only; map join falls back to plant_name
-warn,osm_id_format,way/160279522,West Burton B Power Station,T_WBURB-43,WBURB-43,auto,resolves by numeric id only; map join falls back to plant_name
-warn,osm_id_format,way/16075498,Pembroke Power Station,T_PEMB-11,PEMB-11,auto,resolves by numeric id only; map join falls back to plant_name
-warn,osm_id_format,way/16075498,Pembroke Power Station,T_PEMB-21,PEMB-21,auto,resolves by numeric id only; map join falls back to plant_name
-warn,osm_id_format,way/16075498,Pembroke Power Station,T_PEMB-31,PEMB-31,auto,resolves by numeric id only; map join falls back to plant_name
-warn,osm_id_format,way/16075498,Pembroke Power Station,T_PEMB-41,PEMB-41,auto,resolves by numeric id only; map join falls back to plant_name
-warn,osm_id_format,way/16075498,Pembroke Power Station,T_PEMB-51,PEMB-51,auto,resolves by numeric id only; map join falls back to plant_name
-warn,osm_id_format,way/16075498,Pembroke Power Station,T_PEMBSC-61,PMBSC-61,auto,resolves by numeric id only; map join falls back to plant_name
-warn,osm_id_format,way/201993701,Great Yarmouth Power Station,E_GYAR-1,GYAR-1,auto,resolves by numeric id only; map join falls back to plant_name
-warn,osm_id_format,way/204595889,Marchwood Power Station,T_MRWD-1,MRWD-1,auto,resolves by numeric id only; map join falls back to plant_name
-warn,osm_id_format,way/204918278,South Humber Bank Power Station,T_SHBA-1,SHBA-1,manual,resolves by numeric id only; map join falls back to plant_name
-warn,osm_id_format,way/204918278,South Humber Bank Power Station,T_SHBA-2,SHBA-2,manual,resolves by numeric id only; map join falls back to plant_name
-warn,osm_id_format,way/205132626,Killingholme B Power Station,T_KILLPG-1,KILLPG-1,manual,resolves by numeric id only; map join falls back to plant_name
-warn,osm_id_format,way/205132626,Killingholme B Power Station,T_KILLPG-2,KILLPG-2,manual,resolves by numeric id only; map join falls back to plant_name
-warn,osm_id_format,way/205132626,Killingholme B Power Station,T_KILLSC-1,KILLSC-1,auto,resolves by numeric id only; map join falls back to plant_name
-warn,osm_id_format,way/205132626,Killingholme B Power Station,T_KILLSC-2,KILLSC-2,auto,resolves by numeric id only; map join falls back to plant_name
-warn,osm_id_format,way/205132626,Killingholme B Power Station,T_KILNS-1,KILNS,auto,resolves by numeric id only; map join falls back to plant_name
-warn,osm_id_format,way/207523493,Finlarig Power Station,T_FINL-1,FINL-1,auto,resolves by numeric id only; map join falls back to plant_name
-warn,osm_id_format,way/208495234,Glanford Brigg Power Station,E_BRGG-1,BRGG-1,auto,resolves by numeric id only; map join falls back to plant_name
-warn,osm_id_format,way/208757000,Immingham Power Station,E_STALB-1,STALB-1,auto,resolves by numeric id only; map join falls back to plant_name
-warn,osm_id_format,way/208757000,Immingham Power Station,T_HUMR-1,HUMR-1,manual,resolves by numeric id only; map join falls back to plant_name
-warn,osm_id_format,way/218433470,London Array Wind Farm,T_LARYW-1,LARYO-1,auto,resolves by numeric id only; map join falls back to plant_name
-warn,osm_id_format,way/218433470,London Array Wind Farm,T_LARYW-2,LARYO-2,auto,resolves by numeric id only; map join falls back to plant_name
-warn,osm_id_format,way/218433470,London Array Wind Farm,T_LARYW-3,LARYO-3,auto,resolves by numeric id only; map join falls back to plant_name
-warn,osm_id_format,way/218433470,London Array Wind Farm,T_LARYW-4,LARYO-4,auto,resolves by numeric id only; map join falls back to plant_name
-warn,osm_id_format,way/219813087,Glendoe Hydro Scheme,T_GLNDO-1,GLNDO-1,auto,resolves by numeric id only; map join falls back to plant_name
-warn,osm_id_format,way/219813087,Glendoe Hydro Scheme,T_GLNDOD1,GLNDOD1,auto,resolves by numeric id only; map join falls back to plant_name
-warn,osm_id_format,way/229449727,Staythorpe C Power Station,T_STAY-1,STAY-1,auto,resolves by numeric id only; map join falls back to plant_name
-warn,osm_id_format,way/229449727,Staythorpe C Power Station,T_STAY-2,STAY-2,auto,resolves by numeric id only; map join falls back to plant_name
-warn,osm_id_format,way/229449727,Staythorpe C Power Station,T_STAY-3,STAY-3,auto,resolves by numeric id only; map join falls back to plant_name
-warn,osm_id_format,way/229449727,Staythorpe C Power Station,T_STAY-4,STAY-4,auto,resolves by numeric id only; map join falls back to plant_name
-warn,osm_id_format,way/230560199,Cwm Dyli Power Station,E_CWMD-1,CWMD-1,auto,resolves by numeric id only; map join falls back to plant_name
-warn,osm_id_format,way/239248123,Fasnakyle Power Station,T_FASN-1,FASN-1,auto,resolves by numeric id only; map join falls back to plant_name
-warn,osm_id_format,way/239248123,Fasnakyle Power Station,E_FASN-4,FASN-4,auto,resolves by numeric id only; map join falls back to plant_name
-warn,osm_id_format,way/239248123,Fasnakyle Power Station,T_FASN-2,FASN2,auto,resolves by numeric id only; map join falls back to plant_name
-warn,osm_id_format,way/239248123,Fasnakyle Power Station,E_FASN-3,FASN3,auto,resolves by numeric id only; map join falls back to plant_name
-warn,osm_id_format,way/24409061,Sloy Power station,M_SLOY-1,SLOY-1,auto,resolves by numeric id only; map join falls back to plant_name
-warn,osm_id_format,way/24409061,Sloy Power station,T_SLOY-2,SLOY-2,auto,resolves by numeric id only; map join falls back to plant_name
-warn,osm_id_format,way/24409061,Sloy Power station,T_SLOY-3,SLOY-3,auto,resolves by numeric id only; map join falls back to plant_name
-warn,osm_id_format,way/24409061,Sloy Power station,M_SLOY-4,SLOY-4,auto,resolves by numeric id only; map join falls back to plant_name
-warn,osm_id_format,way/24409061,Sloy Power station,T_SLOYD-1,SLOYD-1,auto,resolves by numeric id only; map join falls back to plant_name
-warn,osm_id_format,way/247279710,Clunie Power Station,M_CAS-CLU01,CAS-CLU01,auto,resolves by numeric id only; map join falls back to plant_name
-warn,osm_id_format,way/253091365,Jamesfield Organic Centre - Battery Storage,E_JAMBB-1,JAMBB-1,auto,resolves by numeric id only; map join falls back to plant_name
-warn,osm_id_format,way/253091365,Jamesfield Organic Centre - Battery Storage,E_JAMBB-2,JAMBB-2,auto,resolves by numeric id only; map join falls back to plant_name
-warn,osm_id_format,way/264087413,Clachan Power Station,E_CLAC-1,CLAC-1,auto,resolves by numeric id only; map join falls back to plant_name
-warn,osm_id_format,way/264087413,Clachan Power Station,T_CLACD-1,CLACD-1,auto,resolves by numeric id only; map join falls back to plant_name
-warn,osm_id_format,way/264087413,Clachan Power Station,E_CLFLW-1,CLFLW-1,auto,resolves by numeric id only; map join falls back to plant_name
-warn,osm_id_format,way/26427510,Connahs Quay Power Station,T_CNQPS-1,CNQPS-1,auto,resolves by numeric id only; map join falls back to plant_name
-warn,osm_id_format,way/26427510,Connahs Quay Power Station,T_CNQPS-2,CNQPS-2,auto,resolves by numeric id only; map join falls back to plant_name
-warn,osm_id_format,way/26427510,Connahs Quay Power Station,T_CNQPS-3,CNQPS-3,auto,resolves by numeric id only; map join falls back to plant_name
-warn,osm_id_format,way/26427510,Connahs Quay Power Station,T_CNQPS-4,CNQPS-4,auto,resolves by numeric id only; map join falls back to plant_name
-warn,osm_id_format,way/26550612,Rannoch Power Station,,RANN-1,auto,resolves by numeric id only; map join falls back to plant_name
-warn,osm_id_format,way/26550612,Rannoch Power Station,,RANN-2,auto,resolves by numeric id only; map join falls back to plant_name
-warn,osm_id_format,way/26550612,Rannoch Power Station,,RANN-3,auto,resolves by numeric id only; map join falls back to plant_name
-warn,osm_id_format,way/265797509,Wolverhampton EfW,E_WOLVB-1,WOLVB-1,auto,resolves by numeric id only; map join falls back to plant_name
-warn,osm_id_format,way/27625744,Sizewell B Nuclear Power Station,T_SIZB-1,SIZB-1,auto,resolves by numeric id only; map join falls back to plant_name
-warn,osm_id_format,way/27625744,Sizewell B Nuclear Power Station,T_SIZB-2,SIZB-2,auto,resolves by numeric id only; map join falls back to plant_name
-warn,osm_id_format,way/29083166,Rocksavage Power Station,T_ROCK-1,ROCK-1,auto,resolves by numeric id only; map join falls back to plant_name
-warn,osm_id_format,way/291146217,Robin Rigg Offshore Wind Farm,T_RREW-1,RREW-1,manual,resolves by numeric id only; map join falls back to plant_name
-warn,osm_id_format,way/291146217,Robin Rigg Offshore Wind Farm,T_RRWW-1,RRWW-1,manual,resolves by numeric id only; map join falls back to plant_name
-warn,osm_id_format,way/294548158,Foyers Falls Power Station,T_FOYED-1,FOYED-1,auto,resolves by numeric id only; map join falls back to plant_name
-warn,osm_id_format,way/295169560,Luichart Power Station,T_LUICD-1,LUICD-1,auto,resolves by numeric id only; map join falls back to plant_name
-warn,osm_id_format,way/310488542,Heysham Nuclear Power Station,T_HEYM2-D,HEYM2D-1,auto,resolves by numeric id only; map join falls back to plant_name
-warn,osm_id_format,way/310488542,Heysham Nuclear Power Station,T_HEYM11,HEYM11,manual,resolves by numeric id only; map join falls back to plant_name
-warn,osm_id_format,way/310488542,Heysham Nuclear Power Station,T_HEYM12,HEYM12,manual,resolves by numeric id only; map join falls back to plant_name
-warn,osm_id_format,way/310488542,Heysham Nuclear Power Station,T_HEYM27,HEYM27,manual,resolves by numeric id only; map join falls back to plant_name
-warn,osm_id_format,way/310488542,Heysham Nuclear Power Station,T_HEYM28,HEYM28,manual,resolves by numeric id only; map join falls back to plant_name
-warn,osm_id_format,way/312992167,Saltend Power Station,T_SCCL-1,SCCL-1,auto,resolves by numeric id only; map join falls back to plant_name
-warn,osm_id_format,way/312992167,Saltend Power Station,T_SCCL-2,SCCL-2,auto,resolves by numeric id only; map join falls back to plant_name
-warn,osm_id_format,way/312992167,Saltend Power Station,T_SCCL-3,SCCL-3,auto,resolves by numeric id only; map join falls back to plant_name
-warn,osm_id_format,way/318841702,Taylors Lane Power Station,E_TAYL2G,TAYL2G,auto,resolves by numeric id only; map join falls back to plant_name
-warn,osm_id_format,way/318841702,Taylors Lane Power Station,E_TAYL3G,TAYL3G,auto,resolves by numeric id only; map join falls back to plant_name
-warn,osm_id_format,way/327949356,Burbo Bank Offshore Wind Farm,T_BRBEO-1,BRBEO-1,auto,resolves by numeric id only; map join falls back to plant_name
-warn,osm_id_format,way/327949356,Burbo Bank Offshore Wind Farm,E_BURBO,BURBW-1,auto,resolves by numeric id only; map join falls back to plant_name
-warn,osm_id_format,way/331863739,Humber Gateway Wind Farm,T_HMGTO-1,HMGTO-1,auto,resolves by numeric id only; map join falls back to plant_name
-warn,osm_id_format,way/331863739,Humber Gateway Wind Farm,T_HMGTO-2,HMGTO-2,auto,resolves by numeric id only; map join falls back to plant_name
-warn,osm_id_format,way/332532014,Thornton Greener Grid Park,T_BLWNB-1,BLWNB-1,auto,resolves by numeric id only; map join falls back to plant_name
-warn,osm_id_format,way/341804043,Westermost Rough Wind Farm,T_WTMSO-1,WTMSO-1,auto,resolves by numeric id only; map join falls back to plant_name
-warn,osm_id_format,way/34383063,Drax Power Station,E__MDRX002,DRAXD-2,auto,resolves by numeric id only; map join falls back to plant_name
-warn,osm_id_format,way/34383063,Drax Power Station,T_DRAXX-1,DRAXX-1,auto,resolves by numeric id only; map join falls back to plant_name
-warn,osm_id_format,way/34383063,Drax Power Station,T_DRAXX-2,DRAXX-2,auto,resolves by numeric id only; map join falls back to plant_name
-warn,osm_id_format,way/34383063,Drax Power Station,T_DRAXX-3,DRAXX-3,auto,resolves by numeric id only; map join falls back to plant_name
-warn,osm_id_format,way/34383063,Drax Power Station,T_DRAXX-4,DRAXX-4,auto,resolves by numeric id only; map join falls back to plant_name
-warn,osm_id_format,way/34383063,Drax Power Station,T_DRAXX-5,DRAXX-5,manual,resolves by numeric id only; map join falls back to plant_name
-warn,osm_id_format,way/34383063,Drax Power Station,T_DRAXX-6,DRAXX-6,manual,resolves by numeric id only; map join falls back to plant_name
-warn,osm_id_format,way/34383063,Drax Power Station,T_DRAXX-9G,DRAXX-9G,manual,resolves by numeric id only; map join falls back to plant_name
-warn,osm_id_format,way/34383063,Drax Power Station,T_DRAXX-10G,DRAXX-10G,manual,resolves by numeric id only; map join falls back to plant_name
-warn,osm_id_format,way/34383063,Drax Power Station,T_DRAXX-12G,DRAXX-12G,manual,resolves by numeric id only; map join falls back to plant_name
-warn,osm_id_format,way/352871114,Shoreham Power Station,E_SHOS-1,SHOS-1,auto,resolves by numeric id only; map join falls back to plant_name
-warn,osm_id_format,way/368344994,Gunfleet Sands 3 Offshore Wind Farm,T_GNFSW-1,GNFSW-1,auto,resolves by numeric id only; map join falls back to plant_name
-warn,osm_id_format,way/368344994,Gunfleet Sands 3 Offshore Wind Farm,T_GNFSW-2,GNFSW-2,auto,resolves by numeric id only; map join falls back to plant_name
-warn,osm_id_format,way/374197421,Chapel Hill Solar Farm,E_CHAPB-1,CHAPB-1,auto,resolves by numeric id only; map join falls back to plant_name
-warn,osm_id_format,way/38211225,Little Barford Power Station,T_LBAR-1,LBAR-1,auto,resolves by numeric id only; map join falls back to plant_name
-warn,osm_id_format,way/38211225,Little Barford Power Station,T_LBAR-1G,LBAR-1G,auto,resolves by numeric id only; map join falls back to plant_name
-warn,osm_id_format,way/386371700,Barn Farm,E_DBFRM-1,DBFRM-1,auto,resolves by numeric id only; map join falls back to plant_name
-warn,osm_id_format,way/392054586,Derby & Derbyshire Waste Treatment Centre,E_DERBY-1,DERBY-2,auto,resolves by numeric id only; map join falls back to plant_name
-warn,osm_id_format,way/402566315,Cottam Development Centre,T_CDCL-1,CDCL-1,auto,resolves by numeric id only; map join falls back to plant_name
-warn,osm_id_format,way/402796795,Ffestiniog Power Station,T_FFES-1,FFES-1,auto,resolves by numeric id only; map join falls back to plant_name
-warn,osm_id_format,way/402796795,Ffestiniog Power Station,T_FFES-2,FFES-2,auto,resolves by numeric id only; map join falls back to plant_name
-warn,osm_id_format,way/402796795,Ffestiniog Power Station,T_FFES-3,FFES-3,auto,resolves by numeric id only; map join falls back to plant_name
-warn,osm_id_format,way/402796795,Ffestiniog Power Station,T_FFES-4,FFES-4,auto,resolves by numeric id only; map join falls back to plant_name
-warn,osm_id_format,way/406035513,Exeter Energy Recovery Facility,E_EXETR-2,EXETR-2,auto,resolves by numeric id only; map join falls back to plant_name
-warn,osm_id_format,way/413032680,Plymouth Energy,E_PLYRK-1,PLYRK-1,auto,resolves by numeric id only; map join falls back to plant_name
-warn,osm_id_format,way/428741691,Fawley Waste to Energy Plant,E_FAWN-1,FAWN-1,auto,resolves by numeric id only; map join falls back to plant_name
-warn,osm_id_format,way/449382772,Foyers Power Station,T_FOYE-1,FOYE-1,auto,resolves by numeric id only; map join falls back to plant_name
-warn,osm_id_format,way/449382772,Foyers Power Station,T_FOYE-2,FOYE-2,auto,resolves by numeric id only; map join falls back to plant_name
-warn,osm_id_format,way/449382772,Foyers Power Station,T_FOYED-1,FOYED-1,auto,resolves by numeric id only; map join falls back to plant_name
-warn,osm_id_format,way/467788297,Errochty Hydroelectric Power Station,T_ERRO-1,ERRO-1,auto,resolves by numeric id only; map join falls back to plant_name
-warn,osm_id_format,way/467788297,Errochty Hydroelectric Power Station,T_ERRO-2,ERRO-2,auto,resolves by numeric id only; map join falls back to plant_name
-warn,osm_id_format,way/467788297,Errochty Hydroelectric Power Station,T_ERRO-3,ERRO-3,auto,resolves by numeric id only; map join falls back to plant_name
-warn,osm_id_format,way/4800321,Hartlepool Nuclear Power Station,T_HRTL-1,HRTL-1,auto,resolves by numeric id only; map join falls back to plant_name
-warn,osm_id_format,way/4800321,Hartlepool Nuclear Power Station,T_HRTL-2,HRTL-2,auto,resolves by numeric id only; map join falls back to plant_name
-warn,osm_id_format,way/4911067,Seabank Power Station,T_SEAB-1,SEAB-1,auto,resolves by numeric id only; map join falls back to plant_name
-warn,osm_id_format,way/4911067,Seabank Power Station,T_SEAB-2,SEAB-2,auto,resolves by numeric id only; map join falls back to plant_name
-warn,osm_id_format,way/498275162,Sutton Bridge Solar Farm,T_SUTBS-1,SUTBS-1,auto,resolves by numeric id only; map join falls back to plant_name
-warn,osm_id_format,way/512579289,Tollgate Solar Farm,E_TOLLB-1,TOLLB-1,auto,resolves by numeric id only; map join falls back to plant_name
-warn,osm_id_format,way/51698894,Sutton Bridge Power Station,T_SUTB-1,SUTB-1,manual,resolves by numeric id only; map join falls back to plant_name
-warn,osm_id_format,way/545681226,Sheringham Shoal Offshore Wind Farm,T_SHRSW-1,SHRSO-1,auto,resolves by numeric id only; map join falls back to plant_name
-warn,osm_id_format,way/545681226,Sheringham Shoal Offshore Wind Farm,T_SHRSW-2,SHRSO-2,auto,resolves by numeric id only; map join falls back to plant_name
-warn,osm_id_format,way/550474153,Barrow Wind Farm,T_BOWLW-1,BOWLW-1,auto,resolves by numeric id only; map join falls back to plant_name
-warn,osm_id_format,way/550474159,Ormonde Wind Farm,T_OMNDW-1,OMNDO-1,auto,resolves by numeric id only; map join falls back to plant_name
-warn,osm_id_format,way/550699358,Lincs Wind Farm,T_LNCSW-1,LNCSO-1,auto,resolves by numeric id only; map join falls back to plant_name
-warn,osm_id_format,way/550699358,Lincs Wind Farm,T_LNCSW-2,LNCSO-2,auto,resolves by numeric id only; map join falls back to plant_name
-warn,osm_id_format,way/550726464,Wilton Farm (pv),T_LIONB-1,LionB-1,auto,resolves by numeric id only; map join falls back to plant_name
-warn,osm_id_format,way/550726464,Wilton Farm (pv),T_LIONB-2,LionB-2,auto,resolves by numeric id only; map join falls back to plant_name
-warn,osm_id_format,way/550726464,Wilton Farm (pv),T_LIONB-3,LionB-3,auto,resolves by numeric id only; map join falls back to plant_name
-warn,osm_id_format,way/550726464,Wilton Farm (pv),T_LIOND-1,LionD-1,auto,resolves by numeric id only; map join falls back to plant_name
-warn,osm_id_format,way/550726464,Wilton Farm (pv),T_WILCT-1,WILCT-1,auto,resolves by numeric id only; map join falls back to plant_name
-warn,osm_id_format,way/55955507,Rye House Power Station,T_RYHPS-1,RYHPS-1,auto,resolves by numeric id only; map join falls back to plant_name
-warn,osm_id_format,way/562727161,Inverawe Power Station,,INAW-1,auto,resolves by numeric id only; map join falls back to plant_name
-warn,osm_id_format,way/563018026,Deanie Power Station,T_DEAND-1,DEAND-1,auto,resolves by numeric id only; map join falls back to plant_name
-warn,osm_id_format,way/570076477,Nant Power Station,T_NANT-1,NANT-1,auto,resolves by numeric id only; map join falls back to plant_name
-warn,osm_id_format,way/625572056,Black Bush Farm,T_BEASC-1,BEASC-1,auto,resolves by numeric id only; map join falls back to plant_name
-warn,osm_id_format,way/635728029,West of Duddon Sands Wind Farm,T_WDNSO-1,WDNSO-1,auto,resolves by numeric id only; map join falls back to plant_name
-warn,osm_id_format,way/635728029,West of Duddon Sands Wind Farm,T_WDNSO-2,WDNSO-2,auto,resolves by numeric id only; map join falls back to plant_name
-warn,osm_id_format,way/659490293,Roosecote Battery,E_ROOSB-1,ROOSB-1,auto,resolves by numeric id only; map join falls back to plant_name
-warn,osm_id_format,way/677933700,Grain CHP,T_GRAISC-1,GRAISC-1,auto,resolves by numeric id only; map join falls back to plant_name
-warn,osm_id_format,way/677933700,Grain CHP,T_GRAISC-2,GRAISC-2,auto,resolves by numeric id only; map join falls back to plant_name
-warn,osm_id_format,way/677933700,Grain CHP,T_GRAI-6,GRAI-6,manual,resolves by numeric id only; map join falls back to plant_name
-warn,osm_id_format,way/677933700,Grain CHP,T_GRAI-7,GRAI-7,manual,resolves by numeric id only; map join falls back to plant_name
-warn,osm_id_format,way/677933700,Grain CHP,T_GRAI-8,GRAI-8,manual,resolves by numeric id only; map join falls back to plant_name
-warn,osm_id_format,way/677933700,Grain CHP,T_GRAI1G,GRAI1G,manual,resolves by numeric id only; map join falls back to plant_name
-warn,osm_id_format,way/677933700,Grain CHP,T_GRAI4G,GRAI4G,manual,resolves by numeric id only; map join falls back to plant_name
-warn,osm_id_format,way/681589458,Goose Willow Farm,E_GOSHS-1,GOSHS-1,auto,resolves by numeric id only; map join falls back to plant_name
-warn,osm_id_format,way/682463646,Thornton Lane Solar Farm,T_BLWNB-1,BLWNB-1,auto,resolves by numeric id only; map join falls back to plant_name
-warn,osm_id_format,way/687444711,Lakeside Energy from Waste,T_LKSDB-1,LKSDB-1,auto,resolves by numeric id only; map join falls back to plant_name
-warn,osm_id_format,way/687448641,Tilbury Green Power,E_TGP1,TIBG-1,auto,resolves by numeric id only; map join falls back to plant_name
-warn,osm_id_format,way/688029957,Cowes Power Station,E_COWE1,COWE1,auto,resolves by numeric id only; map join falls back to plant_name
-warn,osm_id_format,way/688029957,Cowes Power Station,E_COWE2,COWE2,auto,resolves by numeric id only; map join falls back to plant_name
-warn,osm_id_format,way/690325130,Beatrice Wind Farm,T_BEATO-1,BEATO-1,auto,resolves by numeric id only; map join falls back to plant_name
-warn,osm_id_format,way/690325130,Beatrice Wind Farm,T_BEATO-2,BEATO-2,auto,resolves by numeric id only; map join falls back to plant_name
-warn,osm_id_format,way/690325130,Beatrice Wind Farm,T_BEATO-3,BEATO-3,auto,resolves by numeric id only; map join falls back to plant_name
-warn,osm_id_format,way/690325130,Beatrice Wind Farm,T_BEATO-4,BEATO-4,auto,resolves by numeric id only; map join falls back to plant_name
-warn,osm_id_format,way/694152827,Black Peak Farm,T_BEASC-1,BEASC-1,auto,resolves by numeric id only; map join falls back to plant_name
-warn,osm_id_format,way/70311216,Carrington Power Station,T_CARR-1,CARR-1,auto,resolves by numeric id only; map join falls back to plant_name
-warn,osm_id_format,way/70311216,Carrington Power Station,T_CARR-2,CARR-2,auto,resolves by numeric id only; map join falls back to plant_name
-warn,osm_id_format,way/711002156,Peterborough Power Station,E_PETEM1,PETEM1,auto,resolves by numeric id only; map join falls back to plant_name
-warn,osm_id_format,way/718284355,Fields Farm Solar Farm,E_GFLDW-1,GFLDW-1,auto,resolves by numeric id only; map join falls back to plant_name
-warn,osm_id_format,way/728893771,Rock Farm / Goldborough Farm (Rookwood),E_PLYRK-1,PLYRK-1,auto,resolves by numeric id only; map join falls back to plant_name
-warn,osm_id_format,way/729739562,Chapel Farm,E_CHAPB-1,CHAPB-1,auto,resolves by numeric id only; map join falls back to plant_name
-warn,osm_id_format,way/738926636,Pen y Cymoedd Energy Storage,T_PNYCB-1,PNYCB-1,auto,resolves by numeric id only; map join falls back to plant_name
-warn,osm_id_format,way/743116558,Fell View Farm Phase 1 & 2,E_FELL-1,FELL-1,auto,resolves by numeric id only; map join falls back to plant_name
-warn,osm_id_format,way/746012676,Newport (Began Road),E_NEWPB-1,NEWPB-1,auto,resolves by numeric id only; map join falls back to plant_name
-warn,osm_id_format,way/771093003,Richborough Energy Park,T_RICHB-1,RICHB-1,auto,resolves by numeric id only; map join falls back to plant_name
-warn,osm_id_format,way/771093003,Richborough Energy Park,T_RICHB-2,RICHB-2,auto,resolves by numeric id only; map join falls back to plant_name
-warn,osm_id_format,way/77471728,Wilton Power Station,T_LIONB-1,LionB-1,auto,resolves by numeric id only; map join falls back to plant_name
-warn,osm_id_format,way/77471728,Wilton Power Station,T_LIONB-2,LionB-2,auto,resolves by numeric id only; map join falls back to plant_name
-warn,osm_id_format,way/77471728,Wilton Power Station,T_LIONB-3,LionB-3,auto,resolves by numeric id only; map join falls back to plant_name
-warn,osm_id_format,way/77471728,Wilton Power Station,T_LIOND-1,LionD-1,auto,resolves by numeric id only; map join falls back to plant_name
-warn,osm_id_format,way/808407172,Trafalgar Park Gas Peaking Plant,E_TRFPK-1,TRFPK-1,auto,resolves by numeric id only; map join falls back to plant_name
-warn,osm_id_format,way/810479966,Cleve Hill Solar Park,T_CLVHS-1,CLVHS-1,auto,resolves by numeric id only; map join falls back to plant_name
-warn,osm_id_format,way/810479966,Cleve Hill Solar Park,T_CLVHS-2,CLVHS-2,auto,resolves by numeric id only; map join falls back to plant_name
-warn,osm_id_format,way/814351698,Damhead Creek Power Station,T_DAMC-1,DAMC-1,auto,resolves by numeric id only; map join falls back to plant_name
-warn,osm_id_format,way/840178098,Sundon Landfill Site,T_SUNDB-1,SUNDB-1,auto,resolves by numeric id only; map join falls back to plant_name
-warn,osm_id_format,way/843940770,Burghfield Landfill Gas Utilisation Site,E_BURGH-1,BURGH-1,auto,resolves by numeric id only; map join falls back to plant_name
-warn,osm_id_format,way/843940771,Burghfield Generation Plant,E_BURGH-1,BURGH-1,auto,resolves by numeric id only; map join falls back to plant_name
-warn,osm_id_format,way/856731154,Coventry Energy From Waste,T_COVNB-1,COVNB-1,auto,resolves by numeric id only; map join falls back to plant_name
-warn,osm_id_format,way/856741235,Letchworth STOR,E_LCHWT-1,LCHWT-1,auto,resolves by numeric id only; map join falls back to plant_name
-warn,osm_id_format,way/895608597,Neart na Gaoithe Wind Farm,T_NNGAO-1,NNGAO-1,auto,resolves by numeric id only; map join falls back to plant_name
-warn,osm_id_format,way/895608597,Neart na Gaoithe Wind Farm,T_NNGAO-2,NNGAO-2,auto,resolves by numeric id only; map join falls back to plant_name
-warn,osm_id_format,way/898388608,Thornhill Gas Power Station,E_THRNL-1,THRNL-1,auto,resolves by numeric id only; map join falls back to plant_name
-warn,osm_id_format,way/90009908,Lynemouth Power Station,E_LYNE1,LNMTH-1,auto,resolves by numeric id only; map join falls back to plant_name
-warn,osm_id_format,way/90009908,Lynemouth Power Station,E_LYNE2,LNMTH-2,auto,resolves by numeric id only; map join falls back to plant_name
-warn,osm_id_format,way/90009908,Lynemouth Power Station,E_LYNE3,LNMTH-3,auto,resolves by numeric id only; map join falls back to plant_name
-warn,osm_id_format,way/903794092,Kemsley Energy from Waste,T_KEMB-1,KEMB-1,auto,resolves by numeric id only; map join falls back to plant_name
-warn,osm_id_format,way/91104903,Torness Nuclear Power Station,T_TORN-1,TORN-1,auto,resolves by numeric id only; map join falls back to plant_name
-warn,osm_id_format,way/91104903,Torness Nuclear Power Station,T_TORN-2,TORN-2,auto,resolves by numeric id only; map join falls back to plant_name
-warn,osm_id_format,way/91104903,Torness Nuclear Power Station,T_TORN-D,TORND-1,auto,resolves by numeric id only; map join falls back to plant_name
-warn,osm_id_format,way/913945639,Coryton Power Station,T_COSO-1,COSO-1,auto,resolves by numeric id only; map join falls back to plant_name
-warn,osm_id_format,way/918927238,Peterborough Energy from Waste,E_PETEM3,PETEM3,auto,resolves by numeric id only; map join falls back to plant_name
-warn,osm_id_format,way/931133702,Rock Farm Battery Storage Scheme,E_PLYRK-1,PLYRK-1,auto,resolves by numeric id only; map join falls back to plant_name
-warn,osm_id_format,way/931146013,Energy Centre,T_EECL-1,EECL-1,auto,resolves by numeric id only; map join falls back to plant_name
-warn,osm_id_format,way/938140160,Chatterley Power Station,E_CHTRY-1,CHTRY-1,auto,resolves by numeric id only; map join falls back to plant_name
-warn,osm_id_format,way/938180482,Wolverhampton Power,E_WOLVB-1,WOLVB-1,auto,resolves by numeric id only; map join falls back to plant_name
-warn,osm_id_format,way/940961824,Derby Gas Power Station,E_DERBY-1,DERBY-2,auto,resolves by numeric id only; map join falls back to plant_name
-warn,osm_id_format,way/944261153,Barton Hill STOR,E_BTNHL-1,BTNHL-1,auto,resolves by numeric id only; map join falls back to plant_name
-warn,osm_id_format,way/945296993,Didcot OCGT,E_DIDC1G,DIDC01G,auto,resolves by numeric id only; map join falls back to plant_name
-warn,osm_id_format,way/945296993,Didcot OCGT,E_DIDC2G,DIDC02G,auto,resolves by numeric id only; map join falls back to plant_name
-warn,osm_id_format,way/945296993,Didcot OCGT,E_DIDC3G,DIDC03G,auto,resolves by numeric id only; map join falls back to plant_name
-warn,osm_id_format,way/945296993,Didcot OCGT,E_DIDC4G,DIDC04G,auto,resolves by numeric id only; map join falls back to plant_name
-warn,osm_id_format,way/945296994,Didcot B Power Station,T_DIDCB5,DIDCB5,auto,resolves by numeric id only; map join falls back to plant_name
-warn,osm_id_format,way/945296994,Didcot B Power Station,T_DIDCB6,DIDCB6,auto,resolves by numeric id only; map join falls back to plant_name
-warn,osm_id_format,way/947716071,Exeter City Council Solar Farm,E_EXETR-2,EXETR-2,auto,resolves by numeric id only; map join falls back to plant_name
-warn,osm_id_format,way/951785974,Redfield Road Gas Generation Plant,E_RDFRB-1,RDFRB-1,auto,resolves by numeric id only; map join falls back to plant_name
-warn,osm_id_format,way/951785974,Redfield Road Gas Generation Plant,E_RDFRD-1,RDFRD-1,auto,resolves by numeric id only; map join falls back to plant_name
-warn,osm_id_format,way/951794677,Dowlais STOR West,E_DOWL-1,DOWL-1,auto,resolves by numeric id only; map join falls back to plant_name
-warn,osm_id_format,way/951794678,Dowlais STOR East,E_DOWL-1,DOWL-1,auto,resolves by numeric id only; map join falls back to plant_name
-warn,osm_id_format,way/951797053,Hirwaun,T_HIRWN-1,HIRWN-1,manual,resolves by numeric id only; map join falls back to plant_name
-warn,osm_id_format,way/954620039,Green Energy Hub,T_BURWS-1,BURWS-1,auto,resolves by numeric id only; map join falls back to plant_name
-warn,osm_id_format,way/955984192,Rothes Bio-Plant,E_MARK-1,MARK-1,auto,resolves by numeric id only; map join falls back to plant_name
-warn,osm_id_format,way/956007730,Broxburn Battery Storage,E_BROXB-1,BROXB-1,manual,resolves by numeric id only; map join falls back to plant_name
-warn,osm_id_format,way/956010231,Port of Tyne Battery Storage,E_POTES-1,POTES-1,auto,resolves by numeric id only; map join falls back to plant_name
-warn,osm_id_format,way/956016428,Steven's Croft Power Station,,STCR-1,auto,resolves by numeric id only; map join falls back to plant_name
-warn,osm_id_format,way/956023502,Carnegie Road Battery Storage,E_CRSSB-1,CRSSB-1,auto,resolves by numeric id only; map join falls back to plant_name
-warn,osm_id_format,way/956046649,West Burton B Battery Storage,E_WBUPS-STX,WBUPS-STX,auto,resolves by numeric id only; map join falls back to plant_name
-warn,osm_id_format,way/956046652,Brigg Renewable Energy Plant,E_BRGG-1,BRGG-1,auto,resolves by numeric id only; map join falls back to plant_name
-warn,osm_id_format,way/956070478,Wilton 11 EfW,T_LIONB-1,LionB-1,auto,resolves by numeric id only; map join falls back to plant_name
-warn,osm_id_format,way/956070478,Wilton 11 EfW,T_LIONB-2,LionB-2,auto,resolves by numeric id only; map join falls back to plant_name
-warn,osm_id_format,way/956070478,Wilton 11 EfW,T_LIONB-3,LionB-3,auto,resolves by numeric id only; map join falls back to plant_name
-warn,osm_id_format,way/956070478,Wilton 11 EfW,T_LIOND-1,LionD-1,auto,resolves by numeric id only; map join falls back to plant_name
-warn,osm_id_format,way/956252571,Farnham Landfill Gas Plant,E_FARNB-1,FARNB-1,auto,resolves by numeric id only; map join falls back to plant_name
-warn,osm_id_format,way/956335701,Caledonian Papermill,T_MEADD-1,MEADD-1,auto,resolves by numeric id only; map join falls back to plant_name
-warn,osm_id_format,way/956335705,Dunlop Landfill Gas Scheme,E_FDUN-1,FDUNT-1,auto,resolves by numeric id only; map join falls back to plant_name
-warn,osm_id_format,way/974781753,Sudmeadow Road STOR,E_SUDME-1,SUDME-1,auto,resolves by numeric id only; map join falls back to plant_name
-warn,osm_id_format,way/97744299,Corby Power Station,E_CORB-1,CORB-1,auto,resolves by numeric id only; map join falls back to plant_name
-warn,osm_id_format,way/981224694,Severn Power Station,T_SVRP-10,SVRP-10,auto,resolves by numeric id only; map join falls back to plant_name
-warn,osm_id_format,way/981224694,Severn Power Station,T_SVRP-20,SVRP-20,auto,resolves by numeric id only; map join falls back to plant_name
-warn,osm_id_format,way/998559908,Kincardine Offshore Windfarm,E_KINCW-1,KINCW-1,auto,resolves by numeric id only; map join falls back to plant_name
 info,name_low_sim,167003752,Chadderton BESS,E_OLDHB-1,OLDHB-1,manual,sim=0.25 vs 'Oldham BESS'
 info,name_low_sim,manual/aberdeen-bay-wind-farm,Aberdeen Bay Offshore Wind Farm,T_ABRBO-1,ABRBO-1,manual,sim=0.29 vs 'ABRBO-1'
 info,name_low_sim,manual/pen-y-cymoedd-wind-farm,Pen y Cymoedd Wind Farm,T_PNYCW-1,PNYCW-1,manual,sim=0.22 vs 'PNYCW-1 Export'
@@ -561,3 +167,397 @@ info,name_low_sim,way/550699358,Lincs Wind Farm,T_LNCSW-2,LNCSO-2,auto,sim=0.29 
 info,name_low_sim,way/728893771,Rock Farm / Goldborough Farm (Rookwood),E_PLYRK-1,PLYRK-1,auto,sim=0.17 vs 'Plymouth Rock'
 info,name_low_sim,way/931133702,Rock Farm Battery Storage Scheme,E_PLYRK-1,PLYRK-1,auto,sim=0.18 vs 'Plymouth Rock'
 info,name_low_sim,way/956046652,Brigg Renewable Energy Plant,E_BRGG-1,BRGG-1,auto,sim=0.24 vs 'Glanford Brigg'
+info,osm_id_format,relation/12718371,Exeter Gas Power Station,E_EXETR-2,EXETR-2,auto,geojson stores '12718371'; joined via normalized osm_id
+info,osm_id_format,relation/13616181,Douglas West wind farm,T_DWEXW-1,DWEXW-1,auto,geojson stores '13616181'; joined via normalized osm_id
+info,osm_id_format,relation/17296061,Cumberhead Wind Farm,T_CUMHW-1,CUMHW-1,auto,geojson stores '17296061'; joined via normalized osm_id
+info,osm_id_format,relation/19293473,Tye Lane - Solar Power Station,T_TYLNS-1,TYLNS-1,auto,geojson stores '19293473'; joined via normalized osm_id
+info,osm_id_format,relation/19293473,Tye Lane - Solar Power Station,T_TYLNB-1,TYLNB-1,manual,geojson stores '19293473'; joined via normalized osm_id
+info,osm_id_format,relation/19313332,Bulphan Fen Solar Farm,T_BLPFB-1,BLPFB-1,auto,geojson stores '19313332'; joined via normalized osm_id
+info,osm_id_format,relation/19313332,Bulphan Fen Solar Farm,T_BLPFS-1,BLPFS-1,auto,geojson stores '19313332'; joined via normalized osm_id
+info,osm_id_format,relation/19404961,Cumberhead West Wind Farm,T_CUMHW-1,CUMHW-1,auto,geojson stores '19404961'; joined via normalized osm_id
+info,osm_id_format,relation/19405219,Hagshaw Hill (Repowering),T_HAGHW-2,HAGHW-2,auto,geojson stores '19405219'; joined via normalized osm_id
+info,osm_id_format,relation/19412289,Broken Cross Wind Farm,T_BROCW-1,BROCW-1,auto,geojson stores '19412289'; joined via normalized osm_id
+info,osm_id_format,relation/19454939,Windy Standard II,T_WISTW-2,WISTW-2,auto,geojson stores '19454939'; joined via normalized osm_id
+info,osm_id_format,relation/20265488,Tebworth - Solar Farm,T_TEBWB-1,TEBWB-1,auto,geojson stores '20265488'; joined via normalized osm_id
+info,osm_id_format,relation/20265488,Tebworth - Solar Farm,T_TEBWS-1,TEBWS-1,auto,geojson stores '20265488'; joined via normalized osm_id
+info,osm_id_format,relation/20679002,Dollymans Battery Storage,E_DOLLB-1,DOLLB-1,auto,geojson stores '20679002'; joined via normalized osm_id
+info,osm_id_format,relation/5474028,Gwynt y Môr Offshore Wind Farm,T_GYMR-15,GYMR-15,manual,geojson stores '5474028'; joined via normalized osm_id
+info,osm_id_format,relation/5474028,Gwynt y Môr Offshore Wind Farm,T_GYMR-17,GYMR-17,manual,geojson stores '5474028'; joined via normalized osm_id
+info,osm_id_format,relation/5474028,Gwynt y Môr Offshore Wind Farm,T_GYMR-26,GYMR-26,manual,geojson stores '5474028'; joined via normalized osm_id
+info,osm_id_format,relation/5474028,Gwynt y Môr Offshore Wind Farm,T_GYMR-28,GYMR-28,manual,geojson stores '5474028'; joined via normalized osm_id
+info,osm_id_format,relation/7868829,Chapel Lane Solar Farm,E_CHAPB-1,CHAPB-1,auto,geojson stores '7868829'; joined via normalized osm_id
+info,osm_id_format,relation/7885568,Langage Solar Farm,T_LAGA-1,LAGA-1,auto,geojson stores '7885568'; joined via normalized osm_id
+info,osm_id_format,relation/8829625,Walney Wind Farm,T_WLNYO-2,WLNYO-2,auto,geojson stores '8829625'; joined via normalized osm_id
+info,osm_id_format,relation/8829625,Walney Wind Farm,T_WLNYO-3,WLNYO-3,auto,geojson stores '8829625'; joined via normalized osm_id
+info,osm_id_format,relation/8829625,Walney Wind Farm,T_WLNYO-4,WLNYO-4,auto,geojson stores '8829625'; joined via normalized osm_id
+info,osm_id_format,relation/8829625,Walney Wind Farm,T_WLNYW-1,WLNYW-1,auto,geojson stores '8829625'; joined via normalized osm_id
+info,osm_id_format,relation/8835793,Hagshaw Hill Extension Wind Farm,T_HAGHW-2,HAGHW-2,auto,geojson stores '8835793'; joined via normalized osm_id
+info,osm_id_format,relation/9106671,Cross Roads Plantation Solar Farm,E_GRCRB-1,GRCRB-1,auto,geojson stores '9106671'; joined via normalized osm_id
+info,osm_id_format,relation/9291197,Water Eaton Farm/Port Farm,E_WTRLN-1,WTRLN-1,auto,geojson stores '9291197'; joined via normalized osm_id
+info,osm_id_format,relation/9455566,Ferry Farm I,T_FIDL-1,FIDL-1,auto,geojson stores '9455566'; joined via normalized osm_id
+info,osm_id_format,relation/9455566,Ferry Farm I,T_FIDL-2,FIDL-2,auto,geojson stores '9455566'; joined via normalized osm_id
+info,osm_id_format,relation/9455566,Ferry Farm I,T_FIDL-2G,FIDL-2G,auto,geojson stores '9455566'; joined via normalized osm_id
+info,osm_id_format,relation/9455566,Ferry Farm I,T_FIDL-3,FIDL-3,auto,geojson stores '9455566'; joined via normalized osm_id
+info,osm_id_format,relation/9455566,Ferry Farm I,T_FIDL-3G,FIDL-3G,auto,geojson stores '9455566'; joined via normalized osm_id
+info,osm_id_format,relation/9455566,Ferry Farm I,T_FIDL-4,FIDL-4,auto,geojson stores '9455566'; joined via normalized osm_id
+info,osm_id_format,relation/9455566,Ferry Farm I,T_FIDLST1,FIDLST1,auto,geojson stores '9455566'; joined via normalized osm_id
+info,osm_id_format,relation/9539129,Brook Hall Farm Solar Farm,E_BROFB-1,BROFB-1,auto,geojson stores '9539129'; joined via normalized osm_id
+info,osm_id_format,relation/9938532,Fields Farm (Agden),E_GFLDW-1,GFLDW-1,auto,geojson stores '9938532'; joined via normalized osm_id
+info,osm_id_format,way/1005424593,Burwell Battery,E_BURWB-1,BURWB-1,auto,geojson stores '1005424593'; joined via normalized osm_id
+info,osm_id_format,way/1005424593,Burwell Battery,E_BURWB-2,BURWB-2,auto,geojson stores '1005424593'; joined via normalized osm_id
+info,osm_id_format,way/1005424593,Burwell Battery,E_BURWB-3,BURWB-3,auto,geojson stores '1005424593'; joined via normalized osm_id
+info,osm_id_format,way/1017473264,Glen Finglas,T_GLNKW-1,GLNKW-1,auto,geojson stores '1017473264'; joined via normalized osm_id
+info,osm_id_format,way/1017473264,Glen Finglas,T_GNAPW-1,GNAPW-1,auto,geojson stores '1017473264'; joined via normalized osm_id
+info,osm_id_format,way/1020439730,St. Fillans Power Station,T_SFILD-1,SFILD-1,auto,geojson stores '1020439730'; joined via normalized osm_id
+info,osm_id_format,way/1020439730,St. Fillans Power Station,,SFIL-1,auto,geojson stores '1020439730'; joined via normalized osm_id
+info,osm_id_format,way/1066120013,Bispham Flexible Generation,E_BSPHM-1,BSPHM-1,auto,geojson stores '1066120013'; joined via normalized osm_id
+info,osm_id_format,way/1110596984,Newton Wood Farm BESS,E_NEWTB-1,NEWTB-1,auto,geojson stores '1110596984'; joined via normalized osm_id
+info,osm_id_format,way/1116566266,Pillswood Battery Storage,E_PILLB-1,PILLB-1,auto,geojson stores '1116566266'; joined via normalized osm_id
+info,osm_id_format,way/1116566266,Pillswood Battery Storage,E_PILLB-2,PILLB-2,auto,geojson stores '1116566266'; joined via normalized osm_id
+info,osm_id_format,way/1122850401,Whitelee Wind Farm Battery Storage,T_WHILW-2,WHILW-2,auto,geojson stores '1122850401'; joined via normalized osm_id
+info,osm_id_format,way/1122850401,Whitelee Wind Farm Battery Storage,T_WHLWB-1,WHLWB-1,auto,geojson stores '1122850401'; joined via normalized osm_id
+info,osm_id_format,way/1122850401,Whitelee Wind Farm Battery Storage,T_WHILW-1,WHILW-1,manual,geojson stores '1122850401'; joined via normalized osm_id
+info,osm_id_format,way/1134093224,Middlewich Power Generation Plant,E_MDLWH-1,MDLWH-1,auto,geojson stores '1134093224'; joined via normalized osm_id
+info,osm_id_format,way/113739834,Thanet Wind Farm,T_THNTO-1,THNTO-1,auto,geojson stores '113739834'; joined via normalized osm_id
+info,osm_id_format,way/113739834,Thanet Wind Farm,T_THNTO-2,THNTO-2,auto,geojson stores '113739834'; joined via normalized osm_id
+info,osm_id_format,way/1148893647,Brook Farm Battery,E_BROFB-1,BROFB-1,auto,geojson stores '1148893647'; joined via normalized osm_id
+info,osm_id_format,way/1148898112,Arbroath Battery,E_ARBRB-1,ARBRB-1,auto,geojson stores '1148898112'; joined via normalized osm_id
+info,osm_id_format,way/1148934860,Contego Battery,E_CONTB-1,CONTB-1,auto,geojson stores '1148934860'; joined via normalized osm_id
+info,osm_id_format,way/1148939839,Nursling Battery Storage,T_NURSB-1,NURSB-1,auto,geojson stores '1148939839'; joined via normalized osm_id
+info,osm_id_format,way/1149111148,Cowley Battery Storage,T_COWB-1,COWB-1,auto,geojson stores '1149111148'; joined via normalized osm_id
+info,osm_id_format,way/1149138868,Bustleholme Battery,T_BUSTB-1,BUSTB-1,auto,geojson stores '1149138868'; joined via normalized osm_id
+info,osm_id_format,way/1149192582,Enderby Battery Storage,T_ENDRB-1,ENDRB-1,auto,geojson stores '1149192582'; joined via normalized osm_id
+info,osm_id_format,way/1149228931,Lester Way Flexible Generation Facility,E_LSTWY-1,LSTWY-1,auto,geojson stores '1149228931'; joined via normalized osm_id
+info,osm_id_format,way/1149233319,The Drove Power Plant,E_TDRVE-1,TDRVE-1,auto,geojson stores '1149233319'; joined via normalized osm_id
+info,osm_id_format,way/1149297467,Hunningley Stairfoot BESS,E_BARNB-1,BARNB-1,auto,geojson stores '1149297467'; joined via normalized osm_id
+info,osm_id_format,way/1149301628,Kemsley Battery Storage,T_KEMB-1,KEMB-1,auto,geojson stores '1149301628'; joined via normalized osm_id
+info,osm_id_format,way/1149497116,Chickerell Power Station,E_CHICK-1,CHICK-1,auto,geojson stores '1149497116'; joined via normalized osm_id
+info,osm_id_format,way/1149621575,Keadby Power Station,T_KEAD-2,KEAD-2,auto,geojson stores '1149621575'; joined via normalized osm_id
+info,osm_id_format,way/1149621575,Keadby Power Station,T_KEAD-1,KEAD-1,auto,geojson stores '1149621575'; joined via normalized osm_id
+info,osm_id_format,way/1149621575,Keadby Power Station,T_KEADGT-3,KEADGT-3,auto,geojson stores '1149621575'; joined via normalized osm_id
+info,osm_id_format,way/1152536439,Wishaw Battery,T_WISHB-1,WISHB-1,auto,geojson stores '1152536439'; joined via normalized osm_id
+info,osm_id_format,way/1152536439,Wishaw Battery,T_WISHD-1,WISHD-1,auto,geojson stores '1152536439'; joined via normalized osm_id
+info,osm_id_format,way/1152989938,Moorfield Drive Power Station,E_MORFL-1,MORFL-1,auto,geojson stores '1152989938'; joined via normalized osm_id
+info,osm_id_format,way/1152991020,Rake Lane Power Station,E_RAKE-1,RAKE-1,auto,geojson stores '1152991020'; joined via normalized osm_id
+info,osm_id_format,way/1153082218,Goose House Lane Power Station,E_GOSHS-1,GOSHS-1,auto,geojson stores '1153082218'; joined via normalized osm_id
+info,osm_id_format,way/1159868562,Broadditch Battery,E_BROAB-1,BROAB-1,auto,geojson stores '1159868562'; joined via normalized osm_id
+info,osm_id_format,way/1160388718,Chapel Farm Battery Storage,E_CHAPB-1,CHAPB-1,auto,geojson stores '1160388718'; joined via normalized osm_id
+info,osm_id_format,way/1168494496,Larks Green Solar Farm,T_LARKB-1,LARKB-1,auto,geojson stores '1168494496'; joined via normalized osm_id
+info,osm_id_format,way/1168910658,Burwell Solar Farm,E_BURWB-1,BURWB-1,auto,geojson stores '1168910658'; joined via normalized osm_id
+info,osm_id_format,way/1168910658,Burwell Solar Farm,E_BURWB-2,BURWB-2,auto,geojson stores '1168910658'; joined via normalized osm_id
+info,osm_id_format,way/1168910658,Burwell Solar Farm,E_BURWB-3,BURWB-3,auto,geojson stores '1168910658'; joined via normalized osm_id
+info,osm_id_format,way/1176283907,Clay Tye BESS,E_CLAYB-1,CLAYB-1,manual,geojson stores '1176283907'; joined via normalized osm_id
+info,osm_id_format,way/1176283907,Clay Tye BESS,E_CLAYB-2,CLAYB-2,manual,geojson stores '1176283907'; joined via normalized osm_id
+info,osm_id_format,way/1187625958,Farnham Battery Storage,E_FARNB-1,FARNB-1,auto,geojson stores '1187625958'; joined via normalized osm_id
+info,osm_id_format,way/1187629536,Fordtown Battery Energy Storage System,V__PHABI004,AG-HEL0CP,auto,geojson stores '1187629536'; joined via normalized osm_id
+info,osm_id_format,way/1189799812,Tollgate Battery Storage Facility,E_TOLLB-1,TOLLB-1,auto,geojson stores '1189799812'; joined via normalized osm_id
+info,osm_id_format,way/1189809901,Capenhurst Battery Energy Storage,T_PINFB-1,PINFB-1,manual,geojson stores '1189809901'; joined via normalized osm_id
+info,osm_id_format,way/1189809901,Capenhurst Battery Energy Storage,T_PINFB-2,PINFB-2,manual,geojson stores '1189809901'; joined via normalized osm_id
+info,osm_id_format,way/1189809901,Capenhurst Battery Energy Storage,T_PINFB-3,PINFB-3,manual,geojson stores '1189809901'; joined via normalized osm_id
+info,osm_id_format,way/1189809901,Capenhurst Battery Energy Storage,T_PINFB-4,PINFB-4,manual,geojson stores '1189809901'; joined via normalized osm_id
+info,osm_id_format,way/1210002953,Little Raith Battery Storage,E_LITRB-1,LITRB-1,auto,geojson stores '1210002953'; joined via normalized osm_id
+info,osm_id_format,way/1211651931,Wilton BESS Phase 1,T_LIONB-1,LionB-1,auto,geojson stores '1211651931'; joined via normalized osm_id
+info,osm_id_format,way/1211651931,Wilton BESS Phase 1,T_LIONB-2,LionB-2,auto,geojson stores '1211651931'; joined via normalized osm_id
+info,osm_id_format,way/1211651931,Wilton BESS Phase 1,T_LIONB-3,LionB-3,auto,geojson stores '1211651931'; joined via normalized osm_id
+info,osm_id_format,way/1211651931,Wilton BESS Phase 1,T_LIOND-1,LionD-1,auto,geojson stores '1211651931'; joined via normalized osm_id
+info,osm_id_format,way/1233495394,Peterborough STOR,E_PETEM3,PETEM3,auto,geojson stores '1233495394'; joined via normalized osm_id
+info,osm_id_format,way/1233495808,Brigg STOR,E_BRGG-1,BRGG-1,auto,geojson stores '1233495808'; joined via normalized osm_id
+info,osm_id_format,way/129923951,Grudie Bridge Power Station,,GRUB-1,auto,geojson stores '129923951'; joined via normalized osm_id
+info,osm_id_format,way/129923951,Grudie Bridge Power Station,,GRUB-2,auto,geojson stores '129923951'; joined via normalized osm_id
+info,osm_id_format,way/1300558890,Sutton Bridge Solar Farm,T_SUTBS-1,SUTBS-1,auto,geojson stores '1300558890'; joined via normalized osm_id
+info,osm_id_format,way/130127380,Shin Power Station,,SHIN-1,auto,geojson stores '130127380'; joined via normalized osm_id
+info,osm_id_format,way/130127380,Shin Power Station,,SHIN-2,auto,geojson stores '130127380'; joined via normalized osm_id
+info,osm_id_format,way/133329765,Peterhead Power Station,T_PEHE-1,PEHE-1,auto,geojson stores '133329765'; joined via normalized osm_id
+info,osm_id_format,way/133329765,Peterhead Power Station,T_PEHE-2,PEHE-2,auto,geojson stores '133329765'; joined via normalized osm_id
+info,osm_id_format,way/133329765,Peterhead Power Station,T_PEHED-1,PEHED-1,auto,geojson stores '133329765'; joined via normalized osm_id
+info,osm_id_format,way/1347689402,Invergarry Power Station,T_INGAD-1,INGAD-1,auto,geojson stores '1347689402'; joined via normalized osm_id
+info,osm_id_format,way/1353839293,Aberdare Power Station,E_ABERDARE,ABERU-1,auto,geojson stores '1353839293'; joined via normalized osm_id
+info,osm_id_format,way/1364037063,Shilton Lane Battery Storage,E_SHILB-1,SHILB-1,auto,geojson stores '1364037063'; joined via normalized osm_id
+info,osm_id_format,way/1371100889,Croydon Power plant,E_CROYD-2,CROYD-2,auto,geojson stores '1371100889'; joined via normalized osm_id
+info,osm_id_format,way/1376105604,Roaring Hill Energy Storage,E_ROARB-1,ROARB-1,auto,geojson stores '1376105604'; joined via normalized osm_id
+info,osm_id_format,way/1408758796,Hywind 2,E_HYWDW-1,HYWDW-1,auto,geojson stores '1408758796'; joined via normalized osm_id
+info,osm_id_format,way/1409249776,Stairfoot Battery Storage & 33kV substation,E_BARNB-1,BARNB-1,auto,geojson stores '1409249776'; joined via normalized osm_id
+info,osm_id_format,way/1411410097,Bulphan Fen Solar Farm Battery Storage,T_BLPFB-1,BLPFB-1,auto,geojson stores '1411410097'; joined via normalized osm_id
+info,osm_id_format,way/1411410097,Bulphan Fen Solar Farm Battery Storage,T_BLPFS-1,BLPFS-1,auto,geojson stores '1411410097'; joined via normalized osm_id
+info,osm_id_format,way/1419346810,Monk Fryston Battery Storage,T_MKFRB-1,MKFRB-1,auto,geojson stores '1419346810'; joined via normalized osm_id
+info,osm_id_format,way/1419408503,Capenhurst Lane BESS,T_CAPNB-1,CAPNB-1,manual,geojson stores '1419408503'; joined via normalized osm_id
+info,osm_id_format,way/1419436615,Native River BESS,T_NTRVB-1,NTRVB-1,auto,geojson stores '1419436615'; joined via normalized osm_id
+info,osm_id_format,way/1421373804,Cathkin BESS,E_CATHB-1,CATHB-1,manual,geojson stores '1421373804'; joined via normalized osm_id
+info,osm_id_format,way/143791247,Indian Queens Power Station,T_INDQB-1,INDQB-1,auto,geojson stores '143791247'; joined via normalized osm_id
+info,osm_id_format,way/143791247,Indian Queens Power Station,T_INDQ-1,INDQ-1,auto,geojson stores '143791247'; joined via normalized osm_id
+info,osm_id_format,way/143902275,Spalding Power Station,T_SPLN-1,SPLN-1,auto,geojson stores '143902275'; joined via normalized osm_id
+info,osm_id_format,way/143902275,Spalding Power Station,T_SEEL-1,SEEL-1,manual,geojson stores '143902275'; joined via normalized osm_id
+info,osm_id_format,way/1442566922,Larks Green Solar Farm Battery Storage,T_LARKB-1,LARKB-1,auto,geojson stores '1442566922'; joined via normalized osm_id
+info,osm_id_format,way/1442566922,Larks Green Solar Farm Battery Storage,T_LARKS-1,LARKS-1,auto,geojson stores '1442566922'; joined via normalized osm_id
+info,osm_id_format,way/1442624228,Coupar Angus BESS,E_CUPAB-1,CUPAB-1,auto,geojson stores '1442624228'; joined via normalized osm_id
+info,osm_id_format,way/1473937486,Uskmouth BESS,T_USKM-13,USKM-13,auto,geojson stores '1473937486'; joined via normalized osm_id
+info,osm_id_format,way/1473937486,Uskmouth BESS,T_USKM-14,USKM-14,auto,geojson stores '1473937486'; joined via normalized osm_id
+info,osm_id_format,way/1473937486,Uskmouth BESS,T_USKM-15,USKM-15,auto,geojson stores '1473937486'; joined via normalized osm_id
+info,osm_id_format,way/1473937486,Uskmouth BESS,T_USKMB-4,USKMB-4,auto,geojson stores '1473937486'; joined via normalized osm_id
+info,osm_id_format,way/1473937486,Uskmouth BESS,T_USKMB-5,USKMB-5,auto,geojson stores '1473937486'; joined via normalized osm_id
+info,osm_id_format,way/1473937486,Uskmouth BESS,T_USKMB-2,USKMB-2,manual,geojson stores '1473937486'; joined via normalized osm_id
+info,osm_id_format,way/1473937486,Uskmouth BESS,T_USKMB-3,USKMB-3,manual,geojson stores '1473937486'; joined via normalized osm_id
+info,osm_id_format,way/1474131593,Harestanes Windfarm BESS,T_HRSTW-1,HRSTW-1,auto,geojson stores '1474131593'; joined via normalized osm_id
+info,osm_id_format,way/1475015185,Blackpool BESS,E_BLKPB-1,BLKPB-1,auto,geojson stores '1475015185'; joined via normalized osm_id
+info,osm_id_format,way/1475017990,Holes Bay BESS,E_BHOLB-1,BHOLB-1,auto,geojson stores '1475017990'; joined via normalized osm_id
+info,osm_id_format,way/1475040946,Burwell 2 BESS,E_BURWB-3,BURWB-3,auto,geojson stores '1475040946'; joined via normalized osm_id
+info,osm_id_format,way/1475218524,Gerrards Cross BESS,E_GRCRB-1,GRCRB-1,auto,geojson stores '1475218524'; joined via normalized osm_id
+info,osm_id_format,way/1476437942,Skelmersdale Battery,E_SKELB-1,SKELB-1,auto,geojson stores '1476437942'; joined via normalized osm_id
+info,osm_id_format,way/1476526758,Torquay BESS,E_TORQB-1,TORQB-1,auto,geojson stores '1476526758'; joined via normalized osm_id
+info,osm_id_format,way/1476530724,Whitebirk BESS,E_WHTBB-1,WHTBB-1,auto,geojson stores '1476530724'; joined via normalized osm_id
+info,osm_id_format,way/1476857822,Bredbury BESS,T_BREDB-1,BREDB-1,auto,geojson stores '1476857822'; joined via normalized osm_id
+info,osm_id_format,way/1476906510,Ferrybridge BESS,T_FERRB-1,FERRB-1,auto,geojson stores '1476906510'; joined via normalized osm_id
+info,osm_id_format,way/1476906510,Ferrybridge BESS,T_FERRB-2,FERRB-2,auto,geojson stores '1476906510'; joined via normalized osm_id
+info,osm_id_format,way/1482190103,Sundon Battery Storage,T_SUNDB-1,SUNDB-1,auto,geojson stores '1482190103'; joined via normalized osm_id
+info,osm_id_format,way/1482240805,Neilston Greener Grid Park Phase I,T_NLSTB-1,NLSTB-1,auto,geojson stores '1482240805'; joined via normalized osm_id
+info,osm_id_format,way/1482245953,Tebworth Battery Storage,T_TEBWB-1,TEBWB-1,auto,geojson stores '1482245953'; joined via normalized osm_id
+info,osm_id_format,way/1482245953,Tebworth Battery Storage,T_TEBWS-1,TEBWS-1,auto,geojson stores '1482245953'; joined via normalized osm_id
+info,osm_id_format,way/1483333224,Kincraig Solar Farm,E_KINCS-1,KINCS-1,auto,geojson stores '1483333224'; joined via normalized osm_id
+info,osm_id_format,way/1483389306,Coventry BESS,T_COVNB-1,COVNB-1,auto,geojson stores '1483389306'; joined via normalized osm_id
+info,osm_id_format,way/1484128931,Overhill BESS,E_OVRHB-1,OVRHB-1,auto,geojson stores '1484128931'; joined via normalized osm_id
+info,osm_id_format,way/1484583344,Indian Queens BESS,T_INDQB-1,INDQB-1,auto,geojson stores '1484583344'; joined via normalized osm_id
+info,osm_id_format,way/1506690182,PeakGen Hatfield,E_PGPETE,PGPET-1,auto,geojson stores '1506690182'; joined via normalized osm_id
+info,osm_id_format,way/150780483,Medway Power Station,T_MEDP-1,MEDP-1,auto,geojson stores '150780483'; joined via normalized osm_id
+info,osm_id_format,way/1512575413,Berkeley BESS,E_BERKB-1,BERKB-1,auto,geojson stores '1512575413'; joined via normalized osm_id
+info,osm_id_format,way/1512575413,Berkeley BESS,E_BERKB-2,BERKB-2,auto,geojson stores '1512575413'; joined via normalized osm_id
+info,osm_id_format,way/1512627537,North Tawton BESS,E_NTAWB-1,NTAWB-1,auto,geojson stores '1512627537'; joined via normalized osm_id
+info,osm_id_format,way/1512631595,Wolverhampton West BESS,E_WOLVB-1,WOLVB-1,auto,geojson stores '1512631595'; joined via normalized osm_id
+info,osm_id_format,way/1518654795,Heysham Power,T_HEYM2-D,HEYM2D-1,auto,geojson stores '1518654795'; joined via normalized osm_id
+info,osm_id_format,way/160279522,West Burton B Power Station,T_WBUGT-1,WBUGT-1,auto,geojson stores '160279522'; joined via normalized osm_id
+info,osm_id_format,way/160279522,West Burton B Power Station,T_WBUGT-4,WBUGT-4,auto,geojson stores '160279522'; joined via normalized osm_id
+info,osm_id_format,way/160279522,West Burton B Power Station,T_WBUPS-1,WBUPS-1,auto,geojson stores '160279522'; joined via normalized osm_id
+info,osm_id_format,way/160279522,West Burton B Power Station,T_WBUPS-2,WBUPS-2,auto,geojson stores '160279522'; joined via normalized osm_id
+info,osm_id_format,way/160279522,West Burton B Power Station,T_WBUPS-3,WBUPS-3,auto,geojson stores '160279522'; joined via normalized osm_id
+info,osm_id_format,way/160279522,West Burton B Power Station,T_WBUPS-4,WBUPS-4,auto,geojson stores '160279522'; joined via normalized osm_id
+info,osm_id_format,way/160279522,West Burton B Power Station,E_WBUPS-STX,WBUPS-STX,auto,geojson stores '160279522'; joined via normalized osm_id
+info,osm_id_format,way/160279522,West Burton B Power Station,T_WBURB-1,WBURB-1,auto,geojson stores '160279522'; joined via normalized osm_id
+info,osm_id_format,way/160279522,West Burton B Power Station,T_WBURB-2,WBURB-2,auto,geojson stores '160279522'; joined via normalized osm_id
+info,osm_id_format,way/160279522,West Burton B Power Station,T_WBURB-3,WBURB-3,auto,geojson stores '160279522'; joined via normalized osm_id
+info,osm_id_format,way/160279522,West Burton B Power Station,T_WBURB-41,WBURB-41,auto,geojson stores '160279522'; joined via normalized osm_id
+info,osm_id_format,way/160279522,West Burton B Power Station,T_WBURB-43,WBURB-43,auto,geojson stores '160279522'; joined via normalized osm_id
+info,osm_id_format,way/16075498,Pembroke Power Station,T_PEMB-11,PEMB-11,auto,geojson stores '16075498'; joined via normalized osm_id
+info,osm_id_format,way/16075498,Pembroke Power Station,T_PEMB-21,PEMB-21,auto,geojson stores '16075498'; joined via normalized osm_id
+info,osm_id_format,way/16075498,Pembroke Power Station,T_PEMB-31,PEMB-31,auto,geojson stores '16075498'; joined via normalized osm_id
+info,osm_id_format,way/16075498,Pembroke Power Station,T_PEMB-41,PEMB-41,auto,geojson stores '16075498'; joined via normalized osm_id
+info,osm_id_format,way/16075498,Pembroke Power Station,T_PEMB-51,PEMB-51,auto,geojson stores '16075498'; joined via normalized osm_id
+info,osm_id_format,way/16075498,Pembroke Power Station,T_PEMBSC-61,PMBSC-61,auto,geojson stores '16075498'; joined via normalized osm_id
+info,osm_id_format,way/201993701,Great Yarmouth Power Station,E_GYAR-1,GYAR-1,auto,geojson stores '201993701'; joined via normalized osm_id
+info,osm_id_format,way/204595889,Marchwood Power Station,T_MRWD-1,MRWD-1,auto,geojson stores '204595889'; joined via normalized osm_id
+info,osm_id_format,way/204918278,South Humber Bank Power Station,T_SHBA-1,SHBA-1,manual,geojson stores '204918278'; joined via normalized osm_id
+info,osm_id_format,way/204918278,South Humber Bank Power Station,T_SHBA-2,SHBA-2,manual,geojson stores '204918278'; joined via normalized osm_id
+info,osm_id_format,way/205132626,Killingholme B Power Station,T_KILLPG-1,KILLPG-1,manual,geojson stores '205132626'; joined via normalized osm_id
+info,osm_id_format,way/205132626,Killingholme B Power Station,T_KILLPG-2,KILLPG-2,manual,geojson stores '205132626'; joined via normalized osm_id
+info,osm_id_format,way/205132626,Killingholme B Power Station,T_KILLSC-1,KILLSC-1,auto,geojson stores '205132626'; joined via normalized osm_id
+info,osm_id_format,way/205132626,Killingholme B Power Station,T_KILLSC-2,KILLSC-2,auto,geojson stores '205132626'; joined via normalized osm_id
+info,osm_id_format,way/205132626,Killingholme B Power Station,T_KILNS-1,KILNS,auto,geojson stores '205132626'; joined via normalized osm_id
+info,osm_id_format,way/207523493,Finlarig Power Station,T_FINL-1,FINL-1,auto,geojson stores '207523493'; joined via normalized osm_id
+info,osm_id_format,way/208495234,Glanford Brigg Power Station,E_BRGG-1,BRGG-1,auto,geojson stores '208495234'; joined via normalized osm_id
+info,osm_id_format,way/208757000,Immingham Power Station,E_STALB-1,STALB-1,auto,geojson stores '208757000'; joined via normalized osm_id
+info,osm_id_format,way/208757000,Immingham Power Station,T_HUMR-1,HUMR-1,manual,geojson stores '208757000'; joined via normalized osm_id
+info,osm_id_format,way/218433470,London Array Wind Farm,T_LARYW-1,LARYO-1,auto,geojson stores '218433470'; joined via normalized osm_id
+info,osm_id_format,way/218433470,London Array Wind Farm,T_LARYW-2,LARYO-2,auto,geojson stores '218433470'; joined via normalized osm_id
+info,osm_id_format,way/218433470,London Array Wind Farm,T_LARYW-3,LARYO-3,auto,geojson stores '218433470'; joined via normalized osm_id
+info,osm_id_format,way/218433470,London Array Wind Farm,T_LARYW-4,LARYO-4,auto,geojson stores '218433470'; joined via normalized osm_id
+info,osm_id_format,way/219813087,Glendoe Hydro Scheme,T_GLNDO-1,GLNDO-1,auto,geojson stores '219813087'; joined via normalized osm_id
+info,osm_id_format,way/219813087,Glendoe Hydro Scheme,T_GLNDOD1,GLNDOD1,auto,geojson stores '219813087'; joined via normalized osm_id
+info,osm_id_format,way/229449727,Staythorpe C Power Station,T_STAY-1,STAY-1,auto,geojson stores '229449727'; joined via normalized osm_id
+info,osm_id_format,way/229449727,Staythorpe C Power Station,T_STAY-2,STAY-2,auto,geojson stores '229449727'; joined via normalized osm_id
+info,osm_id_format,way/229449727,Staythorpe C Power Station,T_STAY-3,STAY-3,auto,geojson stores '229449727'; joined via normalized osm_id
+info,osm_id_format,way/229449727,Staythorpe C Power Station,T_STAY-4,STAY-4,auto,geojson stores '229449727'; joined via normalized osm_id
+info,osm_id_format,way/230560199,Cwm Dyli Power Station,E_CWMD-1,CWMD-1,auto,geojson stores '230560199'; joined via normalized osm_id
+info,osm_id_format,way/239248123,Fasnakyle Power Station,T_FASN-1,FASN-1,auto,geojson stores '239248123'; joined via normalized osm_id
+info,osm_id_format,way/239248123,Fasnakyle Power Station,E_FASN-4,FASN-4,auto,geojson stores '239248123'; joined via normalized osm_id
+info,osm_id_format,way/239248123,Fasnakyle Power Station,T_FASN-2,FASN2,auto,geojson stores '239248123'; joined via normalized osm_id
+info,osm_id_format,way/239248123,Fasnakyle Power Station,E_FASN-3,FASN3,auto,geojson stores '239248123'; joined via normalized osm_id
+info,osm_id_format,way/24409061,Sloy Power station,M_SLOY-1,SLOY-1,auto,geojson stores '24409061'; joined via normalized osm_id
+info,osm_id_format,way/24409061,Sloy Power station,T_SLOY-2,SLOY-2,auto,geojson stores '24409061'; joined via normalized osm_id
+info,osm_id_format,way/24409061,Sloy Power station,T_SLOY-3,SLOY-3,auto,geojson stores '24409061'; joined via normalized osm_id
+info,osm_id_format,way/24409061,Sloy Power station,M_SLOY-4,SLOY-4,auto,geojson stores '24409061'; joined via normalized osm_id
+info,osm_id_format,way/24409061,Sloy Power station,T_SLOYD-1,SLOYD-1,auto,geojson stores '24409061'; joined via normalized osm_id
+info,osm_id_format,way/247279710,Clunie Power Station,M_CAS-CLU01,CAS-CLU01,auto,geojson stores '247279710'; joined via normalized osm_id
+info,osm_id_format,way/253091365,Jamesfield Organic Centre - Battery Storage,E_JAMBB-1,JAMBB-1,auto,geojson stores '253091365'; joined via normalized osm_id
+info,osm_id_format,way/253091365,Jamesfield Organic Centre - Battery Storage,E_JAMBB-2,JAMBB-2,auto,geojson stores '253091365'; joined via normalized osm_id
+info,osm_id_format,way/264087413,Clachan Power Station,E_CLAC-1,CLAC-1,auto,geojson stores '264087413'; joined via normalized osm_id
+info,osm_id_format,way/264087413,Clachan Power Station,T_CLACD-1,CLACD-1,auto,geojson stores '264087413'; joined via normalized osm_id
+info,osm_id_format,way/264087413,Clachan Power Station,E_CLFLW-1,CLFLW-1,auto,geojson stores '264087413'; joined via normalized osm_id
+info,osm_id_format,way/26427510,Connahs Quay Power Station,T_CNQPS-1,CNQPS-1,auto,geojson stores '26427510'; joined via normalized osm_id
+info,osm_id_format,way/26427510,Connahs Quay Power Station,T_CNQPS-2,CNQPS-2,auto,geojson stores '26427510'; joined via normalized osm_id
+info,osm_id_format,way/26427510,Connahs Quay Power Station,T_CNQPS-3,CNQPS-3,auto,geojson stores '26427510'; joined via normalized osm_id
+info,osm_id_format,way/26427510,Connahs Quay Power Station,T_CNQPS-4,CNQPS-4,auto,geojson stores '26427510'; joined via normalized osm_id
+info,osm_id_format,way/26550612,Rannoch Power Station,,RANN-1,auto,geojson stores '26550612'; joined via normalized osm_id
+info,osm_id_format,way/26550612,Rannoch Power Station,,RANN-2,auto,geojson stores '26550612'; joined via normalized osm_id
+info,osm_id_format,way/26550612,Rannoch Power Station,,RANN-3,auto,geojson stores '26550612'; joined via normalized osm_id
+info,osm_id_format,way/265797509,Wolverhampton EfW,E_WOLVB-1,WOLVB-1,auto,geojson stores '265797509'; joined via normalized osm_id
+info,osm_id_format,way/27625744,Sizewell B Nuclear Power Station,T_SIZB-1,SIZB-1,auto,geojson stores '27625744'; joined via normalized osm_id
+info,osm_id_format,way/27625744,Sizewell B Nuclear Power Station,T_SIZB-2,SIZB-2,auto,geojson stores '27625744'; joined via normalized osm_id
+info,osm_id_format,way/29083166,Rocksavage Power Station,T_ROCK-1,ROCK-1,auto,geojson stores '29083166'; joined via normalized osm_id
+info,osm_id_format,way/291146217,Robin Rigg Offshore Wind Farm,T_RREW-1,RREW-1,manual,geojson stores '291146217'; joined via normalized osm_id
+info,osm_id_format,way/291146217,Robin Rigg Offshore Wind Farm,T_RRWW-1,RRWW-1,manual,geojson stores '291146217'; joined via normalized osm_id
+info,osm_id_format,way/294548158,Foyers Falls Power Station,T_FOYED-1,FOYED-1,auto,geojson stores '294548158'; joined via normalized osm_id
+info,osm_id_format,way/295169560,Luichart Power Station,T_LUICD-1,LUICD-1,auto,geojson stores '295169560'; joined via normalized osm_id
+info,osm_id_format,way/310488542,Heysham Nuclear Power Station,T_HEYM2-D,HEYM2D-1,auto,geojson stores '310488542'; joined via normalized osm_id
+info,osm_id_format,way/310488542,Heysham Nuclear Power Station,T_HEYM11,HEYM11,manual,geojson stores '310488542'; joined via normalized osm_id
+info,osm_id_format,way/310488542,Heysham Nuclear Power Station,T_HEYM12,HEYM12,manual,geojson stores '310488542'; joined via normalized osm_id
+info,osm_id_format,way/310488542,Heysham Nuclear Power Station,T_HEYM27,HEYM27,manual,geojson stores '310488542'; joined via normalized osm_id
+info,osm_id_format,way/310488542,Heysham Nuclear Power Station,T_HEYM28,HEYM28,manual,geojson stores '310488542'; joined via normalized osm_id
+info,osm_id_format,way/312992167,Saltend Power Station,T_SCCL-1,SCCL-1,auto,geojson stores '312992167'; joined via normalized osm_id
+info,osm_id_format,way/312992167,Saltend Power Station,T_SCCL-2,SCCL-2,auto,geojson stores '312992167'; joined via normalized osm_id
+info,osm_id_format,way/312992167,Saltend Power Station,T_SCCL-3,SCCL-3,auto,geojson stores '312992167'; joined via normalized osm_id
+info,osm_id_format,way/318841702,Taylors Lane Power Station,E_TAYL2G,TAYL2G,auto,geojson stores '318841702'; joined via normalized osm_id
+info,osm_id_format,way/318841702,Taylors Lane Power Station,E_TAYL3G,TAYL3G,auto,geojson stores '318841702'; joined via normalized osm_id
+info,osm_id_format,way/327949356,Burbo Bank Offshore Wind Farm,T_BRBEO-1,BRBEO-1,auto,geojson stores '327949356'; joined via normalized osm_id
+info,osm_id_format,way/327949356,Burbo Bank Offshore Wind Farm,E_BURBO,BURBW-1,auto,geojson stores '327949356'; joined via normalized osm_id
+info,osm_id_format,way/331863739,Humber Gateway Wind Farm,T_HMGTO-1,HMGTO-1,auto,geojson stores '331863739'; joined via normalized osm_id
+info,osm_id_format,way/331863739,Humber Gateway Wind Farm,T_HMGTO-2,HMGTO-2,auto,geojson stores '331863739'; joined via normalized osm_id
+info,osm_id_format,way/332532014,Thornton Greener Grid Park,T_BLWNB-1,BLWNB-1,auto,geojson stores '332532014'; joined via normalized osm_id
+info,osm_id_format,way/341804043,Westermost Rough Wind Farm,T_WTMSO-1,WTMSO-1,auto,geojson stores '341804043'; joined via normalized osm_id
+info,osm_id_format,way/34383063,Drax Power Station,E__MDRX002,DRAXD-2,auto,geojson stores '34383063'; joined via normalized osm_id
+info,osm_id_format,way/34383063,Drax Power Station,T_DRAXX-1,DRAXX-1,auto,geojson stores '34383063'; joined via normalized osm_id
+info,osm_id_format,way/34383063,Drax Power Station,T_DRAXX-2,DRAXX-2,auto,geojson stores '34383063'; joined via normalized osm_id
+info,osm_id_format,way/34383063,Drax Power Station,T_DRAXX-3,DRAXX-3,auto,geojson stores '34383063'; joined via normalized osm_id
+info,osm_id_format,way/34383063,Drax Power Station,T_DRAXX-4,DRAXX-4,auto,geojson stores '34383063'; joined via normalized osm_id
+info,osm_id_format,way/34383063,Drax Power Station,T_DRAXX-5,DRAXX-5,manual,geojson stores '34383063'; joined via normalized osm_id
+info,osm_id_format,way/34383063,Drax Power Station,T_DRAXX-6,DRAXX-6,manual,geojson stores '34383063'; joined via normalized osm_id
+info,osm_id_format,way/34383063,Drax Power Station,T_DRAXX-9G,DRAXX-9G,manual,geojson stores '34383063'; joined via normalized osm_id
+info,osm_id_format,way/34383063,Drax Power Station,T_DRAXX-10G,DRAXX-10G,manual,geojson stores '34383063'; joined via normalized osm_id
+info,osm_id_format,way/34383063,Drax Power Station,T_DRAXX-12G,DRAXX-12G,manual,geojson stores '34383063'; joined via normalized osm_id
+info,osm_id_format,way/352871114,Shoreham Power Station,E_SHOS-1,SHOS-1,auto,geojson stores '352871114'; joined via normalized osm_id
+info,osm_id_format,way/368344994,Gunfleet Sands 3 Offshore Wind Farm,T_GNFSW-1,GNFSW-1,auto,geojson stores '368344994'; joined via normalized osm_id
+info,osm_id_format,way/368344994,Gunfleet Sands 3 Offshore Wind Farm,T_GNFSW-2,GNFSW-2,auto,geojson stores '368344994'; joined via normalized osm_id
+info,osm_id_format,way/374197421,Chapel Hill Solar Farm,E_CHAPB-1,CHAPB-1,auto,geojson stores '374197421'; joined via normalized osm_id
+info,osm_id_format,way/38211225,Little Barford Power Station,T_LBAR-1,LBAR-1,auto,geojson stores '38211225'; joined via normalized osm_id
+info,osm_id_format,way/38211225,Little Barford Power Station,T_LBAR-1G,LBAR-1G,auto,geojson stores '38211225'; joined via normalized osm_id
+info,osm_id_format,way/386371700,Barn Farm,E_DBFRM-1,DBFRM-1,auto,geojson stores '386371700'; joined via normalized osm_id
+info,osm_id_format,way/392054586,Derby & Derbyshire Waste Treatment Centre,E_DERBY-1,DERBY-2,auto,geojson stores '392054586'; joined via normalized osm_id
+info,osm_id_format,way/402566315,Cottam Development Centre,T_CDCL-1,CDCL-1,auto,geojson stores '402566315'; joined via normalized osm_id
+info,osm_id_format,way/402796795,Ffestiniog Power Station,T_FFES-1,FFES-1,auto,geojson stores '402796795'; joined via normalized osm_id
+info,osm_id_format,way/402796795,Ffestiniog Power Station,T_FFES-2,FFES-2,auto,geojson stores '402796795'; joined via normalized osm_id
+info,osm_id_format,way/402796795,Ffestiniog Power Station,T_FFES-3,FFES-3,auto,geojson stores '402796795'; joined via normalized osm_id
+info,osm_id_format,way/402796795,Ffestiniog Power Station,T_FFES-4,FFES-4,auto,geojson stores '402796795'; joined via normalized osm_id
+info,osm_id_format,way/406035513,Exeter Energy Recovery Facility,E_EXETR-2,EXETR-2,auto,geojson stores '406035513'; joined via normalized osm_id
+info,osm_id_format,way/413032680,Plymouth Energy,E_PLYRK-1,PLYRK-1,auto,geojson stores '413032680'; joined via normalized osm_id
+info,osm_id_format,way/428741691,Fawley Waste to Energy Plant,E_FAWN-1,FAWN-1,auto,geojson stores '428741691'; joined via normalized osm_id
+info,osm_id_format,way/449382772,Foyers Power Station,T_FOYE-1,FOYE-1,auto,geojson stores '449382772'; joined via normalized osm_id
+info,osm_id_format,way/449382772,Foyers Power Station,T_FOYE-2,FOYE-2,auto,geojson stores '449382772'; joined via normalized osm_id
+info,osm_id_format,way/449382772,Foyers Power Station,T_FOYED-1,FOYED-1,auto,geojson stores '449382772'; joined via normalized osm_id
+info,osm_id_format,way/467788297,Errochty Hydroelectric Power Station,T_ERRO-1,ERRO-1,auto,geojson stores '467788297'; joined via normalized osm_id
+info,osm_id_format,way/467788297,Errochty Hydroelectric Power Station,T_ERRO-2,ERRO-2,auto,geojson stores '467788297'; joined via normalized osm_id
+info,osm_id_format,way/467788297,Errochty Hydroelectric Power Station,T_ERRO-3,ERRO-3,auto,geojson stores '467788297'; joined via normalized osm_id
+info,osm_id_format,way/4800321,Hartlepool Nuclear Power Station,T_HRTL-1,HRTL-1,auto,geojson stores '4800321'; joined via normalized osm_id
+info,osm_id_format,way/4800321,Hartlepool Nuclear Power Station,T_HRTL-2,HRTL-2,auto,geojson stores '4800321'; joined via normalized osm_id
+info,osm_id_format,way/4911067,Seabank Power Station,T_SEAB-1,SEAB-1,auto,geojson stores '4911067'; joined via normalized osm_id
+info,osm_id_format,way/4911067,Seabank Power Station,T_SEAB-2,SEAB-2,auto,geojson stores '4911067'; joined via normalized osm_id
+info,osm_id_format,way/498275162,Sutton Bridge Solar Farm,T_SUTBS-1,SUTBS-1,auto,geojson stores '498275162'; joined via normalized osm_id
+info,osm_id_format,way/512579289,Tollgate Solar Farm,E_TOLLB-1,TOLLB-1,auto,geojson stores '512579289'; joined via normalized osm_id
+info,osm_id_format,way/51698894,Sutton Bridge Power Station,T_SUTB-1,SUTB-1,manual,geojson stores '51698894'; joined via normalized osm_id
+info,osm_id_format,way/545681226,Sheringham Shoal Offshore Wind Farm,T_SHRSW-1,SHRSO-1,auto,geojson stores '545681226'; joined via normalized osm_id
+info,osm_id_format,way/545681226,Sheringham Shoal Offshore Wind Farm,T_SHRSW-2,SHRSO-2,auto,geojson stores '545681226'; joined via normalized osm_id
+info,osm_id_format,way/550474153,Barrow Wind Farm,T_BOWLW-1,BOWLW-1,auto,geojson stores '550474153'; joined via normalized osm_id
+info,osm_id_format,way/550474159,Ormonde Wind Farm,T_OMNDW-1,OMNDO-1,auto,geojson stores '550474159'; joined via normalized osm_id
+info,osm_id_format,way/550699358,Lincs Wind Farm,T_LNCSW-1,LNCSO-1,auto,geojson stores '550699358'; joined via normalized osm_id
+info,osm_id_format,way/550699358,Lincs Wind Farm,T_LNCSW-2,LNCSO-2,auto,geojson stores '550699358'; joined via normalized osm_id
+info,osm_id_format,way/550726464,Wilton Farm (pv),T_LIONB-1,LionB-1,auto,geojson stores '550726464'; joined via normalized osm_id
+info,osm_id_format,way/550726464,Wilton Farm (pv),T_LIONB-2,LionB-2,auto,geojson stores '550726464'; joined via normalized osm_id
+info,osm_id_format,way/550726464,Wilton Farm (pv),T_LIONB-3,LionB-3,auto,geojson stores '550726464'; joined via normalized osm_id
+info,osm_id_format,way/550726464,Wilton Farm (pv),T_LIOND-1,LionD-1,auto,geojson stores '550726464'; joined via normalized osm_id
+info,osm_id_format,way/550726464,Wilton Farm (pv),T_WILCT-1,WILCT-1,auto,geojson stores '550726464'; joined via normalized osm_id
+info,osm_id_format,way/55955507,Rye House Power Station,T_RYHPS-1,RYHPS-1,auto,geojson stores '55955507'; joined via normalized osm_id
+info,osm_id_format,way/562727161,Inverawe Power Station,,INAW-1,auto,geojson stores '562727161'; joined via normalized osm_id
+info,osm_id_format,way/563018026,Deanie Power Station,T_DEAND-1,DEAND-1,auto,geojson stores '563018026'; joined via normalized osm_id
+info,osm_id_format,way/570076477,Nant Power Station,T_NANT-1,NANT-1,auto,geojson stores '570076477'; joined via normalized osm_id
+info,osm_id_format,way/625572056,Black Bush Farm,T_BEASC-1,BEASC-1,auto,geojson stores '625572056'; joined via normalized osm_id
+info,osm_id_format,way/635728029,West of Duddon Sands Wind Farm,T_WDNSO-1,WDNSO-1,auto,geojson stores '635728029'; joined via normalized osm_id
+info,osm_id_format,way/635728029,West of Duddon Sands Wind Farm,T_WDNSO-2,WDNSO-2,auto,geojson stores '635728029'; joined via normalized osm_id
+info,osm_id_format,way/659490293,Roosecote Battery,E_ROOSB-1,ROOSB-1,auto,geojson stores '659490293'; joined via normalized osm_id
+info,osm_id_format,way/677933700,Grain CHP,T_GRAISC-1,GRAISC-1,auto,geojson stores '677933700'; joined via normalized osm_id
+info,osm_id_format,way/677933700,Grain CHP,T_GRAISC-2,GRAISC-2,auto,geojson stores '677933700'; joined via normalized osm_id
+info,osm_id_format,way/677933700,Grain CHP,T_GRAI-6,GRAI-6,manual,geojson stores '677933700'; joined via normalized osm_id
+info,osm_id_format,way/677933700,Grain CHP,T_GRAI-7,GRAI-7,manual,geojson stores '677933700'; joined via normalized osm_id
+info,osm_id_format,way/677933700,Grain CHP,T_GRAI-8,GRAI-8,manual,geojson stores '677933700'; joined via normalized osm_id
+info,osm_id_format,way/677933700,Grain CHP,T_GRAI1G,GRAI1G,manual,geojson stores '677933700'; joined via normalized osm_id
+info,osm_id_format,way/677933700,Grain CHP,T_GRAI4G,GRAI4G,manual,geojson stores '677933700'; joined via normalized osm_id
+info,osm_id_format,way/681589458,Goose Willow Farm,E_GOSHS-1,GOSHS-1,auto,geojson stores '681589458'; joined via normalized osm_id
+info,osm_id_format,way/682463646,Thornton Lane Solar Farm,T_BLWNB-1,BLWNB-1,auto,geojson stores '682463646'; joined via normalized osm_id
+info,osm_id_format,way/687444711,Lakeside Energy from Waste,T_LKSDB-1,LKSDB-1,auto,geojson stores '687444711'; joined via normalized osm_id
+info,osm_id_format,way/687448641,Tilbury Green Power,E_TGP1,TIBG-1,auto,geojson stores '687448641'; joined via normalized osm_id
+info,osm_id_format,way/688029957,Cowes Power Station,E_COWE1,COWE1,auto,geojson stores '688029957'; joined via normalized osm_id
+info,osm_id_format,way/688029957,Cowes Power Station,E_COWE2,COWE2,auto,geojson stores '688029957'; joined via normalized osm_id
+info,osm_id_format,way/690325130,Beatrice Wind Farm,T_BEATO-1,BEATO-1,auto,geojson stores '690325130'; joined via normalized osm_id
+info,osm_id_format,way/690325130,Beatrice Wind Farm,T_BEATO-2,BEATO-2,auto,geojson stores '690325130'; joined via normalized osm_id
+info,osm_id_format,way/690325130,Beatrice Wind Farm,T_BEATO-3,BEATO-3,auto,geojson stores '690325130'; joined via normalized osm_id
+info,osm_id_format,way/690325130,Beatrice Wind Farm,T_BEATO-4,BEATO-4,auto,geojson stores '690325130'; joined via normalized osm_id
+info,osm_id_format,way/694152827,Black Peak Farm,T_BEASC-1,BEASC-1,auto,geojson stores '694152827'; joined via normalized osm_id
+info,osm_id_format,way/70311216,Carrington Power Station,T_CARR-1,CARR-1,auto,geojson stores '70311216'; joined via normalized osm_id
+info,osm_id_format,way/70311216,Carrington Power Station,T_CARR-2,CARR-2,auto,geojson stores '70311216'; joined via normalized osm_id
+info,osm_id_format,way/711002156,Peterborough Power Station,E_PETEM1,PETEM1,auto,geojson stores '711002156'; joined via normalized osm_id
+info,osm_id_format,way/718284355,Fields Farm Solar Farm,E_GFLDW-1,GFLDW-1,auto,geojson stores '718284355'; joined via normalized osm_id
+info,osm_id_format,way/728893771,Rock Farm / Goldborough Farm (Rookwood),E_PLYRK-1,PLYRK-1,auto,geojson stores '728893771'; joined via normalized osm_id
+info,osm_id_format,way/729739562,Chapel Farm,E_CHAPB-1,CHAPB-1,auto,geojson stores '729739562'; joined via normalized osm_id
+info,osm_id_format,way/738926636,Pen y Cymoedd Energy Storage,T_PNYCB-1,PNYCB-1,auto,geojson stores '738926636'; joined via normalized osm_id
+info,osm_id_format,way/743116558,Fell View Farm Phase 1 & 2,E_FELL-1,FELL-1,auto,geojson stores '743116558'; joined via normalized osm_id
+info,osm_id_format,way/746012676,Newport (Began Road),E_NEWPB-1,NEWPB-1,auto,geojson stores '746012676'; joined via normalized osm_id
+info,osm_id_format,way/771093003,Richborough Energy Park,T_RICHB-1,RICHB-1,auto,geojson stores '771093003'; joined via normalized osm_id
+info,osm_id_format,way/771093003,Richborough Energy Park,T_RICHB-2,RICHB-2,auto,geojson stores '771093003'; joined via normalized osm_id
+info,osm_id_format,way/77471728,Wilton Power Station,T_LIONB-1,LionB-1,auto,geojson stores '77471728'; joined via normalized osm_id
+info,osm_id_format,way/77471728,Wilton Power Station,T_LIONB-2,LionB-2,auto,geojson stores '77471728'; joined via normalized osm_id
+info,osm_id_format,way/77471728,Wilton Power Station,T_LIONB-3,LionB-3,auto,geojson stores '77471728'; joined via normalized osm_id
+info,osm_id_format,way/77471728,Wilton Power Station,T_LIOND-1,LionD-1,auto,geojson stores '77471728'; joined via normalized osm_id
+info,osm_id_format,way/808407172,Trafalgar Park Gas Peaking Plant,E_TRFPK-1,TRFPK-1,auto,geojson stores '808407172'; joined via normalized osm_id
+info,osm_id_format,way/810479966,Cleve Hill Solar Park,T_CLVHS-1,CLVHS-1,auto,geojson stores '810479966'; joined via normalized osm_id
+info,osm_id_format,way/810479966,Cleve Hill Solar Park,T_CLVHS-2,CLVHS-2,auto,geojson stores '810479966'; joined via normalized osm_id
+info,osm_id_format,way/814351698,Damhead Creek Power Station,T_DAMC-1,DAMC-1,auto,geojson stores '814351698'; joined via normalized osm_id
+info,osm_id_format,way/840178098,Sundon Landfill Site,T_SUNDB-1,SUNDB-1,auto,geojson stores '840178098'; joined via normalized osm_id
+info,osm_id_format,way/843940770,Burghfield Landfill Gas Utilisation Site,E_BURGH-1,BURGH-1,auto,geojson stores '843940770'; joined via normalized osm_id
+info,osm_id_format,way/843940771,Burghfield Generation Plant,E_BURGH-1,BURGH-1,auto,geojson stores '843940771'; joined via normalized osm_id
+info,osm_id_format,way/856731154,Coventry Energy From Waste,T_COVNB-1,COVNB-1,auto,geojson stores '856731154'; joined via normalized osm_id
+info,osm_id_format,way/856741235,Letchworth STOR,E_LCHWT-1,LCHWT-1,auto,geojson stores '856741235'; joined via normalized osm_id
+info,osm_id_format,way/895608597,Neart na Gaoithe Wind Farm,T_NNGAO-1,NNGAO-1,auto,geojson stores '895608597'; joined via normalized osm_id
+info,osm_id_format,way/895608597,Neart na Gaoithe Wind Farm,T_NNGAO-2,NNGAO-2,auto,geojson stores '895608597'; joined via normalized osm_id
+info,osm_id_format,way/898388608,Thornhill Gas Power Station,E_THRNL-1,THRNL-1,auto,geojson stores '898388608'; joined via normalized osm_id
+info,osm_id_format,way/90009908,Lynemouth Power Station,E_LYNE1,LNMTH-1,auto,geojson stores '90009908'; joined via normalized osm_id
+info,osm_id_format,way/90009908,Lynemouth Power Station,E_LYNE2,LNMTH-2,auto,geojson stores '90009908'; joined via normalized osm_id
+info,osm_id_format,way/90009908,Lynemouth Power Station,E_LYNE3,LNMTH-3,auto,geojson stores '90009908'; joined via normalized osm_id
+info,osm_id_format,way/903794092,Kemsley Energy from Waste,T_KEMB-1,KEMB-1,auto,geojson stores '903794092'; joined via normalized osm_id
+info,osm_id_format,way/91104903,Torness Nuclear Power Station,T_TORN-1,TORN-1,auto,geojson stores '91104903'; joined via normalized osm_id
+info,osm_id_format,way/91104903,Torness Nuclear Power Station,T_TORN-2,TORN-2,auto,geojson stores '91104903'; joined via normalized osm_id
+info,osm_id_format,way/91104903,Torness Nuclear Power Station,T_TORN-D,TORND-1,auto,geojson stores '91104903'; joined via normalized osm_id
+info,osm_id_format,way/913945639,Coryton Power Station,T_COSO-1,COSO-1,auto,geojson stores '913945639'; joined via normalized osm_id
+info,osm_id_format,way/918927238,Peterborough Energy from Waste,E_PETEM3,PETEM3,auto,geojson stores '918927238'; joined via normalized osm_id
+info,osm_id_format,way/931133702,Rock Farm Battery Storage Scheme,E_PLYRK-1,PLYRK-1,auto,geojson stores '931133702'; joined via normalized osm_id
+info,osm_id_format,way/931146013,Energy Centre,T_EECL-1,EECL-1,auto,geojson stores '931146013'; joined via normalized osm_id
+info,osm_id_format,way/938140160,Chatterley Power Station,E_CHTRY-1,CHTRY-1,auto,geojson stores '938140160'; joined via normalized osm_id
+info,osm_id_format,way/938180482,Wolverhampton Power,E_WOLVB-1,WOLVB-1,auto,geojson stores '938180482'; joined via normalized osm_id
+info,osm_id_format,way/940961824,Derby Gas Power Station,E_DERBY-1,DERBY-2,auto,geojson stores '940961824'; joined via normalized osm_id
+info,osm_id_format,way/944261153,Barton Hill STOR,E_BTNHL-1,BTNHL-1,auto,geojson stores '944261153'; joined via normalized osm_id
+info,osm_id_format,way/945296993,Didcot OCGT,E_DIDC1G,DIDC01G,auto,geojson stores '945296993'; joined via normalized osm_id
+info,osm_id_format,way/945296993,Didcot OCGT,E_DIDC2G,DIDC02G,auto,geojson stores '945296993'; joined via normalized osm_id
+info,osm_id_format,way/945296993,Didcot OCGT,E_DIDC3G,DIDC03G,auto,geojson stores '945296993'; joined via normalized osm_id
+info,osm_id_format,way/945296993,Didcot OCGT,E_DIDC4G,DIDC04G,auto,geojson stores '945296993'; joined via normalized osm_id
+info,osm_id_format,way/945296994,Didcot B Power Station,T_DIDCB5,DIDCB5,auto,geojson stores '945296994'; joined via normalized osm_id
+info,osm_id_format,way/945296994,Didcot B Power Station,T_DIDCB6,DIDCB6,auto,geojson stores '945296994'; joined via normalized osm_id
+info,osm_id_format,way/947716071,Exeter City Council Solar Farm,E_EXETR-2,EXETR-2,auto,geojson stores '947716071'; joined via normalized osm_id
+info,osm_id_format,way/951785974,Redfield Road Gas Generation Plant,E_RDFRB-1,RDFRB-1,auto,geojson stores '951785974'; joined via normalized osm_id
+info,osm_id_format,way/951785974,Redfield Road Gas Generation Plant,E_RDFRD-1,RDFRD-1,auto,geojson stores '951785974'; joined via normalized osm_id
+info,osm_id_format,way/951794677,Dowlais STOR West,E_DOWL-1,DOWL-1,auto,geojson stores '951794677'; joined via normalized osm_id
+info,osm_id_format,way/951794678,Dowlais STOR East,E_DOWL-1,DOWL-1,auto,geojson stores '951794678'; joined via normalized osm_id
+info,osm_id_format,way/951797053,Hirwaun,T_HIRWN-1,HIRWN-1,manual,geojson stores '951797053'; joined via normalized osm_id
+info,osm_id_format,way/954620039,Green Energy Hub,T_BURWS-1,BURWS-1,auto,geojson stores '954620039'; joined via normalized osm_id
+info,osm_id_format,way/955984192,Rothes Bio-Plant,E_MARK-1,MARK-1,auto,geojson stores '955984192'; joined via normalized osm_id
+info,osm_id_format,way/956007730,Broxburn Battery Storage,E_BROXB-1,BROXB-1,manual,geojson stores '956007730'; joined via normalized osm_id
+info,osm_id_format,way/956010231,Port of Tyne Battery Storage,E_POTES-1,POTES-1,auto,geojson stores '956010231'; joined via normalized osm_id
+info,osm_id_format,way/956016428,Steven's Croft Power Station,,STCR-1,auto,geojson stores '956016428'; joined via normalized osm_id
+info,osm_id_format,way/956023502,Carnegie Road Battery Storage,E_CRSSB-1,CRSSB-1,auto,geojson stores '956023502'; joined via normalized osm_id
+info,osm_id_format,way/956046649,West Burton B Battery Storage,E_WBUPS-STX,WBUPS-STX,auto,geojson stores '956046649'; joined via normalized osm_id
+info,osm_id_format,way/956046652,Brigg Renewable Energy Plant,E_BRGG-1,BRGG-1,auto,geojson stores '956046652'; joined via normalized osm_id
+info,osm_id_format,way/956070478,Wilton 11 EfW,T_LIONB-1,LionB-1,auto,geojson stores '956070478'; joined via normalized osm_id
+info,osm_id_format,way/956070478,Wilton 11 EfW,T_LIONB-2,LionB-2,auto,geojson stores '956070478'; joined via normalized osm_id
+info,osm_id_format,way/956070478,Wilton 11 EfW,T_LIONB-3,LionB-3,auto,geojson stores '956070478'; joined via normalized osm_id
+info,osm_id_format,way/956070478,Wilton 11 EfW,T_LIOND-1,LionD-1,auto,geojson stores '956070478'; joined via normalized osm_id
+info,osm_id_format,way/956252571,Farnham Landfill Gas Plant,E_FARNB-1,FARNB-1,auto,geojson stores '956252571'; joined via normalized osm_id
+info,osm_id_format,way/956335701,Caledonian Papermill,T_MEADD-1,MEADD-1,auto,geojson stores '956335701'; joined via normalized osm_id
+info,osm_id_format,way/956335705,Dunlop Landfill Gas Scheme,E_FDUN-1,FDUNT-1,auto,geojson stores '956335705'; joined via normalized osm_id
+info,osm_id_format,way/974781753,Sudmeadow Road STOR,E_SUDME-1,SUDME-1,auto,geojson stores '974781753'; joined via normalized osm_id
+info,osm_id_format,way/97744299,Corby Power Station,E_CORB-1,CORB-1,auto,geojson stores '97744299'; joined via normalized osm_id
+info,osm_id_format,way/981224694,Severn Power Station,T_SVRP-10,SVRP-10,auto,geojson stores '981224694'; joined via normalized osm_id
+info,osm_id_format,way/981224694,Severn Power Station,T_SVRP-20,SVRP-20,auto,geojson stores '981224694'; joined via normalized osm_id
+info,osm_id_format,way/998559908,Kincardine Offshore Windfarm,E_KINCW-1,KINCW-1,auto,geojson stores '998559908'; joined via normalized osm_id

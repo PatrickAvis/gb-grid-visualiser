@@ -11,8 +11,8 @@ many Elexon ``bmUnitName`` values are uninformative like "Unit 1").
 Checks
   error  bmu_unknown    bmu_id / ngc_bmu_id not in the Elexon registry
   error  osm_missing    non-manual osm_id resolves to no OSM site at all
-  warn   osm_id_format  resolves only by numeric id, not exact string -> the map
-                        falls back to fragile name matching instead of the id
+  info   osm_id_format  link uses "way/123" but the geojson stores bare "123"
+                        (handled by the map's normalized-id join; informational)
   warn   multi_site     one BMU linked to several distinct physical sites
   warn   fuel_mismatch  plant source_bucket incompatible with BMU fuelType
   info   name_low_sim   low plant_name <-> bmUnitName similarity (review queue)
@@ -162,8 +162,9 @@ def audit(plants_path: Path, name_sim: float) -> tuple[list[dict], dict]:
             if num is None or num not in sites_by_num:
                 add("error", "osm_missing", row, f"osm_id {osm} matches no OSM site")
             elif osm not in exact_ids:
-                add("warn", "osm_id_format", row,
-                    f"resolves by numeric id only; map join falls back to plant_name")
+                stored = str((sites_by_num.get(num) or {}).get("osm_id") or "").strip()
+                add("info", "osm_id_format", row,
+                    f"geojson stores '{stored}'; joined via normalized osm_id")
 
         # warn: one BMU spread across several sites
         if bmu_id and len(sites_per_bmu.get(bmu_id, set())) > 1:
@@ -217,28 +218,7 @@ def write_suggestions(findings: list[dict], ctx: dict, out_dir: Path) -> list[tu
     def by_issue(issue: str) -> list[dict]:
         return [f for f in findings if f["issue"] == issue]
 
-    # 1. osm_id_format -> deterministic fix: align the link's osm_id to the exact
-    #    string the geojson actually stores for that site, so the map joins by id.
-    rows = []
-    for f in by_issue("osm_id_format"):
-        site = sites_by_num.get(numeric_id(f["osm_id"]) or "")
-        stored = "" if site is None else str(site.get("osm_id") or "").strip()
-        rows.append({
-            "osm_id_current": f["osm_id"],
-            "osm_id_in_geojson": stored,
-            "suggested_osm_id": stored,
-            "plant_name": f["plant_name"],
-            "bmu_id": f["bmu_id"],
-            "ngc_bmu_id": f["ngc_bmu_id"],
-            "source": f["source"],
-            "suggested_action": "set link osm_id to suggested_osm_id (or canonicalize geojson ids)",
-        })
-    written.append((out_dir / "bmu_audit_osm_id_format.csv", _write_csv(
-        out_dir / "bmu_audit_osm_id_format.csv",
-        ["osm_id_current", "osm_id_in_geojson", "suggested_osm_id", "plant_name",
-         "bmu_id", "ngc_bmu_id", "source", "suggested_action"], rows)))
-
-    # 2. multi_site -> per BMU, suggest one canonical site to keep, consolidate rest.
+    # multi_site -> per BMU, suggest one canonical site to keep, consolidate rest.
     groups: dict[str, list[dict]] = defaultdict(list)
     for f in by_issue("multi_site"):
         groups[f["bmu_id"]].append(f)
@@ -286,7 +266,7 @@ def write_suggestions(findings: list[dict], ctx: dict, out_dir: Path) -> list[tu
         ["bmu_id", "ngc_bmu_id", "plant_name", "bmu_name", "osm_id", "site_name",
          "suggested_action", "keep_reason"], rows)))
 
-    # 3. fuel_mismatch -> guess whether the OSM tag or the link is the problem.
+    # fuel_mismatch -> guess whether the OSM tag or the link is the problem.
     rows = []
     for f in by_issue("fuel_mismatch"):
         unit = _unit_for(ctx, f["bmu_id"], f["ngc_bmu_id"])
@@ -314,7 +294,7 @@ def write_suggestions(findings: list[dict], ctx: dict, out_dir: Path) -> list[tu
         ["osm_id", "plant_name", "site_fuel_bucket", "bmu_id", "bmu_fuel", "bmu_name",
          "name_sim", "likely_cause", "suggested_action"], rows)))
 
-    # 4. name_low_sim -> a plain review queue, sorted weakest first.
+    # name_low_sim -> a plain review queue, sorted weakest first.
     rows = []
     for f in by_issue("name_low_sim"):
         unit = _unit_for(ctx, f["bmu_id"], f["ngc_bmu_id"])
