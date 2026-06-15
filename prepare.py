@@ -113,9 +113,13 @@ def bucket_plant_source(source: Any) -> str:
 
 
 def bucket_plant_row(row: Any) -> str:
-    """Map an OSM plant row onto one of the fuel taxonomy buckets."""
+    """Map an OSM plant row onto one of the fuel taxonomy buckets.
+
+    Falls back to generator:source when plant:source is absent (common on older
+    or decommissioned stations, e.g. Sizewell A tags only generator:source).
+    """
     return bucket_fuel_properties(
-        row.get("plant:source"),
+        row.get("plant:source") or row.get("generator:source"),
         row.get("name"),
         row.get("operator"),
     )
