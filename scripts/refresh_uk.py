@@ -88,6 +88,8 @@ def parse_args() -> argparse.Namespace:
         "(clean/reproducible, but discards direct edits to that file)",
     )
     parser.add_argument("--skip-bmu-match", action="store_true", help="Skip plant <-> BMU matching")
+    parser.add_argument("--skip-tec", action="store_true", help="Skip BMU <-> TEC connection-site matching")
+    parser.add_argument("--skip-substation-links", action="store_true", help="Skip substation <-> BMU augmentation")
     parser.add_argument("--skip-tiles", action="store_true", help="Skip PMTiles build")
     parser.add_argument(
         "--no-cache",
@@ -231,6 +233,27 @@ def main() -> int:
         run_step(
             "Plant <-> BMU matching",
             [str(SCRIPTS / "propose_plant_bmu_map.py")],
+            critical=False,
+            results=results,
+        )
+
+    # Match BMUs to TEC connection sites / substations (UK only). Downloads the
+    # TEC Register fresh; appends only high-confidence auto matches.
+    if not args.skip_tec and uk_only:
+        run_step(
+            "BMU <-> TEC connection sites",
+            [str(SCRIPTS / "propose_bmu_connection_sites.py"), "--fetch"],
+            critical=False,
+            results=results,
+        )
+
+    # Augment substations_web.geojson with connected BMUs/plants (UK only). Must
+    # run after prepare (regenerates the layer) and after the TEC step (provides
+    # connection sites); re-runs are idempotent.
+    if not args.skip_substation_links and uk_only:
+        run_step(
+            "Substation <-> BMU links",
+            [str(SCRIPTS / "match_substation_bmus.py"), "--region", args.region],
             critical=False,
             results=results,
         )

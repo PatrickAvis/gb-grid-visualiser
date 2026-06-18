@@ -1,0 +1,85 @@
+connection_site,substation_name,voltage,source,notes
+Alness GSP,Alness Substation,132000;33000,auto,exact_compact_name
+Arecleoch 132/33kV,Arecleoch Wind Farm Substation,132000,auto,exact_compact_name
+Beinneun 132kV Substation,Beinneun Substation,132000,auto,exact_compact_name
+Beinneun 132kV Substation,Beinneun Wind Farm Substation,132000,auto,exact_compact_name
+Berry Burn GSP,Berry Burn,275000,auto,exact_compact_name
+Bhlaraidh 132/33kV Substation,Bhlaraidh Substation,132000,auto,exact_compact_name
+Blackcraig 132/33kV,Blackcraig Substation,132000,auto,exact_compact_name
+Blackhill 132/33kV,Blackhill Substation,132000,auto,exact_compact_name
+Blacklaw 132/33kV,Black Law Wind Farm Substation,132000,auto,exact_compact_name
+Blacklaw Extension 132/33kV,Black Law Extension Substation,132000,auto,exact_compact_name
+Blyth GSP,Blyth Substation,400000;275000,auto,exact_compact_name
+Bolney 400kV Substation,Bolney Substation,400000;132000,auto,exact_compact_name
+Coalburn 132kV,Coalburn Substation,400000;132000,auto,exact_compact_name
+Coalburn 400/132kV,Coalburn Substation,400000;132000,auto,exact_compact_name
+Connah's Quay 400kV Substation,Connahs Quay GIS Substation,400000,auto,exact_compact_name
+Connah's Quay 400kV Substation,Connah's Quay 400kV AIS,400000,auto,exact_compact_name
+Corby 132kV Substation,Corby Substation,132000,auto,exact_compact_name
+Corriegarth 132/33kV substation,Corriegarth Wind Farm Substation,132000,auto,exact_compact_name
+Coryton South 400kV Substation,Coryton South Substation,400000,auto,exact_compact_name
+Creag Riabhach 132/33kV Substation,Creag Riabhach Wind Farm Substation,132000,auto,exact_compact_name
+Crossaig 132kV Substation,Crossaig Substation,220000;132000,auto,exact_compact_name
+Crystal Rig 132/33kV,Crystal Rig Substation,400000;132000;33000,auto,exact_compact_name
+Crystal Rig 400kV substation,Crystal Rig Substation,400000;132000;33000,auto,exact_compact_name
+Cumberhead Collector 132/33kV,Cumberhead Collector Substation,132000,auto,exact_compact_name
+Dersalloch 132/33kV,Dersalloch,132000,auto,exact_compact_name
+Didcot 400kV Substation,Didcot Substation,400000;132000,auto,exact_compact_name
+Dounreay GSP,Dounreay Substation,275000;132000,auto,exact_compact_name
+Dunmaglass 132kV Substation,Dunmaglass Wind Farm Substation,132000,auto,exact_compact_name
+Eaton Socon 400kV Substation,Eaton Socon substation,400000;132000,auto,exact_compact_name
+Edinbane 132/33kV Substation,Edinbane,132000,auto,exact_compact_name
+Enoch Hill 132/33kV Substation,Enoch Hill substation,132000;33000,auto,exact_compact_name
+Errochty 132kV Substation,Errochty Switching Station,132000,auto,exact_compact_name
+Ewehill 132/33kV,Ewe Hill Wind Farm Substation,132000,auto,exact_compact_name
+Fallago 400/33kV,Fallago Substation,400000;33000,auto,exact_compact_name
+Foyers 275kV Substation,Foyers Substation,275000,auto,exact_compact_name
+Galawhistle 132/33kV Substation,Galawhistle Wind Farm Substation,132000,auto,exact_compact_name
+Glen App 33kV,Glen App Wind Farm Substation,132000;33000,auto,exact_compact_name
+Glenglass 132/33kV,Glenglass Substation,132000,auto,exact_compact_name
+Gordonbush GSP,Gordonbush Wind Farm Substation,275000,auto,exact_compact_name
+Hartlepool 275kV Substation,Hartlepool,275000,auto,exact_compact_name
+Hawick GSP,Hawick Substation,132000,auto,exact_compact_name
+Humber Gateway 33/132kV Offshore Substation,Humber Gateway onshore substation,275000;132000,auto,exact_compact_name
+Hunterston 400/132kV,Hunterston Substation,400000,auto,exact_compact_name
+Indian Queens 400kV Substation,Indian Queens Substation,400000;132000,auto,exact_compact_name
+Keadby 400kV Substation,Keadby Substation,400000;132000,auto,exact_compact_name
+Keadby 400kV Substation,Keadby 1,132000,auto,exact_compact_name
+Keith 2 132/33kV GSP Substation,Keith Substation,275000;132000;33000,auto,exact_compact_name
+Kilbraur Wind Farm Substation,Kilbraur Wind Farm Substation,275000,auto,exact_compact_name
+Kilgallioch 275kV Substation,Kilgallioch Wind Farm Substation,275000;33000,auto,exact_compact_name
+Killin 132/11kV Substation,Killin Substation,132000,auto,exact_compact_name
+Kingsnorth GSP,Kingsnorth Grid,132000;11000,auto,exact_compact_name
+Kingsnorth GSP,Kingsnorth Substation,400000;132000,auto,exact_compact_name
+Kingsnorth GSP,Kingsnorth,132000,auto,exact_compact_name
+Langage 400kV Substation,Langage Substation,400000,auto,exact_compact_name
+Linnmill 132/33kV,Linnmill Substation,132000,auto,exact_compact_name
+Livingston East 132/33kV,Livingston East Substation,132000;33000,auto,exact_compact_name
+Marchwood 400kV Substation,Marchwood Substation,132000,auto,exact_compact_name
+Mark Hill 275/132kV,Mark Hill Substation,275000;132000,auto,exact_compact_name
+Maybole 132/33kV,Maybole Substation,132000,auto,exact_compact_name
+Moffat 132/33kV,Moffat Substation,400000;132000,auto,exact_compact_name
+Mybster 1 GSP,Mybster Substation,132000,auto,exact_compact_name
+Mybster 3 33kV Substation,Mybster Substation,132000,auto,exact_compact_name
+Necton 400kV Substation,Necton Substation,400000,auto,exact_compact_name
+Norwich Main 132kV,Norwich Main Substation,400000;132000,auto,exact_compact_name
+Peterhead GSP,Peterhead Substation,275000;132000,auto,exact_compact_name
+Peterhead GSP,Peterhead Substation,400000,auto,exact_compact_name
+Peterhead Grange GSP,Peterhead Grange,132000,auto,exact_compact_name
+Rayleigh Main 132kV Substation,Rayleigh Main Substation,400000;132000,auto,exact_compact_name
+Rocksavage 400kV Substation,Rocksavage AIS Substation,400000,auto,exact_compact_name
+Rothienorman 2 400/33kV GSP,Rothienorman Substation,400000,auto,exact_compact_name
+Rye House GSP,Rye House Substation,132000,auto,exact_compact_name
+Rye House GSP,Rye House GIS,400000;132000,auto,exact_compact_name
+Rye House GSP,Rye House AIS,400000;132000,auto,exact_compact_name
+Saltend South 400kV Substation,Saltend South Substation,275000,auto,exact_compact_name
+Seabank 400kV Substation,Seabank Substation,400000;132000;33000,auto,exact_compact_name
+Spalding North 400kV Substation,Spalding North Substation,400000,auto,exact_compact_name
+Stronelairg 132/33kV Substation,Stronelairg Wind Farm Substation,132000,auto,exact_compact_name
+Torness 400/132kV,Torness Substation,400000,auto,exact_compact_name
+Uskmouth 275kV Substation,Uskmouth Grid Substation,275000;132000;33000,auto,exact_compact_name
+Walpole 132kV Substation,Walpole Substation,400000;132000,auto,exact_compact_name
+Walpole 400kV Substation,Walpole Substation,400000;132000,auto,exact_compact_name
+West Burton 400kV Substation,West Burton Substation,400000,auto,exact_compact_name
+West Burton 400kV Substation,West Burton Substation,132000,auto,exact_compact_name
+Willesden 132kV Substation,Willesden Substation,400000;275000;132000;22000,auto,exact_compact_name

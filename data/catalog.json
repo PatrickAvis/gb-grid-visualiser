@@ -9,6 +9,7 @@
       "bounds": [[49.5, -11.0], [61.0, 2.5]],
       "boundary": "data/regions/uk/boundary.geojson",
       "plantBmuMap": "regions/uk/reference/generated/plant_bmu_links.json",
+      "bmuConnectionSites": "regions/uk/reference/generated/bmu_connection_sites.json",
       "layers": {
         "lines": {
           "type": "pmtiles",

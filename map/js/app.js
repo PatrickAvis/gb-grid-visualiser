@@ -64,7 +64,10 @@ async function initRegion(regionId) {
   regionConfigRef = regionConfig;
   if (regionConfig.plantBmuMapUrl) {
     try {
-      regionConfig.bmuLookup = await loadPlantBmuMap(regionConfig.plantBmuMapUrl);
+      regionConfig.bmuLookup = await loadPlantBmuMap(
+        regionConfig.plantBmuMapUrl,
+        regionConfig.bmuConnectionSitesUrl,
+      );
     } catch (error) {
       console.warn("Plant BMU map not loaded:", error);
       regionConfig.bmuLookup = null;

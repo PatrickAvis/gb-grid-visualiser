@@ -1,0 +1,18 @@
+connection_site,substation_name,voltage,source,notes
+Benbrack Wind Farm 132/33kV Substation,Benbrack Windfarm Substation,132000,manual,contains; substation_norm=benbrack windfarm
+Carrington GSP (SP Manweb),Carrington AIS Substation,400000;275000;132000,manual,contains; substation_norm=carrington
+Carrington GSP (SP Manweb),Carrington 400kV GIS,400000,manual,contains; substation_norm=carrington
+Dunlaw Extension 132/33kV,Dun Law Wind Farm Substation,132000,manual,contains; substation_norm=dun law wind farm
+Ffestiniog 275kV Substation,Ffestiniog Power Station Transformers,275000;16000,manual,contains; substation_norm=ffestiniog power transformers
+Galloper North 132/33kV Substation,Galloper Onshore Substation,400000;132000,manual,contains; substation_norm=galloper
+Grain 400kV Substation,Goring Grain Dryer Substation,11000;400,manual,contains; substation_norm=goring grain dryer
+Harestanes West Wind Farm 132/33kV,Harestanes Wind Farm Substation,132000,manual,contains; substation_norm=harestanes wind farm
+Keith Hill 33kV,Keith Substation,275000;132000;33000,manual,contains; substation_norm=keith
+New Abernethy 132kV,Abernethy Substation,132000,manual,contains; substation_norm=abernethy
+Redmoss GSP,Redmoss Grid Supply Point,132000;33000,manual,contains; substation_norm=redmoss supply point
+Rhigos 400kV Substation,Togo Organics Rhigos Substation,11000;400,manual,contains; substation_norm=togo organics rhigos
+Rhigos 400kV Substation,Rhigos School Substation,11000;400,manual,contains; substation_norm=rhigos school
+Rhigos 400kV Substation,Rhigos Supergrid Substation,400000;132000,manual,contains; substation_norm=rhigos supergrid
+Sandyknowe 132/33kV,Sandy Substation,11000;400,manual,contains; substation_norm=sandy
+Sizewell 132kV Substation,Sizewell B Substation,400000;132000,manual,contains; substation_norm=sizewell b
+Whitelee Extension 275/33kV,Whitelee Wind Farm Substation,275000,manual,contains; substation_norm=whitelee wind farm

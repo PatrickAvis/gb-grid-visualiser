@@ -88,7 +88,89 @@ python scripts/propose_plant_bmu_map.py --fetch
 | `reference/generated/bmu_unmapped_displayable.csv` | Displayable BMUs not yet mapped |
 | `reference/generated/bmu_reference_only.csv` | Supplier/virtual/import BMUs |
 
+## Network Connectivity: BMU ↔ Substation (Now)
+
+Links the otherwise-isolated BMUs to the grid: which substation each BMU connects
+to, and (inverted) which BMUs/plants hang off each substation. Source of truth is
+the **NESO TEC (Transmission Entry Capacity) Register**, whose `Connection Site`
+column names the transmission substation for each transmission-connected project.
+The Register carries no BMU ids, so BMUs are **name-matched** to TEC projects
+(reusing the `bmu_data` normalisation machinery), and TEC connection-site names
+are in turn **name-matched** to OSM substation polygons.
+
+```
+fetch  reference/source/neso_tec_register.csv          (scripts/fetch_tec_register.py)
+       NESO CKAN resource 17becbab-e3e8-473f-b303-3806f43a6a10, refreshed Tue/Fri
+
+BMU → connection site:
+edit   reference/editable/bmu_connection_sites.csv       (one row per BMU; append-only)
+run    scripts/propose_bmu_connection_sites.py [--fetch]
+read   reference/generated/bmu_connection_sites.json     (catalog `bmuConnectionSites`)
+       reference/generated/bmu_connection_site_candidates.csv   (review queue)
+
+substation → BMUs/plants (inverse):
+edit   reference/editable/connection_site_substations.csv (connection_site → OSM name)
+run    scripts/match_substation_bmus.py
+write  map/substations_web.geojson  (+connection_site, bmu_count, connected_capacity_mw,
+                                      connected_bmus, connected_plants)
+       reference/generated/connection_site_substation_candidates.csv  (review queue)
+```
+
+Both steps are append-only and have candidate review queues, identical in spirit
+to `plant_bmu_links`. The substation step **augments `substations_web.geojson` in
+place** (idempotent) because OSM substation features carry no stable id to key a
+side-file on; it must run after `prepare_map_data.py` regenerates that layer. The
+match is filtered to transmission substations (`substation=transmission` or
+voltage ≥ 132 kV) to cut ~53k distribution kiosks down to ~1.3k candidates.
+
+`refresh_uk.py` runs both via `--skip-tec` and `--skip-substation-links` stages.
+
+| Path | Role |
+|------|------|
+| `reference/source/neso_tec_register.csv` | TEC Register (auto-fetched) |
+| `reference/editable/bmu_connection_sites.csv` | **BMU → connection site** join table — edit this |
+| `reference/editable/connection_site_substations.csv` | **connection site → OSM substation name** — edit this |
+| `reference/generated/bmu_connection_sites.json` | Map runtime (BMU popups) |
+| `reference/generated/bmu_connection_site_candidates.csv` | Proposed BMU→site matches for review |
+| `reference/generated/connection_site_substation_candidates.csv` | Proposed site→substation matches for review |
+
 ## Candidate Map Enhancements
+
+### Phase 2 — Network topology: "everything connected to a substation"
+
+Extends the substation popup from connected *generation* to connected *circuits*
+("everything connected"), using **NESO ETYS Appendix B** (the published network
+model: node/bus list + circuit/branch data with impedances). The bridge is the
+same shape as the substation step above:
+
+```
+source/    reference/source/etys_appendix_b/*.csv          (per-TO node + branch tables)
+edit       reference/editable/connection_site_nodes.csv     (connection_site → ETYS node id)
+read       reference/generated/node_circuits.json           (node → [circuits to other nodes])
+```
+
+`Connection Site` names won't match ETYS node ids cleanly, so `connection_site_nodes.csv`
+is a hand-maintained alias (same pattern as `elexon_bmu_oc2_aliases.csv`), small
+because it only covers substations that already have BMUs. With it, a substation
+popup (or a click-to-trace) can show BMU → substation → circuit → adjacent
+substations. Caveat: ETYS 2025 is delayed (Connections Reform / tCSNP2), so the
+latest Appendix B is **ETYS 2024** — date-stamp it. OSM transmission lines are not
+a reliable topology source (endpoints aren't tagged with their substations).
+
+### Phase 3 — Embedded generation (ECR)
+
+TEC is transmission-connected only, so distribution-connected BMUs (the
+`gspGroup`-tagged ones) never get a connection site from it. Add the **NESO
+Embedded Capacity Register (ECR)** as a parallel source, giving the DNO connection
+point + connection voltage rather than a transmission substation. Reconcile the
+partial overlap: TEC already flags some rows with `Agreement Type = Embedded`.
+
+```
+fetch  reference/source/neso_ecr.csv                       (NESO CKAN)
+edit   reference/editable/bmu_embedded_connections.csv      (BMU → DNO connection point)
+read   reference/generated/bmu_embedded_connections.json
+```
+
 
 ### Regional balance
 

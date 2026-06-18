@@ -1,0 +1,1227 @@
+[
+  {
+    "bmu_id": "T_ABRBO-1",
+    "ngc_bmu_id": "ABRBO-1",
+    "connection_site": "Aberdeen Bay 132kV Substation",
+    "plant_type": "Wind Offshore",
+    "host_to": "SHET"
+  },
+  {
+    "bmu_id": "T_ACHRW-1",
+    "ngc_bmu_id": "ACHRW-1",
+    "connection_site": "A'Chruach Wind Farm 275kV Substation",
+    "plant_type": "Wind Onshore",
+    "host_to": "SHET"
+  },
+  {
+    "bmu_id": "T_AFTOW-1",
+    "ngc_bmu_id": "AFTOW-1",
+    "connection_site": "Blackhill 132/33kV",
+    "plant_type": "Wind Onshore",
+    "host_to": "SPT"
+  },
+  {
+    "bmu_id": "T_ARCHW-1",
+    "ngc_bmu_id": "ARCHW-1",
+    "connection_site": "Arecleoch 132/33kV",
+    "plant_type": "Wind Onshore",
+    "host_to": "SPT"
+  },
+  {
+    "bmu_id": "E_ASHWW-1",
+    "ngc_bmu_id": "ASHWW-1",
+    "connection_site": "Linnmill 132/33kV",
+    "plant_type": "Wind Onshore",
+    "host_to": "SPT"
+  },
+  {
+    "bmu_id": "E_BABAW-1",
+    "ngc_bmu_id": "BABAW-1",
+    "connection_site": "Dounreay GSP",
+    "plant_type": "Wind Onshore",
+    "host_to": "SHET"
+  },
+  {
+    "bmu_id": "T_BDCHW-1",
+    "ngc_bmu_id": "BDCHW-1",
+    "connection_site": "Mybster 3 33kV Substation",
+    "plant_type": "Wind Onshore",
+    "host_to": "SHET"
+  },
+  {
+    "bmu_id": "T_BEINW-1",
+    "ngc_bmu_id": "BEINW-1",
+    "connection_site": "Beinneun 132kV Substation",
+    "plant_type": "Wind Onshore",
+    "host_to": "SHET"
+  },
+  {
+    "bmu_id": "T_BENBW-1",
+    "ngc_bmu_id": "BENBW-1",
+    "connection_site": "Benbrack Wind Farm 132/33kV Substation",
+    "plant_type": "Wind Onshore",
+    "host_to": "SPT"
+  },
+  {
+    "bmu_id": "E_BETHW-1",
+    "ngc_bmu_id": "BETHW-1",
+    "connection_site": "Alness GSP",
+    "plant_type": "Wind Onshore",
+    "host_to": "SHET"
+  },
+  {
+    "bmu_id": "T_BHLAW-1",
+    "ngc_bmu_id": "BHLAW-1",
+    "connection_site": "Bhlaraidh 132/33kV Substation",
+    "plant_type": "Wind Onshore",
+    "host_to": "SHET"
+  },
+  {
+    "bmu_id": "T_BLKWW-1",
+    "ngc_bmu_id": "BLKWW-1",
+    "connection_site": "Blackcraig 132/33kV",
+    "plant_type": "Wind Onshore",
+    "host_to": "SPT"
+  },
+  {
+    "bmu_id": "T_BLLA-1",
+    "ngc_bmu_id": "BLLA-1",
+    "connection_site": "Blacklaw 132/33kV",
+    "plant_type": "Energy Storage System;Wind Onshore",
+    "host_to": "SPT"
+  },
+  {
+    "bmu_id": "T_BLLA-2",
+    "ngc_bmu_id": "BLLA-2",
+    "connection_site": "Blacklaw Extension 132/33kV",
+    "plant_type": "Energy Storage System;Wind Onshore",
+    "host_to": "SPT"
+  },
+  {
+    "bmu_id": "E_BNWKW-1",
+    "ngc_bmu_id": "BNWKW-1",
+    "connection_site": "Mybster 1 GSP",
+    "plant_type": "Wind Onshore",
+    "host_to": "SHET"
+  },
+  {
+    "bmu_id": "T_BOWLW-1",
+    "ngc_bmu_id": "BOWLW-1",
+    "connection_site": "Barrow 132/33kV Offshore Substation",
+    "plant_type": "Wind Offshore",
+    "host_to": "OFTO"
+  },
+  {
+    "bmu_id": "E_BRYBW-1",
+    "ngc_bmu_id": "BRYBW-1",
+    "connection_site": "Berry Burn GSP",
+    "plant_type": "Wind Onshore",
+    "host_to": "SHET"
+  },
+  {
+    "bmu_id": "E_BTUIW-2",
+    "ngc_bmu_id": "BTUIW-2",
+    "connection_site": "Beinn an Tuirc Substation",
+    "plant_type": "Wind Onshore",
+    "host_to": "SHET"
+  },
+  {
+    "bmu_id": "E_BTUIW-3",
+    "ngc_bmu_id": "BTUIW-3",
+    "connection_site": "Beinn an Tuirc Substation",
+    "plant_type": "Wind Onshore",
+    "host_to": "SHET"
+  },
+  {
+    "bmu_id": "T_CARR-1",
+    "ngc_bmu_id": "CARR-1",
+    "connection_site": "Carrington GSP (SP Manweb)",
+    "plant_type": "CCGT (Combined Cycle Gas Turbine)",
+    "host_to": "NGET"
+  },
+  {
+    "bmu_id": "T_CARR-2",
+    "ngc_bmu_id": "CARR-2",
+    "connection_site": "Carrington GSP (SP Manweb)",
+    "plant_type": "CCGT (Combined Cycle Gas Turbine)",
+    "host_to": "NGET"
+  },
+  {
+    "bmu_id": "T_CGTHW-1",
+    "ngc_bmu_id": "CGTHW-1",
+    "connection_site": "Corriegarth 132/33kV substation",
+    "plant_type": "Wind Onshore",
+    "host_to": "SHET"
+  },
+  {
+    "bmu_id": "T_CLDNW-1",
+    "ngc_bmu_id": "CLDNW-1",
+    "connection_site": "Clyde North 275/33kV",
+    "plant_type": "Wind Onshore",
+    "host_to": "SPT"
+  },
+  {
+    "bmu_id": "T_CLDSW-1",
+    "ngc_bmu_id": "CLDSW-1",
+    "connection_site": "Clyde South 275/33kV",
+    "plant_type": "Wind Onshore",
+    "host_to": "SPT"
+  },
+  {
+    "bmu_id": "E_CNCLW-1",
+    "ngc_bmu_id": "CNCLW-1",
+    "connection_site": "Alness GSP",
+    "plant_type": "Wind Onshore",
+    "host_to": "SHET"
+  },
+  {
+    "bmu_id": "T_CNQPS-1",
+    "ngc_bmu_id": "CNQPS-1",
+    "connection_site": "Connah's Quay 400kV Substation",
+    "plant_type": "CCGT (Combined Cycle Gas Turbine)",
+    "host_to": "NGET"
+  },
+  {
+    "bmu_id": "T_CNQPS-2",
+    "ngc_bmu_id": "CNQPS-2",
+    "connection_site": "Connah's Quay 400kV Substation",
+    "plant_type": "CCGT (Combined Cycle Gas Turbine)",
+    "host_to": "NGET"
+  },
+  {
+    "bmu_id": "T_CNQPS-3",
+    "ngc_bmu_id": "CNQPS-3",
+    "connection_site": "Connah's Quay 400kV Substation",
+    "plant_type": "CCGT (Combined Cycle Gas Turbine)",
+    "host_to": "NGET"
+  },
+  {
+    "bmu_id": "T_CNQPS-4",
+    "ngc_bmu_id": "CNQPS-4",
+    "connection_site": "Connah's Quay 400kV Substation",
+    "plant_type": "CCGT (Combined Cycle Gas Turbine)",
+    "host_to": "NGET"
+  },
+  {
+    "bmu_id": "E_CORB-1",
+    "ngc_bmu_id": "CORB-1",
+    "connection_site": "Corby 132kV Substation",
+    "plant_type": "CCGT (Combined Cycle Gas Turbine)",
+    "host_to": "NGET"
+  },
+  {
+    "bmu_id": "T_COSO-1",
+    "ngc_bmu_id": "COSO-1",
+    "connection_site": "Coryton South 400kV Substation",
+    "plant_type": "CCGT (Combined Cycle Gas Turbine)",
+    "host_to": "NGET"
+  },
+  {
+    "bmu_id": "T_COUWW-1",
+    "ngc_bmu_id": "COUWW-1",
+    "connection_site": "Crossaig 132kV Substation",
+    "plant_type": "Wind Onshore",
+    "host_to": "SHET"
+  },
+  {
+    "bmu_id": "E_COWE1",
+    "ngc_bmu_id": "COWE1",
+    "connection_site": "Fawley 400kV Substation",
+    "plant_type": "OCGT (Open Cycle Gas Turbine)",
+    "host_to": "NGET"
+  },
+  {
+    "bmu_id": "E_COWE2",
+    "ngc_bmu_id": "COWE2",
+    "connection_site": "Fawley 400kV Substation",
+    "plant_type": "OCGT (Open Cycle Gas Turbine)",
+    "host_to": "NGET"
+  },
+  {
+    "bmu_id": "T_CREAW-1",
+    "ngc_bmu_id": "CREAW-1",
+    "connection_site": "Creag Riabhach 132/33kV Substation",
+    "plant_type": "Wind Onshore",
+    "host_to": "SHET"
+  },
+  {
+    "bmu_id": "T_CRGHW-1",
+    "ngc_bmu_id": "CRGHW-1",
+    "connection_site": "Carraig Gheal 132/33kV Substation",
+    "plant_type": "Wind Onshore",
+    "host_to": "SHET"
+  },
+  {
+    "bmu_id": "T_CRYRW-2",
+    "ngc_bmu_id": "CRYRW-2",
+    "connection_site": "Crystal Rig 132/33kV",
+    "plant_type": "Wind Onshore",
+    "host_to": "SPT"
+  },
+  {
+    "bmu_id": "T_CRYRW-3",
+    "ngc_bmu_id": "CRYRW-3",
+    "connection_site": "Crystal Rig 132/33kV",
+    "plant_type": "Wind Onshore",
+    "host_to": "SPT"
+  },
+  {
+    "bmu_id": "T_CRYRW-4",
+    "ngc_bmu_id": "CRYRW-4",
+    "connection_site": "Crystal Rig 400kV substation",
+    "plant_type": "Wind Onshore",
+    "host_to": "SPT"
+  },
+  {
+    "bmu_id": "T_DALQW-1",
+    "ngc_bmu_id": "DALQW-1",
+    "connection_site": "Cumberhead Collector 132/33kV",
+    "plant_type": "Wind Onshore",
+    "host_to": "SPT"
+  },
+  {
+    "bmu_id": "T_DAMC-1",
+    "ngc_bmu_id": "DAMC-1",
+    "connection_site": "Kingsnorth GSP",
+    "plant_type": "CCGT (Combined Cycle Gas Turbine)",
+    "host_to": "NGET"
+  },
+  {
+    "bmu_id": "T_DDGNO-1",
+    "ngc_bmu_id": "DDGNO-1",
+    "connection_site": "Necton 400kV Substation",
+    "plant_type": "Wind Offshore",
+    "host_to": "NGET"
+  },
+  {
+    "bmu_id": "T_DDGNO-2",
+    "ngc_bmu_id": "DDGNO-2",
+    "connection_site": "Necton 400kV Substation",
+    "plant_type": "Wind Offshore",
+    "host_to": "NGET"
+  },
+  {
+    "bmu_id": "T_DDGNO-3",
+    "ngc_bmu_id": "DDGNO-3",
+    "connection_site": "Necton 400kV Substation",
+    "plant_type": "Wind Offshore",
+    "host_to": "NGET"
+  },
+  {
+    "bmu_id": "T_DDGNO-4",
+    "ngc_bmu_id": "DDGNO-4",
+    "connection_site": "Necton 400kV Substation",
+    "plant_type": "Wind Offshore",
+    "host_to": "NGET"
+  },
+  {
+    "bmu_id": "T_DIDCB5",
+    "ngc_bmu_id": "DIDCB5",
+    "connection_site": "Didcot 400kV Substation",
+    "plant_type": "CCGT (Combined Cycle Gas Turbine);Energy Storage System",
+    "host_to": "NGET"
+  },
+  {
+    "bmu_id": "T_DIDCB6",
+    "ngc_bmu_id": "DIDCB6",
+    "connection_site": "Didcot 400kV Substation",
+    "plant_type": "CCGT (Combined Cycle Gas Turbine);Energy Storage System",
+    "host_to": "NGET"
+  },
+  {
+    "bmu_id": "T_DINO-1",
+    "ngc_bmu_id": "DINO-1",
+    "connection_site": "Dinorwig 400kV Substation",
+    "plant_type": "Pump Storage",
+    "host_to": "NGET"
+  },
+  {
+    "bmu_id": "T_DINO-2",
+    "ngc_bmu_id": "DINO-2",
+    "connection_site": "Dinorwig 400kV Substation",
+    "plant_type": "Pump Storage",
+    "host_to": "NGET"
+  },
+  {
+    "bmu_id": "T_DINO-3",
+    "ngc_bmu_id": "DINO-3",
+    "connection_site": "Dinorwig 400kV Substation",
+    "plant_type": "Pump Storage",
+    "host_to": "NGET"
+  },
+  {
+    "bmu_id": "T_DINO-4",
+    "ngc_bmu_id": "DINO-4",
+    "connection_site": "Dinorwig 400kV Substation",
+    "plant_type": "Pump Storage",
+    "host_to": "NGET"
+  },
+  {
+    "bmu_id": "T_DINO-5",
+    "ngc_bmu_id": "DINO-5",
+    "connection_site": "Dinorwig 400kV Substation",
+    "plant_type": "Pump Storage",
+    "host_to": "NGET"
+  },
+  {
+    "bmu_id": "T_DINO-6",
+    "ngc_bmu_id": "DINO-6",
+    "connection_site": "Dinorwig 400kV Substation",
+    "plant_type": "Pump Storage",
+    "host_to": "NGET"
+  },
+  {
+    "bmu_id": "T_DNLWW-1",
+    "ngc_bmu_id": "DNLWW-1",
+    "connection_site": "Dunlaw Extension 132/33kV",
+    "plant_type": "Wind Onshore",
+    "host_to": "SPT"
+  },
+  {
+    "bmu_id": "E_DOLLB-1",
+    "ngc_bmu_id": "DOLLB-1",
+    "connection_site": "Rayleigh Main 132kV Substation",
+    "plant_type": "Energy Storage System",
+    "host_to": "NGET"
+  },
+  {
+    "bmu_id": "T_DRAXX-1",
+    "ngc_bmu_id": "DRAXX-1",
+    "connection_site": "Drax 400kV Substation",
+    "plant_type": "Biomass",
+    "host_to": "NGET"
+  },
+  {
+    "bmu_id": "T_DRAXX-2",
+    "ngc_bmu_id": "DRAXX-2",
+    "connection_site": "Drax 400kV Substation",
+    "plant_type": "Biomass",
+    "host_to": "NGET"
+  },
+  {
+    "bmu_id": "T_DRAXX-3",
+    "ngc_bmu_id": "DRAXX-3",
+    "connection_site": "Drax 400kV Substation",
+    "plant_type": "Biomass",
+    "host_to": "NGET"
+  },
+  {
+    "bmu_id": "T_DRAXX-4",
+    "ngc_bmu_id": "DRAXX-4",
+    "connection_site": "Drax 400kV Substation",
+    "plant_type": "Biomass",
+    "host_to": "NGET"
+  },
+  {
+    "bmu_id": "T_DRSLW-1",
+    "ngc_bmu_id": "DRSLW-1",
+    "connection_site": "Dersalloch 132/33kV",
+    "plant_type": "Wind Onshore",
+    "host_to": "SPT"
+  },
+  {
+    "bmu_id": "T_DUNGW-1",
+    "ngc_bmu_id": "DUNGW-1",
+    "connection_site": "Dunmaglass 132kV Substation",
+    "plant_type": "Wind Onshore",
+    "host_to": "SHET"
+  },
+  {
+    "bmu_id": "T_DWEXW-1",
+    "ngc_bmu_id": "DWEXW-1",
+    "connection_site": "Douglas West Extension Windfarm",
+    "plant_type": "Wind Onshore",
+    "host_to": "SPT"
+  },
+  {
+    "bmu_id": "T_EAAO-1",
+    "ngc_bmu_id": "EAAO-1",
+    "connection_site": "Platform EA One 220/66kV Offshore Substation",
+    "plant_type": "Wind Offshore",
+    "host_to": "NGET"
+  },
+  {
+    "bmu_id": "T_EAAO-2",
+    "ngc_bmu_id": "EAAO-2",
+    "connection_site": "Platform EA One 220/66kV Offshore Substation",
+    "plant_type": "Wind Offshore",
+    "host_to": "NGET"
+  },
+  {
+    "bmu_id": "T_EDINW-1",
+    "ngc_bmu_id": "EDINW-1",
+    "connection_site": "Edinbane 132/33kV Substation",
+    "plant_type": "Energy Storage System;Wind Onshore",
+    "host_to": "SHET"
+  },
+  {
+    "bmu_id": "T_ENDRB-1",
+    "ngc_bmu_id": "ENDRB-1",
+    "connection_site": "Earl Shilton 400kV Substation",
+    "plant_type": "Energy Storage System",
+    "host_to": "NGET"
+  },
+  {
+    "bmu_id": "T_ENHLW-1",
+    "ngc_bmu_id": "ENHLW-1",
+    "connection_site": "Enoch Hill 132/33kV Substation",
+    "plant_type": "Energy Storage System;Wind Onshore",
+    "host_to": "SPT"
+  },
+  {
+    "bmu_id": "T_ERRO-1",
+    "ngc_bmu_id": "ERRO-1",
+    "connection_site": "Errochty 132kV Substation",
+    "plant_type": "Hydro",
+    "host_to": "SHET"
+  },
+  {
+    "bmu_id": "T_ERRO-2",
+    "ngc_bmu_id": "ERRO-2",
+    "connection_site": "Errochty 132kV Substation",
+    "plant_type": "Hydro",
+    "host_to": "SHET"
+  },
+  {
+    "bmu_id": "T_ERRO-3",
+    "ngc_bmu_id": "ERRO-3",
+    "connection_site": "Errochty 132kV Substation",
+    "plant_type": "Hydro",
+    "host_to": "SHET"
+  },
+  {
+    "bmu_id": "T_EWHLW-1",
+    "ngc_bmu_id": "EWHLW-1",
+    "connection_site": "Ewehill 132/33kV",
+    "plant_type": "Wind Onshore",
+    "host_to": "SPT"
+  },
+  {
+    "bmu_id": "T_FALGW-1",
+    "ngc_bmu_id": "FALGW-1",
+    "connection_site": "Fallago 400/33kV",
+    "plant_type": "Wind Onshore",
+    "host_to": "SPT"
+  },
+  {
+    "bmu_id": "T_FFES-1",
+    "ngc_bmu_id": "FFES-1",
+    "connection_site": "Ffestiniog 275kV Substation",
+    "plant_type": "Pump Storage",
+    "host_to": "NGET"
+  },
+  {
+    "bmu_id": "T_FFES-2",
+    "ngc_bmu_id": "FFES-2",
+    "connection_site": "Ffestiniog 275kV Substation",
+    "plant_type": "Pump Storage",
+    "host_to": "NGET"
+  },
+  {
+    "bmu_id": "T_FFES-3",
+    "ngc_bmu_id": "FFES-3",
+    "connection_site": "Ffestiniog 275kV Substation",
+    "plant_type": "Pump Storage",
+    "host_to": "NGET"
+  },
+  {
+    "bmu_id": "T_FFES-4",
+    "ngc_bmu_id": "FFES-4",
+    "connection_site": "Ffestiniog 275kV Substation",
+    "plant_type": "Pump Storage",
+    "host_to": "NGET"
+  },
+  {
+    "bmu_id": "T_FINL-1",
+    "ngc_bmu_id": "FINL-1",
+    "connection_site": "Killin 132/11kV Substation",
+    "plant_type": "Hydro",
+    "host_to": "SHET"
+  },
+  {
+    "bmu_id": "T_FOYE-1",
+    "ngc_bmu_id": "FOYE-1",
+    "connection_site": "Foyers 275kV Substation",
+    "plant_type": "Pump Storage",
+    "host_to": "SHET"
+  },
+  {
+    "bmu_id": "T_FOYE-2",
+    "ngc_bmu_id": "FOYE-2",
+    "connection_site": "Foyers 275kV Substation",
+    "plant_type": "Pump Storage",
+    "host_to": "SHET"
+  },
+  {
+    "bmu_id": "T_FSDLW-1",
+    "ngc_bmu_id": "FSDLW-1",
+    "connection_site": "Crossaig 132kV Substation",
+    "plant_type": "Wind Onshore",
+    "host_to": "SHET"
+  },
+  {
+    "bmu_id": "T_GANW-11",
+    "ngc_bmu_id": "GAOFO-1",
+    "connection_site": "Galloper North 132/33kV Substation",
+    "plant_type": "Wind Offshore",
+    "host_to": "NGET"
+  },
+  {
+    "bmu_id": "T_GANW-22",
+    "ngc_bmu_id": "GAOFO-2",
+    "connection_site": "Galloper North 132/33kV Substation",
+    "plant_type": "Wind Offshore",
+    "host_to": "NGET"
+  },
+  {
+    "bmu_id": "T_GANW-13",
+    "ngc_bmu_id": "GAOFO-3",
+    "connection_site": "Galloper North 132/33kV Substation",
+    "plant_type": "Wind Offshore",
+    "host_to": "NGET"
+  },
+  {
+    "bmu_id": "T_GANW-24",
+    "ngc_bmu_id": "GAOFO-4",
+    "connection_site": "Galloper North 132/33kV Substation",
+    "plant_type": "Wind Offshore",
+    "host_to": "NGET"
+  },
+  {
+    "bmu_id": "T_GLWSW-1",
+    "ngc_bmu_id": "GLWSW-1",
+    "connection_site": "Galawhistle 132/33kV Substation",
+    "plant_type": "Wind Onshore",
+    "host_to": "SPT"
+  },
+  {
+    "bmu_id": "T_GNAPW-1",
+    "ngc_bmu_id": "GNAPW-1",
+    "connection_site": "Glen App 33kV",
+    "plant_type": "Wind Onshore",
+    "host_to": "SPT"
+  },
+  {
+    "bmu_id": "T_GORDW-1",
+    "ngc_bmu_id": "GORDW-1",
+    "connection_site": "Gordonbush GSP",
+    "plant_type": "Wind Onshore",
+    "host_to": "SHET"
+  },
+  {
+    "bmu_id": "T_GORDW-2",
+    "ngc_bmu_id": "GORDW-2",
+    "connection_site": "Gordonbush GSP",
+    "plant_type": "Wind Onshore",
+    "host_to": "SHET"
+  },
+  {
+    "bmu_id": "T_GRAI-6",
+    "ngc_bmu_id": "GRAI-6",
+    "connection_site": "Grain 400kV Substation",
+    "plant_type": "CCGT (Combined Cycle Gas Turbine);Reactive Compensation",
+    "host_to": "NGET"
+  },
+  {
+    "bmu_id": "T_GRAI-7",
+    "ngc_bmu_id": "GRAI-7",
+    "connection_site": "Grain 400kV Substation",
+    "plant_type": "CCGT (Combined Cycle Gas Turbine);Reactive Compensation",
+    "host_to": "NGET"
+  },
+  {
+    "bmu_id": "T_GRAI-8",
+    "ngc_bmu_id": "GRAI-8",
+    "connection_site": "Grain 400kV Substation",
+    "plant_type": "CCGT (Combined Cycle Gas Turbine);Reactive Compensation",
+    "host_to": "NGET"
+  },
+  {
+    "bmu_id": "T_GRAI1G",
+    "ngc_bmu_id": "GRAI1G",
+    "connection_site": "Grain 400kV Substation",
+    "plant_type": "CCGT (Combined Cycle Gas Turbine);Reactive Compensation",
+    "host_to": "NGET"
+  },
+  {
+    "bmu_id": "T_GRAI4G",
+    "ngc_bmu_id": "GRAI4G",
+    "connection_site": "Grain 400kV Substation",
+    "plant_type": "CCGT (Combined Cycle Gas Turbine);Reactive Compensation",
+    "host_to": "NGET"
+  },
+  {
+    "bmu_id": "E_GYAR-1",
+    "ngc_bmu_id": "GYAR-1",
+    "connection_site": "Norwich Main 132kV",
+    "plant_type": "CCGT (Combined Cycle Gas Turbine)",
+    "host_to": "NGET"
+  },
+  {
+    "bmu_id": "T_HADHW-1",
+    "ngc_bmu_id": "HADHW-1",
+    "connection_site": "Maybole 132/33kV",
+    "plant_type": "Wind Onshore",
+    "host_to": "SPT"
+  },
+  {
+    "bmu_id": "T_HALSW-1",
+    "ngc_bmu_id": "HALSW-1",
+    "connection_site": "Mybster 3 33kV Substation",
+    "plant_type": "Wind Onshore",
+    "host_to": "SHET"
+  },
+  {
+    "bmu_id": "E_HBHDW-1",
+    "ngc_bmu_id": "HBHDW-1",
+    "connection_site": "Livingston East 132/33kV",
+    "plant_type": "Wind Onshore",
+    "host_to": "SPT"
+  },
+  {
+    "bmu_id": "T_HEYM11",
+    "ngc_bmu_id": "HEYM11",
+    "connection_site": "Heysham GSP",
+    "plant_type": "Nuclear",
+    "host_to": "NGET"
+  },
+  {
+    "bmu_id": "T_HEYM12",
+    "ngc_bmu_id": "HEYM12",
+    "connection_site": "Heysham GSP",
+    "plant_type": "Nuclear",
+    "host_to": "NGET"
+  },
+  {
+    "bmu_id": "T_HEYM27",
+    "ngc_bmu_id": "HEYM27",
+    "connection_site": "Heysham GSP",
+    "plant_type": "Nuclear",
+    "host_to": "NGET"
+  },
+  {
+    "bmu_id": "T_HEYM28",
+    "ngc_bmu_id": "HEYM28",
+    "connection_site": "Heysham GSP",
+    "plant_type": "Nuclear",
+    "host_to": "NGET"
+  },
+  {
+    "bmu_id": "T_HIRWN-1",
+    "ngc_bmu_id": "HIRWN-1",
+    "connection_site": "Rhigos 400kV Substation",
+    "plant_type": "OCGT (Open Cycle Gas Turbine)",
+    "host_to": "NGET"
+  },
+  {
+    "bmu_id": "E_HLTWW-1",
+    "ngc_bmu_id": "HLTWW-1",
+    "connection_site": "Keith 2 132/33kV GSP Substation",
+    "plant_type": "Wind Onshore",
+    "host_to": "SHET"
+  },
+  {
+    "bmu_id": "T_HMGTO-1",
+    "ngc_bmu_id": "HMGTO-1",
+    "connection_site": "Humber Gateway 33/132kV Offshore Substation",
+    "plant_type": "Wind Offshore",
+    "host_to": "OFTO"
+  },
+  {
+    "bmu_id": "T_HMGTO-2",
+    "ngc_bmu_id": "HMGTO-2",
+    "connection_site": "Humber Gateway 33/132kV Offshore Substation",
+    "plant_type": "Wind Offshore",
+    "host_to": "OFTO"
+  },
+  {
+    "bmu_id": "T_HRSTW-1",
+    "ngc_bmu_id": "HRSTW-1",
+    "connection_site": "Harestanes West Wind Farm 132/33kV",
+    "plant_type": "Energy Storage System;Wind Onshore",
+    "host_to": "SPT"
+  },
+  {
+    "bmu_id": "T_HRTL-1",
+    "ngc_bmu_id": "HRTL-1",
+    "connection_site": "Hartlepool 275kV Substation",
+    "plant_type": "Nuclear",
+    "host_to": "NGET"
+  },
+  {
+    "bmu_id": "T_HRTL-2",
+    "ngc_bmu_id": "HRTL-2",
+    "connection_site": "Hartlepool 275kV Substation",
+    "plant_type": "Nuclear",
+    "host_to": "NGET"
+  },
+  {
+    "bmu_id": "T_HUNB-7",
+    "ngc_bmu_id": "HUNB-7",
+    "connection_site": "Hunterston 400/132kV",
+    "plant_type": "Nuclear",
+    "host_to": "SPT"
+  },
+  {
+    "bmu_id": "T_HUNB-8",
+    "ngc_bmu_id": "HUNB-8",
+    "connection_site": "Hunterston 400/132kV",
+    "plant_type": "Nuclear",
+    "host_to": "SPT"
+  },
+  {
+    "bmu_id": "E_HYWDW-1",
+    "ngc_bmu_id": "HYWDW-1",
+    "connection_site": "Peterhead Grange GSP",
+    "plant_type": "Energy Storage System;Wind Onshore",
+    "host_to": "SHET"
+  },
+  {
+    "bmu_id": "T_INDQ-1",
+    "ngc_bmu_id": "INDQ-1",
+    "connection_site": "Indian Queens 400kV Substation",
+    "plant_type": "OCGT (Open Cycle Gas Turbine)",
+    "host_to": "NGET"
+  },
+  {
+    "bmu_id": "E_JAMBB-1",
+    "ngc_bmu_id": "JAMBB-1",
+    "connection_site": "New Abernethy 132kV",
+    "plant_type": "Energy Storage System",
+    "host_to": "SHET"
+  },
+  {
+    "bmu_id": "E_JAMBB-2",
+    "ngc_bmu_id": "JAMBB-2",
+    "connection_site": "New Abernethy 132kV",
+    "plant_type": "Energy Storage System",
+    "host_to": "SHET"
+  },
+  {
+    "bmu_id": "T_KEAD-1",
+    "ngc_bmu_id": "KEAD-1",
+    "connection_site": "Keadby 400kV Substation",
+    "plant_type": "CCGT (Combined Cycle Gas Turbine)",
+    "host_to": "NGET"
+  },
+  {
+    "bmu_id": "T_KEAD-2",
+    "ngc_bmu_id": "KEAD-2",
+    "connection_site": "Keadby 400kV Substation",
+    "plant_type": "CCGT (Combined Cycle Gas Turbine)",
+    "host_to": "NGET"
+  },
+  {
+    "bmu_id": "T_KEADGT-3",
+    "ngc_bmu_id": "KEADGT-3",
+    "connection_site": "Keadby 400kV Substation",
+    "plant_type": "CCGT (Combined Cycle Gas Turbine)",
+    "host_to": "NGET"
+  },
+  {
+    "bmu_id": "T_KENNW-1",
+    "ngc_bmu_id": "KENNW-1",
+    "connection_site": "Coalburn 132kV",
+    "plant_type": "Wind Onshore",
+    "host_to": "SPT"
+  },
+  {
+    "bmu_id": "T_KILBW-1",
+    "ngc_bmu_id": "KILBW-1",
+    "connection_site": "Kilbraur Wind Farm Substation",
+    "plant_type": "Wind Onshore",
+    "host_to": "SHET"
+  },
+  {
+    "bmu_id": "E_KINCW-1",
+    "ngc_bmu_id": "KINCW-1",
+    "connection_site": "Redmoss GSP",
+    "plant_type": "Wind Offshore",
+    "host_to": "SHET"
+  },
+  {
+    "bmu_id": "T_KLGLW-1",
+    "ngc_bmu_id": "KLGLW-1",
+    "connection_site": "Kilgallioch 275kV Substation",
+    "plant_type": "Wind Onshore",
+    "host_to": "SPT"
+  },
+  {
+    "bmu_id": "E_KLYN-A-1",
+    "ngc_bmu_id": "KLYN-A-1",
+    "connection_site": "Walpole 132kV Substation",
+    "plant_type": "CCGT (Combined Cycle Gas Turbine)",
+    "host_to": "NGET"
+  },
+  {
+    "bmu_id": "T_KPMRW-1",
+    "ngc_bmu_id": "KPMRW-1",
+    "connection_site": "Coalburn 400/132kV",
+    "plant_type": "Wind Onshore",
+    "host_to": "SPT"
+  },
+  {
+    "bmu_id": "T_KTHLW-1",
+    "ngc_bmu_id": "KTHLW-1",
+    "connection_site": "Keith Hill 33kV",
+    "plant_type": "Wind Onshore",
+    "host_to": "SPT"
+  },
+  {
+    "bmu_id": "T_LAGA-1",
+    "ngc_bmu_id": "LAGA-1",
+    "connection_site": "Langage 400kV Substation",
+    "plant_type": "CCGT (Combined Cycle Gas Turbine)",
+    "host_to": "NGET"
+  },
+  {
+    "bmu_id": "T_LBAR-1",
+    "ngc_bmu_id": "LBAR-1",
+    "connection_site": "Eaton Socon 400kV Substation",
+    "plant_type": "CCGT (Combined Cycle Gas Turbine);Energy Storage System",
+    "host_to": "NGET"
+  },
+  {
+    "bmu_id": "T_LBAR-1G",
+    "ngc_bmu_id": "LBAR-1G",
+    "connection_site": "Eaton Socon 400kV Substation",
+    "plant_type": "CCGT (Combined Cycle Gas Turbine);Energy Storage System",
+    "host_to": "NGET"
+  },
+  {
+    "bmu_id": "T_LIMKW-1",
+    "ngc_bmu_id": "LIMKW-1",
+    "connection_site": "Limekilns 132/33kV substation",
+    "plant_type": "Energy Storage System;Wind Onshore",
+    "host_to": "SHET"
+  },
+  {
+    "bmu_id": "E_LYNE1",
+    "ngc_bmu_id": "LNMTH-1",
+    "connection_site": "Blyth GSP",
+    "plant_type": "Biomass",
+    "host_to": "NGET"
+  },
+  {
+    "bmu_id": "E_LYNE2",
+    "ngc_bmu_id": "LNMTH-2",
+    "connection_site": "Blyth GSP",
+    "plant_type": "Biomass",
+    "host_to": "NGET"
+  },
+  {
+    "bmu_id": "E_LYNE3",
+    "ngc_bmu_id": "LNMTH-3",
+    "connection_site": "Blyth GSP",
+    "plant_type": "Biomass",
+    "host_to": "NGET"
+  },
+  {
+    "bmu_id": "T_MEDP-1",
+    "ngc_bmu_id": "MEDP-1",
+    "connection_site": "Grain 400kV Substation",
+    "plant_type": "CCGT (Combined Cycle Gas Turbine)",
+    "host_to": "NGET"
+  },
+  {
+    "bmu_id": "T_MIDMW-1",
+    "ngc_bmu_id": "MIDMW-1",
+    "connection_site": "Middlemuir 132/33kV",
+    "plant_type": "Wind Onshore",
+    "host_to": "SPT"
+  },
+  {
+    "bmu_id": "T_MKHLW-1",
+    "ngc_bmu_id": "MKHLW-1",
+    "connection_site": "Mark Hill 275/132kV",
+    "plant_type": "Wind Onshore",
+    "host_to": "SPT"
+  },
+  {
+    "bmu_id": "T_MRWD-1",
+    "ngc_bmu_id": "MRWD-1",
+    "connection_site": "Marchwood 400kV Substation",
+    "plant_type": "CCGT (Combined Cycle Gas Turbine)",
+    "host_to": "NGET"
+  },
+  {
+    "bmu_id": "T_MYGPW-1",
+    "ngc_bmu_id": "MYGPW-1",
+    "connection_site": "Moffat 132/33kV",
+    "plant_type": "Wind Onshore",
+    "host_to": "SPT"
+  },
+  {
+    "bmu_id": "T_NANT-1",
+    "ngc_bmu_id": "NANT-1",
+    "connection_site": "Nant 132kV Substation",
+    "plant_type": "Hydro",
+    "host_to": "SHET"
+  },
+  {
+    "bmu_id": "E_OVRHB-1",
+    "ngc_bmu_id": "OVRHB-1",
+    "connection_site": "Rothienorman 2 400/33kV GSP",
+    "plant_type": "Energy Storage System",
+    "host_to": "SHET"
+  },
+  {
+    "bmu_id": "T_PEHE-1",
+    "ngc_bmu_id": "PEHE-1",
+    "connection_site": "Peterhead GSP",
+    "plant_type": "CCGT (Combined Cycle Gas Turbine)",
+    "host_to": "SHET"
+  },
+  {
+    "bmu_id": "E_PETEM1",
+    "ngc_bmu_id": "PETEM1",
+    "connection_site": "Walpole 132kV Substation",
+    "plant_type": "CCGT (Combined Cycle Gas Turbine)",
+    "host_to": "NGET"
+  },
+  {
+    "bmu_id": "E_PIBUW-1",
+    "ngc_bmu_id": "PIBUW-1",
+    "connection_site": "Hawick GSP",
+    "plant_type": "Wind Onshore",
+    "host_to": "SPT"
+  },
+  {
+    "bmu_id": "T_PNYCW-1",
+    "ngc_bmu_id": "PNYCW-1",
+    "connection_site": "Rhigos 400kV Substation",
+    "plant_type": "Wind Onshore",
+    "host_to": "NGET"
+  },
+  {
+    "bmu_id": "T_ROCK-1",
+    "ngc_bmu_id": "ROCK-1",
+    "connection_site": "Rocksavage 400kV Substation",
+    "plant_type": "CCGT (Combined Cycle Gas Turbine)",
+    "host_to": "NGET"
+  },
+  {
+    "bmu_id": "T_RYHPS-1",
+    "ngc_bmu_id": "RYHPS-1",
+    "connection_site": "Rye House GSP",
+    "plant_type": "CCGT (Combined Cycle Gas Turbine)",
+    "host_to": "NGET"
+  },
+  {
+    "bmu_id": "T_SAKNW-1",
+    "ngc_bmu_id": "SAKNW-1",
+    "connection_site": "Sandyknowe 132/33kV",
+    "plant_type": "Wind Onshore",
+    "host_to": "SPT"
+  },
+  {
+    "bmu_id": "T_SANQW-1",
+    "ngc_bmu_id": "SANQW-1",
+    "connection_site": "Sanquhar 132/33kV",
+    "plant_type": "Wind Onshore",
+    "host_to": "SPT"
+  },
+  {
+    "bmu_id": "T_SCCL-1",
+    "ngc_bmu_id": "SCCL-1",
+    "connection_site": "Saltend South 400kV Substation",
+    "plant_type": "CCGT (Combined Cycle Gas Turbine)",
+    "host_to": "NGET"
+  },
+  {
+    "bmu_id": "T_SCCL-2",
+    "ngc_bmu_id": "SCCL-2",
+    "connection_site": "Saltend South 400kV Substation",
+    "plant_type": "CCGT (Combined Cycle Gas Turbine)",
+    "host_to": "NGET"
+  },
+  {
+    "bmu_id": "T_SCCL-3",
+    "ngc_bmu_id": "SCCL-3",
+    "connection_site": "Saltend South 400kV Substation",
+    "plant_type": "CCGT (Combined Cycle Gas Turbine)",
+    "host_to": "NGET"
+  },
+  {
+    "bmu_id": "T_SEAB-1",
+    "ngc_bmu_id": "SEAB-1",
+    "connection_site": "Seabank 400kV Substation",
+    "plant_type": "CCGT (Combined Cycle Gas Turbine)",
+    "host_to": "NGET"
+  },
+  {
+    "bmu_id": "T_SEAB-2",
+    "ngc_bmu_id": "SEAB-2",
+    "connection_site": "Seabank 400kV Substation",
+    "plant_type": "CCGT (Combined Cycle Gas Turbine)",
+    "host_to": "NGET"
+  },
+  {
+    "bmu_id": "T_SEEL-1",
+    "ngc_bmu_id": "SEEL-1",
+    "connection_site": "Spalding North 400kV Substation",
+    "plant_type": "Energy Storage System;OCGT (Open Cycle Gas Turbine)",
+    "host_to": "NGET"
+  },
+  {
+    "bmu_id": "E_SHOS-1",
+    "ngc_bmu_id": "SHOS-1",
+    "connection_site": "Bolney 400kV Substation",
+    "plant_type": "CCGT (Combined Cycle Gas Turbine)",
+    "host_to": "NGET"
+  },
+  {
+    "bmu_id": "T_SIZB-1",
+    "ngc_bmu_id": "SIZB-1",
+    "connection_site": "Sizewell 132kV Substation",
+    "plant_type": "Nuclear",
+    "host_to": "NGET"
+  },
+  {
+    "bmu_id": "T_SIZB-2",
+    "ngc_bmu_id": "SIZB-2",
+    "connection_site": "Sizewell 132kV Substation",
+    "plant_type": "Nuclear",
+    "host_to": "NGET"
+  },
+  {
+    "bmu_id": "T_SOKYW-1",
+    "ngc_bmu_id": "SOKYW-1",
+    "connection_site": "South Kyle 2 132/33kV Substation",
+    "plant_type": "Energy Storage System;Wind Onshore",
+    "host_to": "SPT"
+  },
+  {
+    "bmu_id": "T_SPLN-1",
+    "ngc_bmu_id": "SPLN-1",
+    "connection_site": "Spalding North 400kV Substation",
+    "plant_type": "CCGT (Combined Cycle Gas Turbine)",
+    "host_to": "NGET"
+  },
+  {
+    "bmu_id": "T_STLGW-1",
+    "ngc_bmu_id": "STLGW-1",
+    "connection_site": "Stronelairg 132/33kV Substation",
+    "plant_type": "Wind Onshore",
+    "host_to": "SHET"
+  },
+  {
+    "bmu_id": "T_STLGW-2",
+    "ngc_bmu_id": "STLGW-2",
+    "connection_site": "Stronelairg 132/33kV Substation",
+    "plant_type": "Wind Onshore",
+    "host_to": "SHET"
+  },
+  {
+    "bmu_id": "T_STLGW-3",
+    "ngc_bmu_id": "STLGW-3",
+    "connection_site": "Stronelairg 132/33kV Substation",
+    "plant_type": "Wind Onshore",
+    "host_to": "SHET"
+  },
+  {
+    "bmu_id": "T_SUTB-1",
+    "ngc_bmu_id": "SUTB-1",
+    "connection_site": "Walpole 400kV Substation",
+    "plant_type": "CCGT (Combined Cycle Gas Turbine)",
+    "host_to": "NGET"
+  },
+  {
+    "bmu_id": "T_SVRP-10",
+    "ngc_bmu_id": "SVRP-10",
+    "connection_site": "Uskmouth 275kV Substation",
+    "plant_type": "CCGT (Combined Cycle Gas Turbine);Demand",
+    "host_to": "NGET"
+  },
+  {
+    "bmu_id": "T_SVRP-20",
+    "ngc_bmu_id": "SVRP-20",
+    "connection_site": "Uskmouth 275kV Substation",
+    "plant_type": "CCGT (Combined Cycle Gas Turbine);Demand",
+    "host_to": "NGET"
+  },
+  {
+    "bmu_id": "E_TAYL2G",
+    "ngc_bmu_id": "TAYL2G",
+    "connection_site": "Willesden 132kV Substation",
+    "plant_type": "OCGT (Open Cycle Gas Turbine)",
+    "host_to": "NGET"
+  },
+  {
+    "bmu_id": "E_TAYL3G",
+    "ngc_bmu_id": "TAYL3G",
+    "connection_site": "Willesden 132kV Substation",
+    "plant_type": "OCGT (Open Cycle Gas Turbine)",
+    "host_to": "NGET"
+  },
+  {
+    "bmu_id": "T_TDBNW-1",
+    "ngc_bmu_id": "TDBNW-1",
+    "connection_site": "Toddleburn 33kV",
+    "plant_type": "Wind Onshore",
+    "host_to": "SPT"
+  },
+  {
+    "bmu_id": "T_TORN-1",
+    "ngc_bmu_id": "TORN-1",
+    "connection_site": "Torness 400/132kV",
+    "plant_type": "Nuclear",
+    "host_to": "SPT"
+  },
+  {
+    "bmu_id": "T_TORN-2",
+    "ngc_bmu_id": "TORN-2",
+    "connection_site": "Torness 400/132kV",
+    "plant_type": "Nuclear",
+    "host_to": "SPT"
+  },
+  {
+    "bmu_id": "T_TWSHW-1",
+    "ngc_bmu_id": "TWSHW-1",
+    "connection_site": "Glenglass 132/33kV",
+    "plant_type": "Wind Onshore",
+    "host_to": "SPT"
+  },
+  {
+    "bmu_id": "T_WBURB-1",
+    "ngc_bmu_id": "WBURB-1",
+    "connection_site": "West Burton 400kV Substation",
+    "plant_type": "CCGT (Combined Cycle Gas Turbine);Energy Storage System",
+    "host_to": "NGET"
+  },
+  {
+    "bmu_id": "T_WBURB-2",
+    "ngc_bmu_id": "WBURB-2",
+    "connection_site": "West Burton 400kV Substation",
+    "plant_type": "CCGT (Combined Cycle Gas Turbine);Energy Storage System",
+    "host_to": "NGET"
+  },
+  {
+    "bmu_id": "T_WBURB-3",
+    "ngc_bmu_id": "WBURB-3",
+    "connection_site": "West Burton 400kV Substation",
+    "plant_type": "CCGT (Combined Cycle Gas Turbine);Energy Storage System",
+    "host_to": "NGET"
+  },
+  {
+    "bmu_id": "T_WDRGW-1",
+    "ngc_bmu_id": "WDRGW-1",
+    "connection_site": "Blackhill 132/33kV",
+    "plant_type": "Wind Onshore",
+    "host_to": "SPT"
+  },
+  {
+    "bmu_id": "T_WHIHW-1",
+    "ngc_bmu_id": "WHIHW-1",
+    "connection_site": "Glenglass 132/33kV",
+    "plant_type": "Wind Onshore",
+    "host_to": "SPT"
+  },
+  {
+    "bmu_id": "T_WHILW-2",
+    "ngc_bmu_id": "WHILW-2",
+    "connection_site": "Whitelee Extension 275/33kV",
+    "plant_type": "Energy Storage System;Hydrogen;PV Array (Photo Voltaic/solar);Wind Onshore",
+    "host_to": "SPT"
+  }
+]

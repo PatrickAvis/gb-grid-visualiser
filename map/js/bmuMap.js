@@ -32,30 +32,65 @@ function joinUnique(values) {
   return seen.length ? seen.join("; ") : undefined;
 }
 
-function aggregateMapEntries(entries) {
+function aggregateMapEntries(entries, connectionByBmu) {
   if (!entries?.length) {
     return {};
   }
-  return {
+  const result = {
     bmu_id: joinUnique(entries.map((row) => row.bmu_id)),
     ngc_bmu_id: joinUnique(entries.map((row) => row.ngc_bmu_id)),
     bmu_type: joinUnique(entries.map((row) => row.bmu_type)),
   };
+  if (connectionByBmu?.size) {
+    const sites = [];
+    const hosts = [];
+    for (const row of entries) {
+      const key = row.bmu_id == null ? "" : String(row.bmu_id).trim().toUpperCase();
+      const conn = key && connectionByBmu.get(key);
+      if (conn) {
+        sites.push(conn.connection_site);
+        hosts.push(conn.host_to);
+      }
+    }
+    result.connection_site = joinUnique(sites);
+    result.host_to = joinUnique(hosts);
+  }
+  return result;
 }
 
-export async function loadPlantBmuMap(url) {
+async function fetchEntries(url) {
   const response = await fetch(url);
   if (!response.ok) {
-    throw new Error(`Failed to load plant BMU map: ${response.status}`);
+    throw new Error(`Failed to load ${url}: ${response.status}`);
   }
   const payload = await response.json();
-  const entries = Array.isArray(payload) ? payload : payload.entries || [];
-  return createPlantBmuLookup(entries);
+  return Array.isArray(payload) ? payload : payload.entries || [];
 }
 
-export function createPlantBmuLookup(entries) {
+export async function loadPlantBmuMap(url, connectionSitesUrl = null) {
+  const entries = await fetchEntries(url);
+  let connections = [];
+  if (connectionSitesUrl) {
+    try {
+      connections = await fetchEntries(connectionSitesUrl);
+    } catch (error) {
+      console.warn("BMU connection sites not loaded:", error);
+    }
+  }
+  return createPlantBmuLookup(entries, connections);
+}
+
+export function createPlantBmuLookup(entries, connectionEntries = []) {
   const byOsmId = new Map();
   const byName = new Map();
+  const connectionByBmu = new Map();
+
+  for (const conn of connectionEntries) {
+    const key = conn.bmu_id == null ? "" : String(conn.bmu_id).trim().toUpperCase();
+    if (key) {
+      connectionByBmu.set(key, conn);
+    }
+  }
 
   for (const row of entries) {
     const osmId = normalizeOsmId(row.osm_id);
@@ -77,11 +112,11 @@ export function createPlantBmuLookup(entries) {
   return function lookupBmu(props = {}) {
     const osmId = normalizeOsmId(props.osm_id);
     if (osmId && byOsmId.has(osmId)) {
-      return aggregateMapEntries(byOsmId.get(osmId));
+      return aggregateMapEntries(byOsmId.get(osmId), connectionByBmu);
     }
     const nameKey = normalizePlantName(props.name);
     if (nameKey && byName.has(nameKey)) {
-      return aggregateMapEntries(byName.get(nameKey));
+      return aggregateMapEntries(byName.get(nameKey), connectionByBmu);
     }
     return {};
   };

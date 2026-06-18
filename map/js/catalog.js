@@ -48,6 +48,7 @@ export function buildRegionConfig(catalog, regionId) {
   }
   const turbineLayer = region.layers?.turbines;
   const plantBmuMapPath = region.plantBmuMap;
+  const bmuConnectionSitesPath = region.bmuConnectionSites;
   return {
     regionId,
     title: region.title,
@@ -58,6 +59,7 @@ export function buildRegionConfig(catalog, regionId) {
     layerIds: Object.keys(layers),
     turbineMinZoom: turbineLayer?.minZoom ?? 9,
     plantBmuMapUrl: plantBmuMapPath ? resolveDataUrl(plantBmuMapPath) : null,
+    bmuConnectionSitesUrl: bmuConnectionSitesPath ? resolveDataUrl(bmuConnectionSitesPath) : null,
   };
 }
 
