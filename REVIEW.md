@@ -1,5 +1,50 @@
 # Project review — 12 October 2026
 
+## Operational context branch validation
+
+Scottish constraint shading: 23 frontend tests and the geometry regression
+test pass. Browser checks confirmed grey historical defaults, explicit
+historical colours (B4 green / B6 red for 10 October 23:30), one polygon layer
+at a time, GW details, off/region cleanup and no JavaScript errors. The B6
+example showed 5.403 GW forecast / 2.800 GW limit / 2.603 GW exceedance.
+These are historical forecasts, not current conditions. Derived masks use
+public boundary lines and the existing land clip; they exclude Shetland and
+offshore assets and must not be used as electrical membership polygons.
+
+Wind/weather addition: all 19 frontend tests pass, including wind-bearing
+conversion, exact-hour missing-data handling, caching and malformed/error feed
+responses. Live browser validation loaded the initial 42 wind samples and an asset
+forecast; +24h matched in both controls and asset details, and height/time
+changes made no further weather requests. Layer-off and region changes removed
+the overlay without JavaScript errors. Weather appears before satellite imagery.
+The subsequent flow-display revision uses 143 samples at 1° spacing, vector
+interpolation, a speed raster and animated trails. Live checks covered forecast
+loading, time changes, pause, zoom and layer-off cleanup without JS errors.
+Interpolation does not add source detail; missing/outside cells remain blank.
+
+The operational-context update adds three opt-in public feeds without changing
+infrastructure datasets. Final validation passed 19 Python and 23 frontend
+tests. Wind coverage now uses 432 samples across 44–66° N, 20° W–16° E;
+live browser checks confirmed the wider field loads and renders. Fourteen frontend
+tests pass (BMU series, line rendering and the new operational-data checks).
+Live browser checks loaded 227 active REMIT notices (171 mapped by exact BMU
+ID), 10 interconnectors (seven mapped), and 19 forecast groups (two mapped).
+Counts are observations at test time, not fixed expectations.
+
+Verified mapped outage BMU controls and satellite view, SCOTEX selection,
+unmapped entry details, layer-off cleanup, region switching, mobile width,
+and a simulated HTTP 503 with no misleading retained snapshot. No browser
+JavaScript errors were observed. The latest NESO period was 10 October and
+was correctly labelled historical. No backend/Python code was changed.
+
+Limitations: independent overlays do not use zone filters; outage markers
+can overlap at shared sites; no inferred capacity totals or instantaneous
+flows; no automatic polling. Interconnector and boundary mapping coverage
+is explicitly incomplete, with every unmatched row retained in the list.
+Published REMIT capacities can vary across a notice's profile and are not
+treated as current MEL. Crosswalk expansion requires source review. See
+`map/README.md` for endpoint and attribution details.
+
 ## Result and scope
 
 Reviewed the infrastructure/ETYS data flow, BM settlement-window logic, map

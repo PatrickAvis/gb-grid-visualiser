@@ -1,4 +1,5 @@
 import { SERIES, fetchBmuSeries, valueAt } from './bmuSeries.js';
+import { mountAssetWeather } from './weather.js';
 import { escapeHtml } from './utils.js';
 import { instructionColor, instructionId, instructionTitle, mountBalancingDetails } from './bmuBalancing.js';
 
@@ -28,8 +29,8 @@ export function installBmuChart(map) {
   for(const button of panel.querySelectorAll('[data-tab]'))button.onclick=()=>showTab(button.dataset.tab);
   const expand=panel.querySelector('.asset-expand');
   expand.onclick=()=>{const large=panel.classList.toggle('is-expanded');expand.setAttribute('aria-pressed',String(large));expand.textContent=large?'Restore':'Expand';};
-  let controller, generation=0;
-  function close() { generation++; controller?.abort(); panel.hidden=true; }
+  let controller, generation=0, cleanupWeather=()=>{};
+  function close() { generation++; controller?.abort(); cleanupWeather(); panel.hidden=true; }
   panel.querySelector('.bmu-chart-close').onclick=close;
   panel.addEventListener('keydown',event=>{if(event.key==='Escape')close();});
 
@@ -118,6 +119,7 @@ export function installBmuChart(map) {
     select.value=button.dataset.bmuSelect; panel.hidden=false;showTab('operating'); load();
   });
   map.on('popupopen',event=>{
+    cleanupWeather();
     controller?.abort();generation++;
     const node=event.popup.getElement()?.querySelector('.leaflet-popup-content');
     if(!node)return;
@@ -141,6 +143,7 @@ export function installBmuChart(map) {
       const image=imagery.querySelector('img');
       if(image)image.loading='eager';
     }
+    cleanupWeather=mountAssetWeather(overview);
     for(const button of panel.querySelectorAll('[data-tab]'))button.disabled=button.dataset.tab!=='overview' && !ids.length;
     select.replaceChildren(...ids.map(id=>new Option(id,id)));
     select.value=ids.find(id=>id.startsWith('T_')) || ids[0];

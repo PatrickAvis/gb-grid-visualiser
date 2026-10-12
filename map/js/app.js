@@ -1,5 +1,8 @@
 import { loadPlantBmuMap } from "./bmuMap.js";
 import { installBmuChart } from "./bmuChart.js";
+import { installOperationalContext } from "./operationalContext.js";
+import { installWindWeather } from "./weather.js";
+import { installConstraintZones } from "./constraintZones.js";
 import {
   buildRegionConfig,
   loadCatalog,
@@ -24,6 +27,9 @@ const statusEl = document.getElementById("status");
 const zoomEl = document.getElementById("zoom-indicator");
 let map;
 let bmuChart;
+let operationalContext;
+let windWeather;
+let constraintZones;
 let layerManager;
 let zoneFilterState;
 let zonesController;
@@ -65,6 +71,12 @@ function createZoneState() {
 
 async function initRegion(regionId) {
   bmuChart?.close();
+  constraintZones?.destroy();
+  constraintZones=null;
+  windWeather?.destroy();
+  windWeather=null;
+  operationalContext?.destroy();
+  operationalContext = null;
   const request = ++regionRequest;
   const regionStatus = (...args) => { if (request === regionRequest) setStatus(...args); };
   const regionConfig = buildRegionConfig(catalog, regionId);
@@ -103,6 +115,9 @@ async function initRegion(regionId) {
   buildLayerPanel(regionConfig, (layerId, enabled) => {
     layerManager.setLayerEnabled(layerId, enabled, regionStatus);
   });
+  if (regionId === 'uk') operationalContext = installOperationalContext(map, regionConfig);
+  if (regionId === 'uk') windWeather = installWindWeather(map);
+  if (regionId === 'uk') constraintZones = installConstraintZones(map);
   for (const status of ["operational", "construction", "closed"]) {
     document.getElementById(`plant-status-${status}`)?.addEventListener("change", (event) => {
       layerManager.setPlantStatusVisible(status, event.target.checked);

@@ -312,9 +312,9 @@ infer accepted pair volumes, revenue, final dispatch, or metered generation.
 Each source can fail independently; unavailable data is labelled and the
 successful chart/table data remains usable. Refresh retries all five requests.
 
-## UI improvements preview
+## Workspace UI
 
-The `feature/ui-improvements` branch groups layers into Network, Generation,
+The workspace groups layers into Network, Generation,
 Balancing and Boundaries. Search and region selection stay above the scrolling
 layer controls. **Layers & search** collapses the sidebar; small screens start
 collapsed and use an expandable asset panel.
@@ -334,3 +334,131 @@ For this local review, the redesigned working tree is served at
 files against the same local datasets; it does not copy the large data archives.
 The comparison snapshot/server lives under ignored `tmp/ui-comparison/` and is
 not part of deployment. Deploy `map/workspace.css` alongside the other map files.
+
+## Operational context
+
+### Scottish constraint area colours
+
+Enable **Constraint area colours → Shade Scottish export areas**. Select B4
+(SSE_SP2) or B6 (SCOTEX); only one nested area is shaded at a time. Click the
+area or **View area details** for forecast flow, export limit, signed headroom
+and exceedance, in GW. Headroom = limit − flow; exceedance = max(flow − limit, 0).
+Never sum the two boundary values or treat them as local generation minus demand,
+actual curtailment or a dispatch requirement.
+
+Red means above the export limit, amber 90–100%, green below 90%. The 90%
+threshold is an application convention, not an official NESO warning. Forecasts
+dated before today's GB date are grey unless **Colour historical forecasts**
+is explicitly enabled; their historical status remains visible. Grey also means
+missing/invalid data or negative flow (the opposite-direction import limit is
+not assessed). Freshness is by forecast date, not evidence of a live measurement.
+The latest published period is fetched on enable/refresh; there is no polling.
+
+Geometry is **illustrative land north of the public NESO boundary line**, not an
+official zone, membership or eligibility polygon. It uses the existing local
+GB land mask, which excludes Shetland; offshore assets are not shaded. Northern
+Ireland is excluded. The mask cannot determine which BMUs electrically sit behind
+a boundary. The B4/B6 crosswalk is documented in NESO's Local Constraint Market
+page, and the [Scottish boundaries description](https://www.neso.energy/publications/electricity-ten-year-statement-etys/electricity-transmission-network-requirements/scottish-boundaries)
+describes the north–south transfers.
+
+Rebuild this small derived layer with `python scripts/build_constraint_areas.py`.
+It writes only `data/regions/uk/map/constraint_areas.geojson`, retaining input
+hashes and provenance. It does not use private ETYS site coordinates or modify
+the original boundary layers. Unit checks cover nested geometry, Scotland/NI
+test points, thresholds, reverse flows, missing values and historical colours.
+
+### Wind and asset weather
+
+The UK **Wind & weather** control fetches Open-Meteo model forecasts on demand.
+It displays a smooth speed-colour raster and animated downwind trails from
+432 fixed sample points (44–66° N, 20° W–16° E), covering the nearby Atlantic,
+Ireland and north-west Europe. Spacing remains 1° around GB (50–62° N,
+8° W–2° E), widening to 2° farther out to limit API usage. This is spatial
+interpolation of forecast samples, not native-resolution weather tiles.
+Vector components are interpolated; missing cells remain blank and nothing
+is extrapolated outside the sampled area. Colours encode speed in m/s.
+Height options are 10 m and 120 m above ground. Animation speed is illustrative,
+not a real-time parcel trajectory. Pause animation keeps the speed layer;
+reduced-motion preferences disable animation. Panning, hidden tabs, layer-off
+and region changes suspend or remove animation. Asset clicks pass through it.
+The style was informed by Robin Hawkes' GB Renewables Map; our data remains
+Open-Meteo, not that map's NOAA/GFS via WeatherLayers feed.
+
+The hourly slider spans the current forecast hour through +48 hours in UTC.
+Height, time and opacity changes use already-fetched data. **Refresh weather**
+requests a new forecast. Successful responses are cached in memory for 30
+minutes (bounded to 80 location sets); the displayed fetched time is retained.
+There is no background polling. Open-Meteo may count multiple locations as
+multiple calls for usage limits even though the grid is fetched in one request.
+
+Selecting an asset with explicit coordinates adds weather before the satellite
+view in Overview, independently of whether the wind overlay is enabled. It
+shows wind at both heights, 10 m gusts, 2 m temperature, cloud cover and an
+expandable hourly table. The selected overlay time also selects the asset's
+weather hour, without altering the historical BMU chart window. No exact
+forecast hour means unavailable, not an interpolated or substituted reading.
+Unlocated records and boundary-only popups do not get guessed weather locations.
+
+The API uses `cell_selection=nearest` so offshore requests are not forced to
+land, `timezone=GMT`, Unix timestamps, `wind_speed_unit=ms`, and Best Match
+model selection. The returned model grid coordinates appear in asset details.
+These are modelled conditions, not turbine measurements or electrical output;
+120 m is a reference height, not a claim about any turbine's hub height.
+
+[Open-Meteo documentation](https://open-meteo.com/en/docs) and
+[service terms/pricing](https://open-meteo.com/en/pricing): the free API is
+rate-limited and for non-commercial use. Commercial deployment needs a suitable
+subscription and secure handling of its API key. Weather attribution is shown
+in the map and asset panel (CC BY 4.0). Frontend tests:
+`node --test scripts/test_weather.mjs`.
+
+### Outages, interconnectors and boundaries
+
+The UK layer panel includes three optional
+feeds. Enable a checkbox to fetch a snapshot; **Refresh** fetches again. No
+background polling or saved operational data is introduced. Each feed has an
+independent error state and a 90-second timeout. Switching regions cancels
+requests and removes the layers. These overlays do not follow zone filters.
+Click a marker, boundary or list entry to open the existing asset inspector.
+Mapped BMU notices retain operating charts and satellite imagery.
+
+- **REMIT outages**: Elexon `/remit/list/by-event` for now through seven days,
+  latest revisions followed by `/remit?messageId=...` in batches of 50. Only
+  active notices overlapping the window are displayed. Dismissed revisions
+  suppress older active versions. Missing batches fail the whole snapshot.
+  Dates, notice capacity fields and available capacity-profile segments are
+  shown without summing overlapping notices or treating them as live MEL.
+  Locations use exact `assetId` → linked BMU → plant IDs. Unmapped notices stay
+  in the list. Absence of a notice is not proof of availability. Long-running
+  notices, including those for retired assets, are retained as published.
+- **Interconnectors**: Elexon `/generation/outturn/interconnectors`, last 24h,
+  latest half-hour per link. Positive MW imports into GB; negative MW exports.
+  Observations older than two hours are flagged. Null remains unavailable.
+  Seven reviewed GB connection-area markers are provided initially; IFA2,
+  BritNed and Greenlink remain in the list pending coordinate review. Marker
+  positions represent connection areas, not subsea routes or exact equipment.
+- **Boundary forecasts**: NESO CKAN resource
+  `38a18ec1-9e40-465d-93fb-301e80fd1352`, all groups at its latest published
+  forecast period. The feed's GMT/BST wall-clock timestamp is preserved and
+  never interpreted in the browser's timezone. Periods before today's GB date
+  are marked historical. This is day-ahead forecast flow/limit, not measured
+  flow, a contingency check or circuit utilisation. Only confirmed SCOTEX/B6
+  and SSE_SP2/B4 crosswalks are mapped; other groups remain in the list. Missing
+  local boundary geometry leaves the full feed usable as a list.
+
+Implementations: `js/operationalData.js` (fetching and pure transformations),
+`js/operationalLocations.js` (reviewed crosswalks), and
+`js/operationalContext.js` (controls, map and inspector integration).
+Run `node --test scripts/test_operational_data.mjs` from the repository root.
+
+Sources: [Elexon REMIT](https://bmrs.elexon.co.uk/remit),
+[interconnector reporting](https://bmrs.elexon.co.uk/interconnector-flows),
+[flow sign convention](https://www.elexon.co.uk/documents/groups/panel/2018-meetings/280/280-09-cp1506-new-interconnector-fuel-type/),
+[NESO forecasts](https://www.neso.energy/data-portal/day-ahead-constraint-flows-and-limits),
+[B6/B4 crosswalk](https://www.neso.energy/industry-information/balancing-services/local-constraint-market).
+Connection-area coordinates come from the local OSM converter/substation
+layers; [North Sea Link](https://www.nationalgrid.com/stories/energy-explained/what-are-electricity-interconnectors)
+and [Viking Link](https://www.nationalgrid.com/national-grid-ventures/viking-link)
+confirm their GB connection locations. Contains BMRS data © Elexon Limited;
+boundary forecasts © NESO; mapped infrastructure © OpenStreetMap contributors.
