@@ -315,6 +315,15 @@ def _weighted_average(items: list[tuple[float, float]]) -> float | None:
     return sum(value * weight for value, weight in items) / total_weight
 
 
+def _record_so_flag(entry: dict[str, Any], row: dict[str, Any], volume: float) -> None:
+    flag = row.get("soFlag")
+    status = "flagged" if flag is True else "unflagged" if flag is False else "unknown"
+    counts = entry.setdefault("so_counts", {key: 0 for key in ("flagged", "unflagged", "unknown")})
+    volumes = entry.setdefault("so_volumes", {key: 0.0 for key in counts})
+    counts[status] += 1
+    volumes[status] += abs(volume)
+
+
 def _aggregate_mapped_actions(
     rows: list[dict[str, Any]],
     *,
@@ -356,6 +365,7 @@ def _aggregate_mapped_actions(
             if row.get("bidOfferPairId") is not None:
                 entry["bid_offer_pair_ids"].add(str(row["bidOfferPairId"]))
             entry["action_count"] += 1
+            _record_so_flag(entry, row, volume)
             continue
 
         for link in links:
@@ -392,6 +402,7 @@ def _aggregate_mapped_actions(
             if row.get("bidOfferPairId") is not None:
                 entry["bid_offer_pair_ids"].add(str(row["bidOfferPairId"]))
             entry["action_count"] += 1
+            _record_so_flag(entry, row, volume)
 
     return list(mapped.values()), list(unmapped.values())
 
@@ -400,6 +411,13 @@ def _finalize_action(entry: dict[str, Any]) -> dict[str, Any]:
     price = _weighted_average(entry.pop("price_items", []))
     pair_ids = sorted(entry.pop("bid_offer_pair_ids", set()))
     finalized = dict(entry)
+    counts = finalized.pop("so_counts", {"unknown": finalized.get("action_count", 0)})
+    volumes = finalized.pop("so_volumes", {"unknown": finalized.get("abs_volume_mwh", 0)})
+    present = [key for key, count in counts.items() if count]
+    finalized["so_flag_status"] = present[0] if len(present) == 1 else "mixed" if present else "unknown"
+    for key in ("flagged", "unflagged", "unknown"):
+        finalized[f"so_{key}_actions"] = counts.get(key, 0)
+        finalized[f"so_{key}_abs_mwh"] = round(volumes.get(key, 0.0), 3)
     finalized["volume_mwh"] = round(float(finalized["volume_mwh"]), 3)
     finalized["abs_volume_mwh"] = round(float(finalized["abs_volume_mwh"]), 3)
     finalized["price_gbp_mwh"] = None if price is None else round(price, 2)

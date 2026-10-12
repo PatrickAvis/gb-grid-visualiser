@@ -115,6 +115,8 @@ async function initRegion(regionId) {
   buildLayerPanel(regionConfig, (layerId, enabled) => {
     layerManager.setLayerEnabled(layerId, enabled, regionStatus);
   });
+  const soFilter = document.getElementById('bm-so-filter');
+  if (soFilter) { soFilter.value = 'all'; soFilter.onchange = () => layerManager.setBmSoFilter(); }
   if (regionId === 'uk') operationalContext = installOperationalContext(map, regionConfig);
   if (regionId === 'uk') windWeather = installWindWeather(map);
   if (regionId === 'uk') constraintZones = installConstraintZones(map);

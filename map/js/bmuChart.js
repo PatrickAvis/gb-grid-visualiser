@@ -1,7 +1,7 @@
 import { SERIES, fetchBmuSeries, valueAt } from './bmuSeries.js';
 import { mountAssetWeather } from './weather.js';
 import { escapeHtml } from './utils.js';
-import { instructionColor, instructionId, instructionTitle, mountBalancingDetails } from './bmuBalancing.js';
+import { instructionColor, instructionSoStyle, instructionId, instructionTitle, mountBalancingDetails } from './bmuBalancing.js';
 
 const timeLabel = time => new Date(time).toLocaleTimeString('en-GB',{timeZone:'UTC',hour:'2-digit',minute:'2-digit'});
 const dateLabel = time => Number.isFinite(time) ? new Date(time).toISOString().replace('T',' ').slice(0,16)+' UTC' : 'Not supplied';
@@ -52,8 +52,8 @@ export function installBmuChart(map) {
     }).join('');
     const times=Array.from({length:7},(_,i)=>{const t=start+(end-start)*i/6;return `<text x="${x(t)}" y="260" text-anchor="middle">${timeLabel(t)}</text>`;}).join('');
     const paths=SERIES.map(s=>`<path data-series="${s.key}" d="${series[s.key].map(p=>`M${x(p.from)},${y(p.v)} L${x(p.to)},${y(p.w)}`).join(' ')}" fill="none" stroke="${s.color}" stroke-width="2.5" stroke-dasharray="${s.dash}"/>`).join('');
-    const instructionPaths=acceptances.map(s=>`<path data-acceptance="${escapeHtml(instructionId(s))}" d="M${x(s.from)},${y(s.v)} L${x(s.to)},${y(s.w)}" fill="none" stroke="${instructionColor}" stroke-width="3" stroke-dasharray="5 2"><title>${escapeHtml(instructionTitle(s))}</title></path>`).join('');
-    content.innerHTML=`<div class="bmu-chart-legend">${SERIES.map(s=>`<label style="color:${s.color}"><input type="checkbox" data-series="${s.key}" checked> ${s.label}<span>${escapeHtml(s.name)}</span></label>`).join('')}<label style="color:${instructionColor}"><input type="checkbox" class="bmu-instructions-toggle" checked> Instructions<span>Individual accepted levels</span></label></div>
+    const instructionPaths=acceptances.map(s=>`<path data-acceptance="${escapeHtml(instructionId(s))}" d="M${x(s.from)},${y(s.v)} L${x(s.to)},${y(s.w)}" fill="none" stroke="${instructionSoStyle(s).color}" stroke-width="3" stroke-dasharray="${instructionSoStyle(s).dashArray || '5 2'}"><title>${escapeHtml(instructionTitle(s))}</title></path>`).join('');
+    content.innerHTML=`<div class="bmu-chart-legend">${SERIES.map(s=>`<label style="color:${s.color}"><input type="checkbox" data-series="${s.key}" checked> ${s.label}<span>${escapeHtml(s.name)}</span></label>`).join('')}<label style="color:${instructionColor}"><input type="checkbox" class="bmu-instructions-toggle" checked> Instructions<span>Pink: SO-flagged; dark: unflagged; grey: unknown</span></label></div>
       <svg viewBox="0 0 700 280" role="img" aria-label="PN, MEL, SEL, MIL and individual accepted instructions over the selected window, in megawatts"><text x="12" y="18">MW</text>${ticks}${times}${paths}${instructionPaths}<line class="bmu-chart-cursor" x1="660" x2="660" y1="30" y2="235" stroke="#637083" stroke-dasharray="2 3"/></svg>
       <label class="bmu-chart-time">Inspect time <input type="range" min="0" max="360" value="360" aria-label="Inspect chart time"></label>
       <div class="bmu-chart-readout" aria-live="polite"></div><div class="bmu-balancing-details"></div>`;
@@ -66,7 +66,7 @@ export function installBmuChart(map) {
       readout.innerHTML=`<strong>${dateLabel(t)}</strong><div>${SERIES.map(s=>{const v=valueAt(series[s.key],t);return `<span style="color:${s.color}">${s.label}: <b>${v===null?'No data':v.toFixed(1)+' MW'}</b></span>`;}).join('')}</div>`;
       if(instructionToggle.checked) {
         const active=acceptances.filter(s=>(!selectedInstruction || instructionId(s)===selectedInstruction) && s.from<=t && s.to>=t);
-        readout.innerHTML+=`<div style="color:${instructionColor}">${active.length?active.map(s=>`#${escapeHtml(instructionId(s))}: ${valueAt([s],t).toFixed(1)} MW (issued ${escapeHtml(dateLabel(Date.parse(s.row.acceptanceTime)))})`).join('<br>'):(data.acceptancesAvailable?'No returned instruction at this time':'Instruction data unavailable')}</div>`;
+        readout.innerHTML+=`<div style="color:${instructionColor}">${active.length?active.map(s=>`#${escapeHtml(instructionId(s))}: ${valueAt([s],t).toFixed(1)} MW · ${instructionSoStyle(s).label} (issued ${escapeHtml(dateLabel(Date.parse(s.row.acceptanceTime)))})`).join('<br>'):(data.acceptancesAvailable?'No returned instruction at this time':'Instruction data unavailable')}</div>`;
       }
     }
     slider.oninput=()=>inspect(start+Number(slider.value)/360*(end-start));

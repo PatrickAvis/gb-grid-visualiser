@@ -314,6 +314,24 @@ successful chart/table data remains usable. Refresh retries all five requests.
 
 ## Workspace UI
 
+Enable **BM bids** or **BM offers**, then use **SO flag** in the Balancing
+Mechanism legend to isolate **Any SO-flagged activity**, only flagged, only
+unflagged, mixed or unknown periods. Marker fill remains generation type;
+outlines are pink (flagged), thin dark (unflagged), dashed purple (mixed), or
+dotted grey (unknown). Each marker aggregates one mapped BMU, side and settlement
+period. Mixed markers keep the full period volume; their popups show separate
+flagged/unflagged/unknown action counts and absolute MWh. An old snapshot without
+flags is unknown, never assumed unflagged. The legend shows the snapshot fetch
+time; refresh the dataset with `python scripts/fetch_bm_activity.py`.
+
+The BMU operating chart and accepted-instruction table also distinguish published
+true, false and missing SO flags. Submitted bid/offer price pairs do not receive
+SO flags: flags apply to acceptances. Elexon describes SO flags as potentially
+system-related actions, including transmission constraints; they do not identify
+the binding constraint or prove a unit is constrained now. See
+[Elexon's BMU view explanation](https://bmrs.elexon.co.uk/balancing-mechanism-bmu-view)
+and [imbalance pricing guidance](https://bscdocs.elexon.co.uk/bsc-module/guidance-notes/imbalance-pricing-guidance/v-15-0/id-639b4af73bed430c2ad79335).
+
 **Clear all** in the top toolbar closes the asset inspector, clears the
 search and its marker, resets ETYS neighbour highlights and removes any selected
 zone filter. It turns off all infrastructure, balancing, weather and constraint

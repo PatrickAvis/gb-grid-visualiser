@@ -1,4 +1,6 @@
 import { escapeHtml } from './utils.js';
+import {SO_STATES, soStatus} from './soFlags.js';
+export const instructionSoStyle = s => SO_STATES[soStatus(s.row.soFlag)];
 
 export const instructionColor = '#c6263e';
 export const instructionId = segment => String(segment.row.acceptanceNumber ?? 'Unknown');
@@ -7,19 +9,19 @@ const time = value => {
   return Number.isFinite(date.getTime()) ? date.toISOString().replace('T',' ').replace('.000Z',' UTC') : 'Not supplied';
 };
 const value = n => n!==null && n!==undefined && n!=='' && Number.isFinite(Number(n)) ? Number(n).toFixed(2) : 'Not supplied';
-const flags = row => [['soFlag','SO'],['storFlag','STOR'],['rrFlag','RR'],['deemedBoFlag','Deemed']].filter(([key])=>row[key]===true).map(([,label])=>label).join(', ') || 'None';
+const flags = row => [['storFlag','STOR'],['rrFlag','RR'],['deemedBoFlag','Deemed']].filter(([key])=>row[key]===true).map(([,label])=>label).join(', ') || 'None';
 export function instructionTitle(s) {
-  return `Instruction ${instructionId(s)} · issued ${time(s.row.acceptanceTime)} · ${time(s.row.timeFrom)} to ${time(s.row.timeTo)} · ${value(s.row.levelFrom)} → ${value(s.row.levelTo)} MW · Flags: ${flags(s.row)}`;
+  return `Instruction ${instructionId(s)} · issued ${time(s.row.acceptanceTime)} · ${time(s.row.timeFrom)} to ${time(s.row.timeTo)} · ${value(s.row.levelFrom)} → ${value(s.row.levelTo)} MW · ${instructionSoStyle(s).label} · Flags: ${flags(s.row)}`;
 }
 
 export function mountBalancingDetails(container, data, onSelect) {
   const {acceptances,bidOffers,acceptancesAvailable,bidOffersAvailable}=data;
   const ids=[...new Set(acceptances.map(instructionId))];
   container.innerHTML=`<details class="bmu-bm-details"><summary>Accepted instructions (${ids.length})</summary>
-    <p>Individual instructed MW levels. Instructions can overlap or revise earlier instructions; traces are not combined into a final dispatch profile. No trace means no returned instruction, not zero output.</p>
+    <p>Individual instructed MW levels. Instructions can overlap or revise earlier instructions; traces are not combined into a final dispatch profile. No trace means no returned instruction, not zero output. SO-flagged actions may relate to system constraints; a flag does not identify the constraint.</p>
     ${!acceptancesAvailable?'<p>Instruction data unavailable. Use Refresh to retry.</p>':!ids.length?'<p>No accepted instructions returned for this window.</p>':`<label>Highlight instruction <select aria-label="Highlight instruction"><option value="">All instructions</option>${ids.map(id=>`<option value="${escapeHtml(id)}">${escapeHtml(id)}</option>`).join('')}</select></label>
-    <div class="bmu-table-scroll"><table><thead><tr><th>Instruction</th><th>Issued (UTC)</th><th>Effective (UTC)</th><th>Level (MW)</th><th>Flags</th></tr></thead><tbody>${acceptances.map(s=>`<tr><td><button type="button" data-instruction="${escapeHtml(instructionId(s))}">${escapeHtml(instructionId(s))}</button></td><td>${escapeHtml(time(s.row.acceptanceTime))}</td><td>${escapeHtml(time(s.row.timeFrom))}<br>to ${escapeHtml(time(s.row.timeTo))}</td><td>${value(s.row.levelFrom)} → ${value(s.row.levelTo)}</td><td>${flags(s.row)}</td></tr>`).join('')}</tbody></table></div>`}</details>
-    <details class="bmu-bm-details"><summary>Submitted bid/offer prices</summary><p>Pair levels are MW relative to PN. Bid and offer prices are £/MWh; these are submissions, not accepted volumes or payments. Settlement date and period use GB market time; interval timestamps below are UTC.</p>
+    <div class="bmu-table-scroll"><table><thead><tr><th>Instruction</th><th>Issued (UTC)</th><th>Effective (UTC)</th><th>Level (MW)</th><th>SO flag</th><th>Other flags</th></tr></thead><tbody>${acceptances.map(s=>`<tr><td><button type="button" data-instruction="${escapeHtml(instructionId(s))}">${escapeHtml(instructionId(s))}</button></td><td>${escapeHtml(time(s.row.acceptanceTime))}</td><td>${escapeHtml(time(s.row.timeFrom))}<br>to ${escapeHtml(time(s.row.timeTo))}</td><td>${value(s.row.levelFrom)} → ${value(s.row.levelTo)}</td><td style="color:${instructionSoStyle(s).color}">${instructionSoStyle(s).label}</td><td>${flags(s.row)}</td></tr>`).join('')}</tbody></table></div>`}</details>
+    <details class="bmu-bm-details"><summary>Submitted bid/offer prices</summary><p>Pair levels are MW relative to PN. Bid and offer prices are £/MWh; these are submissions, not accepted volumes or payments. SO flags apply to accepted actions, not submitted price pairs. Settlement date and period use GB market time; interval timestamps below are UTC.</p>
     ${!bidOffersAvailable?'<p>Bid/offer data unavailable. Use Refresh to retry.</p>':!bidOffers.length?'<p>No submitted bid/offer data returned for this window.</p>':'<label>Settlement period <select aria-label="Bid offer settlement period"></select></label><div class="bmu-bod-table bmu-table-scroll"></div>'}</details>`;
   const instructionSelect=container.querySelector('select[aria-label="Highlight instruction"]');
   if(instructionSelect) {

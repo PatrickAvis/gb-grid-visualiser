@@ -1,4 +1,5 @@
 import { LINE_TYPE_ORDER } from "./constants.js";
+import {matchesSoFilter} from './soFlags.js';
 import { createEtysNetworkLayer } from "./etysNetwork.js";
 import { buildLayerConfig } from "./layerDefs.js";
 import {
@@ -251,6 +252,7 @@ export function createLayerManager(map, regionConfig, zoneFilter) {
       if (sideFilter && String(props.side || "").toLowerCase() !== sideFilter) {
         return false;
       }
+      if (sideFilter && !matchesSoFilter(props, document.getElementById('bm-so-filter')?.value || 'all')) return false;
       if (zoneFilter.geometry && layerConfig.filterable) {
         const latlon = getLatLon(props, feature);
         return latlon && zoneFilter.pointInside(latlon[0], latlon[1], zoneFilter.geometry);
@@ -279,6 +281,13 @@ export function createLayerManager(map, regionConfig, zoneFilter) {
       || document.getElementById("toggle-bm_activity_offer")?.checked;
     setBmLegendVisible(Boolean(bmOn));
     if (bmOn) buildBmFuelLegend(bmFuelBuckets());
+    const summary = document.getElementById('bm-so-summary');
+    if (summary) {
+      const active = ['bm_activity_bid','bm_activity_offer'].filter(key => document.getElementById(`toggle-${key}`)?.checked);
+      const count = active.reduce((total,key) => total + (layerCache[key]?.geoLayer?.getLayers?.().length || 0), 0);
+      const meta = active.map(key=>layerCache[key]?.data?.metadata).find(Boolean);
+      summary.textContent = `${count.toLocaleString()} BMU/side/period markers match the filter.${meta?.fetched_at ? ` Snapshot fetched ${meta.fetched_at}.` : ''}`;
+    }
   }
 
   function createPointMarker(latlng, feature, layerConfig) {
@@ -943,6 +952,17 @@ export function createLayerManager(map, regionConfig, zoneFilter) {
     layerCache.etys_network?.geoLayer?.clearSelection?.();
   }
 
+  function setBmSoFilter() {
+    for (const key of ['bm_activity_bid', 'bm_activity_offer']) {
+      const cache = layerCache[key];
+      if (!cache?.loaded || !cache.data) continue;
+      layerGroups[key].clearLayers();
+      cache.geoLayer = buildGeoJsonLayer(key, cache.data, LAYER_CONFIG[key]);
+      layerGroups[key].addLayer(cache.geoLayer);
+    }
+    syncBmLegend();
+  }
+
   function destroy() {
     destroyed = true;
     if (searchHighlight) map.removeLayer(searchHighlight);
@@ -969,6 +989,7 @@ export function createLayerManager(map, regionConfig, zoneFilter) {
     searchFeatures,
     focusSearchResult,
     clearSelection,
+    setBmSoFilter,
     rebuildFilterableLayers,
     restoreFilterableLayers,
     setPlantStatusVisible,

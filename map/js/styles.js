@@ -11,6 +11,7 @@ import {
 } from "./constants.js";
 import { bucketFuelProperties, bucketFuelSource, fuelTypeColor, hasFuelType } from "./fuelTypes.js";
 import { parseCapacityToMw, parseVoltageKv } from "./utils.js";
+import {SO_STATES, activitySoStatus} from './soFlags.js';
 
 const DNO_FILL_COLORS = [
   "#8e24aa",
@@ -243,19 +244,20 @@ function bmActivityRadius(props) {
 
 // Fill encodes fuel type (same palette as the plant layer) so "what is being
 // used" reads at a glance. Bids and offers are separate toggleable layers, so
-// the side needs no colour; a thin dark ring keeps the fuel fill dominant.
-const BM_RING = "#000000";
+// outlines encode SO flag status without changing the fuel fill.
 
 function bmActivityFill(props) {
   return fuelTypeColor(plantSourceBucket(props));
 }
 
 function bmActivityMarkerStyle(props) {
+  const flag = SO_STATES[activitySoStatus(props)];
   return {
     radius: bmActivityRadius(props),
     fillColor: bmActivityFill(props),
-    color: BM_RING,
-    weight: 0.5,
+    color: flag.color,
+    weight: flag.weight,
+    dashArray: flag.dashArray,
     opacity: 0.9,
     fillOpacity: 0.9,
   };

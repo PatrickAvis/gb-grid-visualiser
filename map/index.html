@@ -342,6 +342,14 @@
     <div id="bm-legend" class="plant-legend" hidden>
       <div class="legend-title">Balancing Mechanism</div>
       <div class="plant-legend-subitem" style="margin-left: 0">Colour = fuel type, size = volume. Bids &amp; offers are separate layers.</div>
+      <label>SO flag <select id="bm-so-filter" aria-label="BM SO flag filter">
+        <option value="all">All activity</option><option value="any-flagged">Any SO-flagged activity</option>
+        <option value="flagged">Only SO-flagged</option><option value="unflagged">Only unflagged</option>
+        <option value="mixed">Mixed flags</option><option value="unknown">Unknown flags</option>
+      </select></label>
+      <p id="bm-so-summary" class="plant-legend-subitem" style="margin-left:0" role="status"></p>
+      <p class="plant-legend-subitem" style="margin-left:0">Outline: pink = SO-flagged; thin dark = unflagged; dashed purple = mixed; dotted grey = unknown. Mixed markers retain the whole period's volume; see details for the split.</p>
+      <p class="plant-legend-subitem" style="margin-left:0">SO flags indicate potential system/constraint actions, not a confirmed constraint or current unit state. This is a dated settlement snapshot.</p>
       <div id="bm-legend-list" class="plant-legend-list"></div>
     </div>
     <p class="attribution"><span id="data-provenance"></span>Zone boundaries &copy; <a href="https://www.neso.energy/data-portal">NESO</a> (UK). Infrastructure &copy; <a href="https://www.openstreetmap.org/copyright">OpenStreetMap</a> contributors.</p>
