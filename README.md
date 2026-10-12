@@ -1,7 +1,7 @@
-<h1 align="center">UK Power Map</h1>
+<h1 align="center">GB Grid Visualiser</h1>
 
 <p align="center">
-  Interactive Leaflet map of Great Britain transmission, generation, substations, wind turbines, and NESO zone boundaries — built on OpenStreetMap exports from this repo.
+  Research tools for visualising and analysing the Great Britain electricity network, combining infrastructure maps with operational data.
 </p>
 
 ## UK interactive map
@@ -41,8 +41,8 @@ Layer naming keeps the BMU workflow separate from the full OSM generator invento
 ## Installation
 
 ```bash
-git clone https://github.com/PatrickAvis/grid2poster
-cd grid2poster
+git clone https://github.com/PatrickAvis/gb-grid-visualiser
+cd gb-grid-visualiser
 python -m venv .venv
 source .venv/bin/activate   # Windows: .venv\Scripts\activate
 pip install -r requirements.txt

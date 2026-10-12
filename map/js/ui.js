@@ -165,7 +165,7 @@ export function setMapTitle(title) {
   if (heading) {
     heading.textContent = title;
   }
-  document.title = `${title} — Power Map`;
+  document.title = `${title} — GB Grid Visualiser`;
 }
 
 export function fitRegionBounds(map, bounds) {
