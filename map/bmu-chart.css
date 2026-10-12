@@ -1,0 +1,32 @@
+.bmu-chart-panel { position:absolute; right:14px; bottom:28px; z-index:1100; width:min(690px,calc(100vw - 365px)); max-height:calc(100vh - 40px); overflow:auto; background:#fff; border:1px solid #d4dce6; border-radius:12px; box-shadow:0 8px 32px #152f4930; padding:18px; color:#203147; font-size:13px; }
+.bmu-chart-panel[hidden] { display:none; }
+.bmu-chart-panel header { display:flex; justify-content:space-between; align-items:start; font-size:18px; }
+.bmu-chart-subtitle { color:#59697d; font-size:12px; margin-top:4px; }
+.bmu-chart-panel button, .bmu-chart-panel select { font:inherit; padding:6px 10px; border:1px solid #bbc7d6; background:#fff; border-radius:5px; color:#203147; }
+.bmu-chart-panel button { cursor:pointer; }
+.bmu-chart-panel .bmu-chart-close { border:0; font-size:24px; padding:0 5px; }
+.bmu-chart-controls { display:flex; gap:12px; align-items:center; margin-top:14px; }
+.bmu-chart-controls label { flex:1; }
+.bmu-chart-controls select { margin-left:8px; max-width:80%; }
+.bmu-chart-status, .bmu-chart-note { color:#59697d; font-size:12px; line-height:1.5; }
+.bmu-chart-legend { display:flex; flex-wrap:wrap; gap:12px; margin:12px 0; }
+.bmu-chart-legend label { font-weight:700; cursor:pointer; }
+.bmu-chart-legend span { display:block; font-size:10px; font-weight:400; }
+.bmu-chart-panel svg { display:block; width:100%; touch-action:pan-y; }
+.bmu-chart-panel svg text { font-size:12px; fill:#59697d; }
+.bmu-chart-time { display:flex; align-items:center; gap:10px; }
+.bmu-chart-time input { flex:1; min-width:0; }
+.bmu-chart-readout { background:#f4f7fb; padding:10px; margin:10px 0; border-radius:7px; font-size:12px; }
+.bmu-chart-readout > div { display:flex; flex-wrap:wrap; gap:12px; margin-top:7px; }
+.bmu-chart-panel a { color:#1261a0; font-size:12px; }
+@media(max-width:850px) { .bmu-chart-panel { width:calc(100vw - 24px); right:12px; bottom:12px; max-height:62vh; padding:12px; } }
+.bmu-chart-link { padding:2px 0; border:0; background:none; color:#1261a0; text-decoration:underline; font:inherit; cursor:pointer; display:block; }
+.bmu-bm-details { border-top:1px solid #dce3eb; margin-top:12px; padding-top:10px; }
+.bmu-bm-details summary { font-weight:650; cursor:pointer; padding:4px 0; }
+.bmu-bm-details p { font-size:12px; line-height:1.45; color:#59697d; }
+.bmu-bm-details select { margin:5px 0 8px; max-width:100%; }
+.bmu-table-scroll { overflow:auto; max-height:230px; margin-top:6px; }
+.bmu-table-scroll table { border-collapse:collapse; width:100%; font-size:11px; }
+.bmu-table-scroll th, .bmu-table-scroll td { padding:7px; text-align:left; border-bottom:1px solid #e1e7ef; vertical-align:top; }
+.bmu-table-scroll th { background:#f4f7fb; position:sticky; top:0; }
+.bmu-table-scroll button { color:#a01e34; padding:3px; }

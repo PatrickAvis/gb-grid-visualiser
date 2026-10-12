@@ -1,4 +1,5 @@
 import { loadPlantBmuMap } from "./bmuMap.js";
+import { installBmuChart } from "./bmuChart.js";
 import {
   buildRegionConfig,
   loadCatalog,
@@ -21,6 +22,7 @@ import { loadFuelTypes } from "./fuelTypes.js";
 const statusEl = document.getElementById("status");
 const zoomEl = document.getElementById("zoom-indicator");
 let map;
+let bmuChart;
 let layerManager;
 let zoneFilterState;
 let zonesController;
@@ -61,6 +63,7 @@ function createZoneState() {
 }
 
 async function initRegion(regionId) {
+  bmuChart?.close();
   const request = ++regionRequest;
   const regionStatus = (...args) => { if (request === regionRequest) setStatus(...args); };
   const regionConfig = buildRegionConfig(catalog, regionId);
@@ -167,6 +170,7 @@ async function main() {
   const regionId = resolveRegionId(catalog);
 
   map = L.map("map", { zoomControl: true, preferCanvas: true }).setView([54.5, -3.5], 6);
+  bmuChart = installBmuChart(map);
   const basemapLayer = L.tileLayer("https://tile.openstreetmap.org/{z}/{x}/{y}.png", {
     maxZoom: 19,
     attribution: '&copy; <a href="https://www.openstreetmap.org/copyright">OpenStreetMap</a>',
