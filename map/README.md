@@ -262,3 +262,52 @@ Requires [tippecanoe](https://github.com/felt/tippecanoe) and the [pmtiles](http
 ## Deployment
 
 See [`DEPLOY.md`](DEPLOY.md) for nginx, compression, PMTiles serving, and data sync.
+
+## On-demand BMU operating chart
+
+On `feature/bmu-operational-data`, clicking a BMU-mapped site or BM action opens
+one chart for PN (Physical Notification), MEL (Maximum Export Limit), SEL
+(Stable Export Limit) and MIL (Maximum Import Limit). Click a BMU ID in the popup
+or choose a unit in the chart for multi-unit sites. The default is the first
+transmission BMU where present, otherwise the first mapped unit.
+
+The browser fetches the last six hours from Elexon Insights on each opening,
+unit change or Refresh. There is no polling, persisted history or API key.
+The chart uses UTC and MW, retains source signs, and shows missing values as
+"No data" rather than zero. Hover or use the time slider for values; legend
+checkboxes help inspect overlapping lines. These are notifications and limits,
+not metered generation or accepted balancing instructions.
+
+Implementation: `map/js/bmuSeries.js` calls `/balancing/physical` for PN/MELS/MILS,
+`/balancing/dynamic` at the start of the window for an SEL baseline, and
+`/datasets/SEL` with `from`/`to` for changes. SEL is carried forward until the next
+change. A failed changes request suppresses SEL rather than displaying a false
+constant. No initial SEL value is inferred if the baseline is unavailable.
+Requests time out after 25 seconds and are cancelled on another selection,
+chart close or region change. Partial failures remain visible with a retry.
+`map/js/bmuChart.js` renders the chart without an additional chart dependency.
+
+Source documentation: https://developer.data.elexon.co.uk/ . Direct browser
+requests require network access to `https://data.elexon.co.uk` (CORS supported).
+Validate transformations with `node --test scripts/test_bmu_series.mjs`.
+
+### Accepted instructions and submitted prices
+
+The same on-demand load now also requests `/balancing/acceptances` (BOALF) and
+`/balancing/bid-offer` (BOD). The Instructions checkbox overlays individual
+accepted MW segments in red. Expand **Accepted instructions** to inspect issue
+and effective times, levels, flags and instruction numbers; selecting a number
+highlights its segments. Overlapping instructions are preserved, not summed or
+collapsed into a reconstructed final dispatch profile. No instruction is not
+interpreted as zero output. MW traces are not accepted energy volumes or costs.
+
+Expand **Submitted bid/offer prices** and select a settlement date/period to see
+pair IDs, interval times, MW levels relative to PN, and separate bid and offer
+prices in GBP/MWh. Negative and zero prices remain intact. Settlement-period
+identifiers come directly from Elexon (GB settlement calendar); displayed
+interval timestamps are UTC. Data is not combined across BMUs or periods.
+
+The price table is separate from acceptance records: this version does not
+infer accepted pair volumes, revenue, final dispatch, or metered generation.
+Each source can fail independently; unavailable data is labelled and the
+successful chart/table data remains usable. Refresh retries all five requests.

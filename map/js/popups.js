@@ -79,6 +79,9 @@ export function generatorPropsForPopup(props) {
 }
 
 export function popupRows(props, preferredKeys) {
+  const bmuIds = String(props.bmu_id || '').split(';').map(id => id.trim()).filter(Boolean);
+  const bmuChart = bmuIds.length
+    ? `<p data-bmu-ids="${escapeHtml(bmuIds.join(';'))}">PN, MEL, SEL and MIL shown in the BMU chart.</p>` : '';
   const rows = [];
   const seen = new Set();
   for (const key of preferredKeys) {
@@ -99,10 +102,15 @@ export function popupRows(props, preferredKeys) {
     ? `<p class="popup-actions"><a href="https://www.google.com/maps/@?api=1&map_action=map&center=${encodeURIComponent(`${lat},${lon}`)}&zoom=18&basemap=satellite" target="_blank" rel="noopener noreferrer">Open Google satellite view</a></p>`
     : "";
   if (!rows.length) return `${imageryPreview}<em>No properties</em>${satelliteLink}`;
-  return `${imageryPreview}<table class="popup-table">${rows
+  return `${bmuChart}${imageryPreview}<table class="popup-table">${rows
     .slice(0, 12)
     .map(([key, value]) => {
       const label = POPUP_KEY_LABELS[key] || key;
+      if (key === 'bmu_id') {
+        return `<tr><th>${escapeHtml(label)}</th><td>${bmuIds.map(id =>
+          `<button type="button" class="bmu-chart-link" data-bmu-select="${escapeHtml(id)}">${escapeHtml(id)}</button>`
+        ).join(' ')}</td></tr>`;
+      }
       return `<tr><th>${escapeHtml(label)}</th><td>${escapeHtml(value)}</td></tr>`;
     })
     .join("")}</table>${satelliteLink}`;
