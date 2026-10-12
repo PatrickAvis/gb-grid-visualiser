@@ -69,3 +69,28 @@ button:focus-visible,select:focus-visible,input:focus-visible,summary:focus-visi
  .bmu-chart-controls label { width:100%; }
  .bmu-chart-panel svg text { font-size:14px; }
 }
+.operational-context > p, .operational-feed > p { font-size: 11px; line-height: 1.5; color: #526176; margin: 8px 10px; }
+.operational-feed { border-top: 1px solid #dbe3ed; padding: 8px 0; }
+.operational-feed > label { display: flex; align-items: center; gap: 7px; font-size: 12px; font-weight: 600; padding: 5px 10px; }
+.operational-feed > button { margin-left: 10px; }
+.operational-list { max-height: 220px; overflow-y: auto; padding: 4px 10px; }
+.operational-list button { display: block; width: 100%; text-align: left; padding: 7px; margin: 3px 0; font-size: 11px; line-height: 1.5; border: 1px solid #dbe3ed; border-radius: 5px; background: #f8fafc; color: #24324a; cursor: pointer; }
+.operational-list button:hover { background: #e8f0fc; }
+.wind-weather { padding-bottom: 10px; }
+.wind-weather > label { display: flex; align-items: center; gap: 8px; margin: 10px; font-size: 12px; }
+.wind-weather input[type=range] { min-width: 0; flex: 1; }
+.wind-weather > p, .wind-weather > output { display: block; font-size: 11px; line-height: 1.5; margin: 10px; }
+.wind-weather > button { margin-left: 10px; }
+.wind-arrow { font: bold 30px/28px system-ui; text-align: center; text-shadow: 0 0 3px white, 1px 1px 1px white; }
+.asset-weather { margin: 16px 0; padding: 14px; background: #f1f7fa; border-radius: 10px; }
+.asset-weather h2 { font-size: 16px; }
+.asset-weather p { font-size: 12px; line-height: 1.5; }
+.asset-weather dl { display: grid; grid-template-columns: 1fr 1fr; gap: 8px; font-size: 12px; }
+.asset-weather dd { margin: 0; }
+.weather-hours { max-height: 260px; overflow: auto; }
+.wind-speed-legend { display: flex; flex-wrap: wrap; justify-content: space-between; margin: 10px; font-size: 10px; }
+.wind-speed-legend > div { width: 100%; height: 12px; border-radius: 4px; margin-bottom: 4px; background: linear-gradient(to right,#3f71b5 0%,#40afb3 16.7%,#73be7d 33.3%,#e8c963 50%,#da865d 66.7%,#ac4d7f 100%); }
+.constraint-zones > label { display: flex; align-items: center; gap: 7px; margin: 10px; font-size: 12px; }
+.constraint-zones > label select { min-width: 0; max-width: 100%; }
+.constraint-zones > p { margin: 10px; font-size: 11px; line-height: 1.5; }
+.constraint-zones > button { margin: 4px 10px; }

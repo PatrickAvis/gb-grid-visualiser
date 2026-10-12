@@ -112,7 +112,7 @@ export function popupRows(props, preferredKeys, feature = null) {
   const lon = Number(rawLon);
   const hasCoords = rawLat != null && rawLon != null && rawLat !== '' && rawLon !== ''
     && Number.isFinite(lat) && Number.isFinite(lon) && Math.abs(lat)<=90 && Math.abs(lon)<=180;
-  const imageryPreview = hasCoords ? esriWorldImageryPreview(lat, lon) : "";
+  const imageryPreview = hasCoords ? `<span hidden data-weather-lat="${lat}" data-weather-lon="${lon}"></span>` + esriWorldImageryPreview(lat, lon) : "";
   const satelliteLink = hasCoords
     ? `<p class="popup-actions"><a href="https://www.google.com/maps/@?api=1&map_action=map&center=${encodeURIComponent(`${lat},${lon}`)}&zoom=18&basemap=satellite" target="_blank" rel="noopener noreferrer">Open Google satellite view</a></p>`
     : "";

@@ -255,6 +255,25 @@ Output: `reference/operational/bmu_unmapped_ispstack.csv` — cumulative review 
 
 Workflow: fetch ISPSTACK → compare with `plant_bmu_links` → enrich from `elexon_bmu_units` → write review CSV → update editable tables → regenerate JSON.
 
+## Operational context development branch
+
+Scottish B4/B6 constraint-area shading is now implemented, one nested area at a
+time, with explicit historical-data handling and GW headroom/exceedance details.
+Land masks are illustrative and exclude Shetland/offshore assets. Extending this
+requires reviewed area geometry, directional limits and feed-code mappings;
+do not substitute DNO or charging-zone polygons.
+
+`feature/operational-context` adds optional on-demand REMIT notice markers,
+half-hourly interconnector outturn and the latest NESO boundary flow/limit
+forecast. See `map/README.md` for exact semantics and sources. These are
+separate overlays, not a live electrical network model.
+
+Next data-review tasks: locate the three remaining interconnectors, extend
+the constraint-group/ETYS crosswalk beyond confirmed B6 and B4, and review
+unmapped REMIT assets. Keep unreviewed matches in lists instead of assigning
+speculative map coordinates. Time-series playback and automatic polling are
+not implemented in this first version.
+
 ## Reference Data Store (Later)
 
 After naming is stable, add SQLite:

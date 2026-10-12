@@ -6,6 +6,26 @@ point at `/map/`. No application server or frontend build is required.
 
 ## Runtime allowlist
 
+Scottish constraint shading also requires
+`data/regions/uk/map/constraint_areas.geojson`, `map/js/constraintZones.js` and
+`map/js/constraintStatus.js`. This small derived land mask uses public NESO
+boundary lines and the existing GB clip; it contains no private ETYS site
+coordinate seeds. Build it with `python scripts/build_constraint_areas.py`.
+
+The development operational-context controls use browser requests to
+`https://data.elexon.co.uk` and `https://api.neso.energy`; allow both in CSP
+`connect-src`. Deploy the three `map/js/operational*.js` modules and updated
+workspace CSS together. The controls reuse the catalog's UK plant layer,
+plant/BMU link JSON and optional ETYS boundary GeoJSON. No credentials or
+new backend are needed. Unavailable feeds show an error rather than cached
+data represented as current.
+
+Wind and asset weather additionally require `map/js/weather.js`,
+`map/js/weatherData.js`, `map/js/windField.js`, `map/js/windCanvas.js`, and `https://api.open-meteo.com` in CSP `connect-src`.
+The development implementation uses the non-commercial public API without a
+key. Check Open-Meteo's service terms before commercial deployment. Do not
+embed a paid/private API key in these static browser modules.
+
 | Path | Purpose |
 | --- | --- |
 | `map/index.html`, `map/js/` | Application |
