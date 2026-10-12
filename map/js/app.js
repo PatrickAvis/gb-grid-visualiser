@@ -15,6 +15,7 @@ import {
   buildSearchPanel,
   fitRegionBounds,
   setMapTitle,
+  setupWorkspace,
 } from "./ui.js";
 import { boundsFromGeoJson, pointInPolygonGeometry } from "./utils.js";
 import { loadFuelTypes } from "./fuelTypes.js";
@@ -165,11 +166,13 @@ async function initRegion(regionId) {
 }
 
 async function main() {
+  setupWorkspace();
   await loadFuelTypes();
   catalog = await loadCatalog();
   const regionId = resolveRegionId(catalog);
 
   map = L.map("map", { zoomControl: true, preferCanvas: true }).setView([54.5, -3.5], 6);
+  map.zoomControl.setPosition('bottomright');
   bmuChart = installBmuChart(map);
   const basemapLayer = L.tileLayer("https://tile.openstreetmap.org/{z}/{x}/{y}.png", {
     maxZoom: 19,

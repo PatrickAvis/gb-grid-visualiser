@@ -1,6 +1,22 @@
 export function buildLayerPanel(regionConfig, onToggle) {
   const container = document.getElementById("layer-list");
   container.replaceChildren();
+  const groups = new Map();
+  for (const name of ['Network', 'Generation', 'Balancing', 'Boundaries']) {
+    const section=document.createElement('details');
+    section.className='layer-group'; section.open=name==='Network' || name==='Generation';
+    const summary=document.createElement('summary'); summary.textContent=name;
+    const count=document.createElement('span'); summary.append(count);
+    const body=document.createElement('div'); body.className='layer-group-body';
+    section.append(summary,body); container.append(section);
+    groups.set(name,{section,body,count});
+  }
+  function updateCounts() {
+    for(const {body,count,section} of groups.values()) {
+      count.textContent=`${body.querySelectorAll('input:checked').length} on`;
+      section.hidden=!body.children.length;
+    }
+  }
 
   for (const layerId of regionConfig.layerIds) {
     if (layerId === "turbines") continue;
@@ -12,6 +28,7 @@ export function buildLayerPanel(regionConfig, onToggle) {
     checkbox.checked = Boolean(layer.defaultOn);
     checkbox.addEventListener("change", (event) => {
       onToggle(layerId, event.target.checked);
+      updateCounts();
     });
     const text = document.createElement("span");
     text.className = "layer-label-text";
@@ -30,14 +47,39 @@ export function buildLayerPanel(regionConfig, onToggle) {
     }
 
     label.append(checkbox, text);
-    container.appendChild(label);
+    const group=layerId==='plant_boundaries' ? 'Generation' : layer.zone || /dno|gsp|charging|boundaries/.test(layerId) ? 'Boundaries'
+      : /^bm_activity_/.test(layerId) ? 'Balancing'
+      : /plants|plant_boundaries|generators|wind|turbines/.test(layerId) ? 'Generation' : 'Network';
+    groups.get(group).body.appendChild(label);
   }
+  updateCounts();
 
   const hasZones = regionConfig.layerIds.some((id) => regionConfig.layers[id]?.zone);
   const clearBtn = document.getElementById("clear-zone-filter");
   if (clearBtn) {
     clearBtn.hidden = !hasZones;
   }
+}
+
+export function setupWorkspace() {
+  const panel=document.querySelector('.panel');
+  const header=document.createElement('div'); header.className='workspace-header';
+  const brand=document.createElement('div'); brand.className='workspace-brand';brand.textContent='GB GRID VISUALISER';
+  header.append(brand);
+  for(const node of [...panel.children].slice(0,4))header.append(node);
+  const body=document.createElement('div');body.className='workspace-layers';
+  body.append(...panel.childNodes);panel.append(header,body);
+  const toggle=document.createElement('button');toggle.type='button';toggle.className='workspace-toggle';
+  toggle.textContent='Layers & search';toggle.setAttribute('aria-expanded','true');
+  toggle.onclick=()=>{const collapsed=panel.classList.toggle('is-collapsed');toggle.setAttribute('aria-expanded',String(!collapsed));};
+  document.body.append(toggle);
+  const mobile=window.matchMedia('(max-width:850px)');
+  const collapse=()=>{panel.classList.add('is-collapsed');toggle.setAttribute('aria-expanded','false');};
+  if(mobile.matches)collapse();
+  mobile.addEventListener('change',event=>{if(event.matches)collapse();});
+  document.getElementById('search-results').addEventListener('click',()=>{
+    if(window.matchMedia('(max-width:850px)').matches){panel.classList.add('is-collapsed');toggle.setAttribute('aria-expanded','false');}
+  });
 }
 
 export function buildRegionSelector(catalog, currentRegionId, onChange) {
