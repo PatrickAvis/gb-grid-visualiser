@@ -250,3 +250,9 @@ data/regions/*/reference/editable/etys_node_coordinates.csv
 data/regions/*/reference/generated/etys_graph.json
 data/regions/*/reference/generated/etys_location_review.csv
 data/regions/*/map/etys_network.geojson
+
+# UK runtime snapshots included so clones can run all UK map layers.
+!data/regions/uk/map/etys_network.geojson
+!data/regions/uk/map/lines.pmtiles
+!data/regions/uk/map/turbines.pmtiles
+!data/regions/uk/map/all_generators.pmtiles

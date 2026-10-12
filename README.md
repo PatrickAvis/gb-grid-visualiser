@@ -57,9 +57,10 @@ pip install -r requirements.txt
 ```
 
 On Linux/macOS, activate with `source .venv/bin/activate`. Use Python 3.11 or newer.
-The frontend has no build step. Large raw exports, PMTiles, BM activity and the
-optional ETYS coordinate-derived outputs are not supplied by a fresh clone;
-build or copy the required local data before enabling those layers.
+The frontend has no build step. Prepared UK runtime layers are included in Git,
+including transmission-line, turbine and generator PMTiles, ETYS network
+connections and the dated BM activity snapshot. No data rebuild is needed to
+view these UK layers. Raw inputs remain local; other regions require preparation.
 
 ## Validation
 

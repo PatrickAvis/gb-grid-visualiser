@@ -89,7 +89,7 @@ export function siteIndex(plants, links) {
     const lat = number(site?.properties.latitude), lon = number(site?.properties.longitude);
     if (!site || lat == null || lon == null || Math.abs(lat)>90 || Math.abs(lon)>180) continue;
     // Exact BMU IDs only; no speculative matching of asset names or EIC codes.
-    if (row.bmu_id) index.set(row.bmu_id, {lat,lon,name:site.properties.name || row.plant_name,bmu:row.bmu_id});
+    if (row.bmu_id) index.set(row.bmu_id, {lat,lon,name:site.properties.name || row.plant_name,bmu:row.bmu_id,properties:site.properties});
   }
   return index;
 }

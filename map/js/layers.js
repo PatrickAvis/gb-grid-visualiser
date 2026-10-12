@@ -937,6 +937,12 @@ export function createLayerManager(map, regionConfig, zoneFilter) {
     }
   }
 
+  function clearSelection() {
+    if (searchHighlight) map.removeLayer(searchHighlight);
+    searchHighlight = null;
+    layerCache.etys_network?.geoLayer?.clearSelection?.();
+  }
+
   function destroy() {
     destroyed = true;
     if (searchHighlight) map.removeLayer(searchHighlight);
@@ -962,6 +968,7 @@ export function createLayerManager(map, regionConfig, zoneFilter) {
     updateStatusMessage,
     searchFeatures,
     focusSearchResult,
+    clearSelection,
     rebuildFilterableLayers,
     restoreFilterableLayers,
     setPlantStatusVisible,

@@ -94,3 +94,4 @@ button:focus-visible,select:focus-visible,input:focus-visible,summary:focus-visi
 .constraint-zones > label select { min-width: 0; max-width: 100%; }
 .constraint-zones > p { margin: 10px; font-size: 11px; line-height: 1.5; }
 .constraint-zones > button { margin: 4px 10px; }
+.workspace-clear { position: absolute; top: 16px; left: 178px; z-index: 1200; background: white; color: #18334a; border: 1px solid #dce5ec; border-radius: 9px; padding: 10px 12px; font: 600 13px system-ui; cursor: pointer; box-shadow: 0 4px 16px #18334a20; }

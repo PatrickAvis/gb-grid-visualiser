@@ -314,6 +314,11 @@ successful chart/table data remains usable. Refresh retries all five requests.
 
 ## Workspace UI
 
+**Clear all** in the top toolbar closes the asset inspector, clears the
+search and its marker, resets ETYS neighbour highlights and removes any selected
+zone filter. It turns off all infrastructure, balancing, weather and constraint
+overlays, including individual turbines. The base map and current map view remain.
+
 The workspace groups layers into Network, Generation,
 Balancing and Boundaries. Search and region selection stay above the scrolling
 layer controls. **Layers & search** collapses the sidebar; small screens start
@@ -423,7 +428,10 @@ requests and removes the layers. These overlays do not follow zone filters.
 Click a marker, boundary or list entry to open the existing asset inspector.
 Mapped BMU notices retain operating charts and satellite imagery.
 
-- **REMIT outages**: Elexon `/remit/list/by-event` for now through seven days,
+- **REMIT outages**: markers use the same generation-type colours as the plant
+  layer, with the type also shown in the list, tooltip and details. Type comes
+  from the exact BMU's mapped site; other/unknown types are grey.
+  Elexon `/remit/list/by-event` for now through seven days,
   latest revisions followed by `/remit?messageId=...` in batches of 50. Only
   active notices overlapping the window are displayed. Dismissed revisions
   suppress older active versions. Missing batches fail the whole snapshot.

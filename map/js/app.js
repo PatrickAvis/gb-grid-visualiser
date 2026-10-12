@@ -189,6 +189,34 @@ async function main() {
   map = L.map("map", { zoomControl: true, preferCanvas: true }).setView([54.5, -3.5], 6);
   map.zoomControl.setPosition('bottomright');
   bmuChart = installBmuChart(map);
+  const clearSelection = document.createElement('button');
+  clearSelection.type = 'button';
+  clearSelection.className = 'workspace-clear';
+  clearSelection.textContent = 'Clear all';
+  clearSelection.title = 'Clear selections and turn off all map overlays';
+  clearSelection.onclick = () => {
+    bmuChart.close();
+    map.closePopup();
+    map.eachLayer(layer => layer.closeTooltip?.());
+    layerManager?.clearSelection();
+    if (zoneFilterState?.geometry) zonesController?.clearSelection();
+    // Use the normal toggle handlers so pending requests, legends and counts
+    // are cleared along with the layers themselves.
+    document.querySelectorAll('input[id^="toggle-"], input[id^="context-"], #wind-enabled, #constraint-zones-enabled').forEach(toggle => {
+      if (!toggle.checked) return;
+      toggle.checked = false;
+      toggle.dispatchEvent(new Event('change', { bubbles: true }));
+    });
+    // Turbines are controlled from the wind legend, without a main layer toggle.
+    if (regionConfigRef?.layers?.turbines) {
+      layerManager?.setLayerEnabled('turbines', false, setStatus);
+    }
+    const search = document.getElementById('map-search');
+    if (search) search.value = '';
+    const results = document.getElementById('search-results');
+    if (results) { results.replaceChildren(); results.hidden = true; }
+  };
+  document.body.append(clearSelection);
   const basemapLayer = L.tileLayer("https://tile.openstreetmap.org/{z}/{x}/{y}.png", {
     maxZoom: 19,
     attribution: '&copy; <a href="https://www.openstreetmap.org/copyright">OpenStreetMap</a>',

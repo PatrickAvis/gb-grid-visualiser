@@ -176,5 +176,6 @@ export function createEtysNetworkLayer(map, data) {
     focus(id);
   };
   restyle();
+  group.clearSelection = () => { selected = null; restyle(); };
   return group;
 }

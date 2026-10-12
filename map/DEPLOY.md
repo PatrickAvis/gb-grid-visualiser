@@ -32,7 +32,7 @@ embed a paid/private API key in these static browser modules.
 | `data/catalog.json`, `data/shared/` | Layer registry and fuel taxonomy |
 | `data/regions/{id}/boundary.geojson` | Region boundary where referenced |
 | Catalog-referenced small files under `data/regions/{id}/map/` | Prepared map layers |
-| Catalog-referenced `*.pmtiles` | Large streamed layers; build/copy separately |
+| Catalog-referenced `*.pmtiles` | Streamed layers; UK archives included in Git |
 | Catalog-referenced `data/regions/{id}/zones/` files | Zone overlays |
 | `data/regions/uk/map/plants_meta.json` | Plant fetch provenance |
 | `data/regions/uk/reference/generated/plant_bmu_links.json` | Plant/BMU popups |
@@ -40,20 +40,20 @@ embed a paid/private API key in these static browser modules.
 | `data/regions/uk/reference/operational/bmu_activity_latest.json` | Optional BM snapshot |
 
 Copy only needed files, preserving their relative paths. Some catalog paths may
-refer to `boundaries/`; include those specific files too. A fresh clone does not
-contain every optional layer: generate or copy them, or remove unavailable layers
-from the deployment catalog. Keep optional layers off by default.
+refer to `boundaries/`; include those specific files too. A fresh clone includes prepared UK runtime layers. Other regions require
+preparation; remove unavailable regional layers from a deployment catalog. Keep optional layers off by default.
 
 Do not sync entire region or reference directories. Exclude `raw/`, `source/`,
 `reference/editable/`, review CSVs, caches, workbook downloads and tile-build
 source GeoJSON (`all_generators_web.geojson`, `generators_web.geojson`,
 `turbines_web.geojson`). Git ignores do not protect against rsync or upload tools.
 
-The ETYS coordinate seeds come from a private reference repository. Its local
-`etys_network.geojson`, `etys_graph.json`, coordinate/override CSVs and location
-review output are excluded from publication pending provenance/reuse review.
-Once cleared, the browser requires only `map/etys_network.geojson`; the graph and
-review queue need not be public. See [the build workflow](README.md#etys-network-connections).
+The ETYS coordinate seeds come from a private reference repository. The owner
+requested inclusion of the generated `data/regions/uk/map/etys_network.geojson`
+in Git for runtime parity. Coordinate/override CSVs, `etys_graph.json` and
+location review outputs remain local. Runtime inclusion does not establish new
+reuse terms for the original coordinate source. The browser needs only the
+network GeoJSON. See [the build workflow](README.md#etys-network-connections).
 
 ## Static server
 

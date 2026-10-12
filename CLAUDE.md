@@ -106,9 +106,10 @@ The three catalog layer ids are deliberately distinct: `plants` ("BMU-mapped sit
 
 - **Never edit generated files** (`reference/generated/*`, `*_web.geojson` produced by prep). Edit the `editable/` CSVs and `map/bmu_sites_web.geojson` (OSM ground truth) only.
 - **Do not delete or regenerate multi-GB files** (`raw/`, large PMTiles, `*_web.geojson`) unless explicitly asked.
-- **Never commit** (already gitignored): `data/regions/*/raw/`, `data/regions/*/source/`, `data/regions/*/map/*.pmtiles`, `data/regions/*/map/all_generators_web.geojson`, `data/regions/*/map/generators_web.geojson` (legacy name), `data/regions/*/map/turbines_web.geojson`, `cache/`, `posters/`.
+- **Never commit** (already gitignored): `data/regions/*/raw/`, `data/regions/*/source/`, `data/regions/*/map/all_generators_web.geojson`, `data/regions/*/map/generators_web.geojson` (legacy name), `data/regions/*/map/turbines_web.geojson`, `cache/`, `posters/`.
 - Preserve user edits in `editable/` reference files and `bmu_sites_web.geojson`.
-- Keep ETYS coordinate seeds, overrides and generated artifacts local until their provenance/reuse review is complete; they are gitignored. Do not deploy whole region/reference folders. Follow the runtime allowlist in `map/DEPLOY.md`.
+- UK runtime snapshots (`lines.pmtiles`, `turbines.pmtiles`, `all_generators.pmtiles`, and `etys_network.geojson`) are explicitly included at the owner's request so Git clones work like the local map. Keep these tracked when refreshing data. Other regions' tile archives remain ignored.
+- Keep ETYS coordinate seeds, overrides, graph and review files local; they remain gitignored. Do not deploy whole region/reference folders. Follow the runtime allowlist in `map/DEPLOY.md`.
 
 ## Further docs
 

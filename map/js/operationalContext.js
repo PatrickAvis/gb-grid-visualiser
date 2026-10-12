@@ -2,6 +2,8 @@ import {fetchOutages, fetchFlows, fetchBoundaries, getJson, siteIndex, number} f
 import {interconnectorSites, boundaryIds} from './operationalLocations.js';
 import {escapeHtml as esc} from './utils.js';
 import {popupRows} from './popups.js';
+import {plantSourceBucket} from './styles.js';
+import {fuelTypeColor, fuelTypeLabel} from './fuelTypes.js';
 
 const sources = {
   outages:'https://bmrs.elexon.co.uk/remit',
@@ -52,18 +54,21 @@ export function installOperationalContext(map, config) {
     let mapped=0;
     for(const row of notices) {
       const site=index.get(row.assetId);
-      const title=`${row.assetId || row.affectedUnit || row.mrid} · ${Date.parse(row.eventStartTime)>now?'Upcoming':'Ongoing'} · ${row.unavailabilityType || 'Outage'}`;
+      const fuel=plantSourceBucket(site?.properties || {});
+      const fuelLabel=fuel==='other' ? 'Other / unknown' : fuelTypeLabel(fuel);
+      const title=`${row.assetId || row.affectedUnit || row.mrid} · ${fuelLabel} · ${Date.parse(row.eventStartTime)>now?'Upcoming':'Ongoing'} · ${row.unavailabilityType || 'Outage'}`;
       const profile=Array.isArray(row.outageProfile)&&row.outageProfile.length
         ? `<details><summary>Published capacity profile (${row.outageProfile.length} segments)</summary>${row.outageProfile.map(p=>table({'From':utc(p.startTime),'To':utc(p.endTime),'Capacity as published':mw(p.capacity)})).join('')}</details>` : '';
       mapped+=addEntry(state,title,detail(site?.name || title,{
         'Notice':row.messageHeading || row.eventType,'Asset':row.assetId || row.affectedUnit,
+        'Generation type (mapped site)':fuelLabel,
         'Status':row.eventStatus,'Start':utc(row.eventStartTime),'End':utc(row.eventEndTime),
         'Normal capacity':mw(row.normalCapacity),'Available (notice)':mw(row.availableCapacity),
         'Unavailable (notice)':mw(row.unavailableCapacity),'Cause':row.cause || 'Not supplied',
         'Published':utc(row.publishTime),'Revision':row.revisionNumber,'Message ID':row.id,
-      },'outages',site,`<p>${esc(row.relatedInformation || '')}</p><p>Notice capacities are not a current MEL reading. Overlapping notices are not summed.</p>${profile}`),site);
+      },'outages',site,`<p>${esc(row.relatedInformation || '')}</p><p>Notice capacities are not a current MEL reading. Overlapping notices are not summed.</p>${profile}`),site,null,fuelTypeColor(fuel));
     }
-    return `${notices.length} active notices overlapping now–${utc(end)}; ${mapped} mapped by exact BMU ID. Orange: outage notice. No marker does not mean available.`;
+    return `${notices.length} active notices overlapping now–${utc(end)}; ${mapped} mapped by exact BMU ID. Marker colours match the plant generation types; grey means other/unknown. Type comes from the mapped site. No marker does not mean available.`;
   }
   async function flows(state, signal, now) {
     const data=await fetchFlows(now,signal);signal.throwIfAborted();let mapped=0;
