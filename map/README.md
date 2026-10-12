@@ -311,3 +311,26 @@ The price table is separate from acceptance records: this version does not
 infer accepted pair volumes, revenue, final dispatch, or metered generation.
 Each source can fail independently; unavailable data is labelled and the
 successful chart/table data remains usable. Refresh retries all five requests.
+
+## UI improvements preview
+
+The `feature/ui-improvements` branch groups layers into Network, Generation,
+Balancing and Boundaries. Search and region selection stay above the scrolling
+layer controls. **Layers & search** collapses the sidebar; small screens start
+collapsed and use an expandable asset panel.
+
+Asset selection opens one panel with **Overview**, **Operating data** and
+**Instructions & prices** views instead of overlapping a popup and chart.
+Overview retains satellite imagery, site properties, BMU buttons and ETYS
+neighbour links. Operating and balancing views are disabled for assets with no
+linked BMU. BMU data still loads on selection; the window selector offers 1, 6
+(default) or 24 hours. **Expand** gives the panel more room. Selecting an
+instruction highlights its segments and moves the chart cursor to its first
+visible segment. Source signs, gaps and overlapping instructions are preserved.
+
+For this local review, the redesigned working tree is served at
+`http://127.0.0.1:8767/map/` and a snapshot of the main UI at
+`http://127.0.0.1:8768/map/`. The temporary comparison server serves main's map
+files against the same local datasets; it does not copy the large data archives.
+The comparison snapshot/server lives under ignored `tmp/ui-comparison/` and is
+not part of deployment. Deploy `map/workspace.css` alongside the other map files.

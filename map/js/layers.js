@@ -855,7 +855,7 @@ export function createLayerManager(map, regionConfig, zoneFilter) {
     }
     const layerConfig = LAYER_CONFIG[result.layerKey] || {};
     const latlon = getLatLon(result.props, result.feature);
-    const popupHtml = popupRows(result.props, layerConfig.popupKeys || []);
+    const popupHtml = popupRows(result.props, layerConfig.popupKeys || [], result.feature);
 
     if (latlon) {
       map.setView(latlon, Math.max(map.getZoom(), 14));

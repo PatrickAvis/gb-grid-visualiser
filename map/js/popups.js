@@ -2,6 +2,17 @@ import { escapeHtml, parseCapacityToMw } from "./utils.js";
 import { plantCapacityMw } from "./styles.js";
 
 const POPUP_KEY_LABELS = {
+  name: 'Name',
+  status: 'Status',
+  capacity_mw: 'Capacity',
+  'plant:source': 'Energy source',
+  'plant:output:electricity': 'Reported output',
+  source_bucket: 'Fuel category',
+  operator: 'Operator',
+  latitude: 'Latitude',
+  longitude: 'Longitude',
+  osm_id: 'OSM reference',
+  power: 'Asset type',
   bmu_id: "BMU",
   ngc_bmu_id: "NGC BMU ID",
   bmu_type: "BMU type",
@@ -78,7 +89,7 @@ export function generatorPropsForPopup(props) {
   };
 }
 
-export function popupRows(props, preferredKeys) {
+export function popupRows(props, preferredKeys, feature = null) {
   const bmuIds = String(props.bmu_id || '').split(';').map(id => id.trim()).filter(Boolean);
   const bmuChart = bmuIds.length
     ? `<p data-bmu-ids="${escapeHtml(bmuIds.join(';'))}">PN, MEL, SEL and MIL shown in the BMU chart.</p>` : '';
@@ -94,9 +105,13 @@ export function popupRows(props, preferredKeys) {
     if (key === "geometry" || key.startsWith("bbox")) continue;
     rows.push([key, value]);
   }
-  const lat = Number(props.latitude);
-  const lon = Number(props.longitude);
-  const hasCoords = Number.isFinite(lat) && Number.isFinite(lon);
+  const point = feature?.geometry?.type === 'Point' ? feature.geometry.coordinates : [];
+  const rawLat = props.latitude ?? point[1];
+  const rawLon = props.longitude ?? point[0];
+  const lat = Number(rawLat);
+  const lon = Number(rawLon);
+  const hasCoords = rawLat != null && rawLon != null && rawLat !== '' && rawLon !== ''
+    && Number.isFinite(lat) && Number.isFinite(lon) && Math.abs(lat)<=90 && Math.abs(lon)<=180;
   const imageryPreview = hasCoords ? esriWorldImageryPreview(lat, lon) : "";
   const satelliteLink = hasCoords
     ? `<p class="popup-actions"><a href="https://www.google.com/maps/@?api=1&map_action=map&center=${encodeURIComponent(`${lat},${lon}`)}&zoom=18&basemap=satellite" target="_blank" rel="noopener noreferrer">Open Google satellite view</a></p>`
@@ -119,7 +134,7 @@ export function popupRows(props, preferredKeys) {
 export function attachLazyPopup(layer, props, preferredKeys) {
   layer.on("click", function handleClick() {
     if (!this.getPopup()) {
-      this.bindPopup(popupRows(props, preferredKeys));
+      this.bindPopup(popupRows(props, preferredKeys, this.feature));
     }
     this.openPopup();
   });

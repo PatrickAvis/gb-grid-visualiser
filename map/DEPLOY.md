@@ -96,3 +96,6 @@ data. These metadata files contain no private ETYS coordinate seeds.
 The optional on-demand BMU chart also needs `map/bmu-chart.css` and the new JS
 modules, plus browser access to `https://data.elexon.co.uk`. If setting a CSP,
 include that host in `connect-src`. It requires no backend or API credentials.
+
+The redesigned workspace also requires `map/workspace.css`. The temporary local
+main/UI comparison server and snapshots under `tmp/` are not deployment assets.
