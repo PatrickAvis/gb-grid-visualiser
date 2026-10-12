@@ -15,7 +15,6 @@ from bmu_operational import (  # noqa: E402
     BM_UNMAPPED_ISPSTACK_PATH,
     fetch_ispstack_sides,
     fetch_ispstack_window,
-    latest_available_period,
     write_activity_outputs,
 )
 
@@ -33,7 +32,7 @@ def parse_args() -> argparse.Namespace:
         "--settlement-period",
         type=int,
         default=None,
-        help="Settlement period (1-48); use with --settlement-date for one period only",
+        help="Settlement period (1-46/48/50 depending on clock changes); use with --settlement-date",
     )
     parser.add_argument(
         "--hours",
@@ -61,20 +60,18 @@ def parse_args() -> argparse.Namespace:
 
 def main() -> int:
     args = parse_args()
-    if args.settlement_date and args.settlement_period:
+    if args.settlement_date is not None and args.settlement_period is not None:
         settlement_date = args.settlement_date
         settlement_period = args.settlement_period
-    elif args.settlement_date or args.settlement_period:
+    elif args.settlement_date is not None or args.settlement_period is not None:
         print(
             "--settlement-date and --settlement-period must be supplied together",
             file=sys.stderr,
         )
         return 2
-    else:
-        settlement_date, settlement_period = latest_available_period(timeout=args.timeout)
 
     settlement_window = None
-    if args.settlement_date and args.settlement_period:
+    if args.settlement_date is not None:
         print(f"Fetching ISPSTACK for {settlement_date} SP{settlement_period}...")
         rows = fetch_ispstack_sides(
             bid_offer=args.bid_offer,
@@ -88,8 +85,7 @@ def main() -> int:
             print(f"  [{index}/{total}] {date} SP{period}")
 
         print(
-            f"Fetching ISPSTACK for last {args.hours:g}h "
-            f"(up to {settlement_date} SP{settlement_period})...",
+            f"Fetching ISPSTACK for last {args.hours:g}h through the latest published period...",
         )
         rows, settlement_window = fetch_ispstack_window(
             args.hours,
@@ -97,6 +93,8 @@ def main() -> int:
             timeout=args.timeout,
             on_period=_progress,
         )
+        settlement_date = settlement_window["settlement_date_end"]
+        settlement_period = settlement_window["settlement_period_end"]
 
     activity_path, unmapped_path, counts = write_activity_outputs(
         rows,
@@ -123,13 +121,13 @@ def main() -> int:
             f"Fetched {counts['input_rows']:,} ISPSTACK rows for "
             f"{settlement_date} SP{settlement_period}",
         )
-    print(f"Wrote {counts['mapped_actions']:,} mapped actions to {activity_path.relative_to(REPO_ROOT)}")
+    print(f"Wrote {counts['mapped_actions']:,} mapped actions to {activity_path}")
     print(
         f"Unmapped ISPSTACK queue: {counts['unmapped_actions']:,} total "
         f"({counts['snapshot_unmapped']:,} this snapshot, "
         f"{counts['queue_added']:,} new, {counts['queue_updated']:,} updated, "
         f"{counts['queue_active_latest']:,} active latest) -> "
-        f"{unmapped_path.relative_to(REPO_ROOT)}",
+        f"{unmapped_path}",
     )
     return 0
 

@@ -11,6 +11,12 @@
       "plantBmuMap": "regions/uk/reference/generated/plant_bmu_links.json",
       "bmuConnectionSites": "regions/uk/reference/generated/bmu_connection_sites.json",
       "layers": {
+        "etys_network": {
+          "type": "geojson",
+          "path": "regions/uk/map/etys_network.geojson",
+          "label": "ETYS 2025 network connections",
+          "hint": "Schematic circuits and substations. Click a site to highlight neighbours; planning snapshot, not live flows."
+        },
         "lines": {
           "type": "pmtiles",
           "path": "regions/uk/map/lines.pmtiles",
@@ -35,13 +41,13 @@
           "type": "geojson",
           "path": "regions/uk/reference/operational/bmu_activity_latest.json",
           "label": "BM bids",
-          "hint": "Accepted bids (reduce generation) from latest ISPSTACK period"
+          "hint": "Accepted bids (reduce generation) from refreshed ISPSTACK window"
         },
         "bm_activity_offer": {
           "type": "geojson",
           "path": "regions/uk/reference/operational/bmu_activity_latest.json",
           "label": "BM offers",
-          "hint": "Accepted offers (increase generation) from latest ISPSTACK period"
+          "hint": "Accepted offers (increase generation) from refreshed ISPSTACK window"
         },
         "turbines": {
           "type": "pmtiles",

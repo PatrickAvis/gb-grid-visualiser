@@ -1,110 +1,94 @@
-# Deploying the power map
+# Deploying GB Grid Visualiser
 
-The map is a static site: `map/` (HTML/JS) plus `data/catalog.json`, `data/shared/`, and the per-region `data/regions/{id}/map/` (and optional `zones/`). No application server is required.
+The app is static: deploy `map/` and only the runtime data needed by the enabled
+catalog layers. Serve the repository layout from one origin, with the entry
+point at `/map/`. No application server or frontend build is required.
 
-## Recommended layout on server
+## Runtime allowlist
 
-```
-/var/www/power-map/
-  map/                          # index.html, js/
-  data/catalog.json
-  data/shared/                  # fuel_types.json
-  data/regions/uk/map/          # small GeoJSON + generated *.pmtiles
-  data/regions/uk/zones/        # optional zone overlays
-  data/regions/uk/reference/generated/  # plant_bmu_links.json (UK popups)
-```
+| Path | Purpose |
+| --- | --- |
+| `map/index.html`, `map/js/` | Application |
+| `data/catalog.json`, `data/shared/` | Layer registry and fuel taxonomy |
+| `data/regions/{id}/boundary.geojson` | Region boundary where referenced |
+| Catalog-referenced small files under `data/regions/{id}/map/` | Prepared map layers |
+| Catalog-referenced `*.pmtiles` | Large streamed layers; build/copy separately |
+| Catalog-referenced `data/regions/{id}/zones/` files | Zone overlays |
+| `data/regions/uk/map/plants_meta.json` | Plant fetch provenance |
+| `data/regions/uk/reference/generated/plant_bmu_links.json` | Plant/BMU popups |
+| `data/regions/uk/reference/generated/bmu_connection_sites.json` | Connection-site popups |
+| `data/regions/uk/reference/operational/bmu_activity_latest.json` | Optional BM snapshot |
 
-Serve from the repo root so catalog paths (`../data/regions/uk/map/...`) resolve correctly:
+Copy only needed files, preserving their relative paths. Some catalog paths may
+refer to `boundaries/`; include those specific files too. A fresh clone does not
+contain every optional layer: generate or copy them, or remove unavailable layers
+from the deployment catalog. Keep optional layers off by default.
+
+Do not sync entire region or reference directories. Exclude `raw/`, `source/`,
+`reference/editable/`, review CSVs, caches, workbook downloads and tile-build
+source GeoJSON (`all_generators_web.geojson`, `generators_web.geojson`,
+`turbines_web.geojson`). Git ignores do not protect against rsync or upload tools.
+
+The ETYS coordinate seeds come from a private reference repository. Its local
+`etys_network.geojson`, `etys_graph.json`, coordinate/override CSVs and location
+review output are excluded from publication pending provenance/reuse review.
+Once cleared, the browser requires only `map/etys_network.geojson`; the graph and
+review queue need not be public. See [the build workflow](README.md#etys-network-connections).
+
+## Static server
+
+Example layout: `/var/www/gb-grid-visualiser/map/` and
+`/var/www/gb-grid-visualiser/data/`. Serve the directory above `map/`:
 
 ```nginx
 server {
     listen 80;
-    server_name power-map.example.com;
-    root /var/www/power-map;
+    server_name grid.example.com;
+    root /var/www/gb-grid-visualiser;
 
     location / {
         try_files $uri $uri/ =404;
     }
 
-    location ~* \.geojson$ {
-        gzip on;
-        gzip_types application/geo+json application/json;
-        add_header Cache-Control "public, max-age=86400";
+    location ~* \.pmtiles$ {
+        gzip off;
+        default_type application/octet-stream;
+        add_header Cache-Control "public, max-age=3600";
+        try_files $uri =404;
     }
 }
 ```
 
-Enable **brotli** or **gzip** for `.geojson` — compressed payloads are often 5–10× smaller on the wire.
+Enable gzip/Brotli for JSON and GeoJSON if desired. **Do not apply HTTP content
+compression to PMTiles**: clients address byte ranges in the original archive.
+Disable any inherited Brotli or CDN automatic compression for `.pmtiles` too.
+The server must return `206 Partial Content` with a correct `Content-Range` for
+range requests. If data is hosted on another origin, configure CORS there.
 
-## What to sync (and what to skip)
+Use short cache lifetimes for the catalog and frequently replaced BM snapshots.
+Invalidate cached data when replacing files at the same URL. An operational
+snapshot is refreshed by rerunning its fetch command; the browser does not
+subscribe to live Elexon updates.
 
-| Path | Deploy? |
-|------|---------|
-| `map/` | Yes |
-| `data/catalog.json` | Yes |
-| `data/shared/` | Yes (fuel taxonomy) |
-| `data/regions/{id}/map/` | Yes |
-| `data/regions/uk/reference/generated/plant_bmu_links.json` | Yes (UK plant ↔ BMU join for popups) |
-| `data/regions/uk/reference/operational/bmu_activity_latest.json` | Yes, if serving the BM bids/offers snapshot |
-| `data/regions/{id}/zones/` | If used (e.g. UK NESO) |
-| `data/regions/{id}/raw/` | **No** — multi-GB OSM exports (prepare `map/` locally first) |
-| `data/regions/{id}/source/` | **No** — local `.osm.pbf` extracts |
-| `cache/` | **No** |
+## Refresh and verify
 
-Sync app code via git; sync generated data with rsync or object storage. Because
-each region is self-contained, you can rsync one region folder at a time:
+Run `python scripts/refresh_uk.py` locally for infrastructure updates, observing
+its final report for skipped or failed optional stages. BM snapshots use
+`python scripts/fetch_bm_activity.py`; ETYS has its separate workbook build.
+Tippecanoe and the PMTiles CLI require WSL/Linux in the usual Windows setup.
+Do not run a large data refresh solely to deploy unchanged data.
 
-```bash
-rsync -avz map/ user@server:/var/www/power-map/map/
-rsync -avz data/catalog.json user@server:/var/www/power-map/data/
-rsync -avz data/shared/ user@server:/var/www/power-map/data/shared/
-rsync -avz --exclude raw/ --exclude source/ \
-  data/regions/uk/ user@server:/var/www/power-map/data/regions/uk/
-```
+Before publication:
 
-After refreshing OSM data locally:
+1. Preview the selected files with `python scripts/serve_map.py`.
+2. Test every default layer, a plant popup, search and region switching.
+3. Verify PMTiles byte-range responses and optional-layer availability.
+4. Check attribution and the dates shown for operational/planning snapshots.
+5. Review the exact upload list, excluding local coordinate/reference material.
 
-```bash
-python scripts/export_uk.py --all
-python scripts/prepare_map_data.py --region uk
-python scripts/build_tiles.py --region uk
-```
+Preserve the OpenStreetMap and NESO attribution shown by the app. The ETYS
+planning layer is not measured power flow or live switching-state data.
 
-## CORS
-
-Serve `map/` and `data/` from the **same origin** so browser fetches do not need CORS headers.
-
-## Multi-region data sync
-
-Same rules: `data/catalog.json` + `data/shared/` + each `data/regions/{id}/` (excluding `raw/` and `source/`). Never rsync the multi-GB `raw/` or `source/` folders.
-
-After refreshing a region locally:
-
-```bash
-python scripts/export_region.py --region uk --all
-python scripts/prepare_map_data.py --region uk
-```
-
-## PMTiles (UK and Europe)
-
-Build tiles locally with tippecanoe + pmtiles CLI:
-
-```bash
-python scripts/build_tiles.py --region uk
-python scripts/build_tiles.py --region europe
-```
-
-Serve `.pmtiles` with the same cache and compression rules as GeoJSON. The map loads them via `map/js/sources/pmtiles.js` when the catalog layer `type` is `pmtiles`.
-
-Ensure `Content-Type: application/octet-stream` (or `application/vnd.pmtiles`) and support HTTP range requests — PMTiles depends on them.
-
-## Turbines at scale
-
-`turbines_web.geojson` (~250 MB) is only a tile-build source. The deployed map should serve `turbines.pmtiles` instead so users stream only the tiles they need. Alternatives:
-
-- **FlatGeobuf** for range-request access
-- **PostGIS + pg_tileserv / Martin** for server-side vector tiles
-
-## Attribution
-
-Display NESO and OpenStreetMap attribution in the map UI (included in `index.html`) and in your site README or about page.
+Include `data/regions/uk/map/plants_meta.json` and `turbines_meta.json` alongside
+the runtime layers so the map can disclose snapshot dates and retained offshore
+data. These metadata files contain no private ETYS coordinate seeds.

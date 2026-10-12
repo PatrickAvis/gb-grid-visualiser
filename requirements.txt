@@ -5,4 +5,5 @@ pandas
 shapely
 tqdm
 requests
+tzdata
 pyogrio

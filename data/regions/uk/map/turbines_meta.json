@@ -1,0 +1,7 @@
+{
+  "local_extract_date": "2026-10-11",
+  "fresh_extract_turbines": 13756,
+  "retained_previous_offshore_turbines": 4189,
+  "total_turbines": 17945,
+  "notice": "Overpass live offshore refresh failed (504). Retained locations are not newly verified."
+}

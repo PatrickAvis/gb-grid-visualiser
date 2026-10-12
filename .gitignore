@@ -237,6 +237,16 @@ data/regions/*/map/all_generators_web.geojson
 data/regions/*/map/generators_web.geojson
 # Generated vector-tile archives; deploy outside git.
 data/regions/*/map/*.pmtiles
+# Temporary tile-build databases.
+data/regions/*/map/*.mbtiles*
 
 # Legacy poster gallery renders (poster CLI removed)
 posters/
+
+# Local research downloads and ETYS products derived from private coordinate seeds.
+tmp/
+data/regions/*/reference/editable/etys_coordinates.csv
+data/regions/*/reference/editable/etys_node_coordinates.csv
+data/regions/*/reference/generated/etys_graph.json
+data/regions/*/reference/generated/etys_location_review.csv
+data/regions/*/map/etys_network.geojson

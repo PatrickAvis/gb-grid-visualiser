@@ -1,3 +1,21 @@
 osm_id,plant_name,bmu_id,ngc_bmu_id,bmu_type,source,notes
+1418954327,Coalburn BESS,T_COALB-1,COALB-1,T,manual,Candidate match: bmUnitName=COALBURN1 BMU-1; fuelType=OTHER; confidence=medium; reason=site_name_contains_bmUnitName; fuel_compatible=True
+1418954327,Coalburn BESS,T_COALB-2,COALB-2,T,manual,Candidate match: bmUnitName=COALBURN1 BMU-2; fuelType=OTHER; confidence=medium; reason=site_name_contains_bmUnitName; fuel_compatible=True
+1418954327,Coalburn BESS,T_COALB-3,COALB-3,T,manual,Candidate match: bmUnitName=COALBURN1 BMU-3; fuelType=OTHER; confidence=medium; reason=site_name_contains_bmUnitName; fuel_compatible=True
+1418954327,Coalburn BESS,T_COALB-4,COALB-4,T,manual,Candidate match: bmUnitName=COALBURN1 BMU-4; fuelType=OTHER; confidence=medium; reason=site_name_contains_bmUnitName; fuel_compatible=True
+1418954327,Coalburn BESS,T_COALB-5,COALB-5,T,manual,Candidate match: bmUnitName=COALBURN1 BMU-5; fuelType=OTHER; confidence=medium; reason=site_name_contains_bmUnitName; fuel_compatible=True
+1419346809,Monk Fryston Battery Storage,T_MNFRB-1,MNFRB-1,T,manual,Candidate match: bmUnitName=Monk Fryston BESS BMU-1; fuelType=OTHER; confidence=medium; reason=site_name_contains_bmUnitName; fuel_compatible=True
+1419346809,Monk Fryston Battery Storage,T_MNFRB-2,MNFRB-2,T,manual,Candidate match: bmUnitName=Monk Fryston BESS BMU-2; fuelType=OTHER; confidence=medium; reason=site_name_contains_bmUnitName; fuel_compatible=True
+1419346809,Monk Fryston Battery Storage,T_MNFRB-3,MNFRB-3,T,manual,Candidate match: bmUnitName=Monk Fryston BESS BMU-3; fuelType=OTHER; confidence=medium; reason=site_name_contains_bmUnitName; fuel_compatible=True
+1419346809,Monk Fryston Battery Storage,T_MNFRB-4,MNFRB-4,T,manual,Candidate match: bmUnitName=Monk Fryston BESS BMU-4; fuelType=OTHER; confidence=medium; reason=site_name_contains_bmUnitName; fuel_compatible=True
+1419346810,Monk Fryston Battery Storage,T_MNFRB-1,MNFRB-1,T,manual,Candidate match: bmUnitName=Monk Fryston BESS BMU-1; fuelType=OTHER; confidence=medium; reason=site_name_contains_bmUnitName; fuel_compatible=True
+1419346810,Monk Fryston Battery Storage,T_MNFRB-2,MNFRB-2,T,manual,Candidate match: bmUnitName=Monk Fryston BESS BMU-2; fuelType=OTHER; confidence=medium; reason=site_name_contains_bmUnitName; fuel_compatible=True
+1419346810,Monk Fryston Battery Storage,T_MNFRB-3,MNFRB-3,T,manual,Candidate match: bmUnitName=Monk Fryston BESS BMU-3; fuelType=OTHER; confidence=medium; reason=site_name_contains_bmUnitName; fuel_compatible=True
+1419346810,Monk Fryston Battery Storage,T_MNFRB-4,MNFRB-4,T,manual,Candidate match: bmUnitName=Monk Fryston BESS BMU-4; fuelType=OTHER; confidence=medium; reason=site_name_contains_bmUnitName; fuel_compatible=True
 relation/9599112,Glen App Wind Farm,T_GNAPW-1,GNAPW-1,T,manual,Candidate match: bmUnitName=Glen App Windfarm; fuelType=WIND; confidence=medium; reason=site_name_contains_bmUnitName; fuel_compatible=True
 relation/9632223,Keith Hill,T_KTHLW-1,KTHLW-1,T,manual,Candidate match: bmUnitName=KEITH HILL WINDFARM; fuelType=WIND; confidence=medium; reason=site_name_contains_bmUnitName; fuel_compatible=True
+relation/19572138,Pencloe Wind Farm,T_PLOEW-1,PLOEW-1,T,manual,Candidate match: bmUnitName=PENCLOE WIND 1; fuelType=WIND; confidence=medium; reason=site_name_contains_bmUnitName; fuel_compatible=True
+way/1157893252,Sofia Wind Farm,T_SOFOW-11,SOFWO-11,T,manual,Candidate match: bmUnitName=Sofia Offshore Wind BMU 1; fuelType=WIND; confidence=medium; reason=site_name_contains_bmUnitName; fuel_compatible=True
+way/1157893252,Sofia Wind Farm,T_SOFOW-12,SOFWO-12,T,manual,Candidate match: bmUnitName=Sofia Offshore Wind BMU 2; fuelType=WIND; confidence=medium; reason=site_name_contains_bmUnitName; fuel_compatible=True
+way/1157893252,Sofia Wind Farm,T_SOFOW-21,SOFWO-21,T,manual,Candidate match: bmUnitName=Sofia Offshore Wind BMU 3; fuelType=WIND; confidence=medium; reason=site_name_contains_bmUnitName; fuel_compatible=True
+way/1157893252,Sofia Wind Farm,T_SOFOW-22,SOFWO-22,T,manual,Candidate match: bmUnitName=Sofia Offshore Wind BMU 4; fuelType=WIND; confidence=medium; reason=site_name_contains_bmUnitName; fuel_compatible=True

@@ -24,6 +24,8 @@
       box-shadow: 0 2px 10px rgba(0, 0, 0, 0.15);
       padding: 12px 14px;
       max-width: 320px;
+      max-height: calc(100vh - 24px);
+      overflow-y: auto;
     }
     .panel h1 {
       margin: 0 0 8px;
@@ -50,6 +52,7 @@
       font-size: 0.85rem;
       padding: 5px 6px;
     }
+    .search-results[hidden] { display: none; }
     .search-results {
       display: grid;
       gap: 4px;
@@ -273,6 +276,12 @@
     }
     .zoom-indicator b { font-weight: 600; }
     .zoom-indicator .zoom-gates { color: #777; }
+    .etys-network-control { background: white; padding: 12px; border-radius: 6px; box-shadow: 0 2px 10px #0003; max-width: 285px; max-height: 45vh; overflow: auto; font: 12px/1.4 system-ui, sans-serif; }
+    .etys-network-control p { margin: 7px 0; }
+    .etys-network-control label { display: inline-block; margin-right: 8px; }
+    .etys-network-control button, .etys-popup button { cursor: pointer; border: 1px solid #cbd5e1; border-radius: 4px; padding: 5px 8px; background: #f8fafc; }
+    .etys-popup { max-height: 340px; overflow: auto; }
+    .etys-popup button { display: block; margin: 4px 0; width: 100%; text-align: left; }
   </style>
 </head>
 <body>
@@ -280,7 +289,7 @@
   <div id="zoom-indicator" class="zoom-indicator">Zoom: <b>–</b></div>
   <div class="panel">
     <h1 id="map-title">GB Grid Visualiser</h1>
-    <p>Regions and layers are defined in <code>data/catalog.json</code>. Use <code>?region=uk</code> in the URL to deep-link.</p>
+    <p>Explore electricity assets, network connections and balancing activity. Select layers, then search or click the map for details.</p>
     <select id="region-select" class="region-select" aria-label="Region"></select>
     <div class="map-search">
       <input id="map-search" type="search" placeholder="Search loaded plants, substations, zones…" autocomplete="off" />

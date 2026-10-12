@@ -30,8 +30,8 @@ DNO_URL = (
 )
 GSP_URL = (
     "https://api.neso.energy/dataset/2810092e-d4b2-472f-b955-d8bea01f9ec0/"
-    "resource/08534dae-5408-4e31-8639-b579c8f1c50b/download/"
-    "gsp_regions_20220314.geojson"
+    "resource/5dfab3dd-f192-40ab-b97f-b365a594293c/download/"
+    "gsp_regions_20260209.zip"
 )
 GENERATION_CHARGING_ZONES_URL = (
     "https://api.neso.energy/dataset/f72029e7-3056-4021-9493-01c58a667d7a/"
@@ -188,6 +188,7 @@ NESO_DATASETS: dict[str, NesoDataset] = {
         url=GSP_URL,
         output_name="gsp_areas.geojson",
         normalize=normalize_gsp,
+        source_format="zip",
     ),
     "generation": NesoDataset(
         key="generation",

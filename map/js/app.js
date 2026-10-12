@@ -26,6 +26,7 @@ let zoneFilterState;
 let zonesController;
 let catalog;
 let regionConfigRef = null;
+let regionRequest = 0;
 
 function setStatus(message, isError = false) {
   statusEl.textContent = message;
@@ -60,8 +61,13 @@ function createZoneState() {
 }
 
 async function initRegion(regionId) {
+  const request = ++regionRequest;
+  const regionStatus = (...args) => { if (request === regionRequest) setStatus(...args); };
   const regionConfig = buildRegionConfig(catalog, regionId);
-  regionConfigRef = regionConfig;
+  if (regionId === "uk" && new URLSearchParams(window.location.search).get("network") === "etys") {
+    for (const layer of Object.values(regionConfig.layers)) layer.defaultOn = false;
+    regionConfig.layers.etys_network.defaultOn = true;
+  }
   if (regionConfig.plantBmuMapUrl) {
     try {
       regionConfig.bmuLookup = await loadPlantBmuMap(
@@ -73,6 +79,8 @@ async function initRegion(regionId) {
       regionConfig.bmuLookup = null;
     }
   }
+  if (request !== regionRequest) return;
+  regionConfigRef = regionConfig;
   persistRegionId(regionId);
   setMapTitle(regionConfig.title);
 
@@ -89,18 +97,26 @@ async function initRegion(regionId) {
   zoneFilterState.createZoneLayer = zonesController.createZoneLayer;
 
   buildLayerPanel(regionConfig, (layerId, enabled) => {
-    layerManager.setLayerEnabled(layerId, enabled, setStatus);
+    layerManager.setLayerEnabled(layerId, enabled, regionStatus);
   });
   for (const status of ["operational", "construction", "closed"]) {
     document.getElementById(`plant-status-${status}`)?.addEventListener("change", (event) => {
       layerManager.setPlantStatusVisible(status, event.target.checked);
     });
   }
-  fetch(`../data/regions/${regionId}/map/plants_meta.json`)
-    .then((response) => (response.ok ? response.json() : null))
-    .then((meta) => {
+  Promise.all(["plants_meta.json", "turbines_meta.json"].map((name) =>
+    fetch(`../data/regions/${regionId}/map/${name}`)
+      .then((response) => (response.ok ? response.json() : null)).catch(() => null)))
+    .then(([meta, turbines]) => {
+      if (request !== regionRequest) return;
       const el = document.getElementById("data-provenance");
-      if (el && meta?.plants_fetched) el.textContent = `OSM plants fetched ${meta.plants_fetched}. `;
+      const notes = [];
+      if (meta?.plants_fetched) notes.push(`OSM plants fetched ${meta.plants_fetched}.`);
+      if (meta?.source_snapshot) notes.push(`Plant source snapshot ${meta.source_snapshot}.`);
+      if (turbines?.retained_previous_offshore_turbines) {
+        notes.push(`${turbines.retained_previous_offshore_turbines.toLocaleString()} offshore turbines retained from earlier data; live refresh unavailable.`);
+      }
+      if (el) el.textContent = notes.length ? notes.join(" ") + " " : "";
     })
     .catch(() => {});
   buildSearchPanel(
@@ -124,8 +140,9 @@ async function initRegion(regionId) {
     await layerManager.setLayerEnabled(
       defaultLayer,
       document.getElementById(`toggle-${defaultLayer}`)?.checked ?? true,
-      setStatus,
+      regionStatus,
     );
+    if (request !== regionRequest) return;
     const cache = layerManager.layerCache[defaultLayer];
     if (cache?.data) {
       const bounds = boundsFromGeoJson(cache.data);
@@ -133,8 +150,9 @@ async function initRegion(regionId) {
         map.fitBounds(bounds.pad(0.05));
       }
     }
-    layerManager.updateStatusMessage(setStatus);
+    if (cache?.loaded) layerManager.updateStatusMessage(regionStatus);
   } catch (error) {
+    if (request !== regionRequest) return;
     console.error(error);
     setStatus(
       `Failed to load ${regionConfig.title}. Run scripts/prepare_map_data.py --region ${regionId}. ${error.message}`,
@@ -149,7 +167,7 @@ async function main() {
   const regionId = resolveRegionId(catalog);
 
   map = L.map("map", { zoomControl: true, preferCanvas: true }).setView([54.5, -3.5], 6);
-  const basemapLayer = L.tileLayer("https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png", {
+  const basemapLayer = L.tileLayer("https://tile.openstreetmap.org/{z}/{x}/{y}.png", {
     maxZoom: 19,
     attribution: '&copy; <a href="https://www.openstreetmap.org/copyright">OpenStreetMap</a>',
   }).addTo(map);

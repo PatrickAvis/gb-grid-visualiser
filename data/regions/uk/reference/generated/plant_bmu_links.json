@@ -5083,5 +5083,14 @@
     "bmu_type": "E",
     "source": "auto",
     "notes": null
+  },
+  {
+    "osm_id": "1512652328",
+    "plant_name": "Iron Acton BESS",
+    "bmu_id": "T_IRNAB-1",
+    "ngc_bmu_id": "IRNAB-1",
+    "bmu_type": "T",
+    "source": "auto",
+    "notes": null
   }
 ]

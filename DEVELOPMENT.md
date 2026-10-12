@@ -19,7 +19,7 @@ data/regions/uk/
     source/        # downloaded/imported reference tables
     editable/      # human-edited mapping tables
     generated/     # script outputs for review + map runtime
-    operational/   # live-ish BM/forecast data (future)
+    operational/   # BM snapshots now; forecasts planned
 ```
 
 ### Region folder roles
@@ -33,7 +33,7 @@ data/regions/uk/
 | `reference/source/` | Downloaded standing/reference data | `raw/` OSM geometry |
 | `reference/editable/` | Human-edited BMU links and manual sites | generated reports |
 | `reference/generated/` | Script reports + map runtime JSON | source/reference inputs |
-| `reference/operational/` | ISPSTACK / live BM activity (future) | static map layers |
+| `reference/operational/` | Refreshable ISPSTACK BM activity snapshots | static asset layers |
 
 Pipeline: `source/` -> `export_region.py` -> `raw/` -> `prepare_map_data.py` -> `map/`. BMU scripts join `reference/` data to `map/bmu_sites_web.geojson`.
 
@@ -138,6 +138,13 @@ voltage ≥ 132 kV) to cut ~53k distribution kiosks down to ~1.3k candidates.
 
 ### Phase 2 — Network topology: "everything connected to a substation"
 
+Implemented first stage: an optional ETYS 2025 schematic layer, full node/circuit
+graph, parallel circuits, transformer/HVDC toggles, neighbour highlighting and
+an unresolved-location review CSV. Build with `scripts/build_etys_network.py`.
+Coordinate seeds remain explicitly unverified. See `map/README.md`.
+The next stage below is joining those ETYS sites to the existing OSM/TEC/BMU
+records; the current overlay does not yet implement that crosswalk.
+
 Extends the substation popup from connected *generation* to connected *circuits*
 ("everything connected"), using **NESO ETYS Appendix B** (the published network
 model: node/bus list + circuit/branch data with impedances). The bridge is the
@@ -153,8 +160,8 @@ read       reference/generated/node_circuits.json           (node → [circuits 
 is a hand-maintained alias (same pattern as `elexon_bmu_oc2_aliases.csv`), small
 because it only covers substations that already have BMUs. With it, a substation
 popup (or a click-to-trace) can show BMU → substation → circuit → adjacent
-substations. Caveat: ETYS 2025 is delayed (Connections Reform / tCSNP2), so the
-latest Appendix B is **ETYS 2024** — date-stamp it. OSM transmission lines are not
+substations. ETYS 2025 Appendix B was published on 30 June 2026 and is used by
+the new layer; retain its 2025/26 snapshot label. OSM transmission lines are not
 a reliable topology source (endpoints aren't tagged with their substations).
 
 ### Phase 3 — Embedded generation (ECR)

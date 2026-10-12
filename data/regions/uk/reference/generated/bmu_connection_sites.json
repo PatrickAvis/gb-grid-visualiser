@@ -1223,5 +1223,19 @@
     "connection_site": "Whitelee Extension 275/33kV",
     "plant_type": "Energy Storage System;Hydrogen;PV Array (Photo Voltaic/solar);Wind Onshore",
     "host_to": "SPT"
+  },
+  {
+    "bmu_id": "T_IRNAB-1",
+    "ngc_bmu_id": "IRNAB-1",
+    "connection_site": "Iron Acton 275kV Substation",
+    "plant_type": "Energy Storage System",
+    "host_to": "NGET"
+  },
+  {
+    "bmu_id": "T_MKFRB-1",
+    "ngc_bmu_id": "MKFRB-1",
+    "connection_site": "Monk Fryston 275kV Substation",
+    "plant_type": "Energy Storage System",
+    "host_to": "NGET"
   }
 ]

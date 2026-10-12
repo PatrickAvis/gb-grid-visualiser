@@ -1,3 +1,31 @@
 bmu_id,ngc_bmu_id,bmUnitName,fuelType,bmUnitType,productionOrConsumptionFlag,generationCapacity,leadPartyName,gspGroupName,interconnectorId,category,mapped
+T_COALB-1,COALB-1,COALBURN1 BMU-1,OTHER,T,P,103.087,Alcemi Storage Developments 4,,,displayable,False
+T_COALB-2,COALB-2,COALBURN1 BMU-2,OTHER,T,P,101.825,Alcemi Storage Developments 4,,,displayable,False
+T_COALB-3,COALB-3,COALBURN1 BMU-3,OTHER,T,P,101.885,Alcemi Storage Developments 4,,,displayable,False
+T_COALB-4,COALB-4,COALBURN1 BMU-4,OTHER,T,P,104.152,Alcemi Storage Developments 4,,,displayable,False
+T_COALB-5,COALB-5,COALBURN1 BMU-5,OTHER,T,P,101.428,Alcemi Storage Developments 4,,,displayable,False
 T_GNAPW-1,GNAPW-1,Glen App Windfarm,WIND,T,P,22.000,SP Renewables (UK) Limited,,,displayable,False
+T_HAMHB-1,HAMHB-1,T_HAMHB-1,OTHER,T,P,100.000,Welbar Energy Storage Limited,,,displayable,False
+T_HAMHB-2,HAMHB-2,T_HAMHB-2,OTHER,T,P,100.000,Welbar Energy Storage Limited,,,displayable,False
+T_HAMHB-3,HAMHB-3,T_HAMHB-3,OTHER,T,P,100.000,Welbar Energy Storage Limited,,,displayable,False
+T_HAMHB-4,HAMHB-4,T_HAMHB-4,OTHER,T,P,100.000,Welbar Energy Storage Limited,,,displayable,False
+T_INCWO-1,INCWO-1,T_INCWO-1,WIND,T,P,450.000,Inch CAPE Offshore Ltd,,,displayable,False
+T_INCWO-2,INCWO-2,T_INCWO-2,WIND,T,P,90.000,Inch CAPE Offshore Ltd,,,displayable,False
+T_INCWO-3,INCWO-3,T_INCWO-3,WIND,T,P,360.000,Inch CAPE Offshore Ltd,,,displayable,False
+T_INCWO-4,INCWO-4,T_INCWO-4,WIND,T,P,180.000,Inch CAPE Offshore Ltd,,,displayable,False
+T_KLGLW-2,KLGLW-2,T_KLGLW-2,WIND,T,P,225.000,SP Renewables (UK) Limited,,,displayable,False
 T_KTHLW-1,KTHLW-1,KEITH HILL WINDFARM,WIND,T,P,4.540,Statkraft Markets Gmbh,,,displayable,False
+T_MNFRB-1,MNFRB-1,Monk Fryston BESS BMU-1,OTHER,T,P,80.000,SSE Battery Monk Fryston Ltd,,,displayable,False
+T_MNFRB-2,MNFRB-2,Monk Fryston BESS BMU-2,OTHER,T,P,80.000,SSE Battery Monk Fryston Ltd,,,displayable,False
+T_MNFRB-3,MNFRB-3,Monk Fryston BESS BMU-3,OTHER,T,P,80.000,SSE Battery Monk Fryston Ltd,,,displayable,False
+T_MNFRB-4,MNFRB-4,Monk Fryston BESS BMU-4,OTHER,T,P,80.000,SSE Battery Monk Fryston Ltd,,,displayable,False
+T_PLOEW-1,PLOEW-1,PENCLOE WIND 1,WIND,T,P,81.000,PENCLOE WIND ENERGY LIMITED,,,displayable,False
+T_SOFOW-11,SOFWO-11,Sofia Offshore Wind BMU 1,WIND,T,P,457.000,Sofia Offshore Wind Farm Ltd,,,displayable,False
+T_SOFOW-12,SOFWO-12,Sofia Offshore Wind BMU 2,WIND,T,P,457.000,Sofia Offshore Wind Farm Ltd,,,displayable,False
+T_SOFOW-21,SOFWO-21,Sofia Offshore Wind BMU 3,WIND,T,P,457.000,Sofia Offshore Wind Farm Ltd,,,displayable,False
+T_SOFOW-22,SOFWO-22,Sofia Offshore Wind BMU 4,WIND,T,P,457.000,Sofia Offshore Wind Farm Ltd,,,displayable,False
+T_THUPG-2,THUPG-2,T_THUPG-2,OTHER,T,P,170.000,THURROCK POWER LIMITED,,,displayable,False
+T_THUPG-3,THUPG-3,T_THUPG-3,OTHER,T,P,100.000,THURROCK POWER LIMITED,,,displayable,False
+T_THURB-1,THURB-1,T_THURB-1,OTHER,T,P,100.000,THURROCK STORAGE LIMITED,,,displayable,False
+T_THURB-2,THURB-2,T_THURB-2,OTHER,T,P,100.000,THURROCK STORAGE LIMITED,,,displayable,False
+T_THURB-3,THURB-3,T_THURB-3,OTHER,T,P,100.000,THURROCK STORAGE LIMITED,,,displayable,False

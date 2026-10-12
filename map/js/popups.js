@@ -24,7 +24,7 @@ const POPUP_KEY_LABELS = {
   created_datetime: "Published",
 };
 
-function esriWorldImageryPreview(lat, lon) {
+export function esriWorldImageryPreview(lat, lon) {
   const delta = 0.003;
   const bbox = [
     lon - delta,

@@ -1,4 +1,4 @@
-# Interactive power map
+# GB Grid Visualiser — interactive map
 
 Leaflet map of transmission, generation, substations, wind turbines, and region-specific zone boundaries.
 
@@ -8,6 +8,70 @@ Leaflet map of transmission, generation, substations, wind turbines, and region-
 UK and Europe catalog entries already point at `data/regions/uk/boundary.geojson` and `boundaries/europe.geojson`. Any manifest boundary can be exported without a catalog entry; add one when map layers are prepared.
 
 ## Quick start
+
+### ETYS network connections
+
+Build the optional connectivity layer separately from the OSM refresh:
+
+```powershell
+python scripts/build_etys_network.py --workbook "path/to/ETYS-2025.xlsx" --seed-workbook "path/to/coordinate-enriched-ETYS-2024.xlsx"
+```
+
+The official [ETYS 2025 Appendix B](https://www.neso.energy/document/383936/download)
+contains network records but no latitude/longitude. The initial seed workbook
+is the coordinate-enriched version in PSALOxford/GB-Transmission-Map (HunterTracer).
+Its seed locations are attributed and labelled unverified; the build does not
+independently validate them against surveyed locations. No third-party code is
+copied into the importer or renderer.
+
+The first command creates `data/regions/uk/reference/editable/etys_coordinates.csv`.
+It refuses to overwrite an existing table. Subsequently run **without**
+`--seed-workbook` to preserve corrections. You can also supply a separately
+prepared coordinate CSV through `--coordinates`, with columns:
+`owner,site_code,site_name,voltage_kv,latitude,longitude,source`.
+Owner values are `SHE`, `SPT`, `NGET`, `OFTO`; matching requires the owner, code,
+name and voltage to agree. Duplicate conflicting coordinates remain unresolved.
+
+For descriptive HVDC endpoints or other exceptions, optionally create
+`reference/editable/etys_node_coordinates.csv` with columns
+`node_id,latitude,longitude,source`. Node IDs are owner-scoped, for example
+`GB:Central DC Substation`. Supply verified coordinates rather than guessed
+connections or centroids. Node overrides affect location only.
+
+The build writes:
+
+- `map/etys_network.geojson`: located site markers and schematic connections.
+- `reference/generated/etys_graph.json`: all imported nodes and connections,
+  including those without coordinates, original normalized attributes, source
+  sheet/row, workbook hash, coordinate-table hash and optional override-table hash.
+- `reference/generated/etys_location_review.csv`: unmatched/ambiguous locations.
+
+Only `B-2-1*` circuits, `B-3-1*` transformers and `B-5-1` rows explicitly marked
+`Existing = Yes` are imported. Future upgrade sheets are excluded. Full node IDs,
+parallel records and within-site transformers are retained. Node IDs are scoped
+by owner; cross-owner aliases are not claimed to be a validated electrical model.
+Source row IDs identify records within a workbook version, not across editions.
+The CSV review includes unused site-index records as well as actual unlocated
+endpoints, so its row count exceeds the unlocated-node count displayed on the map.
+
+Enable **ETYS 2025 network connections**, or open
+`http://localhost:8000/map/?region=uk&network=etys`. The layer has its own legend,
+circuit/transformer/HVDC toggles and a clear-highlight button. Click a site for
+neighbours, or select a loaded site/node through the search box. Curved lines
+separate parallel records; loops show co-located connections. They are schematic,
+not OSM routes. Connected-site lists describe mapped connections only.
+
+Site popups include the same Esri satellite preview and Google satellite-view
+link as plant popups, centred on the displayed site marker. Imagery does not
+validate the unverified coordinate seeds; use it to help review their positions.
+
+Downloads, coordinate seeds and derived ETYS outputs stay local and are ignored
+by Git pending provenance/reuse review of the private coordinate source. A fresh
+clone needs the separate build before this optional layer can be enabled.
+
+Checks: `python -m unittest scripts.test_etys_network`.
+
+### Serve the map
 
 ```powershell
 python scripts/serve_map.py
@@ -33,7 +97,7 @@ data/
       source/                    # downloaded Elexon reference
       editable/                  # human-edited plant_bmu_links.csv
       generated/                 # script outputs + map runtime JSON
-      operational/               # BM activity (future)
+      operational/               # refreshable BM activity snapshots
 ```
 
 Everything computed for a region lives under `data/regions/{region_id}/`, so a
@@ -94,7 +158,7 @@ Add manual BMU links in `plant_bmu_links.csv` (one row per BMU unit; use `source
 python scripts/fetch_bm_activity.py
 ```
 
-This fetches the latest available Elexon ISPSTACK settlement period and writes:
+This fetches the last 24 hours through the latest published Elexon ISPSTACK period and writes:
 
 - `data/regions/uk/reference/operational/bmu_activity_latest.json` for the **BM bids** and **BM offers** layers.
 - `data/regions/uk/reference/operational/bmu_unmapped_ispstack.csv` for active BMUs that still need mapping.

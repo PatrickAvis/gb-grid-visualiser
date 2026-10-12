@@ -83,6 +83,9 @@ export function buildSearchPanel(onSearch, onSelect) {
   const input = document.getElementById("map-search");
   const resultsEl = document.getElementById("search-results");
   if (!input || !resultsEl) return;
+  input.value = "";
+  resultsEl.replaceChildren();
+  resultsEl.hidden = true;
 
   function renderResults(results) {
     resultsEl.replaceChildren();

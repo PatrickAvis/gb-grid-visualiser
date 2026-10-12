@@ -83,3 +83,5 @@ Walpole 400kV Substation,Walpole Substation,400000;132000,auto,exact_compact_nam
 West Burton 400kV Substation,West Burton Substation,400000,auto,exact_compact_name
 West Burton 400kV Substation,West Burton Substation,132000,auto,exact_compact_name
 Willesden 132kV Substation,Willesden Substation,400000;275000;132000;22000,auto,exact_compact_name
+Iron Acton 275kV Substation,Iron Acton Substation,275000;132000,auto,exact_compact_name
+Monk Fryston 275kV Substation,Monk Fryston substation,400000;275000,auto,exact_compact_name

@@ -1,4 +1,5 @@
 import { LINE_TYPE_ORDER } from "./constants.js";
+import { createEtysNetworkLayer } from "./etysNetwork.js";
 import { buildLayerConfig } from "./layerDefs.js";
 import {
   buildEtysLegend,
@@ -40,6 +41,7 @@ export function createLayerManager(map, regionConfig, zoneFilter) {
   const layerIds = config.layerIds || Object.keys(LAYER_CONFIG);
 
   const layerGroups = {};
+  let destroyed = false;
   const layerCache = {};
   for (const id of layerIds) {
     layerGroups[id] = L.layerGroup();
@@ -287,6 +289,7 @@ export function createLayerManager(map, regionConfig, zoneFilter) {
   }
 
   function buildGeoJsonLayer(layerKey, data, layerConfig) {
+    if (layerKey === "etys_network") return createEtysNetworkLayer(map, data);
     if (layerKey === "lines") {
       return createLineLayer(data, layerConfig);
     }
@@ -658,7 +661,9 @@ export function createLayerManager(map, regionConfig, zoneFilter) {
     cache.loading = (async () => {
       setStatus(`Loading ${layerConfig.label}…`);
       const payload = await loadLayerData(layerConfig);
+      if (destroyed) return null;
       const geoLayer = await createLayerFromData(layerKey, payload, layerConfig, geoJsonHelpers);
+      if (destroyed) return null;
       layerGroups[layerKey].addLayer(geoLayer);
       if (document.getElementById(`toggle-${layerKey}`)?.checked) {
         if (isZoomGated(layerKey)) {
@@ -700,11 +705,17 @@ export function createLayerManager(map, regionConfig, zoneFilter) {
       return geoLayer;
     })();
 
-    return cache.loading;
+    try {
+      return await cache.loading;
+    } finally {
+      cache.loading = null;
+    }
   }
 
   function updateStatusMessage(setStatus) {
     const parts = [];
+    const network = layerCache.etys_network?.data?.metadata;
+    if (network) parts.push(`${network.mapped_edges.toLocaleString()} ETYS connections at ${network.mapped_sites} sites`);
     if (layerCache.plants?.loaded) parts.push(`${layerCache.plants.count.toLocaleString()} BMU-mapped sites`);
     if (layerCache.turbines?.loaded) {
       const zoomNote = turbineZoomOk() ? "" : ` (zoom ${config.turbineMinZoom}+ to show)`;
@@ -793,6 +804,10 @@ export function createLayerManager(map, regionConfig, zoneFilter) {
       "dno_operator",
       "substation",
       "ref",
+      "site_code",
+      "nodes",
+      "node_1_label",
+      "node_2_label",
     ];
     return [
       LAYER_CONFIG[layerKey]?.label,
@@ -827,6 +842,13 @@ export function createLayerManager(map, regionConfig, zoneFilter) {
   }
 
   function focusSearchResult(result) {
+    if (result.layerKey === "etys_network") {
+      map.addLayer(layerGroups.etys_network);
+      const checkbox = document.getElementById("toggle-etys_network");
+      if (checkbox) checkbox.checked = true;
+      layerCache.etys_network.geoLayer.focusFeature(result.props.id);
+      return;
+    }
     if (searchHighlight) {
       map.removeLayer(searchHighlight);
       searchHighlight = null;
@@ -871,6 +893,7 @@ export function createLayerManager(map, regionConfig, zoneFilter) {
       }
       if (enabled) {
         await loadLayer(layerKey, setStatus);
+        if (destroyed || (checkbox && !checkbox.checked)) return;
         if (isZoomGated(layerKey)) {
           syncZoomGatedLayerOnMap(layerKey);
         } else {
@@ -906,6 +929,7 @@ export function createLayerManager(map, regionConfig, zoneFilter) {
       }
       updateStatusMessage(setStatus);
     } catch (error) {
+      if (destroyed) return;
       console.error(error);
       if (checkbox) checkbox.checked = false;
       if (layerKey === "turbines") syncTurbineCheckboxes(false);
@@ -914,6 +938,12 @@ export function createLayerManager(map, regionConfig, zoneFilter) {
   }
 
   function destroy() {
+    destroyed = true;
+    if (searchHighlight) map.removeLayer(searchHighlight);
+    setLineLegendVisible(false, lineBucketGroups);
+    setPlantLegendVisible(false, plantBucketGroups);
+    setEtysLegendVisible(false, etysBucketGroups);
+    setGeneratorLegendVisible(false);
     for (const id of layerIds) {
       map.removeLayer(layerGroups[id]);
       layerGroups[id].clearLayers();

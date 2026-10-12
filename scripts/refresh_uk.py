@@ -12,7 +12,11 @@ dataset end to end:
   6. Lightweight web layers          (scripts/prepare_map_data.py)
   7. Derived wind-farm boundaries    (scripts/derive_plant_boundaries.py)
   8. Plant <-> BMU matching          (scripts/propose_plant_bmu_map.py)
-  9. PMTiles archives                (scripts/build_tiles.py)
+  9. TEC connection-site matching    (scripts/propose_bmu_connection_sites.py)
+ 10. Substation/BMU augmentation     (scripts/match_substation_bmus.py)
+ 11. PMTiles archives                (scripts/build_tiles.py)
+
+BM activity and ETYS connectivity have separate fetch/build commands.
 
 The OSM export only runs when a local ``.osm.pbf`` is found (auto-detected under
 ``data/regions/{region}/source/`` or given with ``--osm-pbf``); otherwise the

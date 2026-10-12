@@ -1,6 +1,6 @@
 # CLAUDE.md
 
-This file provides guidance to Claude Code (claude.ai/code) when working with code in this repository.
+Shared guidance for coding agents working on GB Grid Visualiser. `AGENTS.md` points here.
 
 ## What this is
 
@@ -32,7 +32,9 @@ python scripts/audit_bmu_links.py              # data-quality report on the plan
 python scripts/build_tiles.py --region uk      # needs Tippecanoe + PMTiles CLI on PATH (WSL)
 ```
 
-There is no test suite, linter, or build config in this repo. Use `serve_map.py` (not `python -m http.server`) so PMTiles range requests work.
+Run `python -m unittest discover -s scripts -p "test_*.py"` for ETYS and settlement-window regression checks. There is no configured linter or frontend build step. Use `serve_map.py` (not `python -m http.server`) so PMTiles range requests work. Python 3.11+ is required; install `requirements.txt`, including `tzdata` for UK clock-change handling on Windows.
+
+The refresh pipeline also runs TEC connection-site matching and substation/BMU augmentation (`--skip-tec`, `--skip-substation-links`). BM activity (`scripts/fetch_bm_activity.py`, default last 24 hours) and ETYS connectivity (`scripts/build_etys_network.py`) are separate. Follow `map/README.md` for the ETYS workbook, coordinate CSV and override workflow; do not rerun seeding over an existing editable table.
 
 ### Critical: GDAL drops plant relations — plants come from Overpass, not the PBF
 
@@ -59,6 +61,7 @@ Top-level `*.py` files are the importable logic; `scripts/*.py` are thin argpars
 | `plants_sync.py` | Merges OSM plant exports into the ground-truth `bmu_sites_web.geojson` (OSM fields only — preserves manual edits) |
 | `bmu_data.py` | Elexon BMU reference data + the plant↔BMU mapping table logic |
 | `bmu_operational.py` | Balancing Mechanism (ISPSTACK) activity snapshots |
+| `etys_network.py` | ETYS workbook import, attributed coordinates, complete imported graph and schematic GeoJSON |
 | `fuel_taxonomy.py` | Shared fuel taxonomy / `plant:source` bucketing (Python side of `data/shared/fuel_types.json`) |
 | `manual_plants.py` | UK plants absent from OSM |
 | `export_io.py` | GeoJSON/CSV save helpers |
@@ -105,9 +108,20 @@ The three catalog layer ids are deliberately distinct: `plants` ("BMU-mapped sit
 - **Do not delete or regenerate multi-GB files** (`raw/`, large PMTiles, `*_web.geojson`) unless explicitly asked.
 - **Never commit** (already gitignored): `data/regions/*/raw/`, `data/regions/*/source/`, `data/regions/*/map/*.pmtiles`, `data/regions/*/map/all_generators_web.geojson`, `data/regions/*/map/generators_web.geojson` (legacy name), `data/regions/*/map/turbines_web.geojson`, `cache/`, `posters/`.
 - Preserve user edits in `editable/` reference files and `bmu_sites_web.geojson`.
+- Keep ETYS coordinate seeds, overrides and generated artifacts local until their provenance/reuse review is complete; they are gitignored. Do not deploy whole region/reference folders. Follow the runtime allowlist in `map/DEPLOY.md`.
 
 ## Further docs
 
 - `README.md` — full export options, data sources, derived fields, attribution/licences.
-- `AGENTS.md` — concise cross-session agent guidance (overlaps this file).
+- `AGENTS.md` — pointer to this shared guidance.
+- `REVIEW.md` — current review findings, validation and remaining limitations.
 - `DEVELOPMENT.md` — roadmap: regional balance, NESO forecasts, constraints, ISPSTACK BM activity, a planned SQLite reference store.
+
+### Offline plant fallback
+
+When Overpass is unavailable, use `scripts/import_plants_osm.py --source PATH.osm
+--source-date YYYY-MM-DD` with dependency-complete OSM XML (nodes and ways used
+by plant relations must be included). It reconstructs relation geometry without
+the GDAL relation loss. Coverage is limited to the source extract; retain the
+additive ground-truth merge. This does not refresh offshore sites outside that
+extract. See REVIEW.md for the October 2026 refresh limitations.

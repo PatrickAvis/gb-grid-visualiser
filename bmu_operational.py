@@ -3,12 +3,14 @@
 from __future__ import annotations
 
 import json
+import math
 import re
 from collections import defaultdict
 from collections.abc import Callable
 from datetime import UTC, date, datetime, timedelta
 from pathlib import Path
 from typing import Any
+from zoneinfo import ZoneInfo
 
 import geopandas as gpd
 import pandas as pd
@@ -31,6 +33,8 @@ BM_ACTIVITY_LATEST_PATH = UK_REFERENCE_OPERATIONAL_DIR / "bmu_activity_latest.js
 BM_UNMAPPED_ISPSTACK_PATH = UK_REFERENCE_OPERATIONAL_DIR / "bmu_unmapped_ispstack.csv"
 
 SIDES = ("bid", "offer")
+SETTLEMENT_ZONE = ZoneInfo("Europe/London")
+SLOT_EPOCH = datetime(1970, 1, 1, tzinfo=UTC)
 
 UNMAPPED_ISPSTACK_COLUMNS = (
     "bmu_id",
@@ -74,14 +78,20 @@ def fetch_system_prices(settlement_date: str, *, timeout: int = 60) -> list[dict
 
 
 def settlement_slot(settlement_date: str, settlement_period: int) -> int:
-    """Absolute half-hour slot index (SP1 on 1970-01-01 = 0)."""
+    """UTC half-hour index, respecting the UK's 46/48/50-period days."""
     day = date.fromisoformat(settlement_date)
-    return day.toordinal() * 48 + (settlement_period - 1)
+    start = datetime.combine(day, datetime.min.time(), SETTLEMENT_ZONE).astimezone(UTC)
+    end = datetime.combine(day + timedelta(days=1), datetime.min.time(), SETTLEMENT_ZONE).astimezone(UTC)
+    count = int((end - start).total_seconds() // 1800)
+    if not isinstance(settlement_period, int) or not 1 <= settlement_period <= count:
+        raise ValueError(f"{settlement_date} has settlement periods 1–{count}")
+    return int((start - SLOT_EPOCH).total_seconds() // 1800) + settlement_period - 1
 
 
 def slot_to_settlement(slot: int) -> tuple[str, int]:
-    day_ord, period_index = divmod(slot, 48)
-    return date.fromordinal(day_ord).isoformat(), period_index + 1
+    instant = SLOT_EPOCH + timedelta(minutes=slot * 30)
+    day = instant.astimezone(SETTLEMENT_ZONE).date().isoformat()
+    return day, slot - settlement_slot(day, 1) + 1
 
 
 def periods_last_n_hours(
@@ -91,6 +101,8 @@ def periods_last_n_hours(
     timeout: int = 60,
 ) -> list[tuple[str, int]]:
     """Settlement (date, period) pairs covering the last N hours up to latest published."""
+    if not math.isfinite(hours) or hours <= 0:
+        raise ValueError("hours must be a positive finite number")
     end_date, end_period = latest_available_period(
         lookback_days=lookback_days,
         timeout=timeout,
@@ -103,7 +115,7 @@ def periods_last_n_hours(
 
 def latest_available_period(*, lookback_days: int = 7, timeout: int = 60) -> tuple[str, int]:
     """Find the latest settlement date/period with published system prices."""
-    today = datetime.now(UTC).date()
+    today = datetime.now(SETTLEMENT_ZONE).date()
     for offset in range(lookback_days):
         settlement_date = (today - timedelta(days=offset)).isoformat()
         rows = fetch_system_prices(settlement_date, timeout=timeout)
@@ -125,6 +137,7 @@ def fetch_ispstack(
     timeout: int = 60,
 ) -> list[dict[str, Any]]:
     """Fetch ISPSTACK rows for one side. Elexon accepts bid or offer here."""
+    settlement_slot(settlement_date, settlement_period)
     side = bid_offer.lower()
     if side not in SIDES:
         raise ValueError(f"bid_offer must be one of {SIDES}, got {bid_offer!r}")

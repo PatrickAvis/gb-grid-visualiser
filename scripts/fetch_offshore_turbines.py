@@ -29,9 +29,9 @@ from prepare import parse_capacity_to_mw, parse_numeric_tag  # noqa: E402
 
 OVERPASS_ENDPOINTS = [
     "https://overpass-api.de/api/interpreter",
-    "https://overpass.kumi.systems/api/interpreter",
+    "https://overpass.private.coffee/api/interpreter",
 ]
-HEADERS = {"User-Agent": "grid2poster/1.0 (offshore wind turbine fetch)"}
+HEADERS = {"User-Agent": "GB-Grid-Visualiser/1.0 (+https://github.com/PatrickAvis/gb-grid-visualiser)"}
 MARINE_BBOX = (49.0, -9.5, 61.5, 3.5)  # south, west, north, east
 OFFSHORE_SEA_BUFFER_KM = 250.0
 CONTINENTAL_SHELF = {"lon_min": 2.6, "lat_max": 53.0}  # Belgian/Dutch corner
@@ -43,7 +43,7 @@ def overpass(query: str) -> list[dict]:
         for attempt in range(2):
             try:
                 print(f"Querying {endpoint} (attempt {attempt + 1})…")
-                resp = requests.post(endpoint, data={"data": query}, headers=HEADERS, timeout=320)
+                resp = requests.get(endpoint, params={"data": query}, headers=HEADERS, timeout=320)
                 if resp.status_code == 200 and resp.text.lstrip().startswith("{"):
                     return resp.json()["elements"]
                 last_err = f"status {resp.status_code}: {resp.text[:120]!r}"

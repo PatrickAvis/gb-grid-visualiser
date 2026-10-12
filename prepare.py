@@ -94,9 +94,10 @@ def parse_capacity_to_mw(value: Any) -> float:
             token = token[:-1]
 
         token = token.replace(",", ".")
-        match = re.search(r"\d+(?:\.\d+)?", token)
+        match = re.fullmatch(r"\d+(?:\.\d+)?", token)
         if not match:
-            # Tags like "yes" carry no numeric output; skip them.
+            # Unknown units (e.g. KV) are not power ratings. Never silently
+            # extract their number and interpret it as MW.
             continue
         values.append(float(match.group(0)) * multiplier)
 

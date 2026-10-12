@@ -6,7 +6,14 @@
 
 ## UK interactive map
 
-One command refreshes everything — OSM export (from a local `.osm.pbf` if present), Elexon BMU data, NESO zones, web layers, plant↔BMU matching, and PMTiles:
+The **ETYS 2025 network connections** layer adds schematic circuits, transformers
+and existing internal HVDC links. Click a site to highlight neighbouring sites,
+or a circuit to inspect its node IDs, ratings and impedance. See
+[`map/README.md`](map/README.md#etys-network-connections) for the separate build
+and coordinate-review workflow. This is a 2025/26 planning snapshot, not live
+switching states or measured power flows.
+
+After installing dependencies below, one command refreshes the UK infrastructure pipeline — OSM export (from a local `.osm.pbf` if present), Overpass plants, Elexon BMU data, NESO zones, web layers, plant↔BMU and TEC connection-site matching, and PMTiles. BM activity and ETYS connectivity have separate build commands:
 
 ```bash
 python scripts/refresh_uk.py
@@ -17,6 +24,7 @@ python scripts/serve_map.py
 
 ```powershell
 python scripts/export_region.py --region uk --all
+python scripts/fetch_plants_overpass.py
 python scripts/fetch_neso_zones.py
 python scripts/sync_uk_plants.py
 python scripts/propose_plant_bmu_map.py --fetch
@@ -40,13 +48,32 @@ Layer naming keeps the BMU workflow separate from the full OSM generator invento
 
 ## Installation
 
-```bash
+```powershell
 git clone https://github.com/PatrickAvis/gb-grid-visualiser
 cd gb-grid-visualiser
 python -m venv .venv
-source .venv/bin/activate   # Windows: .venv\Scripts\activate
+.venv\Scripts\Activate.ps1
 pip install -r requirements.txt
 ```
+
+On Linux/macOS, activate with `source .venv/bin/activate`. Use Python 3.11 or newer.
+The frontend has no build step. Large raw exports, PMTiles, BM activity and the
+optional ETYS coordinate-derived outputs are not supplied by a fresh clone;
+build or copy the required local data before enabling those layers.
+
+## Validation
+
+```powershell
+python -m unittest discover -s scripts -p "test_*.py"
+node --test scripts/test_line_rendering.mjs
+python scripts/serve_map.py
+```
+
+The regression suite covers ETYS identity/geometry and UK settlement windows,
+including the 46- and 50-period clock-change days. Browser checks should cover
+layer loading, search, neighbour highlighting, region switching and retry after
+a missing optional file is restored. See [the review record](REVIEW.md) for the
+latest checks, known limitations and pre-push scope.
 
 ## Exporting data
 
@@ -204,7 +231,7 @@ UK balancing-mechanism unit (BMU) ids are kept **separate** from OSM plant geome
 | File | Role |
 | --- | --- |
 | `data/regions/uk/map/bmu_sites_web.geojson` | **OSM site ground truth** — edit plant names, geometry, capacity, etc. |
-| `data/regions/uk/reference/editable/plant_bmu_links.csv` | **Your join table** — one row per plant↔BMU link (`osm_id` primary key) |
+| `data/regions/uk/reference/editable/plant_bmu_links.csv` | **Your join table** — one row per BMU; multiple BMUs at a site share an `osm_id` |
 | `data/regions/uk/reference/source/elexon_bmu_units.json` | Elexon BMU registry (~3k units; auto-fetched) |
 | `data/regions/uk/reference/generated/plant_bmu_links.json` | Generated from the CSV; loaded by the map |
 
@@ -286,7 +313,7 @@ Sync `data/regions/uk/reference/generated/plant_bmu_links.json` with the map (se
 
 ### UK BM activity snapshot
 
-Fetch the latest available Elexon ISPSTACK settlement period and export a refreshable static map layer:
+Fetch the last 24 hours through the latest published Elexon ISPSTACK period and export a refreshable static map layer:
 
 ```powershell
 python scripts/fetch_bm_activity.py
